@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Newifi3 D2 on pNghia.com</title>
+    <link>https://pnghia.com/tags/newifi3-d2/</link>
+    <description>Recent content in Newifi3 D2 on pNghia.com</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>vi-vn</language>
+    <lastBuildDate>Wed, 06 Jan 2021 17:38:05 +0700</lastBuildDate><atom:link href="https://pnghia.com/tags/newifi3-d2/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hướng dẫn chuyển đổi ngôn ngữ Stock Firmware Newifi3 D2 từ Tiếng Trung sang English</title>
+      <link>https://pnghia.com/posts/newifi3-d2-stock-english-firmware/</link>
+      <pubDate>Wed, 06 Jan 2021 17:38:05 +0700</pubDate>
+      
+      <guid>https://pnghia.com/posts/newifi3-d2-stock-english-firmware/</guid>
+      <description>Bài viết hướng dẫn chuyển từ Tiếng Trung sang Tiếng Anh (tiếng Việt vẫn được nhưng do lười dịch với ít dùng nên thôi 😌). Dành cho bạn nào thích dùng FW gốc nhưng lại không thích hoặc không biết tiếng Trung.
+ Chuẩn bị  Máy tính, hoặc điện thoại vẫn được miễn sao bạn dùng được SCP. Ở đây mình sẽ hướng dẫn làm trên PC. Phần mềm WinSCP cho Windows, download tại đây.</description>
+    </item>
+    
+    <item>
+      <title>Tổng hợp Firmware cho Newifi3 D2</title>
+      <link>https://pnghia.com/posts/tong-hop-firmware-newifi3d2/</link>
+      <pubDate>Thu, 03 Sep 2020 02:46:40 +0000</pubDate>
+      
+      <guid>https://pnghia.com/posts/tong-hop-firmware-newifi3d2/</guid>
+      <description>Sơ lược cấu hình Newifi 3 D2 Kiến trúc CPU: Ramips Kiến trúc gói: Mipsel_24kc Bootloader: U-Boot, có thể thay bằng Breed Bootloader CPU: Mediatek MT7621AT Số Lõi/Số Luồng: 2/4 Tốc độ CPU: 880Mhz ROM/RAM: 32Mb/512Mb Cổng WAN 10/100/1000: 1 Cổng LAN 10/100/1000: 4 Switch: MediaTek MT7621AT VLAN: Yes WLAN Hardware: MediaTek MT7603EN, MediaTek MT7612EN MIMO 2x2:2 WLAN 2.4GHz: b/g/n WLAN 5.0GHz: a/n/ac WLAN driver (Stock OpenWRT): mt76 USB ports: 1x 3.</description>
+    </item>
+    
+    <item>
+      <title>Nâng cấp Newifi3 D2 với Custom Firmware</title>
+      <link>https://pnghia.com/posts/newifi3-d2-firmware-upgrade/</link>
+      <pubDate>Sat, 04 Apr 2020 08:59:53 +0700</pubDate>
+      
+      <guid>https://pnghia.com/posts/newifi3-d2-firmware-upgrade/</guid>
+      <description>Bài viết sẽ có 3 phần. Phần đầu là hướng dẫn cài Breed Bootloader, phần 2 sẽ hướng dẫn UP ROM và phần 3 là tự Build ROM OpenWRT.  Yêu cầu chung: Sử dụng Command Line, sử dụng hệ điều hành Linux càng tốt, có SSH Client để truy cập vào Router thông qua SSH. Kết nối với Router thông qua Cáp LAN. Để Compile OpenWRT, hệ điều hành khuyên dùng là Ubuntu 18.</description>
+    </item>
+    
+    <item>
+      <title>OpenWrt by Lean (LEDE) cho Newifi3 D2</title>
+      <link>https://pnghia.com/posts/openwrt-newifi3-d2/</link>
+      <pubDate>Thu, 02 Apr 2020 19:51:12 +0700</pubDate>
+      
+      <guid>https://pnghia.com/posts/openwrt-newifi3-d2/</guid>
+      <description>-&amp;gt; Hướng dẫn UP Firmware  ROM được @kizimirua build từ Lean OpenWRT https://github.com/coolsnowwolf/ledevar r = new XMLHttpRequest();r.addEventListener(&#39;load&#39;, function() {document.querySelector(&#39;#a674231985&#39;).innerText = JSON.parse(this.responseText).count_unique})r.open(&#39;GET&#39;, &#39;https://stats.pnghia.com/counter/&#39; + encodeURIComponent(&#34;https://github.com/coolsnowwolf/lede&#34;).replace(/\/$/, &#39;&#39;) + &#39;.json&#39;)r.send()tương thích với NEWIFI3 D2 OpenWrt thế hệ thứ 3
+Có 2 bản để lựa chọn là bản FULL và bản rút gọn, bài viết này sẽ tổng hợp lại cả 2 bản cho các bạn dễ lựa chọn.</description>
+    </item>
+    
+  </channel>
+</rss>

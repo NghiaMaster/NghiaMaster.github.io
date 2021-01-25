@@ -1,0 +1,972 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Tổng hợp Firmware cho Newifi3 D2 - pNghia.com</title>
+	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
+	<meta name="description" content="Tổng hợp các Firmware cho Newifi3 D2 ở trên các diễn đàn và nhiều nguồn khác nhau (Stock xCloudOS, Gocloud, OpenWRT, X-wrt, PandoraBOX, Padavan, GoldenOrb, Gargoyle, Wive-NG-MT, DD-Wrt, ASUS-Wrt, Tomato)">
+		<meta property="og:title" content="Tổng hợp Firmware cho Newifi3 D2" />
+<meta property="og:description" content="Tổng hợp các Firmware cho Newifi3 D2 ở trên các diễn đàn và nhiều nguồn khác nhau (Stock xCloudOS, Gocloud, OpenWRT, X-wrt, PandoraBOX, Padavan, GoldenOrb, Gargoyle, Wive-NG-MT, DD-Wrt, ASUS-Wrt, Tomato)" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://pnghia.com/posts/tong-hop-firmware-newifi3d2/" />
+<meta property="article:published_time" content="2020-09-03T02:46:40+00:00" />
+<meta property="article:modified_time" content="2021-01-25T09:12:22+07:00" />
+
+
+	<link rel="stylesheet" href="/css/style.min.css">
+	
+
+	<link rel="apple-touch-icon" sizes="57x57" href="/favicon/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="/favicon/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="/favicon/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="/favicon/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="/favicon/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="/favicon/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="/favicon/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="/favicon/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192" href="/favicon/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="192x192" href="/favicon/android-icon-512x512.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="/favicon/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+	<meta name="msapplication-TileColor" content="#3d434b">
+	<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+	<meta name="theme-color" content="#3d434b" />
+		
+</head>
+<body class="body">
+	<div class="container container--outer">
+		<header class="header">
+	<div class="container header__container">
+		
+	<div class="logo">
+		<a class="logo__link" href="/" title="pNghia.com" rel="home">
+			<div class="logo__item logo__text">
+					<div class="logo__title">pNghia.com</div>
+					<div class="logo__tagline">Make life easier</div>
+				</div>
+		</a>
+	</div>
+		
+<nav class="menu">
+	<button class="menu__btn" aria-haspopup="true" aria-expanded="false" tabindex="0">
+		<span class="menu__btn-title" tabindex="-1">Menu</span>
+	</button>
+	<ul class="menu__list">
+		<li class="menu__item">
+			<a class="menu__link" href="/serial/openwrt/">
+				
+				<span class="menu__text">Cấu hình OpenWRT</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/serial/opnsense/">
+				
+				<span class="menu__text">Cấu hình OPNsense</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/categories/newifi3-d2/">
+				
+				<span class="menu__text">Newifi3 D2</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/about/">
+				
+				<span class="menu__text">Về tôi</span>
+				
+			</a>
+		</li>
+	</ul>
+</nav>
+
+	</div>
+</header>
+		<div class="wrapper flex">
+			<div class="primary">
+			
+
+<script defer src="/js/lazysizes.min.498676c34eb225e85357ab0ce19c3c1244f3bd0bf595e5684d1b9d50ea4fbc42.js"></script>
+<link rel="stylesheet" href="/css/single.min.css">
+<main class="main" role="main">
+	<article class="post">
+		<header class="post__header">
+			<h1 class="post__title">Tổng hợp Firmware cho Newifi3 D2</h1>
+			<div class="post__meta meta">
+<script defer>
+	var r = new XMLHttpRequest();
+  r.addEventListener('load', function() {
+  document.querySelector('#goatCounter_value_page_pv').innerText = JSON.parse(this.responseText).count_unique + " lượt xem"})
+  r.open('GET', 'https://stats.pnghia.com/counter/' + (location.pathname).replace(/\/$/, '') + '.json')
+  r.send()
+  </script>
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2020-09-03T02:46:40Z">3 tháng 9, 2020</time>
+	<time class="meta__text" datetime="2021-01-25T09:12:22&#43;07:00">(
+		Cập nhật: 25 tháng 1, 2021)</time>&nbsp;<div class="meta__item"><svg xmlns="http://www.w3.org/2000/svg" class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 24 24"><path d="M15 12c0 1.657-1.343 3-3 3s-3-1.343-3-3c0-.199.02-.393.057-.581 1.474.541 2.927-.882 2.405-2.371.174-.03.354-.048.538-.048 1.657 0 3 1.344 3 3zm-2.985-7c-7.569 0-12.015 6.551-12.015 6.551s4.835 7.449 12.015 7.449c7.733 0 11.985-7.449 11.985-7.449s-4.291-6.551-11.985-6.551zm-.015 12c-2.761 0-5-2.238-5-5 0-2.761 2.239-5 5-5 2.762 0 5 2.239 5 5 0 2.762-2.238 5-5 5z"/></svg>
+<span class="meta__text" id="goatCounter_value_page_pv">3456</span>&nbsp;&bull;
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M20 15c0 .552-.448 1-1 1s-1-.448-1-1 .448-1 1-1 1 .448 1 1m-3 0c0 .552-.448 1-1 1s-1-.448-1-1 .448-1 1-1 1 .448 1 1m-3 0c0 .552-.448 1-1 1s-1-.448-1-1 .448-1 1-1 1 .448 1 1m5.415 4.946c-1 .256-1.989.482-3.324.482-3.465 0-7.091-2.065-7.091-5.423 0-3.128 3.14-5.672 7-5.672 3.844 0 7 2.542 7 5.672 0 1.591-.646 2.527-1.481 3.527l.839 2.686-2.943-1.272zm-13.373-3.375l-4.389 1.896 1.256-4.012c-1.121-1.341-1.909-2.665-1.909-4.699 0-4.277 4.262-7.756 9.5-7.756 5.018 0 9.128 3.194 9.467 7.222-1.19-.566-2.551-.889-3.967-.889-4.199 0-8 2.797-8 6.672 0 .712.147 1.4.411 2.049-.953-.126-1.546-.272-2.369-.483m17.958-1.566c0-2.172-1.199-4.015-3.002-5.21l.002-.039c0-5.086-4.988-8.756-10.5-8.756-5.546 0-10.5 3.698-10.5 8.756 0 1.794.646 3.556 1.791 4.922l-1.744 5.572 6.078-2.625c.982.253 1.932.407 2.85.489 1.317 1.953 3.876 3.314 7.116 3.314 1.019 0 2.105-.135 3.242-.428l4.631 2-1.328-4.245c.871-1.042 1.364-2.384 1.364-3.75"/></svg>
+<a class="meta__text" href="/posts/tong-hop-firmware-newifi3d2/#isso-thread">Comments</a></div>
+</div>
+<div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/newifi3-d2/" rel="category">Newifi3 D2</a>
+	</span>
+</div></div>
+		</header>
+		<figure class="post__thumbnail">
+			<img src="/img/newifi3d2.jpg" alt="Tổng hợp Firmware cho Newifi3 D2">
+		</figure>
+<div class="post__toc toc">
+	<div class="toc__title">Mục lục</div>
+	<div class="toc__menu">
+		<nav id="TableOfContents">
+  <ul>
+    <li><a href="#o-stock-firmware---xcloudos">O. Stock Firmware - xCloudOS</a></li>
+    <li><a href="#i-firmware-openwrt">I. Firmware OPENWRT</a></li>
+    <li><a href="#ii-firmware-x-wrt">II. Firmware X-WRT</a></li>
+    <li><a href="#iii-firmware-gocloud---update-25122020">III. Firmware GoCloud - UPDATE 25/12/2020</a></li>
+    <li><a href="#iv-firmware-padavan">IV. Firmware PADAVAN</a>
+      <ul>
+        <li><a href="#1-phiên-bản-padavan-hiboy">1. Phiên bản PADAVAN HiBoy</a></li>
+        <li><a href="#2-phiên-bản-padavan-scut">2. Phiên bản PADAVAN Scut</a></li>
+        <li><a href="#3-phiên-bản-pandorabox-padavan">3. Phiên bản PANDORABOX PADAVAN</a></li>
+      </ul>
+    </li>
+    <li><a href="#v-firmware-pandorabox">V. Firmware PANDORABOX</a></li>
+    <li><a href="#vi-firmware-gargoyle">VI. Firmware Gargoyle</a></li>
+    <li><a href="#vii-firmware-wive-ng-mt">VII. Firmware Wive-NG-MT</a></li>
+    <li><a href="#viii-firmware-rooter-goldenorb">VIII. Firmware ROOter (GoldenOrb)</a></li>
+    <li><a href="#ix-firmware-dd-wrt">IX. Firmware DD-WRT</a></li>
+    <li><a href="#x-firmware-comfast-cf-n3">X. Firmware Comfast CF-N3</a></li>
+    <li><a href="#xi-firmware-asus-wrt-merlin">XI. Firmware ASUS-WRT (Merlin)</a></li>
+    <li><a href="#xii-openwrt-by-lean-lede">XII. OpenWRT by Lean (LEDE)</a></li>
+    <li><a href="#xiii-firmware-tomato-phoenix">XIII. Firmware Tomato (Phoenix)</a></li>
+  </ul>
+</nav>
+	</div>
+</div>
+<div class="content post__content clearfix">
+			<details >
+    <summary>Sơ lược cấu hình Newifi 3 D2</summary>
+    <div class="markdown-inner">
+      <ul>
+<li>Kiến trúc CPU: <em>Ramips</em></li>
+<li>Kiến trúc gói: <em>Mipsel_24kc</em></li>
+<li>Bootloader: <em>U-Boot, có thể thay bằng Breed Bootloader</em></li>
+<li>CPU: <em>Mediatek MT7621AT</em></li>
+<li>Số Lõi/Số Luồng: <em>2/4</em></li>
+<li>Tốc độ CPU: <em>880Mhz</em></li>
+<li>ROM/RAM: <em>32Mb/512Mb</em></li>
+<li>Cổng WAN 10/100/1000: <em>1</em></li>
+<li>Cổng LAN 10/100/1000: <em>4</em></li>
+<li>Switch: <em>MediaTek MT7621AT</em></li>
+<li>VLAN: <em>Yes</em></li>
+<li>WLAN Hardware: <em>MediaTek MT7603EN, MediaTek MT7612EN MIMO 2x2:2</em></li>
+<li>WLAN 2.4GHz: <em>b/g/n</em></li>
+<li>WLAN 5.0GHz: <em>a/n/ac</em></li>
+<li>WLAN driver (Stock OpenWRT): <em>mt76</em></li>
+<li>USB ports: <em>1x 3.0</em></li>
+</ul>
+
+    </div>
+  </details>
+
+<details >
+    <summary>Hướng dẫn Up FW Newifi3 D2</summary>
+    <div class="markdown-inner">
+      <ul>
+<li>Làm tương tự bài viết 
+<a href="/posts/newifi3-d2-firmware-upgrade/#ii-up-rom-firmware">Newifi3 D2 Firmware Upgrade</a>
+</li>
+<li>Tuỳ theo Firmware mà địa chỉ LAN IP mặc định, Usename, Password sẽ khác nhau. Đa số ROM Padavan là <code>192.168.123.1</code> Rom OpenWRT và dựa trên nền OpenWRT là <code>192.168.1.1</code>, một số FW đặc biệt do tác giả đặt mình sẽ có ghi chú sau.</li>
+</ul>
+
+    </div>
+  </details>
+
+<h2 id="o-stock-firmware---xcloudos">O. Stock Firmware - xCloudOS</h2>
+<blockquote>
+<p>Firmware gốc khi xuất xưởng của <em>newifi3 D2</em>, được biết đến với cái tên là <strong>xCloudOS</strong>, ngôn ngữ mặc định là tiếng Trung (có hướng dẫn chuyển sang tiếng Anh bên dưới).<br />
+<details >
+    <summary>Screenshot FW Tiếng Trung</summary>
+    <div class="markdown-inner">
+      <img data-src="https://pnghia.com/images/newifi-d2/stockfw1_hu6b1c343bdb489e7580377dc48fe65918_88733_filter_1334269291160664337.png" alt="Stock FW Newifi3 D2" class="lazyload blur-up" />
+
+
+<br />
+
+
+<img data-src="https://pnghia.com/images/newifi-d2/stockfw2_hu4151318c397898fe582a57f608cb0089_197617_filter_1334269291160664337.png" alt="Stock FW Newifi3 D2" class="lazyload blur-up" />
+    </div>
+  </details>
+</p>
+</blockquote>
+<ul>
+<li>File nén .RAR chứa <strong>EEPROM</strong> và <strong>Firmware</strong> được backup từ newifi3 D2.</li>
+<li>Tải file 
+<a href="https://drive.google.com/file/d/1N1u9zUETF4WJx22nZpcK1czeVf3IhOpZ/view?usp=sharing" title="Download Stock FW Newifi3 D2" data-goatcounter-title="Download Stock FW Newifi3 D2"
+ target="_blank" rel="noopener noreferrer" data-goatcounter-click="https://drive.google.com/file/d/1N1u9zUETF4WJx22nZpcK1czeVf3IhOpZ/view?usp=sharing" data-goatcounter-referrer="/posts/tong-hop-firmware-newifi3d2/">này</a><span title="Mức độ phổ biến" id="a273495681" class="single__badge"></span><script async>var r = new XMLHttpRequest();
+r.addEventListener('load', function() {
+document.querySelector('#a273495681').innerText = JSON.parse(this.responseText).count_unique
+})
+r.open('GET', 'https://stats.pnghia.com/counter/' + encodeURIComponent("https://drive.google.com/file/d/1N1u9zUETF4WJx22nZpcK1czeVf3IhOpZ/view?usp=sharing").replace(/\/$/, '') + '.json')
+r.send()</script>
+ sau đó giải nén ra sẽ có EEPROM và FW gốc của Newifi3 D2.</li>
+<li>Hướng dẫn chuyển đổi vĩnh viễn ngôn ngữ Tiếng Trung sang Tiếng Anh firmware Gốc Newifi3 D2. Xem chi tiết 
+<a href="/posts/newifi3-d2-stock-english-firmware/" title="Chuyển ngôn ngữ Stock FW sang tiếng Anh" data-goatcounter-title="Chuyển ngôn ngữ Stock FW sang tiếng Anh"
+>tại bài viết này.</a>
+<br />
+<details >
+    <summary>Screenshot FW Tiếng Anh</summary>
+    <div class="markdown-inner">
+      <img data-src="https://pnghia.com/images/newifi-d2/newifi3d2english1_hue776a334b902d7828bf5c7a8aa11ccb3_25340_filter_1334269291160664337.jpg" alt="Stock FW Newifi3 D2 English" class="lazyload blur-up" />
+
+
+<br />
+
+
+<img data-src="https://pnghia.com/images/newifi-d2/newifi3d2english_hue776a334b902d7828bf5c7a8aa11ccb3_44060_filter_1334269291160664337.jpg" alt="Stock FW Newifi3 D2 English" class="lazyload blur-up" />
+    </div>
+  </details>
+</li>
+</ul>
+<h2 id="i-firmware-openwrt">I. Firmware OPENWRT</h2>
+<blockquote>
+<p>Firmware này có ưu điểm là luôn được cập nhật lên bản ổn định mới nhất của OpenWRT, được hỗ trợ rất tốt bởi cộng đồng, tuy nhiên bản ROM này sử dụng driver MT76, một số model Newifi khi sử dụng driver này sẽ có vấn đề liên quan tới sóng 2.4Ghz như thiếu ổn định, hay disconnect&hellip; để biết Model của bạn có bị lỗi hay không thì thử mới biết nhé 😅</p>
+</blockquote>
+<details >
+    <summary>v19.07.3</summary>
+    <div class="markdown-inner">
+      <ul>
+<li>Phiên bản <strong>19.07.3</strong>: 
+<a href="http://downloads.openwrt.org/releases/19.07.3/targets/ramips/mt7621/openwrt-19.07.3-ramips-mt7621-d-team_newifi-d2-squashfs-sysupgrade.bin" title="Download OpenWRT 19.07.3" data-goatcounter-title="Download OpenWRT 19.07.3"
+ target="_blank" rel="noopener noreferrer" data-goatcounter-click="http://downloads.openwrt.org/releases/19.07.3/targets/ramips/mt7621/openwrt-19.07.3-ramips-mt7621-d-team_newifi-d2-squashfs-sysupgrade.bin" data-goatcounter-referrer="/posts/tong-hop-firmware-newifi3d2/">Link Download chính chủ OpenWRT</a><span title="Mức độ phổ biến" id="a812695743" class="single__badge"></span><script async>var r = new XMLHttpRequest();
+r.addEventListener('load', function() {
+document.querySelector('#a812695743').innerText = JSON.parse(this.responseText).count_unique
+})
+r.open('GET', 'https://stats.pnghia.com/counter/' + encodeURIComponent("http://downloads.openwrt.org/releases/19.07.3/targets/ramips/mt7621/openwrt-19.07.3-ramips-mt7621-d-team_newifi-d2-squashfs-sysupgrade.bin").replace(/\/$/, '') + '.json')
+r.send()</script>
+</li>
+<li>Phiên bản <strong>BETA Snapshot</strong>: 
+<a href="http://downloads.openwrt.org/snapshots/targets/ramips/mt7621/openwrt-ramips-mt7621-d-team_newifi-d2-squashfs-sysupgrade.bin" title="Download Snapshot OpenWRT" data-goatcounter-title="Download Snapshot OpenWRT"
+ target="_blank" rel="noopener noreferrer" data-goatcounter-click="http://downloads.openwrt.org/snapshots/targets/ramips/mt7621/openwrt-ramips-mt7621-d-team_newifi-d2-squashfs-sysupgrade.bin" data-goatcounter-referrer="/posts/tong-hop-firmware-newifi3d2/">Link Download chính chủ OpenWRT</a><span title="Mức độ phổ biến" id="a296185734" class="single__badge"></span><script async>var r = new XMLHttpRequest();
+r.addEventListener('load', function() {
+document.querySelector('#a296185734').innerText = JSON.parse(this.responseText).count_unique
+})
+r.open('GET', 'https://stats.pnghia.com/counter/' + encodeURIComponent("http://downloads.openwrt.org/snapshots/targets/ramips/mt7621/openwrt-ramips-mt7621-d-team_newifi-d2-squashfs-sysupgrade.bin").replace(/\/$/, '') + '.json')
+r.send()</script>
+</li>
+</ul>
+
+    </div>
+  </details>
+
+<details >
+    <summary>v19.07.5 update 09/12/2020</summary>
+    <div class="markdown-inner">
+      <ul>
+<li>Phiên bản <strong>19.07.5</strong>: 
+<a href="http://downloads.openwrt.org/releases/19.07.5/targets/ramips/mt7621/openwrt-19.07.5-ramips-mt7621-d-team_newifi-d2-squashfs-sysupgrade.bin" title="Download OpenWRT 19.07.5" data-goatcounter-title="Download OpenWRT 19.07.5"
+ target="_blank" rel="noopener noreferrer" data-goatcounter-click="http://downloads.openwrt.org/releases/19.07.5/targets/ramips/mt7621/openwrt-19.07.5-ramips-mt7621-d-team_newifi-d2-squashfs-sysupgrade.bin" data-goatcounter-referrer="/posts/tong-hop-firmware-newifi3d2/">Link Download chính chủ OpenWRT</a><span title="Mức độ phổ biến" id="a948217365" class="single__badge"></span><script async>var r = new XMLHttpRequest();
+r.addEventListener('load', function() {
+document.querySelector('#a948217365').innerText = JSON.parse(this.responseText).count_unique
+})
+r.open('GET', 'https://stats.pnghia.com/counter/' + encodeURIComponent("http://downloads.openwrt.org/releases/19.07.5/targets/ramips/mt7621/openwrt-19.07.5-ramips-mt7621-d-team_newifi-d2-squashfs-sysupgrade.bin").replace(/\/$/, '') + '.json')
+r.send()</script>
+.</li>
+<li>Xem <em>changelog</em> 
+<a href="https://openwrt.org/releases/19.07/notes-19.07.5" title="Changelog OpenWRT" data-goatcounter-title="Changelog OpenWRT"
+ target="_blank" rel="noopener noreferrer" data-goatcounter-click="https://openwrt.org/releases/19.07/notes-19.07.5" data-goatcounter-referrer="/posts/tong-hop-firmware-newifi3d2/">tại đây</a><span title="Mức độ phổ biến" id="a438167259" class="single__badge"></span><script async>var r = new XMLHttpRequest();
+r.addEventListener('load', function() {
+document.querySelector('#a438167259').innerText = JSON.parse(this.responseText).count_unique
+})
+r.open('GET', 'https://stats.pnghia.com/counter/' + encodeURIComponent("https://openwrt.org/releases/19.07/notes-19.07.5").replace(/\/$/, '') + '.json')
+r.send()</script>
+</li>
+</ul>
+
+    </div>
+  </details>
+
+<details >
+    <summary>v19.07.6 update 19/01/2021</summary>
+    <div class="markdown-inner">
+      <ul>
+<li>Phiên bản <strong>19.07.6</strong>: 
+<a href="https://downloads.openwrt.org/releases/19.07.6/targets/ramips/mt7621/openwrt-19.07.6-ramips-mt7621-d-team_newifi-d2-squashfs-sysupgrade.bin" title="Download OpenWRT 19.07.6" data-goatcounter-title="Download OpenWRT 19.07.6"
+ target="_blank" rel="noopener noreferrer" data-goatcounter-click="https://downloads.openwrt.org/releases/19.07.6/targets/ramips/mt7621/openwrt-19.07.6-ramips-mt7621-d-team_newifi-d2-squashfs-sysupgrade.bin" data-goatcounter-referrer="/posts/tong-hop-firmware-newifi3d2/">Link Download chính chủ OpenWRT</a><span title="Mức độ phổ biến" id="a941637582" class="single__badge"></span><script async>var r = new XMLHttpRequest();
+r.addEventListener('load', function() {
+document.querySelector('#a941637582').innerText = JSON.parse(this.responseText).count_unique
+})
+r.open('GET', 'https://stats.pnghia.com/counter/' + encodeURIComponent("https://downloads.openwrt.org/releases/19.07.6/targets/ramips/mt7621/openwrt-19.07.6-ramips-mt7621-d-team_newifi-d2-squashfs-sysupgrade.bin").replace(/\/$/, '') + '.json')
+r.send()</script>
+.</li>
+<li>Xem <em>changelog</em> 
+<a href="https://openwrt.org/releases/19.07/notes-19.07.6" title="Changelog OpenWRT 19.07.6" data-goatcounter-title="Changelog OpenWRT 19.07.6"
+ target="_blank" rel="noopener noreferrer" data-goatcounter-click="https://openwrt.org/releases/19.07/notes-19.07.6" data-goatcounter-referrer="/posts/tong-hop-firmware-newifi3d2/">tại đây</a><span title="Mức độ phổ biến" id="a834915762" class="single__badge"></span><script async>var r = new XMLHttpRequest();
+r.addEventListener('load', function() {
+document.querySelector('#a834915762').innerText = JSON.parse(this.responseText).count_unique
+})
+r.open('GET', 'https://stats.pnghia.com/counter/' + encodeURIComponent("https://openwrt.org/releases/19.07/notes-19.07.6").replace(/\/$/, '') + '.json')
+r.send()</script>
+</li>
+</ul>
+
+    </div>
+  </details>
+
+<h2 id="ii-firmware-x-wrt">II. Firmware X-WRT</h2>
+<blockquote>
+<p>ROM X-WRT được dựa trên mã nguồn của OPENWRT nên nó thừa hưởng được các ưu điểm của OPENWRT. Tính tuỳ biến cao, được thêm vào một số tính năng mới&hellip; X-WRT trên Newifi 3 D2 khá ổn, có thể do không sử dụng driver như trên OPENWRT hoặc có thể đã tuỳ biến lại nên nó chạy khá ổn định, đáng để thử.</p>
+</blockquote>
+<ul>
+<li>Phiên bản 8.0 Update ngày 22/12/2020: 
+<a href="https://downloads.x-wrt.com/rom/x-wrt-8.0-b202012211725-ramips-mt7621-d-team_newifi-d2-squashfs-sysupgrade.bin" title="Download XWRT" data-goatcounter-title="Download XWRT"
+ target="_blank" rel="noopener noreferrer" data-goatcounter-click="https://downloads.x-wrt.com/rom/x-wrt-8.0-b202012211725-ramips-mt7621-d-team_newifi-d2-squashfs-sysupgrade.bin" data-goatcounter-referrer="/posts/tong-hop-firmware-newifi3d2/">Link Download chính chủ X-WRT</a><span title="Mức độ phổ biến" id="a495718263" class="single__badge"></span><script async>var r = new XMLHttpRequest();
+r.addEventListener('load', function() {
+document.querySelector('#a495718263').innerText = JSON.parse(this.responseText).count_unique
+})
+r.open('GET', 'https://stats.pnghia.com/counter/' + encodeURIComponent("https://downloads.x-wrt.com/rom/x-wrt-8.0-b202012211725-ramips-mt7621-d-team_newifi-d2-squashfs-sysupgrade.bin").replace(/\/$/, '') + '.json')
+r.send()</script>
+. Nếu link die - truy cập vào trang chủ 
+<a href="https://downloads.x-wrt.com/rom/" title="Trang chủ XWRT" data-goatcounter-title="Trang chủ XWRT"
+ target="_blank" rel="noopener noreferrer" data-goatcounter-click="https://downloads.x-wrt.com/rom/" data-goatcounter-referrer="/posts/tong-hop-firmware-newifi3d2/">tại đây</a><span title="Mức độ phổ biến" id="a936854172" class="single__badge"></span><script async>var r = new XMLHttpRequest();
+r.addEventListener('load', function() {
+document.querySelector('#a936854172').innerText = JSON.parse(this.responseText).count_unique
+})
+r.open('GET', 'https://stats.pnghia.com/counter/' + encodeURIComponent("https://downloads.x-wrt.com/rom/").replace(/\/$/, '') + '.json')
+r.send()</script>
+, tìm tên Newifi D2 để Download.</li>
+<li>Địa chỉ IP mặc định: <code>192.168.15.1</code></li>
+<li>Tên WIFI mặc định: <code>X-WRT_XXXX</code>, mật khẩu: <code>88888888</code></li>
+<li>Tên đăng nhập/Password mặc định: <code>root/admin</code></li>
+</ul>
+<h2 id="iii-firmware-gocloud---update-25122020">III. Firmware GoCloud - UPDATE 25/12/2020</h2>
+<details >
+    <summary>Về cách up FW GoCloud</summary>
+    <div class="markdown-inner">
+      <ul>
+<li>Fun Fact: Mấy thánh hay cheat băng thông mạng bằng chức năng cân bằng tải của FW này nè :v</li>
+<li><strong>CÁC BẠN LƯU Ý</strong> bản FW này có 2 loại file. file có đuôi <strong>.bin</strong> và đuôi <strong>.web.bin</strong>
+<ul>
+<li>Đuôi <strong>.bin</strong> là file dùng để up qua <strong>Breed bootloader</strong>, File <strong>.web.bin</strong> là file để up thông qua giao diện web của Gocloud.</li>
+</ul>
+</li>
+<li>Về link thư mục trên <em>Google Drive</em> của bạn <code>@Nhat Triet Cao</code>:<br />
+vào 
+<a href="https://drive.google.com/drive/folders/132XcZAY14e-6QY-HafThPYpVSn2ptigQ" title="Thư mục Google Drive Gocloud" data-goatcounter-title="Thư mục Google Drive Gocloud"
+ target="_blank" rel="noopener noreferrer" data-goatcounter-click="https://drive.google.com/drive/folders/132XcZAY14e-6QY-HafThPYpVSn2ptigQ" data-goatcounter-referrer="/posts/tong-hop-firmware-newifi3d2/">link Google Drive</a><span title="Mức độ phổ biến" id="a752981364" class="single__badge"></span><script async>var r = new XMLHttpRequest();
+r.addEventListener('load', function() {
+document.querySelector('#a752981364').innerText = JSON.parse(this.responseText).count_unique
+})
+r.open('GET', 'https://stats.pnghia.com/counter/' + encodeURIComponent("https://drive.google.com/drive/folders/132XcZAY14e-6QY-HafThPYpVSn2ptigQ").replace(/\/$/, '') + '.json')
+r.send()</script>
+ sẽ thấy 2 thư mục, thư mục <strong>WEB</strong> chứa các phiên bản của <strong>Gocloud</strong> Up thông qua giao diện WEB của <strong>Gocloud</strong>, thư mục <strong>BREED + EEPROM</strong> chứa file <strong>.bin</strong>, nếu Newifi2 D2 của các bạn đang chạy FW khác không phải <strong>GoCloud</strong> thì các bạn phải dùng file <strong>GOCLOUD-Nwifi3刷机专用底包.bin</strong> trong thư mục <strong>BREED + EEPROM</strong> và up FW thông qua <strong>Breed Bootloader</strong> như hướng dẫn tại 
+<a href="/posts/newifi3-d2-firmware-upgrade/#ii-up-rom-firmware" title="Hướng dẫn up FW newifi3 d2" data-goatcounter-title="Hướng dẫn up FW newifi3 d2"
+>đây</a>
+ rồi sau đó dùng chức năng Upgrade Firmware trên giao diện quản lý của <strong>Gocloud</strong> để Up các file đuôi <strong>.web.bin</strong></li>
+</ul>
+
+    </div>
+  </details>
+
+<ul>
+<li>Update <span style="color: #f00;"><strong>25/12/2020</strong></span>
+<ul>
+<li><span style="color: #0f0;"><strong>GoCloud 5.2.0.19646 Stable</strong></span> tải về 
+<a href="https://drive.google.com/file/d/1DmBbJVtn8KlgjnoCgd0XbZstT-bg6bHg/view?usp=sharing" title="Download GoCloud 5.2.0.19646 Stable" data-goatcounter-title="Download GoCloud 5.2.0.19646 Stable"
+ target="_blank" rel="noopener noreferrer" data-goatcounter-click="https://drive.google.com/file/d/1DmBbJVtn8KlgjnoCgd0XbZstT-bg6bHg/view?usp=sharing" data-goatcounter-referrer="/posts/tong-hop-firmware-newifi3d2/">tại đây</a><span title="Mức độ phổ biến" id="a967815423" class="single__badge"></span><script async>var r = new XMLHttpRequest();
+r.addEventListener('load', function() {
+document.querySelector('#a967815423').innerText = JSON.parse(this.responseText).count_unique
+})
+r.open('GET', 'https://stats.pnghia.com/counter/' + encodeURIComponent("https://drive.google.com/file/d/1DmBbJVtn8KlgjnoCgd0XbZstT-bg6bHg/view?usp=sharing").replace(/\/$/, '') + '.json')
+r.send()</script>
+(Google Drive).<br />
+<details >
+    <summary>ChangeLog Gocloud 5.2.0</summary>
+    <div class="markdown-inner">
+      <p>GoCloud 5.2.0.19646 - Stable Release 25/12, 2020<br />
+ChangeLog:<br />
+This update merges all updates since v5.2.0.19490 November 20 .<br />
+The main updates of 5.2.0.19646 are as follows:</p>
+<ol>
+<li>DMZ supports vpn interface</li>
+<li>Updates WeChat, maintains cloud features</li>
+<li>Adds terminal type recognition function and displays it in host monitoring</li>
+<li>Updates speedtest speed measurement, bdadmin, VNC, 360 cloud disk, war Features of Thunder and PlayerUnknown&rsquo;s Battlegrounds</li>
+<li>Fix a potential problem that may cause the failure of multi-line shunting</li>
+<li>Solve the problem that the legendary private server may have no sound in a multi-line environment</li>
+<li>Fix the problem that the expert guide description text and buttons overlap</li>
+<li>Fix the mobile terminal The page length is longer than the screen width, which causes the horizontal scroll bar.</li>
+<li>Timing redial can support looping in minutes.</li>
+<li>Solve the scrolling problem of ios11 safari.</li>
+<li>Solve the problem that the wan port cannot connect to the cloud platform without DNS configuration.</li>
+</ol>
+
+    </div>
+  </details>
+</li>
+<li>Nguồn: 
+<a href="http://www.gocloud.cn/bbs/forum.php?mod=viewthread&amp;tid=20396&amp;extra=page%3D1" title="Forum GoCloud" data-goatcounter-title="Forum GoCloud"
+ target="_blank" rel="noopener noreferrer" data-goatcounter-click="http://www.gocloud.cn/bbs/forum.php?mod=viewthread&amp;tid=20396&amp;extra=page%3D1" data-goatcounter-referrer="/posts/tong-hop-firmware-newifi3d2/">Forum Gocloud</a><span title="Mức độ phổ biến" id="a258943617" class="single__badge"></span><script async>var r = new XMLHttpRequest();
+r.addEventListener('load', function() {
+document.querySelector('#a258943617').innerText = JSON.parse(this.responseText).count_unique
+})
+r.open('GET', 'https://stats.pnghia.com/counter/' + encodeURIComponent("http://www.gocloud.cn/bbs/forum.php?mod=viewthread\u0026tid=20396\u0026extra=page%3D1").replace(/\/$/, '') + '.json')
+r.send()</script>
+</li>
+</ul>
+</li>
+<li>Các Phiên bản Gocloud do bạn <code>@Nhat Triet Cao</code> tổng hợp: 
+<a href="https://drive.google.com/drive/folders/132XcZAY14e-6QY-HafThPYpVSn2ptigQ" title="Google Drive tổng hợp phiên bản GoCloud" data-goatcounter-title="Google Drive tổng hợp phiên bản GoCloud"
+ target="_blank" rel="noopener noreferrer" data-goatcounter-click="https://drive.google.com/drive/folders/132XcZAY14e-6QY-HafThPYpVSn2ptigQ" data-goatcounter-referrer="/posts/tong-hop-firmware-newifi3d2/">Link thư mục Google Drive</a><span title="Mức độ phổ biến" id="a573948126" class="single__badge"></span><script async>var r = new XMLHttpRequest();
+r.addEventListener('load', function() {
+document.querySelector('#a573948126').innerText = JSON.parse(this.responseText).count_unique
+})
+r.open('GET', 'https://stats.pnghia.com/counter/' + encodeURIComponent("https://drive.google.com/drive/folders/132XcZAY14e-6QY-HafThPYpVSn2ptigQ").replace(/\/$/, '') + '.json')
+r.send()</script>
+</li>
+<li>IP/user/pass: 192.168.1.1/admin/admin<br />
+<details >
+    <summary>Screenshot</summary>
+    <div class="markdown-inner">
+      <img data-src="https://i.imgur.com/FcBm2Kv.jpg" alt="Screenshot GoCloud FW" class="lazyload" />
+    </div>
+  </details>
+</li>
+</ul>
+<h2 id="iv-firmware-padavan">IV. Firmware PADAVAN</h2>
+<blockquote>
+<p>Có thể nói đây là bản ROM được nhiều người dùng nhất vì giao diện gọn gàng, dễ cấu hình cho newbie, sóng wifi ổn định. Có nhiều phiên bản PADAVAN do DEV Trung Quốc và NGA phát hành, tuỳ theo bản mà sẽ có những phần mềm được thêm vào như chặn quảng cáo, proxy, VPN &hellip;<br />
+Các bạn có thể thử và chọn bản nào phù hợp nhất, ổn định nhất để dùng.</p>
+</blockquote>
+<h3 id="1-phiên-bản-padavan-hiboy">1. Phiên bản PADAVAN HiBoy</h3>
+<ul>
+<li>Phiên bản Hiboy update 28/8/2020: 
+<a href="https://opt.cn2qq.com/padavan/RT-N56UB1-newif3D2-512M_3.4.3.9-099.trx" title="Download Padavan Hiboy" data-goatcounter-title="Download Padavan Hiboy"
+ target="_blank" rel="noopener noreferrer" data-goatcounter-click="https://opt.cn2qq.com/padavan/RT-N56UB1-newif3D2-512M_3.4.3.9-099.trx" data-goatcounter-referrer="/posts/tong-hop-firmware-newifi3d2/">Link cho Newifi 3 D2</a><span title="Mức độ phổ biến" id="a962435871" class="single__badge"></span><script async>var r = new XMLHttpRequest();
+r.addEventListener('load', function() {
+document.querySelector('#a962435871').innerText = JSON.parse(this.responseText).count_unique
+})
+r.open('GET', 'https://stats.pnghia.com/counter/' + encodeURIComponent("https://opt.cn2qq.com/padavan/RT-N56UB1-newif3D2-512M_3.4.3.9-099.trx").replace(/\/$/, '') + '.json')
+r.send()</script>
+</li>
+<li>
+<a href="https://opt.cn2qq.com/padavan/" title="Thư mục chung Padavan Hiboy" data-goatcounter-title="Thư mục chung Padavan Hiboy"
+ target="_blank" rel="noopener noreferrer" data-goatcounter-click="https://opt.cn2qq.com/padavan/" data-goatcounter-referrer="/posts/tong-hop-firmware-newifi3d2/">Link thư mục chung</a><span title="Mức độ phổ biến" id="a563428179" class="single__badge"></span><script async>var r = new XMLHttpRequest();
+r.addEventListener('load', function() {
+document.querySelector('#a563428179').innerText = JSON.parse(this.responseText).count_unique
+})
+r.open('GET', 'https://stats.pnghia.com/counter/' + encodeURIComponent("https://opt.cn2qq.com/padavan/").replace(/\/$/, '') + '.json')
+r.send()</script>
+: Tìm tên <code>newiwi3D2</code></li>
+</ul>
+<h3 id="2-phiên-bản-padavan-scut">2. Phiên bản PADAVAN Scut</h3>
+<ul>
+<li>Phiên bản Scut update 3/5/2020: 
+<a href="https://github.com/hanwckf/rt-n56u/releases/download/v2020-05-03/NEWIFI3.trx" title="Download Padavan Scut" data-goatcounter-title="Download Padavan Scut"
+ target="_blank" rel="noopener noreferrer" data-goatcounter-click="https://github.com/hanwckf/rt-n56u/releases/download/v2020-05-03/NEWIFI3.trx" data-goatcounter-referrer="/posts/tong-hop-firmware-newifi3d2/">Link cho Newifi 3 D2</a><span title="Mức độ phổ biến" id="a345826719" class="single__badge"></span><script async>var r = new XMLHttpRequest();
+r.addEventListener('load', function() {
+document.querySelector('#a345826719').innerText = JSON.parse(this.responseText).count_unique
+})
+r.open('GET', 'https://stats.pnghia.com/counter/' + encodeURIComponent("https://github.com/hanwckf/rt-n56u/releases/download/v2020-05-03/NEWIFI3.trx").replace(/\/$/, '') + '.json')
+r.send()</script>
+</li>
+<li>
+<a href="https://github.com/hanwckf/rt-n56u/releases" title="Thư mục chung Padavan Scut" data-goatcounter-title="Thư mục chung Padavan Scut"
+ target="_blank" rel="noopener noreferrer" data-goatcounter-click="https://github.com/hanwckf/rt-n56u/releases" data-goatcounter-referrer="/posts/tong-hop-firmware-newifi3d2/">Link thư mục chung</a><span title="Mức độ phổ biến" id="a823967415" class="single__badge"></span><script async>var r = new XMLHttpRequest();
+r.addEventListener('load', function() {
+document.querySelector('#a823967415').innerText = JSON.parse(this.responseText).count_unique
+})
+r.open('GET', 'https://stats.pnghia.com/counter/' + encodeURIComponent("https://github.com/hanwckf/rt-n56u/releases").replace(/\/$/, '') + '.json')
+r.send()</script>
+: Tìm tên <code>Neiwifi3.trx</code></li>
+</ul>
+<h3 id="3-phiên-bản-pandorabox-padavan">3. Phiên bản PANDORABOX PADAVAN</h3>
+<blockquote>
+<p>Bản này do các DEV phát triển Pandorabox phát hành, cũng có một phiên bản PANDORABOX dựa trên nền OPENWRT, mình sẽ tổng hợp ở mục dưới.</p>
+</blockquote>
+<ul>
+<li>Phiên bản update ngày 20/4/2020: 
+<a href="http://pandorabox.tuuz.cc:8000/lintel/Pandvan/Newifi3/NEWIFI3_3.4.3.9_5561_399d123_20200420.trx" title="Download Pandorabox Padavan" data-goatcounter-title="Download Pandorabox Padavan"
+ target="_blank" rel="noopener noreferrer" data-goatcounter-click="http://pandorabox.tuuz.cc:8000/lintel/Pandvan/Newifi3/NEWIFI3_3.4.3.9_5561_399d123_20200420.trx" data-goatcounter-referrer="/posts/tong-hop-firmware-newifi3d2/">Link cho Newifi3 D2</a><span title="Mức độ phổ biến" id="a948312567" class="single__badge"></span><script async>var r = new XMLHttpRequest();
+r.addEventListener('load', function() {
+document.querySelector('#a948312567').innerText = JSON.parse(this.responseText).count_unique
+})
+r.open('GET', 'https://stats.pnghia.com/counter/' + encodeURIComponent("http://pandorabox.tuuz.cc:8000/lintel/Pandvan/Newifi3/NEWIFI3_3.4.3.9_5561_399d123_20200420.trx").replace(/\/$/, '') + '.json')
+r.send()</script>
+</li>
+<li>Link thư mục tổng hợp các phiên bản, changelog&hellip;: 
+<a href="http://pandorabox.tuuz.cc:8000/lintel/Pandvan/Newifi3/" title="Thư mục chung Padavan Pandorabox" data-goatcounter-title="Thư mục chung Padavan Pandorabox"
+ target="_blank" rel="noopener noreferrer" data-goatcounter-click="http://pandorabox.tuuz.cc:8000/lintel/Pandvan/Newifi3/" data-goatcounter-referrer="/posts/tong-hop-firmware-newifi3d2/">Link gốc</a><span title="Mức độ phổ biến" id="a156237948" class="single__badge"></span><script async>var r = new XMLHttpRequest();
+r.addEventListener('load', function() {
+document.querySelector('#a156237948').innerText = JSON.parse(this.responseText).count_unique
+})
+r.open('GET', 'https://stats.pnghia.com/counter/' + encodeURIComponent("http://pandorabox.tuuz.cc:8000/lintel/Pandvan/Newifi3/").replace(/\/$/, '') + '.json')
+r.send()</script>
+</li>
+</ul>
+<h2 id="v-firmware-pandorabox">V. Firmware PANDORABOX</h2>
+<blockquote>
+<p>Firmware này được xây dựng dựa trên OPENWRT, đầy đủ các chức năng mà OPENWRT có. Phiên bản Firmware này dùng làm AP rất ổn định. Mình sử dụng Newifi ở nhà để làm AP và đang dùng bản FW này.</p>
+</blockquote>
+<ul>
+<li>Phiên bản 19.06 update ngày 07/06/2019: 
+<a href="https://drive.google.com/file/d/1MdKGZ8onhKtwbPuFfNHT0iV1kjxwai5c/view?usp=sharing" title="Download PANDORABOX" data-goatcounter-title="Download PANDORABOX"
+ target="_blank" rel="noopener noreferrer" data-goatcounter-click="https://drive.google.com/file/d/1MdKGZ8onhKtwbPuFfNHT0iV1kjxwai5c/view?usp=sharing" data-goatcounter-referrer="/posts/tong-hop-firmware-newifi3d2/">Link cho Newifi 3 D2</a><span title="Mức độ phổ biến" id="a256984137" class="single__badge"></span><script async>var r = new XMLHttpRequest();
+r.addEventListener('load', function() {
+document.querySelector('#a256984137').innerText = JSON.parse(this.responseText).count_unique
+})
+r.open('GET', 'https://stats.pnghia.com/counter/' + encodeURIComponent("https://drive.google.com/file/d/1MdKGZ8onhKtwbPuFfNHT0iV1kjxwai5c/view?usp=sharing").replace(/\/$/, '') + '.json')
+r.send()</script>
+ (Đã fix link gDrive).</li>
+</ul>
+  
+<blockquote class="book-hint warning">
+    <p>Do bản Firmware này đã lâu chưa update nên REPO mặc định trong FW cũng đã die. Các bạn phải thay thế REPO đó.</p>
+<ul>
+<li>Đăng nhập vào Router, Vào mục SYSTEM &gt; SOFTWARE &gt; Chọn tab CONFIGURATION &gt; Mục DISTRIBUTION FEEDS Xoá hết các dòng cũ đi và dán các dòng dưới đây vào</li>
+</ul>
+<pre><code>src/gz 19.06_core http://downloads.wdwaf.com/pandorabox/19.02/targets/ralink/mt7621/packages
+src/gz 19.06_base http://downloads.wdwaf.com/pandorabox/19.02/packages/mipsel_1004kc_dsp/base
+src/gz 19.06_newifi http://downloads.wdwaf.com/pandorabox/19.02/packages/mipsel_1004kc_dsp/newifi
+src/gz 19.06_pear http://downloads.wdwaf.com/pandorabox/19.02/packages/mipsel_1004kc_dsp/pear
+src/gz 19.06_packages http://downloads.wdwaf.com/pandorabox/19.02/packages/mipsel_1004kc_dsp/packages
+src/gz 19.06_luci http://downloads.wdwaf.com/pandorabox/19.02/packages/mipsel_1004kc_dsp/luci
+src/gz 19.06_lafite http://downloads.wdwaf.com/pandorabox/19.02/packages/mipsel_1004kc_dsp/lafite
+</code></pre><p>Nhấn nút SUBMIT.</p>
+
+  </blockquote>
+
+<h2 id="vi-firmware-gargoyle">VI. Firmware Gargoyle</h2>
+<blockquote>
+<p>Gargoyle là bản phân phối Linux miễn phí dựa trên OpenWrt cho một loạt các bộ định tuyến không dây dựa trên chipset Broadcom hoặc Atheros, Bộ định tuyến Asus, Netgear, Linksys và TP-Link. Các tính năng đáng chú ý trong FW này là khả năng giới hạn và giám sát băng thông, đặt giới hạn băng thông cho từng địa chỉ IP cụ thể. Ngoài ra còn có các tính năng hữu ích như chia sẻ lưu trữ tệp mạng(SMB, CIFS), VPN Server/VPN Client, Tor Server/Tor Client, chặn quảng cáo, lập lịch bật/tắt Wi-Fi, giám sát băng thông, hạn ngạch, giới hạn và điều chỉnh băng thông, chất lượng dịch vụ (QoS) với kiểm soát tắc nghẽn chủ động, đưa trang web vào danh sách đen theo tên máy chủ hoặc địa chỉ IP&hellip;</p>
+</blockquote>
+<ul>
+<li>Phiên bản mới nhất 1.13.x cập nhật 20/8/2020: 
+<a href="https://drive.google.com/file/d/1I5WYJAcbIeCoVuum5jzDlqkRwCk4kPdZ/view?usp=sharing" title="Download Gargoyle" data-goatcounter-title="Download Gargoyle"
+ target="_blank" rel="noopener noreferrer" data-goatcounter-click="https://drive.google.com/file/d/1I5WYJAcbIeCoVuum5jzDlqkRwCk4kPdZ/view?usp=sharing" data-goatcounter-referrer="/posts/tong-hop-firmware-newifi3d2/">Link Google Drive</a><span title="Mức độ phổ biến" id="a128493576" class="single__badge"></span><script async>var r = new XMLHttpRequest();
+r.addEventListener('load', function() {
+document.querySelector('#a128493576').innerText = JSON.parse(this.responseText).count_unique
+})
+r.open('GET', 'https://stats.pnghia.com/counter/' + encodeURIComponent("https://drive.google.com/file/d/1I5WYJAcbIeCoVuum5jzDlqkRwCk4kPdZ/view?usp=sharing").replace(/\/$/, '') + '.json')
+r.send()</script>
+</li>
+<li>Xem ảnh chụp màn hình của FW tại 
+<a href="https://www.gargoyle-router.com/wiki/doku.php?id=screenshots" title="Screenshot Gargoyle" data-goatcounter-title="Screenshot Gargoyle"
+ target="_blank" rel="noopener noreferrer" data-goatcounter-click="https://www.gargoyle-router.com/wiki/doku.php?id=screenshots" data-goatcounter-referrer="/posts/tong-hop-firmware-newifi3d2/">Đây</a><span title="Mức độ phổ biến" id="a721653894" class="single__badge"></span><script async>var r = new XMLHttpRequest();
+r.addEventListener('load', function() {
+document.querySelector('#a721653894').innerText = JSON.parse(this.responseText).count_unique
+})
+r.open('GET', 'https://stats.pnghia.com/counter/' + encodeURIComponent("https://www.gargoyle-router.com/wiki/doku.php?id=screenshots").replace(/\/$/, '') + '.json')
+r.send()</script>
+.</li>
+</ul>
+<h2 id="vii-firmware-wive-ng-mt">VII. Firmware Wive-NG-MT</h2>
+<blockquote>
+<p>Wive-NG là một hệ điều hành nhúng mã nguồn mở thương mại dành cho các bộ định tuyến được tạo bởi Evgeny Manachkin (sfstudio). Nhánh cho MT7620/7621 được gọi là Wive-NG-MT và quá trình phát triển của nó đã được thực hiện tích cực cho đến năm 2019. So với dự án cha đẻ của nó là XRMWRT (Padavan) bị bỏ quên từ lâu, Wive-NG cung cấp Source code chất lượng cao, các lỗ hổng bảo mật đã được fix trong vài năm qua và thêm vào các Driver mới hơn, so với nhánh chính của OpenWRT - Driver Mediatek HW_NAT cũng được tích hợp sẵn. Phần mềm cơ sở và giao diện người dùng được tập trung vào sự ổn định và dễ sử dụng.<br />
+Chú ý! Vì sản phẩm là thương mại, tác giả nghiêm cấm phân phối tệp nhị phân và xây dựng các công cụ tự động hóa cho các thiết bị không được hỗ trợ. Việc sử dụng FW lắp ráp là nguy cơ và rủi ro của riêng bạn.</p>
+</blockquote>
+<ul>
+<li>Phiên bản được Build vào 13/6/2020: 
+<a href="https://drive.google.com/file/d/1f9Ee-zlQbqAbgSK1ZGulTO3vp5G0bBvN/view?usp=sharing" title="Download Wive-NG-MT" data-goatcounter-title="Download Wive-NG-MT"
+ target="_blank" rel="noopener noreferrer" data-goatcounter-click="https://drive.google.com/file/d/1f9Ee-zlQbqAbgSK1ZGulTO3vp5G0bBvN/view?usp=sharing" data-goatcounter-referrer="/posts/tong-hop-firmware-newifi3d2/">Link Google Drive</a><span title="Mức độ phổ biến" id="a567319482" class="single__badge"></span><script async>var r = new XMLHttpRequest();
+r.addEventListener('load', function() {
+document.querySelector('#a567319482').innerText = JSON.parse(this.responseText).count_unique
+})
+r.open('GET', 'https://stats.pnghia.com/counter/' + encodeURIComponent("https://drive.google.com/file/d/1f9Ee-zlQbqAbgSK1ZGulTO3vp5G0bBvN/view?usp=sharing").replace(/\/$/, '') + '.json')
+r.send()</script>
+ (Update 19/12/2020: fix die link)</li>
+</ul>
+<pre><code>- SSIDs: Wive-NG-MT and Wive-NG-MT-5GHZ
+- WIFI password: 1234567890
+- LAN address: 192.168.123.1
+- web/ssh login: admin
+- web/ssh password: admin
+</code></pre><ul>
+<li>Xem Review về Firmware: 
+<a href="https://www.youtube.com/watch?v=pi1_lfdRjbI" title="Youtube Review Wive-NG-MT" data-goatcounter-title="Youtube Review Wive-NG-MT"
+ target="_blank" rel="noopener noreferrer" data-goatcounter-click="https://www.youtube.com/watch?v=pi1_lfdRjbI" data-goatcounter-referrer="/posts/tong-hop-firmware-newifi3d2/">Youtube</a><span title="Mức độ phổ biến" id="a654913728" class="single__badge"></span><script async>var r = new XMLHttpRequest();
+r.addEventListener('load', function() {
+document.querySelector('#a654913728').innerText = JSON.parse(this.responseText).count_unique
+})
+r.open('GET', 'https://stats.pnghia.com/counter/' + encodeURIComponent("https://www.youtube.com/watch?v=pi1_lfdRjbI").replace(/\/$/, '') + '.json')
+r.send()</script>
+</li>
+</ul>
+<h2 id="viii-firmware-rooter-goldenorb">VIII. Firmware ROOter (GoldenOrb)</h2>
+<blockquote>
+<p>Project site 
+<a href="https://www.ofmodemsandmen.com/index.html" title="Project site GoldenORB" data-goatcounter-title="Project site GoldenORB"
+ target="_blank" rel="noopener noreferrer" data-goatcounter-click="https://www.ofmodemsandmen.com/index.html" data-goatcounter-referrer="/posts/tong-hop-firmware-newifi3d2/">ofmodemsandmen</a><span title="Mức độ phổ biến" id="a162748953" class="single__badge"></span><script async>var r = new XMLHttpRequest();
+r.addEventListener('load', function() {
+document.querySelector('#a162748953').innerText = JSON.parse(this.responseText).count_unique
+})
+r.open('GET', 'https://stats.pnghia.com/counter/' + encodeURIComponent("https://www.ofmodemsandmen.com/index.html").replace(/\/$/, '') + '.json')
+r.send()</script>
+. FW này tập trung vào việc hỗ trợ các modem USB (USB 3G, 4G&hellip;), dựa trên OpenWRT + nhiều chức năng bổ sung. Tác giả đã Build FW này dựa trên OpenWRT 19.07.2, File tải về chứa Firmware và danh sách các mô-đun, thành phần có trong FW.</p>
+</blockquote>
+<ul>
+<li>Tải File zip về, giải nén ra: 
+<a href="https://drive.google.com/file/d/1AK3JDN80vABzNExYA1bd-TM5Fu80Ezof/view?usp=sharing" title="Download ROOter" data-goatcounter-title="Download ROOter"
+ target="_blank" rel="noopener noreferrer" data-goatcounter-click="https://drive.google.com/file/d/1AK3JDN80vABzNExYA1bd-TM5Fu80Ezof/view?usp=sharing" data-goatcounter-referrer="/posts/tong-hop-firmware-newifi3d2/">Link Google Drive</a><span title="Mức độ phổ biến" id="a269135478" class="single__badge"></span><script async>var r = new XMLHttpRequest();
+r.addEventListener('load', function() {
+document.querySelector('#a269135478').innerText = JSON.parse(this.responseText).count_unique
+})
+r.open('GET', 'https://stats.pnghia.com/counter/' + encodeURIComponent("https://drive.google.com/file/d/1AK3JDN80vABzNExYA1bd-TM5Fu80Ezof/view?usp=sharing").replace(/\/$/, '') + '.json')
+r.send()</script>
+</li>
+</ul>
+<pre><code>- IP: 192.168.1.1
+- Login: root. nhấn enter để đăng nhập luôn vì mặc định là không có mật khẩu.
+- Bạn phải đổi mật khẩu sau khi đăng nhập.
+- Tên WIFI Mặc định: Rooter (cả 2.4 và 5Ghz).
+- Mật khẩu WIFI mặc định: rooter2017
+</code></pre><h2 id="ix-firmware-dd-wrt">IX. Firmware DD-WRT</h2>
+<blockquote>
+<p>Giao diện người dùng được cấu trúc hợp lý và được vận hành thông qua trình duyệt web tiêu chuẩn, ngay cả những người không phải là kỹ thuật viên cũng có thể cấu hình hệ thống chỉ trong một vài bước đơn giản.<br />
+Ngoài việc xử lý đơn giản, tốc độ và sự ổn định cũng là trọng tâm trong công việc phát triển của DD-WRT. So với phần mềm được cài đặt sẵn trên nhiều bộ định tuyến WLAN, DD-WRT cho phép hoạt động đáng tin cậy với chức năng lớn hơn rõ ràng cũng đáp ứng nhu cầu triển khai chuyên nghiệp.</p>
+</blockquote>
+<ul>
+<li>Link Download: 
+<a href="https://drive.google.com/file/d/1hU_k13cMhm3d0hyXifX1ZHtMoQF1c38j/view?usp=sharing" title="Download DD-WRT" data-goatcounter-title="Download DD-WRT"
+ target="_blank" rel="noopener noreferrer" data-goatcounter-click="https://drive.google.com/file/d/1hU_k13cMhm3d0hyXifX1ZHtMoQF1c38j/view?usp=sharing" data-goatcounter-referrer="/posts/tong-hop-firmware-newifi3d2/">Google Drive</a><span title="Mức độ phổ biến" id="a398675421" class="single__badge"></span><script async>var r = new XMLHttpRequest();
+r.addEventListener('load', function() {
+document.querySelector('#a398675421').innerText = JSON.parse(this.responseText).count_unique
+})
+r.open('GET', 'https://stats.pnghia.com/counter/' + encodeURIComponent("https://drive.google.com/file/d/1hU_k13cMhm3d0hyXifX1ZHtMoQF1c38j/view?usp=sharing").replace(/\/$/, '') + '.json')
+r.send()</script>
+</li>
+<li>Trang chủ: 
+<a href="https://dd-wrt.com" title="Trang chủ DD-WRT" data-goatcounter-title="Trang chủ DD-WRT"
+ target="_blank" rel="noopener noreferrer" data-goatcounter-click="https://dd-wrt.com" data-goatcounter-referrer="/posts/tong-hop-firmware-newifi3d2/">https://dd-wrt.com</a><span title="Mức độ phổ biến" id="a543769281" class="single__badge"></span><script async>var r = new XMLHttpRequest();
+r.addEventListener('load', function() {
+document.querySelector('#a543769281').innerText = JSON.parse(this.responseText).count_unique
+})
+r.open('GET', 'https://stats.pnghia.com/counter/' + encodeURIComponent("https://dd-wrt.com").replace(/\/$/, '') + '.json')
+r.send()</script>
+</li>
+<li>IP/Username/Passowrd: <code>192.168.1.1/root/password</code> (Tuỳ loại router mà DDWRT có các mật khẩu mặc định khác nhau. Bản này mình test cũng lâu rồi nên không nhớ rõ lắm, nếu mật khẩu mặc định ở trên không được thì các bạn có thể thử <em>root/admin</em> , <em>root/password</em>, <em>admin/password</em>, <em>admin/admin</em>, <em>root,admin/không mật khẩu</em>)</li>
+</ul>
+<h2 id="x-firmware-comfast-cf-n3">X. Firmware Comfast CF-N3</h2>
+<ul>
+<li>Link Download <strong>v3.0.0.9</strong>: 
+<a href="https://drive.google.com/file/d/1jK73wfXYKzSwCMVw9bqR8iwz053Xl2oi/view?usp=sharing" title="Download Comfast CF-N3" data-goatcounter-title="Download Comfast CF-N3"
+ target="_blank" rel="noopener noreferrer" data-goatcounter-click="https://drive.google.com/file/d/1jK73wfXYKzSwCMVw9bqR8iwz053Xl2oi/view?usp=sharing" data-goatcounter-referrer="/posts/tong-hop-firmware-newifi3d2/">Google Drive</a><span title="Mức độ phổ biến" id="a317469258" class="single__badge"></span><script async>var r = new XMLHttpRequest();
+r.addEventListener('load', function() {
+document.querySelector('#a317469258').innerText = JSON.parse(this.responseText).count_unique
+})
+r.open('GET', 'https://stats.pnghia.com/counter/' + encodeURIComponent("https://drive.google.com/file/d/1jK73wfXYKzSwCMVw9bqR8iwz053Xl2oi/view?usp=sharing").replace(/\/$/, '') + '.json')
+r.send()</script>
+</li>
+<li>IP/user/pass: 192.168.0.1/root/admin</li>
+</ul>
+<details >
+    <summary>Screenshot</summary>
+    <div class="markdown-inner">
+      <img data-src="https://pnghia.com/images/newifi-d2/Untitled_hub8e3aaba41c0c40f1d7f6f314a7aa5d7_44919_filter_1334269291160664337.png" alt="1" class="lazyload blur-up" />
+
+
+<br />
+
+
+<img data-src="https://pnghia.com/images/newifi-d2/Untitled2_hu1e0ed2363874caab58d3933d65dca9b8_66817_filter_1334269291160664337.png" alt="2" class="lazyload blur-up" />
+
+
+<br />
+
+
+<img data-src="https://pnghia.com/images/newifi-d2/Untitled3_huf16dd94c76ed7d0b20813801366ec146_153612_filter_1334269291160664337.png" alt="3" class="lazyload blur-up" />
+
+
+<br />
+
+
+<img data-src="https://pnghia.com/images/newifi-d2/Untitled4_hu4a93725e012da21bf0aaa16aee729b1a_225825_filter_1334269291160664337.png" alt="4" class="lazyload blur-up" />
+    </div>
+  </details>
+
+<h2 id="xi-firmware-asus-wrt-merlin">XI. Firmware ASUS-WRT (Merlin)</h2>
+<ul>
+<li>Phiên bản đã Disable USB để giảm nhiễu WIFI: 
+<a href="https://drive.google.com/file/d/1BQWdu6a4un-EKqMmXvnB2bhhZWAGhvVR/view?usp=sharing" title="Download ASUS-WRT no USB" data-goatcounter-title="Download ASUS-WRT no USB"
+ target="_blank" rel="noopener noreferrer" data-goatcounter-click="https://drive.google.com/file/d/1BQWdu6a4un-EKqMmXvnB2bhhZWAGhvVR/view?usp=sharing" data-goatcounter-referrer="/posts/tong-hop-firmware-newifi3d2/">Link Google Drive</a><span title="Mức độ phổ biến" id="a497831625" class="single__badge"></span><script async>var r = new XMLHttpRequest();
+r.addEventListener('load', function() {
+document.querySelector('#a497831625').innerText = JSON.parse(this.responseText).count_unique
+})
+r.open('GET', 'https://stats.pnghia.com/counter/' + encodeURIComponent("https://drive.google.com/file/d/1BQWdu6a4un-EKqMmXvnB2bhhZWAGhvVR/view?usp=sharing").replace(/\/$/, '') + '.json')
+r.send()</script>
+</li>
+<li>Phiên bản có USB: 
+<a href="https://drive.google.com/file/d/1ho8HdVcRyzosy4y6r4vwzGJ1eyxQum4K/view?usp=sharing" title="Download ASUS-WRT" data-goatcounter-title="Download ASUS-WRT"
+ target="_blank" rel="noopener noreferrer" data-goatcounter-click="https://drive.google.com/file/d/1ho8HdVcRyzosy4y6r4vwzGJ1eyxQum4K/view?usp=sharing" data-goatcounter-referrer="/posts/tong-hop-firmware-newifi3d2/">Link Google Drive</a><span title="Mức độ phổ biến" id="a684953721" class="single__badge"></span><script async>var r = new XMLHttpRequest();
+r.addEventListener('load', function() {
+document.querySelector('#a684953721').innerText = JSON.parse(this.responseText).count_unique
+})
+r.open('GET', 'https://stats.pnghia.com/counter/' + encodeURIComponent("https://drive.google.com/file/d/1ho8HdVcRyzosy4y6r4vwzGJ1eyxQum4K/view?usp=sharing").replace(/\/$/, '') + '.json')
+r.send()</script>
+.</li>
+<li>Xem thêm ảnh chụp màn hình 
+<a href="https://www.asuswrt-merlin.net/screenshots" title="Merlin screenshot" data-goatcounter-title="Merlin screenshot"
+ target="_blank" rel="noopener noreferrer" data-goatcounter-click="https://www.asuswrt-merlin.net/screenshots" data-goatcounter-referrer="/posts/tong-hop-firmware-newifi3d2/">ở đây</a><span title="Mức độ phổ biến" id="a982461537" class="single__badge"></span><script async>var r = new XMLHttpRequest();
+r.addEventListener('load', function() {
+document.querySelector('#a982461537').innerText = JSON.parse(this.responseText).count_unique
+})
+r.open('GET', 'https://stats.pnghia.com/counter/' + encodeURIComponent("https://www.asuswrt-merlin.net/screenshots").replace(/\/$/, '') + '.json')
+r.send()</script>
+</li>
+</ul>
+<h2 id="xii-openwrt-by-lean-lede">XII. OpenWRT by Lean (LEDE)</h2>
+<blockquote>
+<p>Bản FW được dev Trung Quốc phát triển dựa trên OpenWRT, được xây dựng từ đầu để trở thành một hệ điều hành đầy đủ tính năng, có thể sửa đổi dễ dàng cho các thiết bị router. Trong thực tế, điều này có nghĩa là bạn có thể có tất cả các tính năng bạn cần mà không có gì cản trở, được hỗ trợ Linux kernel hiện đại (5.x).<br />
+FW được thêm vào các Driver mới và hỗ trợ được nhiều model hơn. Ngoài ra, FW cũng được phát triển và fix lỗi liên tục. FW được tác giả cam kết là không chứa Backdoors hoặc bất kì phần mềm closed-source nào có thể theo dõi và hijack HTTPS. SSL là cửa ngõ cuối cùng của nhà bạn tới internet, <em>an toàn</em> và <em>sạch</em> là những gì mà FW hướng tới.</p>
+<p>Tham khảo thêm tiến trình phát triển và <em>Changelog</em> tại 
+<a href="https://github.com/coolsnowwolf/lede/commits/master" title="Github LEDE" data-goatcounter-title="Github LEDE"
+ target="_blank" rel="noopener noreferrer" data-goatcounter-click="https://github.com/coolsnowwolf/lede/commits/master" data-goatcounter-referrer="/posts/tong-hop-firmware-newifi3d2/">Github</a><span title="Mức độ phổ biến" id="a358129674" class="single__badge"></span><script async>var r = new XMLHttpRequest();
+r.addEventListener('load', function() {
+document.querySelector('#a358129674').innerText = JSON.parse(this.responseText).count_unique
+})
+r.open('GET', 'https://stats.pnghia.com/counter/' + encodeURIComponent("https://github.com/coolsnowwolf/lede/commits/master").replace(/\/$/, '') + '.json')
+r.send()</script>
+</p>
+</blockquote>
+<ul>
+<li>Bản FW dành cho <em>Newifi3 D2</em> do <em>@kizimarua</em> build được update hàng tháng dựa trên mã nguồn của LEAN OpenWRT.<br />
+Mình đã có bài viết chi tiết về ROM này 
+<a href="/posts/openwrt-newifi3-d2/" title="Bài viết về LEDE Newifi3 D2" data-goatcounter-title="Bài viết về LEDE Newifi3 D2"
+>TẠI ĐÂY</a>
+.</li>
+</ul>
+<h2 id="xiii-firmware-tomato-phoenix">XIII. Firmware Tomato (Phoenix)</h2>
+  
+<blockquote class="book-hint warning">
+    Firmware này mình chưa test. Nếu được, bạn có thể UP thử và chia sẻ screenshot cũng như trải nghiệm về FW này cho mọi người cùng biết. Mọi vấn đề và screenshot xin gửi link ở comment bên dưới hoặc gửi cho mình qua Facebook, telegram. Mình sẽ Update lên đây.<br />
+Ngôn ngữ mặc định có thể là tiếng Trung (có hỗ trợ ngôn ngữ tiếng Anh trong settings)
+  </blockquote>
+
+<blockquote>
+<p>Tomato Phoenix là một Firmware (Hệ điều hành) miễn phí của bên thứ 3 dành cho router. Nó hỗ trợ đầy đủ các loại chip của Mediatek, thể chạy trên MT7620AN, MT7621AN, MT7628AN, MT7688KN&hellip; Hệ thống này kế thừa sự ổn định tuyệt vời của Tomato, đồng thời đột phá nâng cao khả năng đa nền tảng của Tomato, đây là một cột mốc quan trọng trong toàn bộ lịch sử phát triển của Tomato.<br />
+Tomato Phoenix hướng đến người dùng không thích quăng quật nhưng cần xử lý nhiều môi trường mạng phức tạp khác nhau. Tomato Phoneix rất thích hợp để sử dụng trong gia đình. Các doanh nghiệp vừa và nhỏ, nhà thông minh,&hellip; có yêu cầu cao về tính ổn định và hiệu suất. Tomato Phoenix cũng hỗ trợ chức năng DTU, có thể thu thập và kiểm soát thông tin của thiết bị đầu cuối GPS, mô-đun ZigBee và serial port module.</p>
+</blockquote>
+<details >
+    <summary>Các chức năng chính</summary>
+    <div class="markdown-inner">
+      <p>Được trích dẫn và dịch lại ở trang chủ chính thức của FW 
+<a href="http://www.tomato.org.cn/index.html" title="Trang chủ tomato.org.cn" data-goatcounter-title="Trang chủ tomato.org.cn"
+ target="_blank" rel="noopener noreferrer" data-goatcounter-click="http://www.tomato.org.cn/index.html" data-goatcounter-referrer="/posts/tong-hop-firmware-newifi3d2/">http://www.tomato.org.cn</a><span title="Mức độ phổ biến" id="a349871652" class="single__badge"></span><script async>var r = new XMLHttpRequest();
+r.addEventListener('load', function() {
+document.querySelector('#a349871652').innerText = JSON.parse(this.responseText).count_unique
+})
+r.open('GET', 'https://stats.pnghia.com/counter/' + encodeURIComponent("http://www.tomato.org.cn/index.html").replace(/\/$/, '') + '.json')
+r.send()</script>
+</p>
+<ul>
+<li>Hoàn toàn miễn phí để sử dụng, nó được sinh ra từ cảm xúc và kết thúc bằng sự hài lòng của người dùng (một tác phẩm tốt trước hết phải làm hài lòng nhà phát triển và sau đó làm hài lòng người dùng)</li>
+<li>Qos thông minh, làm cho kết quả công nghệ của tôi biến thành năng suất của bạn, cho phép bạn dễ dàng đối phó với áp lực của nhiều thiết bị đầu cuối trên mạng</li>
+<li>Chức năng quản lý từ xa tiện lợi, không có IP công cộng và ánh xạ cổng phức tạp, cho phép bạn quản lý bộ định tuyến của mình bất cứ lúc nào</li>
+<li>Giao diện tương tác đơn giản và dễ sử dụng, bạn có thể dễ dàng cấu hình và quản lý bộ định tuyến mà không cần biết quá nhiều thuật ngữ kỹ thuật</li>
+<li>Độ ổn định cao, độ tin cậy cao, độ ổn định như đá cho phép bạn giải phóng bản thân và thoát khỏi lo lắng<br />
+Hiệu suất siêu chuyển tiếp cho phép bạn tiêu hao từng giọt băng thông rộng và không còn lo lắng về độ trễ cao</li>
+<li>Tự động xác định dung lượng bộ nhớ và tự động tối ưu hóa các thông số hạt nhân theo sự khác biệt về dung lượng bộ nhớ</li>
+<li>Hỗ trợ hoàn hảo cho 2.4G và 5G, cho phép phần cứng của bạn thực hiện đầy đủ các chức năng của nó</li>
+<li>Hỗ trợ đa ngôn ngữ, hỗ trợ tiếng Trung giản thể, tiếng Trung phồn thể, tiếng Anh và các ngôn ngữ khác</li>
+</ul>
+
+    </div>
+  </details>
+
+<p>Xem thêm screenshot của Tomato FW 
+<a href="https://tomato.groov.pl/?page_id=31" title="Tomato Screenshot" data-goatcounter-title="Tomato Screenshot"
+ target="_blank" rel="noopener noreferrer" data-goatcounter-click="https://tomato.groov.pl/?page_id=31" data-goatcounter-referrer="/posts/tong-hop-firmware-newifi3d2/">tại đây</a><span title="Mức độ phổ biến" id="a318574269" class="single__badge"></span><script async>var r = new XMLHttpRequest();
+r.addEventListener('load', function() {
+document.querySelector('#a318574269').innerText = JSON.parse(this.responseText).count_unique
+})
+r.open('GET', 'https://stats.pnghia.com/counter/' + encodeURIComponent("https://tomato.groov.pl/?page_id=31").replace(/\/$/, '') + '.json')
+r.send()</script>
+</p>
+<ul>
+<li>
+<p style="color:#ff5722;">Vì FW chưa được test, khi download và up FW này đồng nghĩa với bạn chấp nhận rủi ro và đó là nguy cơ của riêng bạn.</p>
+</li>
+<li>Download FW 
+<a href="https://drive.google.com/file/d/1b9Z_J_Gq0e1Nm9pc3w_seLrOdjqVJfA_/view?usp=sharing" title="Download Tomato Phoenix" data-goatcounter-title="Download Tomato Phoenix"
+ target="_blank" rel="noopener noreferrer" data-goatcounter-click="https://drive.google.com/file/d/1b9Z_J_Gq0e1Nm9pc3w_seLrOdjqVJfA_/view?usp=sharing" data-goatcounter-referrer="/posts/tong-hop-firmware-newifi3d2/">tại đây</a><span title="Mức độ phổ biến" id="a345918627" class="single__badge"></span><script async>var r = new XMLHttpRequest();
+r.addEventListener('load', function() {
+document.querySelector('#a345918627').innerText = JSON.parse(this.responseText).count_unique
+})
+r.open('GET', 'https://stats.pnghia.com/counter/' + encodeURIComponent("https://drive.google.com/file/d/1b9Z_J_Gq0e1Nm9pc3w_seLrOdjqVJfA_/view?usp=sharing").replace(/\/$/, '') + '.json')
+r.send()</script>
+</li>
+</ul>
+<pre><code>- IP mặc định: 192.168.1.1
+- Password mặc định: tomato.org.cn
+- WIFI mặc định: Phoenix
+- Password wifi mặc định: 1234567890
+</code></pre><center>--%--</center><br>
+  
+<blockquote class="book-hint info">
+    <ul>
+<li>Do các firmware mình chỉ test sơ qua nên phần IP/user/password có thể sẽ sai sót, nếu không đăng nhập được các bạn có thể tham khảo thêm trên Google hoặc ib cho mình.</li>
+<li>Sẽ Update thêm nếu có firmware mới.</li>
+<li>Newifi 3 D2 có rất nhiều FW để lựa chọn, tuỳ theo model mà phù hợp với các FW khác nhau, các bạn cứ Flash thoải mái đến cái nào ổn thì dùng nhé :)))).</li>
+<li>Chúc các bạn lựa chọn được Firmware phù hợp</li>
+</ul>
+
+  </blockquote>
+
+<details >
+    <summary>Hướng dẫn Cấu hình OpenWRT</summary>
+    <div class="markdown-inner">
+      <ul>
+<li>
+<a href="/serial/openwrt/huong-dan-cau-hinh-openwrt-quay-pppoe/">Hướng dẫn cấu hình OpenWRT quay PPPoE</a>
+</li>
+<li>
+<a href="/serial/openwrt/huong-dan-cau-hinh-openwrt-quay-pppoe-with-vlan/">Hướng dẫn cấu hình OpenWRT quay PPPoE có VLAN ID.</a>
+</li>
+<li>
+<a href="/serial/openwrt/cau-hinh-openwrt-lam-ap-mode/">Hướng dẫn cấu hình OpenWRT làm Access Point (AP) và cách thêm VLAN cho GUEST AP</a>
+</li>
+</ul>
+
+    </div>
+  </details>
+
+
+		</div>
+		<footer class="post__footer">
+			
+<div class="post__tags tags clearfix">
+	<svg class="tags__badge icon icon-tag" width="16" height="16" viewBox="0 0 32 32"><path d="M32 19c0 1-1 2-1 2L21 31s-1 1-2 1-2-1-2-1L2 16c-1-1-1.4-2-1.4-2S0 12.5 0 11V3C0 1.5.8.8.8.8S1.5 0 3 0h8c1.5 0 3 .6 3 .6S15 1 16 2l15 15s1 1 1 2zM7 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></svg>
+	<ul class="tags__list">
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/newifi3-d2/" rel="tag">Newifi3 D2</a>
+		</li>
+	</ul>
+</div>
+		</footer>
+	</article>
+	
+<div class="donation">
+  <div style="text-align: center;" class="donation__message">
+    Nếu bài viết giúp ích cho bạn<br />
+    Ủng hộ mình cốc cafe nhé...
+  </div>
+  <div class="donation__icons">
+    
+      
+    
+      
+        
+          <div class="donation__item donation__dropup" title="momo" aria-label="momo" data-type="donation">
+            <svg style="background:#a50064" width="40" height="40" viewBox="0 0 96 87" fill="#fff" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M75.5326 0C64.2284 0 55.0651 8.74843 55.0651 19.5409C55.0651 30.3333 64.2284 39.0818 75.5326 39.0818C86.8368 39.0818 96 30.3333 96 19.5409C96 8.74843 86.8368 0 75.5326 0ZM75.5326 27.8805C70.7368 27.8805 66.8403 24.1604 66.8403 19.5818C66.8403 15.0031 70.7368 11.283 75.5326 11.283C80.3283 11.283 84.2248 15.0031 84.2248 19.5818C84.2248 24.1604 80.3283 27.8805 75.5326 27.8805ZM49.1561 14.6761V39.1226H37.3809V14.5535C37.3809 12.7138 35.8394 11.2421 33.9126 11.2421C31.9857 11.2421 30.4442 12.7138 30.4442 14.5535V39.1226H18.669V14.5535C18.669 12.7138 17.1276 11.2421 15.2007 11.2421C13.2739 11.2421 11.7324 12.7138 11.7324 14.5535V39.1226H0V14.6761C0 6.58176 6.89385 0 15.372 0C18.8403 0 22.0089 1.10377 24.5781 2.9434C27.1472 1.10377 30.3586 0 33.7841 0C42.2623 0 49.1561 6.58176 49.1561 14.6761ZM75.5326 47.544C64.2284 47.544 55.0651 56.2925 55.0651 67.0849C55.0651 77.8774 64.2284 86.6258 75.5326 86.6258C86.8368 86.6258 96 77.8774 96 67.0849C96 56.2925 86.8368 47.544 75.5326 47.544ZM75.5326 75.4245C70.7368 75.4245 66.8403 71.7044 66.8403 67.1258C66.8403 62.5472 70.7368 58.827 75.5326 58.827C80.3283 58.827 84.2248 62.5472 84.2248 67.1258C84.2248 71.7044 80.3283 75.4245 75.5326 75.4245ZM49.1561 62.2201V86.6667H37.3809V62.0975C37.3809 60.2579 35.8394 58.7862 33.9126 58.7862C31.9857 58.7862 30.4442 60.2579 30.4442 62.0975V86.6667H18.669V62.0975C18.669 60.2579 17.1276 58.7862 15.2007 58.7862C13.2739 58.7862 11.7324 60.2579 11.7324 62.0975V86.6667H0V62.2201C0 54.1258 6.89385 47.544 15.372 47.544C18.8403 47.544 22.0089 48.6478 24.5781 50.4874C27.1472 48.6478 30.3158 47.544 33.7841 47.544C42.2623 47.544 49.1561 54.1258 49.1561 62.2201Z" fill=""></path>
+                </svg>
+
+            <div class="donation__dropup--content">
+              <img data-src="/images/donation/momo.png" alt="momo QR Code" src="data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath fill='none' d='M0 0h24v24H0V0z'/%3E%3Cpath fill='%23aaa' d='M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 16H6c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v12c0 .55-.45 1-1 1zm-4.44-6.19l-2.35 3.02-1.56-1.88c-.2-.25-.58-.24-.78.01l-1.74 2.23c-.26.33-.02.81.39.81h8.98c.41 0 .65-.47.4-.8l-2.55-3.39c-.19-.26-.59-.26-.79 0z'/%3E%3C/svg%3E" class="lazyload"/>
+            </div>
+          </div>        
+        
+      
+    
+      
+    
+      
+    
+      
+        
+          <div class="donation__item donation__dropup" title="viettelpay" aria-label="viettelpay" data-type="donation">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="none" viewBox="0 0 200 200"><g clip-path="url(#clip0)"><path fill="url(#paint0_linear)" fill-rule="evenodd" d="M106.784 189.477L4.82 87.204c-9.6-9.678-4.026-26.091 9.368-27.95l166.997-23.458c13.239-1.858 23.072 12 16.956 23.846L133.107 185.45a16.493 16.493 0 01-26.323 4.026z" clip-rule="evenodd"></path><path fill="url(#paint1_linear)" d="M60.331 169.115c2.09 20.44 26.633 29.73 41.73 15.794h.077L57.311 139.85l3.02 29.265z"></path><path fill="url(#paint2_linear)" d="M76.822 9.395c-14.633-8.284-32.517 3.407-30.814 20.13l2.555 24.852 86.402-12.078L76.822 9.395z"></path><path fill="url(#paint3_linear)" d="M185.211 108.03a24.93 24.93 0 004.181-31.51l-27.33 52.878 23.149-21.368z"></path><path fill="url(#paint4_linear)" d="M170.037 113.914l19.355-37.395a24.157 24.157 0 00-8.903-8.516l-45.524-25.704-86.402 12.078 8.749 85.473 44.826 44.982 59.924-55.434 7.975-15.484"></path><g fill="#6E0018" opacity="0.36"><path d="M84.95 80.545h-1.625a1.161 1.161 0 00-1.161 1.161v12.078a1.161 1.161 0 001.16 1.161h1.627a1.161 1.161 0 001.161-1.161V81.706a1.161 1.161 0 00-1.161-1.161M79.144 80.545a2.478 2.478 0 00-2.323 1.471l-4.335 9.213c-.155.233-.31.542-.465.542-.154 0-.387-.31-.541-.542l-4.336-9.213a2.478 2.478 0 00-2.323-1.47h-2.477l6.89 13.316c.62 1.316 2.013 1.238 2.787 1.238.775 0 2.09-.077 2.71-1.238l6.89-13.317h-2.477zM155.017 78.3a1.165 1.165 0 00-1.161-1.161h-1.626a1.164 1.164 0 00-1.162 1.161v11.923c0 1.858.62 2.942 1.781 3.639 1.161.696 2.4 1.084 4.878 1.084h1.316a1.161 1.161 0 001.161-1.162v-1.316h-1.006c-.697 0-2.246 0-3.097-.62-.852-.619-1.084-2.09-1.084-3.096V78.3zM129.546 92.468a5.96 5.96 0 01-3.097-.62c-1.162-.696-1.007-2.09-1.007-3.096v-5.807h3.794a1.16 1.16 0 001.239-1.161v-1.239h-5.033V78.3a1.236 1.236 0 00-1.238-1.161h-1.626a1.16 1.16 0 00-1.162 1.161v2.245h-8.284V78.3a1.16 1.16 0 00-1.161-1.161h-1.626a1.161 1.161 0 00-1.161 1.161v2.245h-2.555v1.239a1.17 1.17 0 00.367.85 1.158 1.158 0 00.872.311h1.316v7.278c0 1.858.619 2.942 1.781 3.639 1.161.696 2.4 1.084 4.8 1.084h1.316a1.161 1.161 0 001.161-1.162v-1.316h-.929c-.774 0-2.245 0-3.097-.62-.851-.619-1.084-2.09-1.084-3.096v-5.807h8.284v7.278a3.952 3.952 0 001.781 3.639c1.161.774 2.478 1.084 4.878 1.084h1.316a1.161 1.161 0 001.161-1.162v-1.316h-1.006zM105.235 93.784v-1.316h-8.826c-1.47 0-3.174-.155-3.639-1.703a6.967 6.967 0 01-.232-1.936h10.452a3.33 3.33 0 001.936-.542 2.638 2.638 0 00.851-2.245c0-1.78-.464-3.561-2.555-4.645-2.09-1.084-3.87-.93-5.961-.93-2.09 0-4.723 0-6.736 1.394s-2.168 3.33-2.168 6.039c0 2.71.155 3.871 1.317 5.265 1.16 1.393 3.716 1.78 5.496 1.78h8.827a1.238 1.238 0 001.238-1.16zm-3.561-8.284c0 .387-.078.852-.929.852h-5.652c-1.394 0-2.555.619-2.555 1.47v-1.47c0-.93 0-1.781.774-2.478.775-.697 2.71-.929 3.794-.929a6.505 6.505 0 013.407.62 2.406 2.406 0 011.161 1.935M148.204 93.784v-1.316h-8.749c-1.471 0-3.174-.155-3.639-1.703a6.982 6.982 0 01-.232-1.936h10.452a3.325 3.325 0 001.935-.542 2.63 2.63 0 00.852-2.245c0-1.78-.464-3.561-2.555-4.645-2.09-1.084-3.871-.93-5.961-.93-2.091 0-4.723 0-6.736 1.394s-2.168 3.33-2.168 6.039c0 2.71.155 3.871 1.316 5.265 1.162 1.393 3.717 1.78 5.497 1.78h8.826a1.164 1.164 0 001.162-1.16zM144.72 85.5c0 .387-.155.852-.929.852h-5.652c-1.394 0-2.555.619-2.555 1.47v-1.47c0-.93 0-1.781.774-2.478.774-.697 2.71-.929 3.794-.929a6.5 6.5 0 013.406.62 2.4 2.4 0 011.162 1.935M84.95 76.52h-1.625a1.162 1.162 0 00-1.161 1.16v3.02a1.858 1.858 0 012.013-1.549h.774a1.161 1.161 0 001.161-1.16v-.31a1.083 1.083 0 00-1.161-1.162" opacity="0.36"></path></g><g fill="#6E0018" opacity="0.36"><path d="M96.41 107.643c-2.091-4.568-8.13-4.258-8.13-4.258H78.215a3.326 3.326 0 00-3.561 3.329v23.613h2.555c1.548 0 2.864-1.006 2.864-2.322v-4.181h8.904c6.426 0 7.82-5.11 7.82-5.11s1.703-6.503-.388-11.071zM91.3 117.94c-1.084 2.322-4.259 2.4-4.259 2.4h-6.968v-12.62c0-1.084 1.549-.929 1.549-.929h4.8c.84 0 1.677.131 2.477.387 2.633.697 2.865 3.871 2.865 3.871s.542 4.646-.465 6.891zM116.694 103.385h-14.555v1.161c0 1.239 1.238 2.245 2.787 2.245h9.523s3.096.078 3.096 2.323v2.013h-11.148s-3.097-.232-4.491 1.548a8.216 8.216 0 00-1.626 5.265c0 1.626.62 3.871 2.246 4.877a6.43 6.43 0 003.871.93h11.148s5.342.619 5.342-2.942v-11.846s.388-5.574-6.193-5.574zm-.387 16.955h-7.588a2.635 2.635 0 01-2.787-2.865c0-2.632 1.549-2.942 2.013-2.942h9.6v4.568a1.076 1.076 0 01-.304.935 1.092 1.092 0 01-.934.304zM127.377 103.385h1.704a1.774 1.774 0 011.703.929l7.355 14.71 7.897-14.788a1.857 1.857 0 011.626-.851h1.626c1.316 0 2.167 1.084 1.625 2.09l-13.006 24.001a1.935 1.935 0 01-1.704.929h-1.471c-1.316 0-2.245-1.162-1.625-2.168l2.477-4.413-9.832-18.349c-.542-1.006.309-2.09 1.625-2.09z" opacity="0.36"></path></g><path fill="#fff" d="M84.022 79.461h-1.626a1.239 1.239 0 00-1.162 1.24v12.077a1.16 1.16 0 001.162 1.161h1.626a1.239 1.239 0 001.238-1.161V80.7a1.239 1.239 0 00-1.239-1.239M78.215 79.462a2.477 2.477 0 00-2.323 1.548l-4.335 9.213c-.078.155-.31.542-.465.542-.155 0-.387-.387-.464-.542l-4.413-9.213a2.478 2.478 0 00-2.323-1.548h-2.477l6.89 13.316a2.865 2.865 0 002.787 1.316c1.007 0 2.09-.077 2.71-1.316l6.89-13.316h-2.477zM154.088 77.294a1.097 1.097 0 00-.315-.847 1.082 1.082 0 00-.847-.315h-1.625a1.164 1.164 0 00-1.162 1.162v11.923a3.952 3.952 0 001.781 3.639c1.161.774 2.477 1.083 4.877 1.083h1.317a1.161 1.161 0 001.161-1.161v-1.316h-1.007a5.957 5.957 0 01-3.096-.62c-1.162-.774-1.084-2.09-1.084-3.096V77.294zM128.616 91.462a5.963 5.963 0 01-3.097-.62c-1.161-.774-1.006-2.09-1.006-3.096v-5.807h3.871a1.161 1.161 0 001.161-1.161V79.46h-5.032v-2.167a1.165 1.165 0 00-1.162-1.162h-1.703a1.161 1.161 0 00-1.161 1.162v2.168h-8.284v-2.168a1.165 1.165 0 00-1.162-1.162h-1.625a1.083 1.083 0 00-1.162 1.162v2.168h-2.477v1.316a1.16 1.16 0 001.161 1.161h1.316v7.278a3.952 3.952 0 001.781 3.639c1.084.774 2.4 1.083 4.8 1.083h1.316a1.16 1.16 0 001.162-1.161v-1.316h-.929c-.775 0-2.246 0-3.097-.62-.852-.619-1.084-2.09-1.084-3.096v-5.807h8.284v7.278a4.025 4.025 0 001.858 3.638c1.084.775 2.4 1.084 4.8 1.084h1.316a1.16 1.16 0 001.162-1.161v-1.316h-1.007zM104.306 92.778v-1.316H95.48c-1.47 0-3.174-.155-3.639-1.704a7.975 7.975 0 01-.232-2.013h10.452a2.867 2.867 0 001.936-.541 2.402 2.402 0 00.851-2.168c0-1.781-.464-3.64-2.555-4.646-2.09-1.006-3.793-.929-5.961-.929s-4.723 0-6.736 1.317c-2.013 1.316-2.09 3.406-2.09 6.038 0 2.633.077 3.949 1.239 5.265 1.16 1.316 3.716 1.858 5.496 1.858h8.904a1.161 1.161 0 001.161-1.161zm-3.561-8.284c0 .387-.078.851-.852.851h-5.729c-1.394 0-2.555.62-2.555 1.471v-1.47c0-1.007 0-1.781.774-2.478.775-.697 2.71-1.007 3.794-1.007a6.426 6.426 0 013.407.697 2.321 2.321 0 011.161 1.936M147.352 92.778v-1.316h-8.826c-1.471 0-3.174-.155-3.639-1.704a8.03 8.03 0 01-.232-2.013h10.452a2.863 2.863 0 001.935-.541 2.395 2.395 0 00.852-2.168c0-1.781-.464-3.64-2.555-4.646-2.09-1.006-3.871-.929-5.961-.929-2.091 0-4.723 0-6.736 1.317-2.013 1.316-2.09 3.406-2.09 6.038 0 2.633.077 3.949 1.238 5.265 1.162 1.316 3.717 1.858 5.497 1.858h8.826a1.239 1.239 0 001.239-1.161zm-3.561-8.284c0 .387-.078.851-.929.851h-5.652c-1.394 0-2.555.62-2.555 1.471v-1.47c0-1.007 0-1.781.774-2.478.774-.697 2.71-1.007 3.794-1.007a6.422 6.422 0 013.406.697 2.316 2.316 0 011.162 1.936M84.022 75.436h-1.626a1.161 1.161 0 00-1.162 1.16v3.098c0-.775.775-1.549 2.013-1.549h.775a1.239 1.239 0 001.238-1.161v-.387a1.239 1.239 0 00-1.239-1.161M95.48 106.559c-2.09-4.568-8.13-4.258-8.13-4.258H77.287a3.326 3.326 0 00-3.561 3.329v23.691h2.555c1.625 0 2.864-1.084 2.864-2.4v-4.104h8.826c6.426 0 7.82-5.187 7.82-5.187s1.78-6.503-.31-11.071zm-5.11 10.374c-1.084 2.245-4.258 2.323-4.258 2.323h-6.968v-12.542c0-1.084 1.626-.929 1.626-.929h4.8c.81.003 1.616.107 2.4.309 2.632.774 2.942 3.949 2.942 3.949s.465 4.568-.542 6.89zM115.765 102.301h-14.556v1.161c0 1.316 1.239 2.323 2.788 2.323h9.522s3.097 0 3.097 2.322v1.936h-11.148s-3.097-.155-4.491 1.626a8.052 8.052 0 00-1.626 5.264c0 1.626.62 3.871 2.245 4.878a7.124 7.124 0 003.872.929h11.148s5.342.619 5.342-3.019v-11.768s.387-5.652-6.193-5.652zm-.388 16.955h-7.587a2.559 2.559 0 01-2.787-2.865c0-2.554 1.548-2.864 2.013-2.864h9.6v4.568s.232 1.161-1.239 1.161zM126.449 102.301h1.78a1.775 1.775 0 011.626.929l7.355 14.787 7.897-14.787a1.858 1.858 0 011.626-.929h1.626c1.316 0 2.168 1.161 1.626 2.168l-13.007 24a1.852 1.852 0 01-1.626.852h-1.548c-1.316 0-2.245-1.161-1.626-2.168l2.477-4.336-9.832-18.426c-.542-.929.31-2.09 1.626-2.09z"></path></g><defs><linearGradient id="paint0_linear" x1="24.33" x2="312.321" y1="142.575" y2="36.725" gradientUnits="userSpaceOnUse"><stop stop-color="#FF9196"></stop><stop offset="1" stop-color="#FFA3A7"></stop></linearGradient><linearGradient id="paint1_linear" x1="84.572" x2="54.973" y1="150.914" y2="220.484" gradientUnits="userSpaceOnUse"><stop offset="0.28" stop-color="#FF5A61"></stop><stop offset="1" stop-color="#F01947"></stop></linearGradient><linearGradient id="paint2_linear" x1="98.538" x2="35.301" y1="60.493" y2="-52.913" gradientUnits="userSpaceOnUse"><stop offset="0.28" stop-color="#FF6268"></stop><stop offset="1" stop-color="#F1335C"></stop></linearGradient><linearGradient id="paint3_linear" x1="158.71" x2="199.952" y1="89.619" y2="121.927" gradientUnits="userSpaceOnUse"><stop offset="0.28" stop-color="#FF6D73"></stop><stop offset="1" stop-color="#FF7F84"></stop></linearGradient><linearGradient id="paint4_linear" x1="151.301" x2="37.894" y1="16.1" y2="203.049" gradientUnits="userSpaceOnUse"><stop offset="0.28" stop-color="#FF454B"></stop><stop offset="1" stop-color="#E03"></stop></linearGradient><clipPath id="clip0"><path fill="#fff" d="M0 0H200V200H0z"></path></clipPath></defs></svg>
+
+            <div class="donation__dropup--content">
+              <img data-src="/images/donation/vtp.png" alt="viettelpay QR Code" src="data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath fill='none' d='M0 0h24v24H0V0z'/%3E%3Cpath fill='%23aaa' d='M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 16H6c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v12c0 .55-.45 1-1 1zm-4.44-6.19l-2.35 3.02-1.56-1.88c-.2-.25-.58-.24-.78.01l-1.74 2.23c-.26.33-.02.81.39.81h8.98c.41 0 .65-.47.4-.8l-2.55-3.39c-.19-.26-.59-.26-.79 0z'/%3E%3C/svg%3E" class="lazyload"/>
+            </div>
+          </div>        
+        
+      
+    
+      
+    
+  </div>
+</div>
+
+
+	<section class="comments">
+	
+  
+    
+
+<link rel="stylesheet" href="/css/isso.min.css">
+<script defer src="/js/helper/markdowntoolbar.min.js"></script>
+<script defer src="/js/helper/isso.min.js" data-isso='https://comments.pnghia.com/' data-isso-require-author='true' data-isso-css='false' data-isso-require-email='true' data-isso-max-comments-top='15' data-isso-max-comments-nested='8' data-isso-reveal-on-click='5' data-isso-reply-notifications='true' data-isso-vote='true' data-isso-vote-levels='-5,-3,0,3,5'></script>
+<section id='isso-thread' data-title='Tổng hợp Firmware cho Newifi3 D2' data-isso-id='/posts/tong-hop-firmware-newifi3d2/'></section>
+
+  
+	
+</section>
+
+</main>
+<script>
+	'use strict';
+	window.onload = function() {
+	var tables = document.querySelectorAll('.content > table');
+    for (let i = 0; i < tables.length; i++) {
+    var table = tables[i];
+    var wrapper = document.createElement('div');
+    wrapper.className = 'table-wrapper';
+    table.parentElement.replaceChild(wrapper, table);
+    wrapper.appendChild(table);
+}
+}
+</script>
+
+<div class="authorbox clearfix">
+	<figure class="authorbox__avatar">
+		<img alt="Nghĩa Phan avatar" src="/img/avatar.jpg" class="avatar" height="90" width="90">
+	</figure>
+	<div class="authorbox__header">
+		<span class="authorbox__name">✍️ Nghĩa Phan</span>
+	</div>
+	<div class="authorbox__description">
+		• Điêu khắc, ArtForm/JDpaint Designer<br/>• Quảng Trị, Việt Nam<br/>• <a href="https://facebook.com/pVNghiaQT/">Facebook</a> / <a href="https://t.me/pVNghiaQT/">Telegram</a>
+	</div>
+</div>
+
+<nav class="pager flex">
+	<div class="pager__item pager__item--prev">
+		<a class="pager__link" href="/posts/update-macvendor-opnsense/" rel="prev">
+			<span class="pager__subtitle">«&thinsp;Trước</span>
+			<p class="pager__title">Update MacVendor OPNSENSE</p>
+		</a>
+	</div>
+	<div class="pager__item pager__item--next">
+		<a class="pager__link" href="/posts/newifi3-d2-stock-english-firmware/" rel="next">
+			<span class="pager__subtitle">Sau&thinsp;»</span>
+			<p class="pager__title">Hướng dẫn chuyển đổi ngôn ngữ Stock Firmware Newifi3 D2 từ Tiếng Trung sang English</p>
+		</a>
+	</div>
+</nav>
+
+			</div>
+			
+		</div>
+		<footer class="footer">
+	<div class="container footer__container flex">
+		
+		<div class="footer__copyright">
+			&copy; 2021 pNghia.com.
+			<span class="footer__copyright-credits">Powered by <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">goHugo</a> | <a href="https://posativ.org/isso/" rel="nofollow noopener" target="_blank">ISSO</a> | <a href="https://www.goatcounter.com/" rel="nofollow noopener" target="_blank">goatCounter</a> and the <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span>
+		</div>
+	</div>
+</footer>
+	</div>
+<script async defer src="/js/menu.js"></script>
+</body>
+</html>

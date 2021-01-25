@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tutorial on pNghia.com</title>
+    <link>https://pnghia.com/categories/tutorial/</link>
+    <description>Recent content in Tutorial on pNghia.com</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>vi-vn</language>
+    <lastBuildDate>Wed, 06 Jan 2021 10:49:11 +0700</lastBuildDate><atom:link href="https://pnghia.com/categories/tutorial/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hướng dẫn cấu hình OpenWRT quay PPPoE có VLAN ID.</title>
+      <link>https://pnghia.com/serial/openwrt/huong-dan-cau-hinh-openwrt-quay-pppoe-with-vlan/</link>
+      <pubDate>Wed, 06 Jan 2021 10:49:11 +0700</pubDate>
+      
+      <guid>https://pnghia.com/serial/openwrt/huong-dan-cau-hinh-openwrt-quay-pppoe-with-vlan/</guid>
+      <description>Ở bài trước mình đã Hướng dẫn cấu hình OpenWRT quay PPPoE
+khi nhà cung cấp mạng không set VLAN hoặc khi Brigde modem nhà mạng đã hỗ trợ set VLAN ngay trong phần thiết lập Brigde của modem. Trong bài viết này, mình sẽ hướng dẫn các bạn setup OpenWRT quay PPPoE kèm VLAN vì một số modem nhà mạng không cho phép cấu hình số VLAN ở thiết lập Brigde Mode nhưng bắt buộc phải có số VLAN mới quay PPPoE được, vì vậy - chỉ còn cách là Set số VLAN đó ngay trên OpenWRT.</description>
+    </item>
+    
+    <item>
+      <title>Hướng dẫn cấu hình OpenWRT quay PPPoE</title>
+      <link>https://pnghia.com/serial/openwrt/huong-dan-cau-hinh-openwrt-quay-pppoe/</link>
+      <pubDate>Tue, 05 Jan 2021 12:21:39 +0700</pubDate>
+      
+      <guid>https://pnghia.com/serial/openwrt/huong-dan-cau-hinh-openwrt-quay-pppoe/</guid>
+      <description>Đây là bài viết hướng dẫn cấu hình OpenWRT quay PPPoE khi đã setup Modem nhà mạng sang chế độ Brigde Mode. Bài viết này hướng dẫn quay PPPoE không kèm VLAN - tức là nhà mạng khu vực bạn ở không dùng VLAN hoặc modem nhà mạng hỗ trợ setup VLAN ID ở phần cấu hình Brigde Mode của modem. Nếu modem nhà bạn không có mục set VLAN ID nhưng khi quay PPPoE bắt buộc phải có thì các bạn có thể xem bài viết Hướng dẫn cấu hình OpenWRT quay PPPoE với VLANđể set VLAN ID ngay trên router mà không thông qua modem nhà mạng.</description>
+    </item>
+    
+    <item>
+      <title>Update MacVendor OPNSENSE</title>
+      <link>https://pnghia.com/posts/update-macvendor-opnsense/</link>
+      <pubDate>Sat, 01 Aug 2020 03:40:01 +0000</pubDate>
+      
+      <guid>https://pnghia.com/posts/update-macvendor-opnsense/</guid>
+      <description>  Truy cập SSH vào máy chủ OPNSENSE
+$ ssh root@172.16.1.1 Nhấn phím 8 để truy cập Shell.    Gõ theo thứ tự các lệnh sau:
+1 2 3 4 5  $ cd /usr/local/lib/python3.7/site-packages/netaddr/eui $ mv ./oui.txt ./oui.txt.backup $ curl http://standards-oui.ieee.org/oui.txt --output oui.txt $ mv ./oui.idx ./oui.idx.backup $ python3 ./ieee.py     DONE !
+  </description>
+    </item>
+    
+    <item>
+      <title>Hướng dẫn cấu hình OpenWRT làm Access Point (AP) và cách thêm VLAN cho GUEST AP</title>
+      <link>https://pnghia.com/serial/openwrt/cau-hinh-openwrt-lam-ap-mode/</link>
+      <pubDate>Mon, 15 Jun 2020 13:07:56 +0000</pubDate>
+      
+      <guid>https://pnghia.com/serial/openwrt/cau-hinh-openwrt-lam-ap-mode/</guid>
+      <description>&amp;gt; Xem qua bài viết Hướng dẫn cấu hình OpenWRT quay PPPoE Tại đây &amp;gt; Xem qua bài viết Hướng dẫn cấu hình OpenWRT quay PPPoE có VLAN ID Tại đây Mục đích bài viết  Cấu hình Firmware OpenWRT sang chế độ AP Mode (Access Point) khi đã có modem cấp DHCP ở đằng sau.  Ở chế độ này, Router chỉ có chức năng duy nhất là phát WIFI, các chức năng khác như cấp DHCP, cân bằng tải, DNS Server, Firewall,&amp;hellip; sẽ bị vô hiệu.</description>
+    </item>
+    
+  </channel>
+</rss>

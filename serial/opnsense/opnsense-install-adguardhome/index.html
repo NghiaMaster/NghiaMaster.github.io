@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Cài đặt ADGuardHome lên OPNsense - chặn quảng cáo bằng DNS hiệu quả. - pNghia.com</title>
+	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
+	<meta name="description" content="ADGuardHome là trình chặn quảng cáo bằng DNS hiệu quả cao, có tác dụng với tất cả các clients kết nối vào mạng qua OPNsense. Chặn quảng cáo trên các trang đọc báo, chặn các trang 18&#43;, bảo vệ người dùng khỏi mã độc, trang web lừa đảo...">
+		<meta property="og:title" content="Cài đặt ADGuardHome lên OPNsense - chặn quảng cáo bằng DNS hiệu quả." />
+<meta property="og:description" content="ADGuardHome là trình chặn quảng cáo bằng DNS hiệu quả cao, có tác dụng với tất cả các clients kết nối vào mạng qua OPNsense. Chặn quảng cáo trên các trang đọc báo, chặn các trang 18&#43;, bảo vệ người dùng khỏi mã độc, trang web lừa đảo..." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://pnghia.com/serial/opnsense/opnsense-install-adguardhome/" />
+<meta property="article:published_time" content="2020-12-24T13:00:39+07:00" />
+<meta property="article:modified_time" content="2021-01-23T16:04:12+07:00" />
+
+
+	<link rel="stylesheet" href="/css/style.min.css">
+	
+
+	<link rel="apple-touch-icon" sizes="57x57" href="/favicon/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="/favicon/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="/favicon/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="/favicon/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="/favicon/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="/favicon/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="/favicon/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="/favicon/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192" href="/favicon/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="192x192" href="/favicon/android-icon-512x512.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="/favicon/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+	<meta name="msapplication-TileColor" content="#3d434b">
+	<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+	<meta name="theme-color" content="#3d434b" />
+		
+</head>
+<body class="body">
+	<div class="container container--outer">
+		<header class="header">
+	<div class="container header__container">
+		
+	<div class="logo">
+		<a class="logo__link" href="/" title="pNghia.com" rel="home">
+			<div class="logo__item logo__text">
+					<div class="logo__title">pNghia.com</div>
+					<div class="logo__tagline">Make life easier</div>
+				</div>
+		</a>
+	</div>
+		
+<nav class="menu">
+	<button class="menu__btn" aria-haspopup="true" aria-expanded="false" tabindex="0">
+		<span class="menu__btn-title" tabindex="-1">Menu</span>
+	</button>
+	<ul class="menu__list">
+		<li class="menu__item">
+			<a class="menu__link" href="/serial/openwrt/">
+				
+				<span class="menu__text">Cấu hình OpenWRT</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/serial/opnsense/">
+				
+				<span class="menu__text">Cấu hình OPNsense</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/categories/newifi3-d2/">
+				
+				<span class="menu__text">Newifi3 D2</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/about/">
+				
+				<span class="menu__text">Về tôi</span>
+				
+			</a>
+		</li>
+	</ul>
+</nav>
+
+	</div>
+</header>
+		<div class="wrapper flex">
+			<div class="primary">
+			
+
+<script defer src="/js/lazysizes.min.498676c34eb225e85357ab0ce19c3c1244f3bd0bf595e5684d1b9d50ea4fbc42.js"></script>
+<link rel="stylesheet" href="/css/single.min.css">
+<main class="main" role="main">
+	<article class="post">
+		<header class="post__header">
+			<h1 class="post__title">Cài đặt ADGuardHome lên OPNsense - chặn quảng cáo bằng DNS hiệu quả.</h1>
+			<div class="post__meta meta">
+<script defer>
+	var r = new XMLHttpRequest();
+  r.addEventListener('load', function() {
+  document.querySelector('#goatCounter_value_page_pv').innerText = JSON.parse(this.responseText).count_unique + " lượt xem"})
+  r.open('GET', 'https://stats.pnghia.com/counter/' + (location.pathname).replace(/\/$/, '') + '.json')
+  r.send()
+  </script>
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2020-12-24T13:00:39&#43;07:00">24 tháng 12, 2020</time>
+	<time class="meta__text" datetime="2021-01-23T16:04:12&#43;07:00">(
+		Cập nhật: 23 tháng 1, 2021)</time>&nbsp;<div class="meta__item"><svg xmlns="http://www.w3.org/2000/svg" class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 24 24"><path d="M15 12c0 1.657-1.343 3-3 3s-3-1.343-3-3c0-.199.02-.393.057-.581 1.474.541 2.927-.882 2.405-2.371.174-.03.354-.048.538-.048 1.657 0 3 1.344 3 3zm-2.985-7c-7.569 0-12.015 6.551-12.015 6.551s4.835 7.449 12.015 7.449c7.733 0 11.985-7.449 11.985-7.449s-4.291-6.551-11.985-6.551zm-.015 12c-2.761 0-5-2.238-5-5 0-2.761 2.239-5 5-5 2.762 0 5 2.239 5 5 0 2.762-2.238 5-5 5z"/></svg>
+<span class="meta__text" id="goatCounter_value_page_pv">3456</span>&nbsp;&bull;
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M20 15c0 .552-.448 1-1 1s-1-.448-1-1 .448-1 1-1 1 .448 1 1m-3 0c0 .552-.448 1-1 1s-1-.448-1-1 .448-1 1-1 1 .448 1 1m-3 0c0 .552-.448 1-1 1s-1-.448-1-1 .448-1 1-1 1 .448 1 1m5.415 4.946c-1 .256-1.989.482-3.324.482-3.465 0-7.091-2.065-7.091-5.423 0-3.128 3.14-5.672 7-5.672 3.844 0 7 2.542 7 5.672 0 1.591-.646 2.527-1.481 3.527l.839 2.686-2.943-1.272zm-13.373-3.375l-4.389 1.896 1.256-4.012c-1.121-1.341-1.909-2.665-1.909-4.699 0-4.277 4.262-7.756 9.5-7.756 5.018 0 9.128 3.194 9.467 7.222-1.19-.566-2.551-.889-3.967-.889-4.199 0-8 2.797-8 6.672 0 .712.147 1.4.411 2.049-.953-.126-1.546-.272-2.369-.483m17.958-1.566c0-2.172-1.199-4.015-3.002-5.21l.002-.039c0-5.086-4.988-8.756-10.5-8.756-5.546 0-10.5 3.698-10.5 8.756 0 1.794.646 3.556 1.791 4.922l-1.744 5.572 6.078-2.625c.982.253 1.932.407 2.85.489 1.317 1.953 3.876 3.314 7.116 3.314 1.019 0 2.105-.135 3.242-.428l4.631 2-1.328-4.245c.871-1.042 1.364-2.384 1.364-3.75"/></svg>
+<a class="meta__text" href="/serial/opnsense/opnsense-install-adguardhome/#isso-thread">Comments</a></div>
+</div>
+<div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/opnsense-config/" rel="category">OPNsense Config</a>
+	</span>
+</div></div>
+		</header><div class="content post__content clearfix">
+			<h5 id="xem-qua-loạt-bài-viết-hướng-dẫn-cấu-hình-opnsense-tại-đâyserialopnsense">Xem qua loạt bài viết hướng dẫn cấu hình OPNsense 
+<a href="/serial/opnsense/">tại đây</a>
+</h5>
+<details >
+    <summary>[PHẢI ĐỌC] Chú ý trước khi làm</summary>
+    <div class="markdown-inner">
+      <br/>
+<ul>
+<li>Để cài đặt được <em>ADguardHome</em> yêu cầu các bạn phải hiểu biết cơ bản về sử dụng dòng lệnh (<em>Terminal, Commandline</em>&hellip;)</li>
+<li>Mọi thao tác phải thận trọng, các thao tác <em>Copy</em>, <em>Dán</em>, <em>gõ lệnh</em> - phải thao tác chính xác, không thừa hoặc thiếu bất kì ký tự nào. Bất kì sai sót nào cũng sẽ khiến thao tác cài đặt thất bại, nhẹ thì <em>ADguardHome</em> không chạy, nặng thì phải cài đặt lại <em>OPNsense</em>. <strong>Làm theo bài viết này đồng nghĩa với bạn chấp nhận rủi ro và đó là nguy cơ của riêng bạn, mình sẽ không chịu trách nhiệm.</strong></li>
+<li>Mình đã cài đặt và chạy <em>ADguardHome</em> trên <em>OPNsense</em> từ mấy tháng trước và vẫn chạy rất ổn định cho tới bây giờ.</li>
+<li>Để thao tác với dòng lệnh thông qua <em>SSH</em>, có thể sử dụng máy tính <strong>Windows</strong> (<em>Windows PowerShell, PuTTY</em>&hellip;), <strong>Linux</strong> (<em>Terminal</em>), hoặc điện thoại <strong>Android</strong> (<em>Termius,ConnectBot</em>&hellip;) hoặc bất kì thiết bị nào có hỗ trợ <em>SSH Client</em> để kết nối với <em>OPNsense</em>.</li>
+<li>Dùng cáp LAN kết nối máy tính với Modem <em>OPNsense</em> hoặc Wifi cũng được miễn sao thiết bị kết nối phải cùng 1 mạng với OPNsense mới connect được vào SSH của <em>OPNsense</em>.</li>
+<li>Trong bài này mình sẽ lấy địa chỉ IP mặc định của OPNsense làm ví dụ <code>192.168.1.1</code>.</li>
+</ul>
+
+    </div>
+  </details>
+
+<h2 id="bước-1-thiết-lập-dns-và-mở-ssh-cho-opnsense">Bước 1: Thiết lập DNS và mở SSH cho OPNSENSE</h2>
+<h3 id="mở-ssh---cho-phép-truy-cập-vào-opnsense-thông-qua-ssh">Mở SSH - Cho phép truy cập vào OPNsense thông qua SSH</h3>
+<ul>
+<li>Đăng nhập vào trang quản lý của <strong>OPNsense</strong> <code>https://192.168.1.1</code>
+<ul>
+<li>Vào <em>System</em> &gt; <em>Setting</em> &gt; <em>Administration</em>
+<ul>
+<li>Tại mục <em>Secure Shell</em> tick vào mục <em>Enable Secure Shell</em>
+<ul>
+<li>mục <em>Login Group</em> chọn <em>wheel,admins</em></li>
+<li>tick vào 2 dòng <em>Permit root user login</em> và <em>Permit password login</em></li>
+<li>các dòng còn lại để mặc định và nhấn <strong>SAVE</strong></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="thiết-lập-dns">Thiết lập DNS</h3>
+<ul>
+<li>Vào <em>System</em> &gt; <em>Settings</em> &gt; <em>General</em>
+<ul>
+<li>Tại mục <em>Networking</em> - <em>DNS Servers</em> điền DNS Server Google vào 2 dòng đầu là <code>8.8.8.8</code> và <code>8.8.4.4</code> hoặc Cloudflare <code>1.1.1.1</code> và <code>1.0.0.1</code> hoặc cả 4 dòng nếu muốn 😆</li>
+<li>Tick Chọn vào dòng <strong>Do not use the local DNS service as a nameserver for this system</strong></li>
+<li>Nhấn <strong>Save</strong>.</li>
+</ul>
+</li>
+</ul>
+<h3 id="disable-unbound-dns">Disable Unbound DNS</h3>
+<blockquote>
+<p>Unbound DNS là dịch vụ DNS Revolver mặc định của OPNsense, sử dụng port 53 (Port mặc định của DNS Server). Để <em>AdguardHome</em> có thể dùng Port 53 làm mặc định thì phải tắt Unbound DNS đi.</p>
+</blockquote>
+<ul>
+<li>Vào <em>Services</em> &gt; <em>Unbound DNS</em> &gt; <em>General</em>
+<ul>
+<li>Bỏ tick <em>Enable Unbound</em> và nhấn <strong>SAVE</strong></li>
+</ul>
+</li>
+<li>Khởi động lại <em>OPNsense</em> cho chắc ăn 😄
+<ul>
+<li>Vào mục <em>Power</em> &gt; <em>Reboot</em></li>
+</ul>
+</li>
+</ul>
+<h2 id="bước-2-tải-và-cài-đặt-adguardhome">Bước 2: Tải và cài đặt ADguardHome.</h2>
+<blockquote>
+<ul>
+<li>Ở trong bài này mình sẽ sử dụng Terminal để thao tác.</li>
+<li><strong>Chú ý</strong>: khi copy Dòng lệnh thì bỏ dấu <strong>$</strong> ở đầu dòng. Copy và chạy (ENTER) lần lượt theo thứ tự mỗi dòng dó dấu <strong>$</strong></li>
+</ul>
+</blockquote>
+<ul>
+<li>
+<p>Truy cập vào SSH Server <em>OPNsense</em> sử dụng Terminal (hoặc Powershell, PuTTY, Termius&hellip; tuỳ theo HĐH)</p>
+<pre><code>$ ssh root@192.168.1.1
+</code></pre><ul>
+<li>Nhập mật khẩu đăng nhập sau đó nhấn phím <em>8</em> để mở <em>Shell</em>.</li>
+</ul>
+</li>
+<li>
+<p>Truy cập vào trang Github chính thức của <em>ADguardHome</em> 
+<a href="https://github.com/AdguardTeam/AdGuardHome/releases" target="_blank" rel="noopener noreferrer" data-goatcounter-click="https://github.com/AdguardTeam/AdGuardHome/releases" data-goatcounter-referrer="/serial/opnsense/opnsense-install-adguardhome/">tại đây</a><span title="Mức độ phổ biến" id="a235418796" class="single__badge"></span><script async>var r = new XMLHttpRequest();
+r.addEventListener('load', function() {
+document.querySelector('#a235418796').innerText = JSON.parse(this.responseText).count_unique
+})
+r.open('GET', 'https://stats.pnghia.com/counter/' + encodeURIComponent("https://github.com/AdguardTeam/AdGuardHome/releases").replace(/\/$/, '') + '.json')
+r.send()</script>
+ và copy link của phiên bản mới nhất, ở đây ta copy link có tên <code>AdGuardHome_freebsd_amd64.tar.gz</code> (<em>freebsd</em> là hệ điều hành <em>OPNsense</em> đang dùng, <em>amd64</em> là kiến trúc 64bit)</p>
+<ul>
+<li>tải xuống Binary của ADguardHome</li>
+</ul>
+<pre><code>$ fetch &lt;link vừa copy&gt;
+</code></pre><ul>
+<li>Ví Dụ ADguardHome bản v0.104.3:</li>
+</ul>
+<pre><code>$ fetch https://github.com/AdguardTeam/AdGuardHome/releases/download/v0.104.3/AdGuardHome_freebsd_amd64.tar.gz
+</code></pre></li>
+<li>
+<p>Sau khi tải về hoàn tất, tiến hành giải nén và cấp quyền chạy cho <em>AdguardHome</em></p>
+<pre><code>$ tar -vxzf ./AdguardHome_freebsd_amd64.tar.gz
+$ cd ./AdGuardHome
+$ chmod a+x ./AdGuardHome
+</code></pre></li>
+<li>
+<p>Chạy ADguardHome và thiết lập lần đầu.</p>
+<pre><code>$ ./ADGuardHome
+</code></pre></li>
+<li>
+<p>Dùng trình duyệt truy cập vào địa chỉ <code>http://192.168.1.1:3000</code>.</p>
+<ul>
+<li>Trình duyệt sẽ hiển thị trang thiết lập lần đầu của <em>AdGuardHome</em><br />
+
+
+<img data-src="https://pnghia.com/images/opnsense/AdguardWelcome_hu7ea94877ae18f2483b569232cfe5b876_19644_filter_1334269291160664337.PNG" alt="ADguardHome Welcome Page" class="lazyload blur-up" />
+
+
+</li>
+<li>Tại mục <strong>Admin Web Interface</strong> các bạn thay port <em>80</em> bằng port tuỳ ý. ví dụ như <em>8080</em>
+<ul>
+<li>Nhớ số Port để sau này truy cập vào trang Dashboard nha ~~.</li>
+</ul>
+</li>
+<li>Mục <em>DNS Server</em> để mặc định và nhấn <strong>NEXT</strong></li>
+<li>Trang tiếp theo là thiết lập <em>tên đăng nhập</em> và <em>mật khẩu</em>. Nhấn <strong>NEXT</strong> cho đến khi hoàn tất.</li>
+</ul>
+</li>
+<li>
+<p>Đóng tab thiết lập và mở trang Dashboard <em>ADguardHome</em> ở địa chỉ <code>http://192.168.1.1:8080</code></p>
+</li>
+<li>
+<p>Đăng nhập bằng <em>Username</em> và <em>Password</em> đã thiết lập ở bước trên.</p>
+</li>
+<li>
+<p>Vậy là xong bước thiết lập lần đầu.</p>
+</li>
+<li>
+<p>Tại <strong>Terminal</strong> nhấn <kbd><kbd>CTRL</kbd>+<kbd>C</kbd></kbd> để dừng AdguardHome.</p>
+</li>
+</ul>
+<h2 id="bước-3-thiêt-lập-adguardhome-khởi-động-cùng-opnsense">Bước 3: Thiêt lập AdguardHome khởi động cùng OPNsense.</h2>
+<blockquote>
+<p>Đây là bước quan trọng giúp AdguardHome tự khởi động khi OPNsense khởi động lại. Nếu làm sai bước này thì sau khi khởi động lại Router, <em>AdguardHome</em> sẽ không chạy dẫn đến clients sẽ không truy cập được mạng.<br />
+Mọi thao tác ở bước này đều sử dụng <em>dòng lệnh</em>, các bạn nhớ chú ý.</p>
+</blockquote>
+<ul>
+<li>Đây là bước truy cập vào thư mục <em>/etc/rc.d/</em>, tải xuống <em>adguardhome</em> init script và cấp quyền chạy (<em>chmod</em>)</li>
+</ul>
+<pre><code>$ cd /etc/rc.d/
+$ fetch https://gist.githubusercontent.com/NghiaMaster/d4487479708418f85b1c1c90fdaa0185/raw/b5d37d07be15056d4173dc2134d94d9626ba2463/adguardhome
+$ chmod a+x ./adguardhome
+$ echo &quot;adguardhome_enable='YES'&quot; &gt;&gt; ../rc.conf
+</code></pre><ul>
+<li>Các bạn có thể xem qua nội dung file <em>adguardhome</em> để chắc chắn rằng mình không có chèn mã độc 😆</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-sh" data-lang="sh"><span class="cp">#!/bin/sh
+</span><span class="cp"></span>. /etc/rc.subr
+<span class="nv">name</span><span class="o">=</span><span class="s2">&#34;adguardhome&#34;</span>
+<span class="nv">rcvar</span><span class="o">=</span><span class="s2">&#34;adguardhome_enable&#34;</span>
+<span class="nv">adguardhome_user</span><span class="o">=</span><span class="s2">&#34;root&#34;</span>
+<span class="nv">adguardhome_command</span><span class="o">=</span><span class="s2">&#34;/root/AdGuardHome/AdGuardHome&#34;</span>
+<span class="nv">pidfile</span><span class="o">=</span><span class="s2">&#34;/var/run/</span><span class="si">${</span><span class="nv">name</span><span class="si">}</span><span class="s2">.pid&#34;</span>
+<span class="nv">command</span><span class="o">=</span><span class="s2">&#34;/usr/sbin/daemon&#34;</span>
+<span class="nv">command_args</span><span class="o">=</span><span class="s2">&#34;-P </span><span class="si">${</span><span class="nv">pidfile</span><span class="si">}</span><span class="s2"> -r -f </span><span class="si">${</span><span class="nv">adguardhome_command</span><span class="si">}</span><span class="s2">&#34;</span>
+load_rc_config <span class="nv">$name</span>
+: <span class="si">${</span><span class="nv">adguardhome_enable</span><span class="p">:=no</span><span class="si">}</span>
+run_rc_command <span class="s2">&#34;</span><span class="nv">$1</span><span class="s2">&#34;</span>
+</code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>Khởi động <em>adguardhome</em> và hưởng thụ thành quả.</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-sh" data-lang="sh">$ service adguardhome start
+</code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>Kiểm tra bằng lệnh</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-sh" data-lang="sh">$ service adguardhome status.
+</code></pre></td></tr></table>
+</div>
+</div><p>Terminal hiển thị <code>adguardhome is running as pid xxxxx.</code> là được.</p>
+  
+<blockquote class="book-hint info">
+    <ul>
+<li>Mọi thắc mắc các bạn Comment ở dưới.</li>
+<li>Sau khi hoàn thành toàn bộ hướng dẫn trên đây thì cơ bản đã sử dụng được AdguardHome</li>
+<li>Các thiết lập nâng cao như DoT - DoH, Enable HTTPS, rDNS&hellip; yêu cầu phải mở Port và thiết lập DDNS để sử dụng. Mình sẽ hướng dẫn thêm ở bài 
+<a href="/serial/opnsense/opnsense-domain-ddns-letsencrypt-reveserproxy/">Thiết lập Tên Miền, DDNS thông qua Cloudflare, lấy chứng chỉ SSL Let&rsquo;s Encrypt, Reveser Proxy</a>
+</li>
+</ul>
+
+  </blockquote>
+
+
+		</div>
+		<footer class="post__footer">
+			
+<div class="post__tags tags clearfix">
+	<svg class="tags__badge icon icon-tag" width="16" height="16" viewBox="0 0 32 32"><path d="M32 19c0 1-1 2-1 2L21 31s-1 1-2 1-2-1-2-1L2 16c-1-1-1.4-2-1.4-2S0 12.5 0 11V3C0 1.5.8.8.8.8S1.5 0 3 0h8c1.5 0 3 .6 3 .6S15 1 16 2l15 15s1 1 1 2zM7 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></svg>
+	<ul class="tags__list">
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/opnsense/" rel="tag">OPNsense</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/tutorial/" rel="tag">tutorial</a>
+		</li>
+	</ul>
+</div>
+		</footer>
+	</article>
+	
+<div class="donation">
+  <div style="text-align: center;" class="donation__message">
+    Nếu bài viết giúp ích cho bạn<br />
+    Ủng hộ mình cốc cafe nhé...
+  </div>
+  <div class="donation__icons">
+    
+      
+    
+      
+        
+          <div class="donation__item donation__dropup" title="momo" aria-label="momo" data-type="donation">
+            <svg style="background:#a50064" width="40" height="40" viewBox="0 0 96 87" fill="#fff" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M75.5326 0C64.2284 0 55.0651 8.74843 55.0651 19.5409C55.0651 30.3333 64.2284 39.0818 75.5326 39.0818C86.8368 39.0818 96 30.3333 96 19.5409C96 8.74843 86.8368 0 75.5326 0ZM75.5326 27.8805C70.7368 27.8805 66.8403 24.1604 66.8403 19.5818C66.8403 15.0031 70.7368 11.283 75.5326 11.283C80.3283 11.283 84.2248 15.0031 84.2248 19.5818C84.2248 24.1604 80.3283 27.8805 75.5326 27.8805ZM49.1561 14.6761V39.1226H37.3809V14.5535C37.3809 12.7138 35.8394 11.2421 33.9126 11.2421C31.9857 11.2421 30.4442 12.7138 30.4442 14.5535V39.1226H18.669V14.5535C18.669 12.7138 17.1276 11.2421 15.2007 11.2421C13.2739 11.2421 11.7324 12.7138 11.7324 14.5535V39.1226H0V14.6761C0 6.58176 6.89385 0 15.372 0C18.8403 0 22.0089 1.10377 24.5781 2.9434C27.1472 1.10377 30.3586 0 33.7841 0C42.2623 0 49.1561 6.58176 49.1561 14.6761ZM75.5326 47.544C64.2284 47.544 55.0651 56.2925 55.0651 67.0849C55.0651 77.8774 64.2284 86.6258 75.5326 86.6258C86.8368 86.6258 96 77.8774 96 67.0849C96 56.2925 86.8368 47.544 75.5326 47.544ZM75.5326 75.4245C70.7368 75.4245 66.8403 71.7044 66.8403 67.1258C66.8403 62.5472 70.7368 58.827 75.5326 58.827C80.3283 58.827 84.2248 62.5472 84.2248 67.1258C84.2248 71.7044 80.3283 75.4245 75.5326 75.4245ZM49.1561 62.2201V86.6667H37.3809V62.0975C37.3809 60.2579 35.8394 58.7862 33.9126 58.7862C31.9857 58.7862 30.4442 60.2579 30.4442 62.0975V86.6667H18.669V62.0975C18.669 60.2579 17.1276 58.7862 15.2007 58.7862C13.2739 58.7862 11.7324 60.2579 11.7324 62.0975V86.6667H0V62.2201C0 54.1258 6.89385 47.544 15.372 47.544C18.8403 47.544 22.0089 48.6478 24.5781 50.4874C27.1472 48.6478 30.3158 47.544 33.7841 47.544C42.2623 47.544 49.1561 54.1258 49.1561 62.2201Z" fill=""></path>
+                </svg>
+
+            <div class="donation__dropup--content">
+              <img data-src="/images/donation/momo.png" alt="momo QR Code" src="data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath fill='none' d='M0 0h24v24H0V0z'/%3E%3Cpath fill='%23aaa' d='M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 16H6c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v12c0 .55-.45 1-1 1zm-4.44-6.19l-2.35 3.02-1.56-1.88c-.2-.25-.58-.24-.78.01l-1.74 2.23c-.26.33-.02.81.39.81h8.98c.41 0 .65-.47.4-.8l-2.55-3.39c-.19-.26-.59-.26-.79 0z'/%3E%3C/svg%3E" class="lazyload"/>
+            </div>
+          </div>        
+        
+      
+    
+      
+    
+      
+    
+      
+        
+          <div class="donation__item donation__dropup" title="viettelpay" aria-label="viettelpay" data-type="donation">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="none" viewBox="0 0 200 200"><g clip-path="url(#clip0)"><path fill="url(#paint0_linear)" fill-rule="evenodd" d="M106.784 189.477L4.82 87.204c-9.6-9.678-4.026-26.091 9.368-27.95l166.997-23.458c13.239-1.858 23.072 12 16.956 23.846L133.107 185.45a16.493 16.493 0 01-26.323 4.026z" clip-rule="evenodd"></path><path fill="url(#paint1_linear)" d="M60.331 169.115c2.09 20.44 26.633 29.73 41.73 15.794h.077L57.311 139.85l3.02 29.265z"></path><path fill="url(#paint2_linear)" d="M76.822 9.395c-14.633-8.284-32.517 3.407-30.814 20.13l2.555 24.852 86.402-12.078L76.822 9.395z"></path><path fill="url(#paint3_linear)" d="M185.211 108.03a24.93 24.93 0 004.181-31.51l-27.33 52.878 23.149-21.368z"></path><path fill="url(#paint4_linear)" d="M170.037 113.914l19.355-37.395a24.157 24.157 0 00-8.903-8.516l-45.524-25.704-86.402 12.078 8.749 85.473 44.826 44.982 59.924-55.434 7.975-15.484"></path><g fill="#6E0018" opacity="0.36"><path d="M84.95 80.545h-1.625a1.161 1.161 0 00-1.161 1.161v12.078a1.161 1.161 0 001.16 1.161h1.627a1.161 1.161 0 001.161-1.161V81.706a1.161 1.161 0 00-1.161-1.161M79.144 80.545a2.478 2.478 0 00-2.323 1.471l-4.335 9.213c-.155.233-.31.542-.465.542-.154 0-.387-.31-.541-.542l-4.336-9.213a2.478 2.478 0 00-2.323-1.47h-2.477l6.89 13.316c.62 1.316 2.013 1.238 2.787 1.238.775 0 2.09-.077 2.71-1.238l6.89-13.317h-2.477zM155.017 78.3a1.165 1.165 0 00-1.161-1.161h-1.626a1.164 1.164 0 00-1.162 1.161v11.923c0 1.858.62 2.942 1.781 3.639 1.161.696 2.4 1.084 4.878 1.084h1.316a1.161 1.161 0 001.161-1.162v-1.316h-1.006c-.697 0-2.246 0-3.097-.62-.852-.619-1.084-2.09-1.084-3.096V78.3zM129.546 92.468a5.96 5.96 0 01-3.097-.62c-1.162-.696-1.007-2.09-1.007-3.096v-5.807h3.794a1.16 1.16 0 001.239-1.161v-1.239h-5.033V78.3a1.236 1.236 0 00-1.238-1.161h-1.626a1.16 1.16 0 00-1.162 1.161v2.245h-8.284V78.3a1.16 1.16 0 00-1.161-1.161h-1.626a1.161 1.161 0 00-1.161 1.161v2.245h-2.555v1.239a1.17 1.17 0 00.367.85 1.158 1.158 0 00.872.311h1.316v7.278c0 1.858.619 2.942 1.781 3.639 1.161.696 2.4 1.084 4.8 1.084h1.316a1.161 1.161 0 001.161-1.162v-1.316h-.929c-.774 0-2.245 0-3.097-.62-.851-.619-1.084-2.09-1.084-3.096v-5.807h8.284v7.278a3.952 3.952 0 001.781 3.639c1.161.774 2.478 1.084 4.878 1.084h1.316a1.161 1.161 0 001.161-1.162v-1.316h-1.006zM105.235 93.784v-1.316h-8.826c-1.47 0-3.174-.155-3.639-1.703a6.967 6.967 0 01-.232-1.936h10.452a3.33 3.33 0 001.936-.542 2.638 2.638 0 00.851-2.245c0-1.78-.464-3.561-2.555-4.645-2.09-1.084-3.87-.93-5.961-.93-2.09 0-4.723 0-6.736 1.394s-2.168 3.33-2.168 6.039c0 2.71.155 3.871 1.317 5.265 1.16 1.393 3.716 1.78 5.496 1.78h8.827a1.238 1.238 0 001.238-1.16zm-3.561-8.284c0 .387-.078.852-.929.852h-5.652c-1.394 0-2.555.619-2.555 1.47v-1.47c0-.93 0-1.781.774-2.478.775-.697 2.71-.929 3.794-.929a6.505 6.505 0 013.407.62 2.406 2.406 0 011.161 1.935M148.204 93.784v-1.316h-8.749c-1.471 0-3.174-.155-3.639-1.703a6.982 6.982 0 01-.232-1.936h10.452a3.325 3.325 0 001.935-.542 2.63 2.63 0 00.852-2.245c0-1.78-.464-3.561-2.555-4.645-2.09-1.084-3.871-.93-5.961-.93-2.091 0-4.723 0-6.736 1.394s-2.168 3.33-2.168 6.039c0 2.71.155 3.871 1.316 5.265 1.162 1.393 3.717 1.78 5.497 1.78h8.826a1.164 1.164 0 001.162-1.16zM144.72 85.5c0 .387-.155.852-.929.852h-5.652c-1.394 0-2.555.619-2.555 1.47v-1.47c0-.93 0-1.781.774-2.478.774-.697 2.71-.929 3.794-.929a6.5 6.5 0 013.406.62 2.4 2.4 0 011.162 1.935M84.95 76.52h-1.625a1.162 1.162 0 00-1.161 1.16v3.02a1.858 1.858 0 012.013-1.549h.774a1.161 1.161 0 001.161-1.16v-.31a1.083 1.083 0 00-1.161-1.162" opacity="0.36"></path></g><g fill="#6E0018" opacity="0.36"><path d="M96.41 107.643c-2.091-4.568-8.13-4.258-8.13-4.258H78.215a3.326 3.326 0 00-3.561 3.329v23.613h2.555c1.548 0 2.864-1.006 2.864-2.322v-4.181h8.904c6.426 0 7.82-5.11 7.82-5.11s1.703-6.503-.388-11.071zM91.3 117.94c-1.084 2.322-4.259 2.4-4.259 2.4h-6.968v-12.62c0-1.084 1.549-.929 1.549-.929h4.8c.84 0 1.677.131 2.477.387 2.633.697 2.865 3.871 2.865 3.871s.542 4.646-.465 6.891zM116.694 103.385h-14.555v1.161c0 1.239 1.238 2.245 2.787 2.245h9.523s3.096.078 3.096 2.323v2.013h-11.148s-3.097-.232-4.491 1.548a8.216 8.216 0 00-1.626 5.265c0 1.626.62 3.871 2.246 4.877a6.43 6.43 0 003.871.93h11.148s5.342.619 5.342-2.942v-11.846s.388-5.574-6.193-5.574zm-.387 16.955h-7.588a2.635 2.635 0 01-2.787-2.865c0-2.632 1.549-2.942 2.013-2.942h9.6v4.568a1.076 1.076 0 01-.304.935 1.092 1.092 0 01-.934.304zM127.377 103.385h1.704a1.774 1.774 0 011.703.929l7.355 14.71 7.897-14.788a1.857 1.857 0 011.626-.851h1.626c1.316 0 2.167 1.084 1.625 2.09l-13.006 24.001a1.935 1.935 0 01-1.704.929h-1.471c-1.316 0-2.245-1.162-1.625-2.168l2.477-4.413-9.832-18.349c-.542-1.006.309-2.09 1.625-2.09z" opacity="0.36"></path></g><path fill="#fff" d="M84.022 79.461h-1.626a1.239 1.239 0 00-1.162 1.24v12.077a1.16 1.16 0 001.162 1.161h1.626a1.239 1.239 0 001.238-1.161V80.7a1.239 1.239 0 00-1.239-1.239M78.215 79.462a2.477 2.477 0 00-2.323 1.548l-4.335 9.213c-.078.155-.31.542-.465.542-.155 0-.387-.387-.464-.542l-4.413-9.213a2.478 2.478 0 00-2.323-1.548h-2.477l6.89 13.316a2.865 2.865 0 002.787 1.316c1.007 0 2.09-.077 2.71-1.316l6.89-13.316h-2.477zM154.088 77.294a1.097 1.097 0 00-.315-.847 1.082 1.082 0 00-.847-.315h-1.625a1.164 1.164 0 00-1.162 1.162v11.923a3.952 3.952 0 001.781 3.639c1.161.774 2.477 1.083 4.877 1.083h1.317a1.161 1.161 0 001.161-1.161v-1.316h-1.007a5.957 5.957 0 01-3.096-.62c-1.162-.774-1.084-2.09-1.084-3.096V77.294zM128.616 91.462a5.963 5.963 0 01-3.097-.62c-1.161-.774-1.006-2.09-1.006-3.096v-5.807h3.871a1.161 1.161 0 001.161-1.161V79.46h-5.032v-2.167a1.165 1.165 0 00-1.162-1.162h-1.703a1.161 1.161 0 00-1.161 1.162v2.168h-8.284v-2.168a1.165 1.165 0 00-1.162-1.162h-1.625a1.083 1.083 0 00-1.162 1.162v2.168h-2.477v1.316a1.16 1.16 0 001.161 1.161h1.316v7.278a3.952 3.952 0 001.781 3.639c1.084.774 2.4 1.083 4.8 1.083h1.316a1.16 1.16 0 001.162-1.161v-1.316h-.929c-.775 0-2.246 0-3.097-.62-.852-.619-1.084-2.09-1.084-3.096v-5.807h8.284v7.278a4.025 4.025 0 001.858 3.638c1.084.775 2.4 1.084 4.8 1.084h1.316a1.16 1.16 0 001.162-1.161v-1.316h-1.007zM104.306 92.778v-1.316H95.48c-1.47 0-3.174-.155-3.639-1.704a7.975 7.975 0 01-.232-2.013h10.452a2.867 2.867 0 001.936-.541 2.402 2.402 0 00.851-2.168c0-1.781-.464-3.64-2.555-4.646-2.09-1.006-3.793-.929-5.961-.929s-4.723 0-6.736 1.317c-2.013 1.316-2.09 3.406-2.09 6.038 0 2.633.077 3.949 1.239 5.265 1.16 1.316 3.716 1.858 5.496 1.858h8.904a1.161 1.161 0 001.161-1.161zm-3.561-8.284c0 .387-.078.851-.852.851h-5.729c-1.394 0-2.555.62-2.555 1.471v-1.47c0-1.007 0-1.781.774-2.478.775-.697 2.71-1.007 3.794-1.007a6.426 6.426 0 013.407.697 2.321 2.321 0 011.161 1.936M147.352 92.778v-1.316h-8.826c-1.471 0-3.174-.155-3.639-1.704a8.03 8.03 0 01-.232-2.013h10.452a2.863 2.863 0 001.935-.541 2.395 2.395 0 00.852-2.168c0-1.781-.464-3.64-2.555-4.646-2.09-1.006-3.871-.929-5.961-.929-2.091 0-4.723 0-6.736 1.317-2.013 1.316-2.09 3.406-2.09 6.038 0 2.633.077 3.949 1.238 5.265 1.162 1.316 3.717 1.858 5.497 1.858h8.826a1.239 1.239 0 001.239-1.161zm-3.561-8.284c0 .387-.078.851-.929.851h-5.652c-1.394 0-2.555.62-2.555 1.471v-1.47c0-1.007 0-1.781.774-2.478.774-.697 2.71-1.007 3.794-1.007a6.422 6.422 0 013.406.697 2.316 2.316 0 011.162 1.936M84.022 75.436h-1.626a1.161 1.161 0 00-1.162 1.16v3.098c0-.775.775-1.549 2.013-1.549h.775a1.239 1.239 0 001.238-1.161v-.387a1.239 1.239 0 00-1.239-1.161M95.48 106.559c-2.09-4.568-8.13-4.258-8.13-4.258H77.287a3.326 3.326 0 00-3.561 3.329v23.691h2.555c1.625 0 2.864-1.084 2.864-2.4v-4.104h8.826c6.426 0 7.82-5.187 7.82-5.187s1.78-6.503-.31-11.071zm-5.11 10.374c-1.084 2.245-4.258 2.323-4.258 2.323h-6.968v-12.542c0-1.084 1.626-.929 1.626-.929h4.8c.81.003 1.616.107 2.4.309 2.632.774 2.942 3.949 2.942 3.949s.465 4.568-.542 6.89zM115.765 102.301h-14.556v1.161c0 1.316 1.239 2.323 2.788 2.323h9.522s3.097 0 3.097 2.322v1.936h-11.148s-3.097-.155-4.491 1.626a8.052 8.052 0 00-1.626 5.264c0 1.626.62 3.871 2.245 4.878a7.124 7.124 0 003.872.929h11.148s5.342.619 5.342-3.019v-11.768s.387-5.652-6.193-5.652zm-.388 16.955h-7.587a2.559 2.559 0 01-2.787-2.865c0-2.554 1.548-2.864 2.013-2.864h9.6v4.568s.232 1.161-1.239 1.161zM126.449 102.301h1.78a1.775 1.775 0 011.626.929l7.355 14.787 7.897-14.787a1.858 1.858 0 011.626-.929h1.626c1.316 0 2.168 1.161 1.626 2.168l-13.007 24a1.852 1.852 0 01-1.626.852h-1.548c-1.316 0-2.245-1.161-1.626-2.168l2.477-4.336-9.832-18.426c-.542-.929.31-2.09 1.626-2.09z"></path></g><defs><linearGradient id="paint0_linear" x1="24.33" x2="312.321" y1="142.575" y2="36.725" gradientUnits="userSpaceOnUse"><stop stop-color="#FF9196"></stop><stop offset="1" stop-color="#FFA3A7"></stop></linearGradient><linearGradient id="paint1_linear" x1="84.572" x2="54.973" y1="150.914" y2="220.484" gradientUnits="userSpaceOnUse"><stop offset="0.28" stop-color="#FF5A61"></stop><stop offset="1" stop-color="#F01947"></stop></linearGradient><linearGradient id="paint2_linear" x1="98.538" x2="35.301" y1="60.493" y2="-52.913" gradientUnits="userSpaceOnUse"><stop offset="0.28" stop-color="#FF6268"></stop><stop offset="1" stop-color="#F1335C"></stop></linearGradient><linearGradient id="paint3_linear" x1="158.71" x2="199.952" y1="89.619" y2="121.927" gradientUnits="userSpaceOnUse"><stop offset="0.28" stop-color="#FF6D73"></stop><stop offset="1" stop-color="#FF7F84"></stop></linearGradient><linearGradient id="paint4_linear" x1="151.301" x2="37.894" y1="16.1" y2="203.049" gradientUnits="userSpaceOnUse"><stop offset="0.28" stop-color="#FF454B"></stop><stop offset="1" stop-color="#E03"></stop></linearGradient><clipPath id="clip0"><path fill="#fff" d="M0 0H200V200H0z"></path></clipPath></defs></svg>
+
+            <div class="donation__dropup--content">
+              <img data-src="/images/donation/vtp.png" alt="viettelpay QR Code" src="data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath fill='none' d='M0 0h24v24H0V0z'/%3E%3Cpath fill='%23aaa' d='M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 16H6c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v12c0 .55-.45 1-1 1zm-4.44-6.19l-2.35 3.02-1.56-1.88c-.2-.25-.58-.24-.78.01l-1.74 2.23c-.26.33-.02.81.39.81h8.98c.41 0 .65-.47.4-.8l-2.55-3.39c-.19-.26-.59-.26-.79 0z'/%3E%3C/svg%3E" class="lazyload"/>
+            </div>
+          </div>        
+        
+      
+    
+      
+    
+  </div>
+</div>
+
+
+	<section class="comments">
+	
+  
+    
+
+<link rel="stylesheet" href="/css/isso.min.css">
+<script defer src="/js/helper/markdowntoolbar.min.js"></script>
+<script defer src="/js/helper/isso.min.js" data-isso='https://comments.pnghia.com/' data-isso-require-author='true' data-isso-css='false' data-isso-require-email='true' data-isso-max-comments-top='15' data-isso-max-comments-nested='8' data-isso-reveal-on-click='5' data-isso-reply-notifications='true' data-isso-vote='true' data-isso-vote-levels='-5,-3,0,3,5'></script>
+<section id='isso-thread' data-title='Cài đặt ADGuardHome lên OPNsense - chặn quảng cáo bằng DNS hiệu quả.' data-isso-id='/serial/opnsense/opnsense-install-adguardhome/'></section>
+
+  
+	
+</section>
+
+</main>
+<script>
+	'use strict';
+	window.onload = function() {
+	var tables = document.querySelectorAll('.content > table');
+    for (let i = 0; i < tables.length; i++) {
+    var table = tables[i];
+    var wrapper = document.createElement('div');
+    wrapper.className = 'table-wrapper';
+    table.parentElement.replaceChild(wrapper, table);
+    wrapper.appendChild(table);
+}
+}
+</script>
+
+<div class="authorbox clearfix">
+	<figure class="authorbox__avatar">
+		<img alt="Nghĩa Phan avatar" src="/img/avatar.jpg" class="avatar" height="90" width="90">
+	</figure>
+	<div class="authorbox__header">
+		<span class="authorbox__name">✍️ Nghĩa Phan</span>
+	</div>
+	<div class="authorbox__description">
+		• Điêu khắc, ArtForm/JDpaint Designer<br/>• Quảng Trị, Việt Nam<br/>• <a href="https://facebook.com/pVNghiaQT/">Facebook</a> / <a href="https://t.me/pVNghiaQT/">Telegram</a>
+	</div>
+</div>
+
+<nav class="pager flex">
+	<div class="pager__item pager__item--prev">
+		<a class="pager__link" href="/serial/opnsense/opnsense-vlan-captiveportal-bwmanagement/" rel="prev">
+			<span class="pager__subtitle">«&thinsp;Trước</span>
+			<p class="pager__title">Chia VLAN cho Guest, giới hạn tốc độ, thiết lập Captive Portal.</p>
+		</a>
+	</div>
+	<div class="pager__item pager__item--next">
+		<a class="pager__link" href="/serial/opnsense/opnsense-domain-ddns-letsencrypt-reveserproxy/" rel="next">
+			<span class="pager__subtitle">Sau&thinsp;»</span>
+			<p class="pager__title">Thiết lập Tên Miền, DDNS thông qua Cloudflare, lấy chứng chỉ SSL Let&#39;s Encrypt, Reveser Proxy</p>
+		</a>
+	</div>
+</nav>
+
+			</div>
+			
+		</div>
+		<footer class="footer">
+	<div class="container footer__container flex">
+		
+		<div class="footer__copyright">
+			&copy; 2021 pNghia.com.
+			<span class="footer__copyright-credits">Powered by <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">goHugo</a> | <a href="https://posativ.org/isso/" rel="nofollow noopener" target="_blank">ISSO</a> | <a href="https://www.goatcounter.com/" rel="nofollow noopener" target="_blank">goatCounter</a> and the <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span>
+		</div>
+	</div>
+</footer>
+	</div>
+<script async defer src="/js/menu.js"></script>
+</body>
+</html>

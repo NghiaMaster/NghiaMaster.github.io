@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>pNghia.com</title>
+    <link>https://pnghia.com/</link>
+    <description>Recent content on pNghia.com</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>vi-vn</language>
+    <lastBuildDate>Fri, 22 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://pnghia.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Loạt bài viết hướng dẫn cấu hình OpenWRT cơ bản</title>
+      <link>https://pnghia.com/serial/openwrt/</link>
+      <pubDate>Fri, 22 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://pnghia.com/serial/openwrt/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Loạt bài viết hướng dẫn cấu hình OPNsense</title>
+      <link>https://pnghia.com/serial/opnsense/</link>
+      <pubDate>Fri, 22 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://pnghia.com/serial/opnsense/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Hướng dẫn chuyển đổi ngôn ngữ Stock Firmware Newifi3 D2 từ Tiếng Trung sang English</title>
+      <link>https://pnghia.com/posts/newifi3-d2-stock-english-firmware/</link>
+      <pubDate>Wed, 06 Jan 2021 17:38:05 +0700</pubDate>
+      
+      <guid>https://pnghia.com/posts/newifi3-d2-stock-english-firmware/</guid>
+      <description>Bài viết hướng dẫn chuyển từ Tiếng Trung sang Tiếng Anh (tiếng Việt vẫn được nhưng do lười dịch với ít dùng nên thôi 😌). Dành cho bạn nào thích dùng FW gốc nhưng lại không thích hoặc không biết tiếng Trung.
+ Chuẩn bị  Máy tính, hoặc điện thoại vẫn được miễn sao bạn dùng được SCP. Ở đây mình sẽ hướng dẫn làm trên PC. Phần mềm WinSCP cho Windows, download tại đây.</description>
+    </item>
+    
+    <item>
+      <title>Hướng dẫn cấu hình OpenWRT quay PPPoE có VLAN ID.</title>
+      <link>https://pnghia.com/serial/openwrt/huong-dan-cau-hinh-openwrt-quay-pppoe-with-vlan/</link>
+      <pubDate>Wed, 06 Jan 2021 10:49:11 +0700</pubDate>
+      
+      <guid>https://pnghia.com/serial/openwrt/huong-dan-cau-hinh-openwrt-quay-pppoe-with-vlan/</guid>
+      <description>Ở bài trước mình đã Hướng dẫn cấu hình OpenWRT quay PPPoE
+khi nhà cung cấp mạng không set VLAN hoặc khi Brigde modem nhà mạng đã hỗ trợ set VLAN ngay trong phần thiết lập Brigde của modem. Trong bài viết này, mình sẽ hướng dẫn các bạn setup OpenWRT quay PPPoE kèm VLAN vì một số modem nhà mạng không cho phép cấu hình số VLAN ở thiết lập Brigde Mode nhưng bắt buộc phải có số VLAN mới quay PPPoE được, vì vậy - chỉ còn cách là Set số VLAN đó ngay trên OpenWRT.</description>
+    </item>
+    
+    <item>
+      <title>Hướng dẫn cấu hình OpenWRT quay PPPoE</title>
+      <link>https://pnghia.com/serial/openwrt/huong-dan-cau-hinh-openwrt-quay-pppoe/</link>
+      <pubDate>Tue, 05 Jan 2021 12:21:39 +0700</pubDate>
+      
+      <guid>https://pnghia.com/serial/openwrt/huong-dan-cau-hinh-openwrt-quay-pppoe/</guid>
+      <description>Đây là bài viết hướng dẫn cấu hình OpenWRT quay PPPoE khi đã setup Modem nhà mạng sang chế độ Brigde Mode. Bài viết này hướng dẫn quay PPPoE không kèm VLAN - tức là nhà mạng khu vực bạn ở không dùng VLAN hoặc modem nhà mạng hỗ trợ setup VLAN ID ở phần cấu hình Brigde Mode của modem. Nếu modem nhà bạn không có mục set VLAN ID nhưng khi quay PPPoE bắt buộc phải có thì các bạn có thể xem bài viết Hướng dẫn cấu hình OpenWRT quay PPPoE với VLANđể set VLAN ID ngay trên router mà không thông qua modem nhà mạng.</description>
+    </item>
+    
+    <item>
+      <title>Hướng dẫn cấu hình Captive Portal trên OPNsense</title>
+      <link>https://pnghia.com/serial/opnsense/opnsense-cau-hinh-captive-portal/</link>
+      <pubDate>Fri, 25 Dec 2020 09:30:14 +0700</pubDate>
+      
+      <guid>https://pnghia.com/serial/opnsense/opnsense-cau-hinh-captive-portal/</guid>
+      <description>Xem qua loạt bài viết hướng dẫn cấu hình OPNsense tại đây Ứng dụng Captive Portal Làm điểm truy cập WIFI ở khách sạn, nhà nghỉ, quán cafe&amp;hellip; có thể quản lý bằng các mã voucher, username&amp;hellip; WIFI Marketing, trang giới thiệu sản phẩm khi kết nối tới điểm truy cập &amp;hellip;  Các chức năng chính Có thể quản lý, tuỳ chọn các Template cho trang đăng nhập  Chuyển hướng URL Cửa sổ POP-UP Tuỳ chỉnh trang splash&amp;hellip;   Quản lý Khu vực  Các vùng khác nhau có thể được thiết lập trên mỗi giao diện hoặc nhiều giao diện, có thể chia sẻ thiết lập một vùng.</description>
+    </item>
+    
+    <item>
+      <title>Thiết lập Tên Miền, DDNS thông qua Cloudflare, lấy chứng chỉ SSL Let&#39;s Encrypt, Reveser Proxy</title>
+      <link>https://pnghia.com/serial/opnsense/opnsense-domain-ddns-letsencrypt-reveserproxy/</link>
+      <pubDate>Thu, 24 Dec 2020 13:01:14 +0700</pubDate>
+      
+      <guid>https://pnghia.com/serial/opnsense/opnsense-domain-ddns-letsencrypt-reveserproxy/</guid>
+      <description>Xem qua loạt bài viết hướng dẫn cấu hình OPNsense tại đây  &amp;ldquo;Đây là bài viết mở rộng, yêu cầu các bạn phải biết cấu hình Domain, bài này mình hướng dẫn dựa trên dịch vụ DynamicDNS (DDNS) của Cloudflare (Domain đăng kí tại nơi khác phải trỏ Nameserver về Cloudflare để sử dụng) - các dịch vụ DDNS khác các bạn tự tham khảo hướng dẫn tại nơi đăng kí.</description>
+    </item>
+    
+    <item>
+      <title>Cài đặt ADGuardHome lên OPNsense - chặn quảng cáo bằng DNS hiệu quả.</title>
+      <link>https://pnghia.com/serial/opnsense/opnsense-install-adguardhome/</link>
+      <pubDate>Thu, 24 Dec 2020 13:00:39 +0700</pubDate>
+      
+      <guid>https://pnghia.com/serial/opnsense/opnsense-install-adguardhome/</guid>
+      <description>Xem qua loạt bài viết hướng dẫn cấu hình OPNsense tại đây [PHẢI ĐỌC] Chú ý trước khi làm Để cài đặt được ADguardHome yêu cầu các bạn phải hiểu biết cơ bản về sử dụng dòng lệnh (Terminal, Commandline&amp;hellip;) Mọi thao tác phải thận trọng, các thao tác Copy, Dán, gõ lệnh - phải thao tác chính xác, không thừa hoặc thiếu bất kì ký tự nào.</description>
+    </item>
+    
+    <item>
+      <title>Chia VLAN cho Guest, giới hạn tốc độ, thiết lập Captive Portal.</title>
+      <link>https://pnghia.com/serial/opnsense/opnsense-vlan-captiveportal-bwmanagement/</link>
+      <pubDate>Thu, 24 Dec 2020 12:58:08 +0700</pubDate>
+      
+      <guid>https://pnghia.com/serial/opnsense/opnsense-vlan-captiveportal-bwmanagement/</guid>
+      <description>Xem qua loạt bài viết hướng dẫn cấu hình OPNsense tại đây  Chia VLAN cho mạng khách là cách để ta có thể dùng 1 Port LAN để chia thành 2 đường truyền riêng biệt áp dụng cho các Router có số Port hạn chế (Router nhà mình có 2 Port, 1 LAN và 1 WAN). Ví dụ nếu ta muốn phát Wifi Free cho khách nhưng lại muốn hạn chế tốc độ tối đa cho khách, tách biệt với đường truyền chính, đưa máy khách vào 1 DHCP server riêng để dễ quản lý hoặc các quán cafe muốn khách phải truy cập vào một trang giới thiệu (Captive Portal) mới có thể tiếp tục truy cập mạng (Để quảng cáo sản phẩm, giới thiệu &amp;hellip;).</description>
+    </item>
+    
+    <item>
+      <title>Cấu hình OPNsense quay PPPoE.</title>
+      <link>https://pnghia.com/serial/opnsense/opnsense-pppoe/</link>
+      <pubDate>Thu, 24 Dec 2020 12:45:58 +0700</pubDate>
+      
+      <guid>https://pnghia.com/serial/opnsense/opnsense-pppoe/</guid>
+      <description>Xem qua loạt bài viết hướng dẫn cấu hình OPNsense tại đây  Đăng nhập vào OPNsense  IP mặc định là https://192.168.1.1 với Username là root và Password là opnsense   Vào mục Interface &amp;gt; WAN, Thiết lập theo bảng dưới. Những mục không được nêu thì để mặc định.     Mục Chọn Ghi chú     IPv4 Configuration type PPPoE    IPv6 Configuration type DHCPv6 Nếu không muốn bật IPv6 thì chọn None, tuỳ vào nhà mạng mà mục này sẽ khác nhau.</description>
+    </item>
+    
+    <item>
+      <title>Tổng hợp Firmware cho Newifi3 D2</title>
+      <link>https://pnghia.com/posts/tong-hop-firmware-newifi3d2/</link>
+      <pubDate>Thu, 03 Sep 2020 02:46:40 +0000</pubDate>
+      
+      <guid>https://pnghia.com/posts/tong-hop-firmware-newifi3d2/</guid>
+      <description>Sơ lược cấu hình Newifi 3 D2 Kiến trúc CPU: Ramips Kiến trúc gói: Mipsel_24kc Bootloader: U-Boot, có thể thay bằng Breed Bootloader CPU: Mediatek MT7621AT Số Lõi/Số Luồng: 2/4 Tốc độ CPU: 880Mhz ROM/RAM: 32Mb/512Mb Cổng WAN 10/100/1000: 1 Cổng LAN 10/100/1000: 4 Switch: MediaTek MT7621AT VLAN: Yes WLAN Hardware: MediaTek MT7603EN, MediaTek MT7612EN MIMO 2x2:2 WLAN 2.4GHz: b/g/n WLAN 5.0GHz: a/n/ac WLAN driver (Stock OpenWRT): mt76 USB ports: 1x 3.</description>
+    </item>
+    
+    <item>
+      <title>Update MacVendor OPNSENSE</title>
+      <link>https://pnghia.com/posts/update-macvendor-opnsense/</link>
+      <pubDate>Sat, 01 Aug 2020 03:40:01 +0000</pubDate>
+      
+      <guid>https://pnghia.com/posts/update-macvendor-opnsense/</guid>
+      <description>  Truy cập SSH vào máy chủ OPNSENSE
+$ ssh root@172.16.1.1 Nhấn phím 8 để truy cập Shell.    Gõ theo thứ tự các lệnh sau:
+1 2 3 4 5  $ cd /usr/local/lib/python3.7/site-packages/netaddr/eui $ mv ./oui.txt ./oui.txt.backup $ curl http://standards-oui.ieee.org/oui.txt --output oui.txt $ mv ./oui.idx ./oui.idx.backup $ python3 ./ieee.py     DONE !
+  </description>
+    </item>
+    
+    <item>
+      <title>Hướng dẫn cấu hình OpenWRT làm Access Point (AP) và cách thêm VLAN cho GUEST AP</title>
+      <link>https://pnghia.com/serial/openwrt/cau-hinh-openwrt-lam-ap-mode/</link>
+      <pubDate>Mon, 15 Jun 2020 13:07:56 +0000</pubDate>
+      
+      <guid>https://pnghia.com/serial/openwrt/cau-hinh-openwrt-lam-ap-mode/</guid>
+      <description>&amp;gt; Xem qua bài viết Hướng dẫn cấu hình OpenWRT quay PPPoE Tại đây &amp;gt; Xem qua bài viết Hướng dẫn cấu hình OpenWRT quay PPPoE có VLAN ID Tại đây Mục đích bài viết  Cấu hình Firmware OpenWRT sang chế độ AP Mode (Access Point) khi đã có modem cấp DHCP ở đằng sau.  Ở chế độ này, Router chỉ có chức năng duy nhất là phát WIFI, các chức năng khác như cấp DHCP, cân bằng tải, DNS Server, Firewall,&amp;hellip; sẽ bị vô hiệu.</description>
+    </item>
+    
+    <item>
+      <title>Nâng cấp Newifi3 D2 với Custom Firmware</title>
+      <link>https://pnghia.com/posts/newifi3-d2-firmware-upgrade/</link>
+      <pubDate>Sat, 04 Apr 2020 08:59:53 +0700</pubDate>
+      
+      <guid>https://pnghia.com/posts/newifi3-d2-firmware-upgrade/</guid>
+      <description>Bài viết sẽ có 3 phần. Phần đầu là hướng dẫn cài Breed Bootloader, phần 2 sẽ hướng dẫn UP ROM và phần 3 là tự Build ROM OpenWRT.  Yêu cầu chung: Sử dụng Command Line, sử dụng hệ điều hành Linux càng tốt, có SSH Client để truy cập vào Router thông qua SSH. Kết nối với Router thông qua Cáp LAN. Để Compile OpenWRT, hệ điều hành khuyên dùng là Ubuntu 18.</description>
+    </item>
+    
+    <item>
+      <title>OpenWrt by Lean (LEDE) cho Newifi3 D2</title>
+      <link>https://pnghia.com/posts/openwrt-newifi3-d2/</link>
+      <pubDate>Thu, 02 Apr 2020 19:51:12 +0700</pubDate>
+      
+      <guid>https://pnghia.com/posts/openwrt-newifi3-d2/</guid>
+      <description>-&amp;gt; Hướng dẫn UP Firmware  ROM được @kizimirua build từ Lean OpenWRT https://github.com/coolsnowwolf/ledevar r = new XMLHttpRequest();r.addEventListener(&#39;load&#39;, function() {document.querySelector(&#39;#a674231985&#39;).innerText = JSON.parse(this.responseText).count_unique})r.open(&#39;GET&#39;, &#39;https://stats.pnghia.com/counter/&#39; + encodeURIComponent(&#34;https://github.com/coolsnowwolf/lede&#34;).replace(/\/$/, &#39;&#39;) + &#39;.json&#39;)r.send()tương thích với NEWIFI3 D2 OpenWrt thế hệ thứ 3
+Có 2 bản để lựa chọn là bản FULL và bản rút gọn, bài viết này sẽ tổng hợp lại cả 2 bản cho các bạn dễ lựa chọn.</description>
+    </item>
+    
+    <item>
+      <title>Cloudflare Dynamic IP Update - API v4</title>
+      <link>https://pnghia.com/posts/cloudflare-dynamic-ip-update.vi/</link>
+      <pubDate>Sun, 22 Mar 2020 14:04:20 +0700</pubDate>
+      
+      <guid>https://pnghia.com/posts/cloudflare-dynamic-ip-update.vi/</guid>
+      <description>cloudflare_dynamic_ip_update.bash 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115  #!</description>
+    </item>
+    
+    <item>
+      <title>Về tôi</title>
+      <link>https://pnghia.com/about/</link>
+      <pubDate>Tue, 21 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://pnghia.com/about/</guid>
+      <description>Công việc chính của mình là làm Điêu khắc (thủ công/CNC), thiết kế mẫu điêu khắc bằng phần mềm JDPaint và Artform - vận hành máy chạm khắc CNC.
+Ngoài ra, mình còn là một người đam mê Công Nghệ, điện tử, máy tính và lập trình. Mình lập ra trang này để viết lách, giải trí khi rảnh rỗi, muốn chia sẽ một ít kiến thức nhỏ nhoi của mình mong sẽ giúp ích cho mọi người ở một trường hợp nào đó.</description>
+    </item>
+    
+  </channel>
+</rss>
