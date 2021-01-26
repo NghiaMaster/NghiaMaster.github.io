@@ -36,47 +36,8 @@
 	<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
 	<meta name="theme-color" content="#171d26" />
 		
-	<script>
-		function fadeInPage() {
-		  if (!window.AnimationEvent) { return; }
-		  var fader = document.getElementById('fader');
-		  fader.classList.add('fade-out');
-		}
-  
-		document.addEventListener('DOMContentLoaded', function() {
-		  if (!window.AnimationEvent) { return }
-  
-		  var anchors = document.getElementsByTagName('a:not(.post__toc)');
-  
-		  for (var idx=0; idx<anchors.length; idx+=1) {
-			if (anchors[idx].hostname !== window.location.hostname) {
-			  continue;
-			}
-  
-			anchors[idx].addEventListener('click', function(event) {
-			  var fader = document.getElementById('fader'),
-				  anchor = event.currentTarget;
-  
-			  var listener = function() {
-				window.location = anchor.href;
-				fader.removeEventListener('animationend', listener);
-			  };
-			  fader.addEventListener('animationend', listener);
-  
-			  event.preventDefault();
-			  fader.classList.add('fade-in');
-			});
-		  }
-		});
-  
-		window.addEventListener('pageshow', function (event) {
-		  if (!event.persisted) {
-			return;
-		  }
-		  var fader = document.getElementById('fader');
-		  fader.classList.remove('fade-in');
-		});
-	  </script>
+	
+	<script src="/js/helper/loading.min.js"></script>
 </head>
 <body class="body">
 	<div class="container container--outer">
@@ -182,8 +143,8 @@
 
 	</div>
 </header></div>
+		<script>fadeInPage()</script>
 		<div class="wrapper flex">
-			<script>fadeInPage()</script>
 			<div class="primary">
 			
 
@@ -257,9 +218,9 @@
 </li>
 <li>Quản lý Băng thông</li>
 <li>Ngoài ra còn rất nhiều chức năng khác có thể tham khảo thêm ở 
-<a href="https://docs.opnsense.org/manual/captiveportal.html" target="_blank" rel="noopener noreferrer" data-goatcounter-click="https://docs.opnsense.org/manual/captiveportal.html" data-goatcounter-referrer="/serial/opnsense/opnsense-cau-hinh-captive-portal/">Trang chủ</a><span title="Mức độ phổ biến" id="a287569134" class="single__badge"></span><script async>var r = new XMLHttpRequest();
+<a href="https://docs.opnsense.org/manual/captiveportal.html" target="_blank" rel="noopener noreferrer" data-goatcounter-click="https://docs.opnsense.org/manual/captiveportal.html" data-goatcounter-referrer="/serial/opnsense/opnsense-cau-hinh-captive-portal/">Trang chủ</a><span title="Mức độ phổ biến" id="a912857634" class="single__badge"></span><script async>var r = new XMLHttpRequest();
 r.addEventListener('load', function() {
-document.querySelector('#a287569134').innerText = JSON.parse(this.responseText).count_unique
+document.querySelector('#a912857634').innerText = JSON.parse(this.responseText).count_unique
 })
 r.open('GET', 'https://stats.pnghia.com/counter/' + encodeURIComponent("https://docs.opnsense.org/manual/captiveportal.html").replace(/\/$/, '') + '.json')
 r.send()</script>
@@ -356,9 +317,9 @@ Mỗi Interface sẽ cần phải có 1 Zone riêng (GUEST VLAN, LAN1, LAN2&hell
 <li>Nhấn vào nút <img style="display:inline;" src="https://docs.opnsense.org/_images/btn_download.png"> ở giữa cạnh bên phải màn hình để tải về template mặc định.</li>
 <li>Các bạn có thể custom dựa trên template này hoặc có thể tìm thêm ở trên Google.</li>
 <li>Mình cũng tìm thấy 1 template trên Github, các bạn có thể tham khảo thêm 
-<a href="https://github.com/t4skforce/OPNsense-Captive-Portal" target="_blank" rel="noopener noreferrer" data-goatcounter-click="https://github.com/t4skforce/OPNsense-Captive-Portal" data-goatcounter-referrer="/serial/opnsense/opnsense-cau-hinh-captive-portal/">Link chi tiết và screenshot</a><span title="Mức độ phổ biến" id="a423895176" class="single__badge"></span><script async>var r = new XMLHttpRequest();
+<a href="https://github.com/t4skforce/OPNsense-Captive-Portal" target="_blank" rel="noopener noreferrer" data-goatcounter-click="https://github.com/t4skforce/OPNsense-Captive-Portal" data-goatcounter-referrer="/serial/opnsense/opnsense-cau-hinh-captive-portal/">Link chi tiết và screenshot</a><span title="Mức độ phổ biến" id="a921836754" class="single__badge"></span><script async>var r = new XMLHttpRequest();
 r.addEventListener('load', function() {
-document.querySelector('#a423895176').innerText = JSON.parse(this.responseText).count_unique
+document.querySelector('#a921836754').innerText = JSON.parse(this.responseText).count_unique
 })
 r.open('GET', 'https://stats.pnghia.com/counter/' + encodeURIComponent("https://github.com/t4skforce/OPNsense-Captive-Portal").replace(/\/$/, '') + '.json')
 r.send()</script>
@@ -386,9 +347,9 @@ r.send()</script>
 <ul>
 <li>Tốc độ tối đa này sẽ chia đều cho mọi clients trong mạng khách. Ví dụ nếu có 7 clients trong mạng khách thì mỗi máy sẽ có tốc độ Download tối đa là <strong>8/7 = 1.1Mbps</strong>. Thông thường nên để 1/3 hoặc 1/2 tốc độ của gói cước.</li>
 <li>Xem thêm cách thiết lập tốc độ tối đa cho từng clients và các chức năng khác về Quản Lý băng thông 
-<a href="https://docs.opnsense.org/manual/how-tos/shaper.html" target="_blank" rel="noopener noreferrer" data-goatcounter-click="https://docs.opnsense.org/manual/how-tos/shaper.html" data-goatcounter-referrer="/serial/opnsense/opnsense-cau-hinh-captive-portal/">tại đây</a><span title="Mức độ phổ biến" id="a327851946" class="single__badge"></span><script async>var r = new XMLHttpRequest();
+<a href="https://docs.opnsense.org/manual/how-tos/shaper.html" target="_blank" rel="noopener noreferrer" data-goatcounter-click="https://docs.opnsense.org/manual/how-tos/shaper.html" data-goatcounter-referrer="/serial/opnsense/opnsense-cau-hinh-captive-portal/">tại đây</a><span title="Mức độ phổ biến" id="a412687935" class="single__badge"></span><script async>var r = new XMLHttpRequest();
 r.addEventListener('load', function() {
-document.querySelector('#a327851946').innerText = JSON.parse(this.responseText).count_unique
+document.querySelector('#a412687935').innerText = JSON.parse(this.responseText).count_unique
 })
 r.open('GET', 'https://stats.pnghia.com/counter/' + encodeURIComponent("https://docs.opnsense.org/manual/how-tos/shaper.html").replace(/\/$/, '') + '.json')
 r.send()</script>
@@ -580,9 +541,9 @@ Nhấn <strong>Apply</strong> để áp dụng thay đổi.</p>
   
 <blockquote class="book-hint info">
     Xem thêm các hướng dẫn thêm Voucher/Tickets/Username&hellip; tại 
-<a href="https://docs.opnsense.org/manual/how-tos/guestnet.html#step-8-add-voucher-server" target="_blank" rel="noopener noreferrer" data-goatcounter-click="https://docs.opnsense.org/manual/how-tos/guestnet.html#step-8-add-voucher-server" data-goatcounter-referrer="/serial/opnsense/opnsense-cau-hinh-captive-portal/">trang chủ</a><span title="Mức độ phổ biến" id="a294531867" class="single__badge"></span><script async>var r = new XMLHttpRequest();
+<a href="https://docs.opnsense.org/manual/how-tos/guestnet.html#step-8-add-voucher-server" target="_blank" rel="noopener noreferrer" data-goatcounter-click="https://docs.opnsense.org/manual/how-tos/guestnet.html#step-8-add-voucher-server" data-goatcounter-referrer="/serial/opnsense/opnsense-cau-hinh-captive-portal/">trang chủ</a><span title="Mức độ phổ biến" id="a243159786" class="single__badge"></span><script async>var r = new XMLHttpRequest();
 r.addEventListener('load', function() {
-document.querySelector('#a294531867').innerText = JSON.parse(this.responseText).count_unique
+document.querySelector('#a243159786').innerText = JSON.parse(this.responseText).count_unique
 })
 r.open('GET', 'https://stats.pnghia.com/counter/' + encodeURIComponent("https://docs.opnsense.org/manual/how-tos/guestnet.html#step-8-add-voucher-server").replace(/\/$/, '') + '.json')
 r.send()</script>
@@ -710,7 +671,7 @@ r.send()</script>
 		<div class="footer__copyright">
 			&copy; 2021 pNghia.com.
 			<span class="footer__copyright-credits">Powered by <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">goHugo</a> | <a href="https://posativ.org/isso/" rel="nofollow noopener" target="_blank">ISSO</a> | <a href="https://www.goatcounter.com/" rel="nofollow noopener" target="_blank">goatCounter</a> and the <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span><br />
-			<span>v.13:09 - 26 tháng 01, 2021</span>
+			<span>v.14:22 - 26 tháng 01, 2021</span>
 		</div>
 	</div>
 </footer>
