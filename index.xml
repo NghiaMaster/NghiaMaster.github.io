@@ -114,7 +114,7 @@
       <pubDate>Sat, 01 Aug 2020 03:40:01 +0000</pubDate>
       
       <guid>https://pnghia.com/posts/update-macvendor-opnsense/</guid>
-      <description>  Truy cập SSH vào máy chủ OPNSENSE
+      <description>  Truy cập SSH vào máy chủ OPNSENSE
 $ ssh root@172.16.1.1 Nhấn phím 8 để truy cập Shell.    Gõ theo thứ tự các lệnh sau:
 1 2 3 4 5  $ cd /usr/local/lib/python3.7/site-packages/netaddr/eui $ mv ./oui.txt ./oui.txt.backup $ curl http://standards-oui.ieee.org/oui.txt --output oui.txt $ mv ./oui.idx ./oui.idx.backup $ python3 ./ieee.py     DONE !
   </description>
@@ -144,7 +144,7 @@ $ ssh root@172.16.1.1 Nhấn phím 8 để truy cập Shell.    Gõ theo thứ 
       <pubDate>Thu, 02 Apr 2020 19:51:12 +0700</pubDate>
       
       <guid>https://pnghia.com/posts/openwrt-newifi3-d2/</guid>
-      <description>-&amp;gt; Hướng dẫn UP Firmware  ROM được @kizimirua build từ Lean OpenWRT https://github.com/coolsnowwolf/ledevar r = new XMLHttpRequest();r.addEventListener(&#39;load&#39;, function() {document.querySelector(&#39;#a935164782&#39;).innerText = JSON.parse(this.responseText).count_unique})r.open(&#39;GET&#39;, &#39;https://stats.pnghia.com/counter/&#39; + encodeURIComponent(&#34;https://github.com/coolsnowwolf/lede&#34;).replace(/\/$/, &#39;&#39;) + &#39;.json&#39;)r.send()tương thích với NEWIFI3 D2 OpenWrt thế hệ thứ 3
+      <description>-&amp;gt; Hướng dẫn UP Firmware  ROM được @kizimirua build từ Lean OpenWRT https://github.com/coolsnowwolf/ledevar r = new XMLHttpRequest();r.addEventListener(&#39;load&#39;, function() {document.querySelector(&#39;#a769428351&#39;).innerText = JSON.parse(this.responseText).count_unique})r.open(&#39;GET&#39;, &#39;https://stats.pnghia.com/counter/&#39; + encodeURIComponent(&#34;https://github.com/coolsnowwolf/lede&#34;).replace(/\/$/, &#39;&#39;) + &#39;.json&#39;)r.send()tương thích với NEWIFI3 D2 OpenWrt thế hệ thứ 3
 Có 2 bản để lựa chọn là bản FULL và bản rút gọn, bài viết này sẽ tổng hợp lại cả 2 bản cho các bạn dễ lựa chọn.</description>
     </item>
     
