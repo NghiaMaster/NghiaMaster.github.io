@@ -36,6 +36,47 @@
 	<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
 	<meta name="theme-color" content="#171d26" />
 		
+	<script>
+		function fadeInPage() {
+		  if (!window.AnimationEvent) { return; }
+		  var fader = document.getElementById('fader');
+		  fader.classList.add('fade-out');
+		}
+  
+		document.addEventListener('DOMContentLoaded', function() {
+		  if (!window.AnimationEvent) { return }
+  
+		  var anchors = document.getElementsByTagName('a:not(.post__toc)');
+  
+		  for (var idx=0; idx<anchors.length; idx+=1) {
+			if (anchors[idx].hostname !== window.location.hostname) {
+			  continue;
+			}
+  
+			anchors[idx].addEventListener('click', function(event) {
+			  var fader = document.getElementById('fader'),
+				  anchor = event.currentTarget;
+  
+			  var listener = function() {
+				window.location = anchor.href;
+				fader.removeEventListener('animationend', listener);
+			  };
+			  fader.addEventListener('animationend', listener);
+  
+			  event.preventDefault();
+			  fader.classList.add('fade-in');
+			});
+		  }
+		});
+  
+		window.addEventListener('pageshow', function (event) {
+		  if (!event.persisted) {
+			return;
+		  }
+		  var fader = document.getElementById('fader');
+		  fader.classList.remove('fade-in');
+		});
+	  </script>
 </head>
 <body class="body">
 	<div class="container container--outer">
@@ -50,6 +91,7 @@
 				</div>
 		</a>
 	</div>
+
 		
 <nav class="menu">
 	<button class="menu__btn" aria-haspopup="true" aria-expanded="false" tabindex="0">
@@ -89,7 +131,59 @@
 
 	</div>
 </header>
+		<div id="fader" class="container container--outer"><header class="header">
+	<div class="container header__container">
+		
+	<div class="logo">
+		<a class="logo__link" href="/" title="pNghia.com" rel="home">
+			<div class="logo__item logo__text">
+					<div class="logo__title">pNghia.com</div>
+					<div class="logo__tagline">Make life easier</div>
+				</div>
+		</a>
+	</div>
+
+		
+<nav class="menu">
+	<button class="menu__btn" aria-haspopup="true" aria-expanded="false" tabindex="0">
+		<span class="menu__btn-title" tabindex="-1">Menu</span>
+	</button>
+	<ul class="menu__list">
+		<li class="menu__item">
+			<a class="menu__link" href="/serial/openwrt/">
+				
+				<span class="menu__text">Cấu hình OpenWRT</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/serial/opnsense/">
+				
+				<span class="menu__text">Cấu hình OPNsense</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/categories/newifi3-d2/">
+				
+				<span class="menu__text">Newifi3 D2</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/about/">
+				
+				<span class="menu__text">Về tôi</span>
+				
+			</a>
+		</li>
+	</ul>
+</nav>
+
+	</div>
+</header></div>
 		<div class="wrapper flex">
+			<script>fadeInPage()</script>
 			<div class="primary">
 			
 
@@ -156,28 +250,28 @@
 <li>Đặt DNS Server và Gateway IP sang địa chỉ IP của Modem. Ở ví dụ này là <code>172.16.1.1</code><br />
 
 
-<img data-src="https://pnghia.com/images/newifi-d2/Lan_Interface_hu99b468a2857da135bc0b7c8ca512cb46_52234_filter_1334269291160664337.PNG" alt="LAN Interface" class="lazyload blur-up" />
+<img data-src="https://pnghia.com/images/newifi-d2/Lan_Interface_hu99b468a2857da135bc0b7c8ca512cb46_52234_filter_1334269291160664337.PNG" alt="LAN Interface" class="lazyload" />
 
 
 </li>
 <li>Ở Mục <strong>DHCP Server</strong> Tick chọn <em>Disable DHCP for this interface</em><br />
 
 
-<img data-src="https://pnghia.com/images/newifi-d2/Lan_Interface2_hu7e8d7eb0437983d00641e5adcd6fde40_30914_filter_1334269291160664337.PNG" alt="LAN Interface 2" class="lazyload blur-up" />
+<img data-src="https://pnghia.com/images/newifi-d2/Lan_Interface2_hu7e8d7eb0437983d00641e5adcd6fde40_30914_filter_1334269291160664337.PNG" alt="LAN Interface 2" class="lazyload" />
 
 
 </li>
 <li>Chuyển qua tab IPv6 <strong>Disable</strong> tất cả các mục như hình<br />
 
 
-<img data-src="https://pnghia.com/images/newifi-d2/LAN_ipv6_hu67022bff4239acb4c537069a7e9e32a9_17001_filter_1334269291160664337.PNG" alt="Disable IPv6" class="lazyload blur-up" />
+<img data-src="https://pnghia.com/images/newifi-d2/LAN_ipv6_hu67022bff4239acb4c537069a7e9e32a9_17001_filter_1334269291160664337.PNG" alt="Disable IPv6" class="lazyload" />
 
 
 </li>
 <li>Vào mục <strong>System</strong> -&gt; <strong>Startup</strong> <em>Disable</em> DHCP Server, Firewall, DNSMASQ, ODHCPD(nếu có) trong danh sách khởi động.<br />
 
 
-<img data-src="https://pnghia.com/images/newifi-d2/startup_hu1a42f4cda92d7fca20185f85a0a8b9fc_54886_filter_1334269291160664337.PNG" alt="Disable Startup Service" class="lazyload blur-up" />
+<img data-src="https://pnghia.com/images/newifi-d2/startup_hu1a42f4cda92d7fca20185f85a0a8b9fc_54886_filter_1334269291160664337.PNG" alt="Disable Startup Service" class="lazyload" />
 
 
 </li>
@@ -210,7 +304,7 @@
 bao gồm 2 điểm truy cập ở băng tần 2.4Ghz và 2 điểm ở băng tần 5Ghz. SSID là <em>test</em> và <em>test-guest</em><br />
 
 
-<img data-src="https://pnghia.com/images/newifi-d2/guest_vlan_huaa24c8a7d0bd7ddc89004e7051192c71_103110_filter_1334269291160664337.png" alt="SSID" class="lazyload blur-up" />
+<img data-src="https://pnghia.com/images/newifi-d2/guest_vlan_huaa24c8a7d0bd7ddc89004e7051192c71_103110_filter_1334269291160664337.png" alt="SSID" class="lazyload" />
 
 
 </li>
@@ -222,7 +316,7 @@ bao gồm 2 điểm truy cập ở băng tần 2.4Ghz và 2 điểm ở băng t�
 <li>Khai báo sẽ tương tự như hình dưới (Ở cột VLAN ID, điền số VLAN các bạn đã thiết lập ở OPNSENSE vào)<br />
 
 
-<img data-src="https://pnghia.com/images/newifi-d2/vlan_hu69a30242e12165d4c8371db251da681b_65687_filter_1334269291160664337.PNG" alt="vlan" class="lazyload blur-up" />
+<img data-src="https://pnghia.com/images/newifi-d2/vlan_hu69a30242e12165d4c8371db251da681b_65687_filter_1334269291160664337.PNG" alt="vlan" class="lazyload" />
 
 
 </li>
@@ -235,21 +329,21 @@ bao gồm 2 điểm truy cập ở băng tần 2.4Ghz và 2 điểm ở băng t�
 <li>Tại mục <em>Cover the following interface</em> Tick vào ô <em>VLAN Interface: eth0.10</em><br />
 
 
-<img data-src="https://pnghia.com/images/newifi-d2/vlan1_hube6cc4a73d04ffa0d9c8a9ceb5920731_98061_filter_1334269291160664337.png" alt="vlan" class="lazyload blur-up" />
+<img data-src="https://pnghia.com/images/newifi-d2/vlan1_hube6cc4a73d04ffa0d9c8a9ceb5920731_98061_filter_1334269291160664337.png" alt="vlan" class="lazyload" />
 
 
 </li>
 <li>Chuyển sang TAB <em>Physical Settings</em> Tick vào các ô <em>VLAN Interface: eth0.10</em>, và 2 ô <em>Wireless Network: Master &ldquo;test-guest&rdquo;</em> (Băng tần 2.5Ghz và 5Ghz)<br />
 
 
-<img data-src="https://pnghia.com/images/newifi-d2/vlan2_huc79a2b06ec988f6167653eafa34b7ddc_117176_filter_1334269291160664337.png" alt="vlan" class="lazyload blur-up" />
+<img data-src="https://pnghia.com/images/newifi-d2/vlan2_huc79a2b06ec988f6167653eafa34b7ddc_117176_filter_1334269291160664337.png" alt="vlan" class="lazyload" />
 
 
 </li>
 <li>Nhấn vào nút <em>Save</em> và <em>Apply</em><br />
 
 
-<img data-src="https://pnghia.com/images/newifi-d2/vlan3_hub7bd0f0ea40e651bf9f1a7eb3f19c4ba_113707_filter_1334269291160664337.png" alt="vlan" class="lazyload blur-up" />
+<img data-src="https://pnghia.com/images/newifi-d2/vlan3_hub7bd0f0ea40e651bf9f1a7eb3f19c4ba_113707_filter_1334269291160664337.png" alt="vlan" class="lazyload" />
 
 
 </li>
@@ -383,10 +477,12 @@ bao gồm 2 điểm truy cập ở băng tần 2.4Ghz và 2 điểm ở băng t�
 		
 		<div class="footer__copyright">
 			&copy; 2021 pNghia.com.
-			<span class="footer__copyright-credits">Powered by <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">goHugo</a> | <a href="https://posativ.org/isso/" rel="nofollow noopener" target="_blank">ISSO</a> | <a href="https://www.goatcounter.com/" rel="nofollow noopener" target="_blank">goatCounter</a> and the <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span>
+			<span class="footer__copyright-credits">Powered by <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">goHugo</a> | <a href="https://posativ.org/isso/" rel="nofollow noopener" target="_blank">ISSO</a> | <a href="https://www.goatcounter.com/" rel="nofollow noopener" target="_blank">goatCounter</a> and the <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span><br />
+			<span>v.13:09 - 26 tháng 01, 2021</span>
 		</div>
 	</div>
 </footer>
+
 	</div>
 <script async defer src="/js/menu.js"></script>
 </body>

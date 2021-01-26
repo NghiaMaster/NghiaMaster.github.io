@@ -36,6 +36,47 @@
 	<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
 	<meta name="theme-color" content="#171d26" />
 		
+	<script>
+		function fadeInPage() {
+		  if (!window.AnimationEvent) { return; }
+		  var fader = document.getElementById('fader');
+		  fader.classList.add('fade-out');
+		}
+  
+		document.addEventListener('DOMContentLoaded', function() {
+		  if (!window.AnimationEvent) { return }
+  
+		  var anchors = document.getElementsByTagName('a:not(.post__toc)');
+  
+		  for (var idx=0; idx<anchors.length; idx+=1) {
+			if (anchors[idx].hostname !== window.location.hostname) {
+			  continue;
+			}
+  
+			anchors[idx].addEventListener('click', function(event) {
+			  var fader = document.getElementById('fader'),
+				  anchor = event.currentTarget;
+  
+			  var listener = function() {
+				window.location = anchor.href;
+				fader.removeEventListener('animationend', listener);
+			  };
+			  fader.addEventListener('animationend', listener);
+  
+			  event.preventDefault();
+			  fader.classList.add('fade-in');
+			});
+		  }
+		});
+  
+		window.addEventListener('pageshow', function (event) {
+		  if (!event.persisted) {
+			return;
+		  }
+		  var fader = document.getElementById('fader');
+		  fader.classList.remove('fade-in');
+		});
+	  </script>
 </head>
 <body class="body">
 	<div class="container container--outer">
@@ -50,6 +91,7 @@
 				</div>
 		</a>
 	</div>
+
 		
 <nav class="menu">
 	<button class="menu__btn" aria-haspopup="true" aria-expanded="false" tabindex="0">
@@ -89,7 +131,59 @@
 
 	</div>
 </header>
+		<div id="fader" class="container container--outer"><header class="header">
+	<div class="container header__container">
+		
+	<div class="logo">
+		<a class="logo__link" href="/" title="pNghia.com" rel="home">
+			<div class="logo__item logo__text">
+					<div class="logo__title">pNghia.com</div>
+					<div class="logo__tagline">Make life easier</div>
+				</div>
+		</a>
+	</div>
+
+		
+<nav class="menu">
+	<button class="menu__btn" aria-haspopup="true" aria-expanded="false" tabindex="0">
+		<span class="menu__btn-title" tabindex="-1">Menu</span>
+	</button>
+	<ul class="menu__list">
+		<li class="menu__item">
+			<a class="menu__link" href="/serial/openwrt/">
+				
+				<span class="menu__text">Cấu hình OpenWRT</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/serial/opnsense/">
+				
+				<span class="menu__text">Cấu hình OPNsense</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/categories/newifi3-d2/">
+				
+				<span class="menu__text">Newifi3 D2</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/about/">
+				
+				<span class="menu__text">Về tôi</span>
+				
+			</a>
+		</li>
+	</ul>
+</nav>
+
+	</div>
+</header></div>
 		<div class="wrapper flex">
+			<script>fadeInPage()</script>
 			<div class="primary">
 			
 
@@ -127,9 +221,9 @@
 <li>Máy tính, hoặc điện thoại vẫn được miễn sao bạn dùng được <strong>SCP</strong>. Ở đây mình sẽ hướng dẫn làm trên PC.</li>
 <li>Phần mềm <strong>WinSCP</strong> cho Windows, download 
 <a href="https://winscp.net/eng/download.php" title="Download WinSCP" data-goatcounter-title="Download WinSCP"
- target="_blank" rel="noopener noreferrer" data-goatcounter-click="https://winscp.net/eng/download.php" data-goatcounter-referrer="/posts/newifi3-d2-stock-english-firmware/">tại đây.</a><span title="Mức độ phổ biến" id="a369185427" class="single__badge"></span><script async>var r = new XMLHttpRequest();
+ target="_blank" rel="noopener noreferrer" data-goatcounter-click="https://winscp.net/eng/download.php" data-goatcounter-referrer="/posts/newifi3-d2-stock-english-firmware/">tại đây.</a><span title="Mức độ phổ biến" id="a763851942" class="single__badge"></span><script async>var r = new XMLHttpRequest();
 r.addEventListener('load', function() {
-document.querySelector('#a369185427').innerText = JSON.parse(this.responseText).count_unique
+document.querySelector('#a763851942').innerText = JSON.parse(this.responseText).count_unique
 })
 r.open('GET', 'https://stats.pnghia.com/counter/' + encodeURIComponent("https://winscp.net/eng/download.php").replace(/\/$/, '') + '.json')
 r.send()</script>
@@ -194,9 +288,9 @@ base.cn.json
 
 <p>Link Drive nếu không tải được file đính kèm: 
 <a href="https://drive.google.com/file/d/1UFKAXUbXqfgwT4h-YyZ2V0mP6nktXB3X/view?usp=sharing" title="Doownload base.cn.json" data-goatcounter-title="Doownload base.cn.json"
- target="_blank" rel="noopener noreferrer" data-goatcounter-click="https://drive.google.com/file/d/1UFKAXUbXqfgwT4h-YyZ2V0mP6nktXB3X/view?usp=sharing" data-goatcounter-referrer="/posts/newifi3-d2-stock-english-firmware/">Download</a><span title="Mức độ phổ biến" id="a752384169" class="single__badge"></span><script async>var r = new XMLHttpRequest();
+ target="_blank" rel="noopener noreferrer" data-goatcounter-click="https://drive.google.com/file/d/1UFKAXUbXqfgwT4h-YyZ2V0mP6nktXB3X/view?usp=sharing" data-goatcounter-referrer="/posts/newifi3-d2-stock-english-firmware/">Download</a><span title="Mức độ phổ biến" id="a614273859" class="single__badge"></span><script async>var r = new XMLHttpRequest();
 r.addEventListener('load', function() {
-document.querySelector('#a752384169').innerText = JSON.parse(this.responseText).count_unique
+document.querySelector('#a614273859').innerText = JSON.parse(this.responseText).count_unique
 })
 r.open('GET', 'https://stats.pnghia.com/counter/' + encodeURIComponent("https://drive.google.com/file/d/1UFKAXUbXqfgwT4h-YyZ2V0mP6nktXB3X/view?usp=sharing").replace(/\/$/, '') + '.json')
 r.send()</script>
@@ -225,7 +319,7 @@ r.send()</script>
 <details >
     <summary>Screenshot SCP login</summary>
     <div class="markdown-inner">
-      <img data-src="https://pnghia.com/images/newifi-d2/scp_hud3634cf6371b10a7699d00bcf1072fa1_11820_filter_1334269291160664337.png" alt="SCP Login" class="lazyload blur-up" />
+      <img data-src="https://pnghia.com/images/newifi-d2/scp_hud3634cf6371b10a7699d00bcf1072fa1_11820_filter_1334269291160664337.png" alt="SCP Login" class="lazyload" />
     </div>
   </details>
 </p>
@@ -233,7 +327,7 @@ r.send()</script>
 <li>Sau khi login thành công, nhấn đúp vào dấu <code>..</code> để quay lại thư mục cha.<br />
 
 
-<img data-src="https://pnghia.com/images/newifi-d2/scproot_huffd235b7248afa802858f6e910914fb2_2433_filter_1334269291160664337.jpg" alt="scp" class="lazyload blur-up" />
+<img data-src="https://pnghia.com/images/newifi-d2/scproot_huffd235b7248afa802858f6e910914fb2_2433_filter_1334269291160664337.jpg" alt="scp" class="lazyload" />
 
 
 </li>
@@ -241,7 +335,7 @@ r.send()</script>
 <details >
     <summary>Hình ảnh minh hoạ</summary>
     <div class="markdown-inner">
-      <img data-src="https://pnghia.com/images/newifi-d2/wwwi18n_hu00cfd21ffb62a031443bd077bb47a604_18002_filter_1334269291160664337.jpg" alt="SCP Login" class="lazyload blur-up" />
+      <img data-src="https://pnghia.com/images/newifi-d2/wwwi18n_hu00cfd21ffb62a031443bd077bb47a604_18002_filter_1334269291160664337.jpg" alt="SCP Login" class="lazyload" />
     </div>
   </details>
 </li>
@@ -255,13 +349,13 @@ r.send()</script>
 <details >
     <summary>Stock FW Tiếng Anh</summary>
     <div class="markdown-inner">
-      <img data-src="https://pnghia.com/images/newifi-d2/newifi3d2english1_hue776a334b902d7828bf5c7a8aa11ccb3_25340_filter_1334269291160664337.jpg" alt="Stock FW Newifi3 D2 English" class="lazyload blur-up" />
+      <img data-src="https://pnghia.com/images/newifi-d2/newifi3d2english1_hue776a334b902d7828bf5c7a8aa11ccb3_25340_filter_1334269291160664337.jpg" alt="Stock FW Newifi3 D2 English" class="lazyload" />
 
 
 <br />
 
 
-<img data-src="https://pnghia.com/images/newifi-d2/newifi3d2english_hue776a334b902d7828bf5c7a8aa11ccb3_44060_filter_1334269291160664337.jpg" alt="Stock FW Newifi3 D2 English" class="lazyload blur-up" />
+<img data-src="https://pnghia.com/images/newifi-d2/newifi3d2english_hue776a334b902d7828bf5c7a8aa11ccb3_44060_filter_1334269291160664337.jpg" alt="Stock FW Newifi3 D2 English" class="lazyload" />
     </div>
   </details>
 
@@ -390,10 +484,12 @@ r.send()</script>
 		
 		<div class="footer__copyright">
 			&copy; 2021 pNghia.com.
-			<span class="footer__copyright-credits">Powered by <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">goHugo</a> | <a href="https://posativ.org/isso/" rel="nofollow noopener" target="_blank">ISSO</a> | <a href="https://www.goatcounter.com/" rel="nofollow noopener" target="_blank">goatCounter</a> and the <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span>
+			<span class="footer__copyright-credits">Powered by <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">goHugo</a> | <a href="https://posativ.org/isso/" rel="nofollow noopener" target="_blank">ISSO</a> | <a href="https://www.goatcounter.com/" rel="nofollow noopener" target="_blank">goatCounter</a> and the <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span><br />
+			<span>v.13:09 - 26 tháng 01, 2021</span>
 		</div>
 	</div>
 </footer>
+
 	</div>
 <script async defer src="/js/menu.js"></script>
 </body>

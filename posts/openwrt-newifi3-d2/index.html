@@ -36,6 +36,47 @@
 	<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
 	<meta name="theme-color" content="#171d26" />
 		
+	<script>
+		function fadeInPage() {
+		  if (!window.AnimationEvent) { return; }
+		  var fader = document.getElementById('fader');
+		  fader.classList.add('fade-out');
+		}
+  
+		document.addEventListener('DOMContentLoaded', function() {
+		  if (!window.AnimationEvent) { return }
+  
+		  var anchors = document.getElementsByTagName('a:not(.post__toc)');
+  
+		  for (var idx=0; idx<anchors.length; idx+=1) {
+			if (anchors[idx].hostname !== window.location.hostname) {
+			  continue;
+			}
+  
+			anchors[idx].addEventListener('click', function(event) {
+			  var fader = document.getElementById('fader'),
+				  anchor = event.currentTarget;
+  
+			  var listener = function() {
+				window.location = anchor.href;
+				fader.removeEventListener('animationend', listener);
+			  };
+			  fader.addEventListener('animationend', listener);
+  
+			  event.preventDefault();
+			  fader.classList.add('fade-in');
+			});
+		  }
+		});
+  
+		window.addEventListener('pageshow', function (event) {
+		  if (!event.persisted) {
+			return;
+		  }
+		  var fader = document.getElementById('fader');
+		  fader.classList.remove('fade-in');
+		});
+	  </script>
 </head>
 <body class="body">
 	<div class="container container--outer">
@@ -50,6 +91,7 @@
 				</div>
 		</a>
 	</div>
+
 		
 <nav class="menu">
 	<button class="menu__btn" aria-haspopup="true" aria-expanded="false" tabindex="0">
@@ -89,7 +131,59 @@
 
 	</div>
 </header>
+		<div id="fader" class="container container--outer"><header class="header">
+	<div class="container header__container">
+		
+	<div class="logo">
+		<a class="logo__link" href="/" title="pNghia.com" rel="home">
+			<div class="logo__item logo__text">
+					<div class="logo__title">pNghia.com</div>
+					<div class="logo__tagline">Make life easier</div>
+				</div>
+		</a>
+	</div>
+
+		
+<nav class="menu">
+	<button class="menu__btn" aria-haspopup="true" aria-expanded="false" tabindex="0">
+		<span class="menu__btn-title" tabindex="-1">Menu</span>
+	</button>
+	<ul class="menu__list">
+		<li class="menu__item">
+			<a class="menu__link" href="/serial/openwrt/">
+				
+				<span class="menu__text">Cấu hình OpenWRT</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/serial/opnsense/">
+				
+				<span class="menu__text">Cấu hình OPNsense</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/categories/newifi3-d2/">
+				
+				<span class="menu__text">Newifi3 D2</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/about/">
+				
+				<span class="menu__text">Về tôi</span>
+				
+			</a>
+		</li>
+	</ul>
+</nav>
+
+	</div>
+</header></div>
 		<div class="wrapper flex">
+			<script>fadeInPage()</script>
 			<div class="primary">
 			
 
@@ -124,9 +218,9 @@
 </h5>
 <blockquote>
 <p>ROM được <em>@kizimirua</em> build từ <em>Lean OpenWRT</em> 
-<a href="https://github.com/coolsnowwolf/lede" target="_blank" rel="noopener noreferrer" data-goatcounter-click="https://github.com/coolsnowwolf/lede" data-goatcounter-referrer="/posts/openwrt-newifi3-d2/">https://github.com/coolsnowwolf/lede</a><span title="Mức độ phổ biến" id="a814795362" class="single__badge"></span><script async>var r = new XMLHttpRequest();
+<a href="https://github.com/coolsnowwolf/lede" target="_blank" rel="noopener noreferrer" data-goatcounter-click="https://github.com/coolsnowwolf/lede" data-goatcounter-referrer="/posts/openwrt-newifi3-d2/">https://github.com/coolsnowwolf/lede</a><span title="Mức độ phổ biến" id="a471985632" class="single__badge"></span><script async>var r = new XMLHttpRequest();
 r.addEventListener('load', function() {
-document.querySelector('#a814795362').innerText = JSON.parse(this.responseText).count_unique
+document.querySelector('#a471985632').innerText = JSON.parse(this.responseText).count_unique
 })
 r.open('GET', 'https://stats.pnghia.com/counter/' + encodeURIComponent("https://github.com/coolsnowwolf/lede").replace(/\/$/, '') + '.json')
 r.send()</script>
@@ -165,17 +259,17 @@ ROM được cộng đồng người dùng bên Trung Quốc đánh giá khá t�
 <li>Firmware này sử dụng trình điều khiển mã nguồn mở và được cập nhật mỗi tháng một lần.
 <ul>
 <li>Link Download trực tiếp: từ 
-<a href="https://github.com/kizimirua/NEWIFI-D2-OpenWrt/releases/download/2021.01/openwrt-ramips-mt7621-d-team_newifi-d2-initramfs-kernel.bin" target="_blank" rel="noopener noreferrer" data-goatcounter-click="https://github.com/kizimirua/NEWIFI-D2-OpenWrt/releases/download/2021.01/openwrt-ramips-mt7621-d-team_newifi-d2-initramfs-kernel.bin" data-goatcounter-referrer="/posts/openwrt-newifi3-d2/">Github</a><span title="Mức độ phổ biến" id="a761985234" class="single__badge"></span><script async>var r = new XMLHttpRequest();
+<a href="https://github.com/kizimirua/NEWIFI-D2-OpenWrt/releases/download/2021.01/openwrt-ramips-mt7621-d-team_newifi-d2-initramfs-kernel.bin" target="_blank" rel="noopener noreferrer" data-goatcounter-click="https://github.com/kizimirua/NEWIFI-D2-OpenWrt/releases/download/2021.01/openwrt-ramips-mt7621-d-team_newifi-d2-initramfs-kernel.bin" data-goatcounter-referrer="/posts/openwrt-newifi3-d2/">Github</a><span title="Mức độ phổ biến" id="a427598631" class="single__badge"></span><script async>var r = new XMLHttpRequest();
 r.addEventListener('load', function() {
-document.querySelector('#a761985234').innerText = JSON.parse(this.responseText).count_unique
+document.querySelector('#a427598631').innerText = JSON.parse(this.responseText).count_unique
 })
 r.open('GET', 'https://stats.pnghia.com/counter/' + encodeURIComponent("https://github.com/kizimirua/NEWIFI-D2-OpenWrt/releases/download/2021.01/openwrt-ramips-mt7621-d-team_newifi-d2-initramfs-kernel.bin").replace(/\/$/, '') + '.json')
 r.send()</script>
 </li>
 <li>Xem cập nhật mới nhất: 
-<a href="https://github.com/kizimirua/NEWIFI-D2-OpenWrt/releases" target="_blank" rel="noopener noreferrer" data-goatcounter-click="https://github.com/kizimirua/NEWIFI-D2-OpenWrt/releases" data-goatcounter-referrer="/posts/openwrt-newifi3-d2/">https://github.com/kizimirua/NEWIFI-D2-OpenWrt/releases</a><span title="Mức độ phổ biến" id="a957486321" class="single__badge"></span><script async>var r = new XMLHttpRequest();
+<a href="https://github.com/kizimirua/NEWIFI-D2-OpenWrt/releases" target="_blank" rel="noopener noreferrer" data-goatcounter-click="https://github.com/kizimirua/NEWIFI-D2-OpenWrt/releases" data-goatcounter-referrer="/posts/openwrt-newifi3-d2/">https://github.com/kizimirua/NEWIFI-D2-OpenWrt/releases</a><span title="Mức độ phổ biến" id="a827316954" class="single__badge"></span><script async>var r = new XMLHttpRequest();
 r.addEventListener('load', function() {
-document.querySelector('#a957486321').innerText = JSON.parse(this.responseText).count_unique
+document.querySelector('#a827316954').innerText = JSON.parse(this.responseText).count_unique
 })
 r.open('GET', 'https://stats.pnghia.com/counter/' + encodeURIComponent("https://github.com/kizimirua/NEWIFI-D2-OpenWrt/releases").replace(/\/$/, '') + '.json')
 r.send()</script>
@@ -198,17 +292,17 @@ r.send()</script>
 + Turbo ACC
 </code></pre><ul>
 <li>Link Download trực tiếp: - Link Download trực tiếp: từ 
-<a href="https://github.com/kizimirua/NEWIFI-D2-OP/releases/download/2021.01/openwrt-ramips-mt7621-d-team_newifi-d2-squashfs-sysupgrade.bin" target="_blank" rel="noopener noreferrer" data-goatcounter-click="https://github.com/kizimirua/NEWIFI-D2-OP/releases/download/2021.01/openwrt-ramips-mt7621-d-team_newifi-d2-squashfs-sysupgrade.bin" data-goatcounter-referrer="/posts/openwrt-newifi3-d2/">Github</a><span title="Mức độ phổ biến" id="a762345891" class="single__badge"></span><script async>var r = new XMLHttpRequest();
+<a href="https://github.com/kizimirua/NEWIFI-D2-OP/releases/download/2021.01/openwrt-ramips-mt7621-d-team_newifi-d2-squashfs-sysupgrade.bin" target="_blank" rel="noopener noreferrer" data-goatcounter-click="https://github.com/kizimirua/NEWIFI-D2-OP/releases/download/2021.01/openwrt-ramips-mt7621-d-team_newifi-d2-squashfs-sysupgrade.bin" data-goatcounter-referrer="/posts/openwrt-newifi3-d2/">Github</a><span title="Mức độ phổ biến" id="a362974518" class="single__badge"></span><script async>var r = new XMLHttpRequest();
 r.addEventListener('load', function() {
-document.querySelector('#a762345891').innerText = JSON.parse(this.responseText).count_unique
+document.querySelector('#a362974518').innerText = JSON.parse(this.responseText).count_unique
 })
 r.open('GET', 'https://stats.pnghia.com/counter/' + encodeURIComponent("https://github.com/kizimirua/NEWIFI-D2-OP/releases/download/2021.01/openwrt-ramips-mt7621-d-team_newifi-d2-squashfs-sysupgrade.bin").replace(/\/$/, '') + '.json')
 r.send()</script>
 </li>
 <li>Xem cập nhật mới nhất: tại 
-<a href="https://github.com/kizimirua/NEWIFI-D2-OP/releases" target="_blank" rel="noopener noreferrer" data-goatcounter-click="https://github.com/kizimirua/NEWIFI-D2-OP/releases" data-goatcounter-referrer="/posts/openwrt-newifi3-d2/">Github</a><span title="Mức độ phổ biến" id="a962173548" class="single__badge"></span><script async>var r = new XMLHttpRequest();
+<a href="https://github.com/kizimirua/NEWIFI-D2-OP/releases" target="_blank" rel="noopener noreferrer" data-goatcounter-click="https://github.com/kizimirua/NEWIFI-D2-OP/releases" data-goatcounter-referrer="/posts/openwrt-newifi3-d2/">Github</a><span title="Mức độ phổ biến" id="a932678154" class="single__badge"></span><script async>var r = new XMLHttpRequest();
 r.addEventListener('load', function() {
-document.querySelector('#a962173548').innerText = JSON.parse(this.responseText).count_unique
+document.querySelector('#a932678154').innerText = JSON.parse(this.responseText).count_unique
 })
 r.open('GET', 'https://stats.pnghia.com/counter/' + encodeURIComponent("https://github.com/kizimirua/NEWIFI-D2-OP/releases").replace(/\/$/, '') + '.json')
 r.send()</script>
@@ -367,10 +461,12 @@ r.send()</script>
 		
 		<div class="footer__copyright">
 			&copy; 2021 pNghia.com.
-			<span class="footer__copyright-credits">Powered by <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">goHugo</a> | <a href="https://posativ.org/isso/" rel="nofollow noopener" target="_blank">ISSO</a> | <a href="https://www.goatcounter.com/" rel="nofollow noopener" target="_blank">goatCounter</a> and the <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span>
+			<span class="footer__copyright-credits">Powered by <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">goHugo</a> | <a href="https://posativ.org/isso/" rel="nofollow noopener" target="_blank">ISSO</a> | <a href="https://www.goatcounter.com/" rel="nofollow noopener" target="_blank">goatCounter</a> and the <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span><br />
+			<span>v.13:09 - 26 tháng 01, 2021</span>
 		</div>
 	</div>
 </footer>
+
 	</div>
 <script async defer src="/js/menu.js"></script>
 </body>

@@ -36,6 +36,47 @@
 	<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
 	<meta name="theme-color" content="#171d26" />
 		
+	<script>
+		function fadeInPage() {
+		  if (!window.AnimationEvent) { return; }
+		  var fader = document.getElementById('fader');
+		  fader.classList.add('fade-out');
+		}
+  
+		document.addEventListener('DOMContentLoaded', function() {
+		  if (!window.AnimationEvent) { return }
+  
+		  var anchors = document.getElementsByTagName('a:not(.post__toc)');
+  
+		  for (var idx=0; idx<anchors.length; idx+=1) {
+			if (anchors[idx].hostname !== window.location.hostname) {
+			  continue;
+			}
+  
+			anchors[idx].addEventListener('click', function(event) {
+			  var fader = document.getElementById('fader'),
+				  anchor = event.currentTarget;
+  
+			  var listener = function() {
+				window.location = anchor.href;
+				fader.removeEventListener('animationend', listener);
+			  };
+			  fader.addEventListener('animationend', listener);
+  
+			  event.preventDefault();
+			  fader.classList.add('fade-in');
+			});
+		  }
+		});
+  
+		window.addEventListener('pageshow', function (event) {
+		  if (!event.persisted) {
+			return;
+		  }
+		  var fader = document.getElementById('fader');
+		  fader.classList.remove('fade-in');
+		});
+	  </script>
 </head>
 <body class="body">
 	<div class="container container--outer">
@@ -50,6 +91,7 @@
 				</div>
 		</a>
 	</div>
+
 		
 <nav class="menu">
 	<button class="menu__btn" aria-haspopup="true" aria-expanded="false" tabindex="0">
@@ -89,7 +131,59 @@
 
 	</div>
 </header>
+		<div id="fader" class="container container--outer"><header class="header">
+	<div class="container header__container">
+		
+	<div class="logo">
+		<a class="logo__link" href="/" title="pNghia.com" rel="home">
+			<div class="logo__item logo__text">
+					<div class="logo__title">pNghia.com</div>
+					<div class="logo__tagline">Make life easier</div>
+				</div>
+		</a>
+	</div>
+
+		
+<nav class="menu">
+	<button class="menu__btn" aria-haspopup="true" aria-expanded="false" tabindex="0">
+		<span class="menu__btn-title" tabindex="-1">Menu</span>
+	</button>
+	<ul class="menu__list">
+		<li class="menu__item">
+			<a class="menu__link" href="/serial/openwrt/">
+				
+				<span class="menu__text">Cấu hình OpenWRT</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/serial/opnsense/">
+				
+				<span class="menu__text">Cấu hình OPNsense</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/categories/newifi3-d2/">
+				
+				<span class="menu__text">Newifi3 D2</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/about/">
+				
+				<span class="menu__text">Về tôi</span>
+				
+			</a>
+		</li>
+	</ul>
+</nav>
+
+	</div>
+</header></div>
 		<div class="wrapper flex">
+			<script>fadeInPage()</script>
 			<div class="primary">
 			
 
@@ -131,7 +225,7 @@
 <details >
     <summary>Ảnh chụp màn hình</summary>
     <div class="markdown-inner">
-      <img data-src="https://pnghia.com/images/openwrt/OpenWRTb1_hu7e6a93fae0052281caa651871ba44e70_85369_filter_1334269291160664337.png" alt="Cấu hình OpenWRT quay PPPoE b1" class="lazyload blur-up" />
+      <img data-src="https://pnghia.com/images/openwrt/OpenWRTb1_hu7e6a93fae0052281caa651871ba44e70_85369_filter_1334269291160664337.png" alt="Cấu hình OpenWRT quay PPPoE b1" class="lazyload" />
     </div>
   </details>
 </p>
@@ -141,7 +235,7 @@
 <details >
     <summary>Ảnh chụp màn hình</summary>
     <div class="markdown-inner">
-      <img data-src="https://pnghia.com/images/openwrt/OpenWRTb2_huae91ce321b7b6990ff5b6392783d7b44_187343_filter_1334269291160664337.png" alt="" class="lazyload blur-up" />
+      <img data-src="https://pnghia.com/images/openwrt/OpenWRTb2_huae91ce321b7b6990ff5b6392783d7b44_187343_filter_1334269291160664337.png" alt="" class="lazyload" />
     </div>
   </details>
 </p>
@@ -151,7 +245,7 @@
 <details >
     <summary>Ảnh chụp màn hình</summary>
     <div class="markdown-inner">
-      <img data-src="https://pnghia.com/images/openwrt/OpenWRTb3_hued2a38a978c3e6444762a89cba8f5b12_81747_filter_1334269291160664337.png" alt="" class="lazyload blur-up" />
+      <img data-src="https://pnghia.com/images/openwrt/OpenWRTb3_hued2a38a978c3e6444762a89cba8f5b12_81747_filter_1334269291160664337.png" alt="" class="lazyload" />
     </div>
   </details>
 </p>
@@ -161,7 +255,7 @@
 <details >
     <summary>Ảnh chụp màn hình</summary>
     <div class="markdown-inner">
-      <img data-src="https://pnghia.com/images/openwrt/OpenWRTb4_hu0801492a5b6d6fa654e145be63ccbfa7_68642_filter_1334269291160664337.png" alt="" class="lazyload blur-up" />
+      <img data-src="https://pnghia.com/images/openwrt/OpenWRTb4_hu0801492a5b6d6fa654e145be63ccbfa7_68642_filter_1334269291160664337.png" alt="" class="lazyload" />
     </div>
   </details>
 </p>
@@ -171,7 +265,7 @@
 <details >
     <summary>Ảnh chụp màn hình</summary>
     <div class="markdown-inner">
-      <img data-src="https://pnghia.com/images/openwrt/OpenWRTb5_huf55401b52180925be0bb852a0d0064cc_90416_filter_1334269291160664337.png" alt="" class="lazyload blur-up" />
+      <img data-src="https://pnghia.com/images/openwrt/OpenWRTb5_huf55401b52180925be0bb852a0d0064cc_90416_filter_1334269291160664337.png" alt="" class="lazyload" />
     </div>
   </details>
 </p>
@@ -180,7 +274,7 @@ Nhấn <strong>Save &amp; Apply</strong><br />
 <details >
     <summary>Ảnh chụp màn hình</summary>
     <div class="markdown-inner">
-      <img data-src="https://pnghia.com/images/openwrt/OpenWRTb6_hubfa6aee5ca1d8f0314f45cd8ebce394b_180388_filter_1334269291160664337.png" alt="" class="lazyload blur-up" />
+      <img data-src="https://pnghia.com/images/openwrt/OpenWRTb6_hubfa6aee5ca1d8f0314f45cd8ebce394b_180388_filter_1334269291160664337.png" alt="" class="lazyload" />
     </div>
   </details>
 </p>
@@ -188,7 +282,7 @@ Nhấn <strong>Save &amp; Apply</strong><br />
 <details >
     <summary>Ảnh chụp màn hình</summary>
     <div class="markdown-inner">
-      <img data-src="https://pnghia.com/images/openwrt/OpenWRTb7_hue3e2792342a59b3928e443d80deddeae_183473_filter_1334269291160664337.png" alt="" class="lazyload blur-up" />
+      <img data-src="https://pnghia.com/images/openwrt/OpenWRTb7_hue3e2792342a59b3928e443d80deddeae_183473_filter_1334269291160664337.png" alt="" class="lazyload" />
     </div>
   </details>
 </p>
@@ -337,10 +431,12 @@ Nhấn <strong>Save &amp; Apply</strong><br />
 		
 		<div class="footer__copyright">
 			&copy; 2021 pNghia.com.
-			<span class="footer__copyright-credits">Powered by <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">goHugo</a> | <a href="https://posativ.org/isso/" rel="nofollow noopener" target="_blank">ISSO</a> | <a href="https://www.goatcounter.com/" rel="nofollow noopener" target="_blank">goatCounter</a> and the <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span>
+			<span class="footer__copyright-credits">Powered by <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">goHugo</a> | <a href="https://posativ.org/isso/" rel="nofollow noopener" target="_blank">ISSO</a> | <a href="https://www.goatcounter.com/" rel="nofollow noopener" target="_blank">goatCounter</a> and the <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span><br />
+			<span>v.13:09 - 26 tháng 01, 2021</span>
 		</div>
 	</div>
 </footer>
+
 	</div>
 <script async defer src="/js/menu.js"></script>
 </body>

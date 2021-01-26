@@ -36,6 +36,47 @@
 	<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
 	<meta name="theme-color" content="#171d26" />
 		
+	<script>
+		function fadeInPage() {
+		  if (!window.AnimationEvent) { return; }
+		  var fader = document.getElementById('fader');
+		  fader.classList.add('fade-out');
+		}
+  
+		document.addEventListener('DOMContentLoaded', function() {
+		  if (!window.AnimationEvent) { return }
+  
+		  var anchors = document.getElementsByTagName('a:not(.post__toc)');
+  
+		  for (var idx=0; idx<anchors.length; idx+=1) {
+			if (anchors[idx].hostname !== window.location.hostname) {
+			  continue;
+			}
+  
+			anchors[idx].addEventListener('click', function(event) {
+			  var fader = document.getElementById('fader'),
+				  anchor = event.currentTarget;
+  
+			  var listener = function() {
+				window.location = anchor.href;
+				fader.removeEventListener('animationend', listener);
+			  };
+			  fader.addEventListener('animationend', listener);
+  
+			  event.preventDefault();
+			  fader.classList.add('fade-in');
+			});
+		  }
+		});
+  
+		window.addEventListener('pageshow', function (event) {
+		  if (!event.persisted) {
+			return;
+		  }
+		  var fader = document.getElementById('fader');
+		  fader.classList.remove('fade-in');
+		});
+	  </script>
 </head>
 <body class="body">
 	<div class="container container--outer">
@@ -50,6 +91,7 @@
 				</div>
 		</a>
 	</div>
+
 		
 <nav class="menu">
 	<button class="menu__btn" aria-haspopup="true" aria-expanded="false" tabindex="0">
@@ -89,7 +131,59 @@
 
 	</div>
 </header>
+		<div id="fader" class="container container--outer"><header class="header">
+	<div class="container header__container">
+		
+	<div class="logo">
+		<a class="logo__link" href="/" title="pNghia.com" rel="home">
+			<div class="logo__item logo__text">
+					<div class="logo__title">pNghia.com</div>
+					<div class="logo__tagline">Make life easier</div>
+				</div>
+		</a>
+	</div>
+
+		
+<nav class="menu">
+	<button class="menu__btn" aria-haspopup="true" aria-expanded="false" tabindex="0">
+		<span class="menu__btn-title" tabindex="-1">Menu</span>
+	</button>
+	<ul class="menu__list">
+		<li class="menu__item">
+			<a class="menu__link" href="/serial/openwrt/">
+				
+				<span class="menu__text">Cấu hình OpenWRT</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/serial/opnsense/">
+				
+				<span class="menu__text">Cấu hình OPNsense</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/categories/newifi3-d2/">
+				
+				<span class="menu__text">Newifi3 D2</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/about/">
+				
+				<span class="menu__text">Về tôi</span>
+				
+			</a>
+		</li>
+	</ul>
+</nav>
+
+	</div>
+</header></div>
 		<div class="wrapper flex">
+			<script>fadeInPage()</script>
 			<div class="primary">
 			
 <main class="main list" role="main">
@@ -286,10 +380,12 @@
 		
 		<div class="footer__copyright">
 			&copy; 2021 pNghia.com.
-			<span class="footer__copyright-credits">Powered by <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">goHugo</a> | <a href="https://posativ.org/isso/" rel="nofollow noopener" target="_blank">ISSO</a> | <a href="https://www.goatcounter.com/" rel="nofollow noopener" target="_blank">goatCounter</a> and the <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span>
+			<span class="footer__copyright-credits">Powered by <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">goHugo</a> | <a href="https://posativ.org/isso/" rel="nofollow noopener" target="_blank">ISSO</a> | <a href="https://www.goatcounter.com/" rel="nofollow noopener" target="_blank">goatCounter</a> and the <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span><br />
+			<span>v.13:09 - 26 tháng 01, 2021</span>
 		</div>
 	</div>
 </footer>
+
 	</div>
 <script async defer src="/js/menu.js"></script>
 </body>
