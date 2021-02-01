@@ -60,7 +60,7 @@
       <guid>https://pnghia.com/posts/update-macvendor-opnsense/</guid>
       <description>  Truy cập SSH vào máy chủ OPNSENSE
 $ ssh root@172.16.1.1 Nhấn phím 8 để truy cập Shell.    Gõ theo thứ tự các lệnh sau:
-1 2 3 4 5  $ cd /usr/local/lib/python3.7/site-packages/netaddr/eui $ mv ./oui.txt ./oui.txt.backup $ curl http://standards-oui.ieee.org/oui.txt --output oui.txt $ mv ./oui.idx ./oui.idx.backup $ python3 ./ieee.py     DONE !
+$ cd /usr/local/lib/python3.7/site-packages/netaddr/eui$ mv ./oui.txt ./oui.txt.backup$ curl http://standards-oui.ieee.org/oui.txt --output oui.txt$ mv ./oui.idx ./oui.idx.backup$ python3 ./ieee.py  DONE !
   </description>
     </item>
     
