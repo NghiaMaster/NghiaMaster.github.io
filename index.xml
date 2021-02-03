@@ -144,7 +144,7 @@ $ cd /usr/local/lib/python3.7/site-packages/netaddr/eui$ mv ./oui.txt ./oui.txt
       <pubDate>Thu, 02 Apr 2020 19:51:12 +0700</pubDate>
       
       <guid>https://pnghia.com/posts/openwrt-newifi3-d2/</guid>
-      <description>-&amp;gt; Hướng dẫn UP Firmware  ROM được @kizimirua build từ Lean OpenWRT https://github.com/coolsnowwolf/ledevar r = new XMLHttpRequest();r.addEventListener(&#39;load&#39;, function() {document.querySelector(&#39;#a981742635&#39;).innerText = JSON.parse(this.responseText).count_unique})r.open(&#39;GET&#39;, &#39;https://stats.pnghia.com/counter/&#39; + encodeURIComponent(&#34;https://github.com/coolsnowwolf/lede&#34;).replace(/\/$/, &#39;&#39;) + &#39;.json&#39;)r.send()tương thích với NEWIFI3 D2 OpenWrt thế hệ thứ 3
+      <description>-&amp;gt; Hướng dẫn UP Firmware  ROM được @kizimirua build từ Lean OpenWRT https://github.com/coolsnowwolf/ledevar r = new XMLHttpRequest();r.addEventListener(&#39;load&#39;, function() {document.querySelector(&#39;#a368194572&#39;).innerText = JSON.parse(this.responseText).count_unique})r.open(&#39;GET&#39;, &#39;https://stats.pnghia.com/counter/&#39; + encodeURIComponent(&#34;https://github.com/coolsnowwolf/lede&#34;).replace(/\/$/, &#39;&#39;) + &#39;.json&#39;)r.send()tương thích với NEWIFI3 D2 OpenWrt thế hệ thứ 3
 Có 2 bản để lựa chọn là bản FULL và bản rút gọn, bài viết này sẽ tổng hợp lại cả 2 bản cho các bạn dễ lựa chọn.</description>
     </item>
     
@@ -163,7 +163,7 @@ Có 2 bản để lựa chọn là bản FULL và bản rút gọn, bài viết 
       <pubDate>Tue, 21 Jan 2020 00:00:00 +0000</pubDate>
       
       <guid>https://pnghia.com/about/</guid>
-      <description>Công việc chính của mình là làm Điêu khắc (thủ công/CNC), thiết kế mẫu điêu khắc bằng phần mềm JDPaint và Artform - vận hành máy chạm khắc CNC.
+      <description>document.writeln(getTodayString1());   Giới thiệu  Công việc chính của mình là làm Điêu khắc (thủ công/CNC), thiết kế mẫu điêu khắc bằng phần mềm JDPaint và Artform - vận hành máy chạm khắc CNC.
 Ngoài ra, mình còn là một người đam mê Công Nghệ, điện tử, máy tính và lập trình. Mình lập ra trang này để viết lách, giải trí khi rảnh rỗi, muốn chia sẽ một ít kiến thức nhỏ nhoi của mình mong sẽ giúp ích cho mọi người ở một trường hợp nào đó.</description>
     </item>
     
