@@ -201,14 +201,14 @@
 <li>Kết nối cáp <em>LAN</em> từ cổng <strong>LAN</strong> của Modem sang cổng <strong>LAN</strong> của Router<br />
   
 <blockquote class="book-hint info">
-    Chú ý là sử dụng <strong>LAN-to-LAN</strong>, ROM <em>OpenWRT</em> không sử dụng cổng <strong>WAN</strong> ở chế độ này
-  </blockquote>
+Chú ý là sử dụng <strong>LAN-to-LAN</strong>, ROM <em>OpenWRT</em> không sử dụng cổng <strong>WAN</strong> ở chế độ này
+</blockquote>
 </li>
 <li>Cấu hình IP cho cổng LAN của Router là IP tĩnh (Static IP) có địa chỉ IP trùng với dải IP chính của Modem<br />
   
 <blockquote class="book-hint info">
-    Ví dụ: IP chính của Modem là <code>172.16.1.1</code> thì Set Static IP cho Router là <code>172.16.1.2</code>
-  </blockquote>
+Ví dụ: IP chính của Modem là <code>172.16.1.1</code> thì Set Static IP cho Router là <code>172.16.1.2</code>
+</blockquote>
 </li>
 <li>Đặt DNS Server và Gateway IP sang địa chỉ IP của Modem. Ở ví dụ này là <code>172.16.1.1</code><br />
 
@@ -242,7 +242,7 @@
 </ul>
   
 <blockquote class="book-hint warning">
-    <ul>
+<ul>
 <li>Nếu trong gia đình có các thiết bị sử dụng DLNA, UPnP, SMB (ví dụ như Smart TV, loa thông minh hỗ trợ ChromeCast&hellip;), để không gặp lỗi khi sử dụng các chức năng đó, bạn phải bật Option <em>igmp_snooping</em></li>
 <li>Để bật <em>igmp_snooping</em>: truy cập SSH vào Router, thêm dòng <code>option igmp_snooping '1'</code> vào file <code>/etc/config/network</code> ở mục <code>config interface 'lan'</code></li>
 </ul>
@@ -257,7 +257,7 @@
         option gateway '172.16.1.1'
         option igmp_snooping '1'
 </code></pre>
-  </blockquote>
+</blockquote>
 
 <h2 id="cấu-hình-vlan-cho-guest-wifi">Cấu hình VLAN cho GUEST WIFI</h2>
 <ul>
@@ -413,7 +413,7 @@ bao gồm 2 điểm truy cập ở băng tần 2.4Ghz và 2 điểm ở băng t�
 
 <div class="authorbox clearfix">
 	<figure class="authorbox__avatar">
-		<img alt="Nghĩa Phan avatar" src="/img/avatar.jpg" class="avatar" height="90" width="90">
+		<img alt="Nghĩa Phan avatar" src="/img/avatar.jpg" class="avatar lazyload" height="90" width="90">
 	</figure>
 	<div class="authorbox__header">
 		<span class="authorbox__name">✍️ Nghĩa Phan</span>
@@ -422,6 +422,7 @@ bao gồm 2 điểm truy cập ở băng tần 2.4Ghz và 2 điểm ở băng t�
 		• Điêu khắc, ArtForm/JDpaint Designer<br/>• Quảng Trị, Việt Nam<br/>• <a href="https://facebook.com/pVNghiaQT/">Facebook</a> / <a href="https://t.me/pVNghiaQT/">Telegram</a>
 	</div>
 </div>
+
 
 <nav class="pager flex">
 	<div class="pager__item pager__item--next">
@@ -442,7 +443,7 @@ bao gồm 2 điểm truy cập ở băng tần 2.4Ghz và 2 điểm ở băng t�
 		<div class="footer__copyright">
 			&copy; 2021 pNghia.com.
 			<span class="footer__copyright-credits">Powered by <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">goHugo</a> | <a href="https://posativ.org/isso/" rel="nofollow noopener" target="_blank">ISSO</a> | <a href="https://www.goatcounter.com/" rel="nofollow noopener" target="_blank">goatCounter</a> and the <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span><br />
-			<span>v.09:46 - 07 tháng 02, 2021</span>
+			<span>v.18:12 - 08 tháng 02, 2021</span>
 		</div>
 	</div>
 </footer>
