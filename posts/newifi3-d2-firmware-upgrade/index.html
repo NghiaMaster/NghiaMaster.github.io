@@ -175,7 +175,45 @@
 <div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/newifi3-d2/" rel="category">Newifi3 D2</a>
 	</span>
 </div></div>
-		</header><div class="content post__content clearfix">
+		</header>
+<div class="post__toc toc">
+	<div class="toc__title">Mục lục</div>
+	<div class="toc__menu">
+		<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li>
+          <ul>
+            <li></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#i-openssh--cài-breed-bootloader">I. OpenSSH &amp; Cài Breed Bootloader.</a>
+      <ul>
+        <li><a href="#1-openssh-stock-firmware">1. OpenSSH stock Firmware:</a></li>
+        <li><a href="#2-cài-breed-bootloader">2. Cài Breed Bootloader</a>
+          <ul>
+            <li><a href="#21-cài-breed-thủ-công">2.1 Cài breed thủ công</a></li>
+            <li><a href="#22-công-cụ-cài-breed-tự-động-1-click">2.2 Công cụ cài Breed tự động 1-Click</a></li>
+          </ul>
+        </li>
+        <li><a href="#3-truy-cập-vào-breed-bootloader">3. Truy cập vào Breed Bootloader.</a></li>
+      </ul>
+    </li>
+    <li><a href="#ii-up-rom-firmware">II. Up ROM (Firmware)</a>
+      <ul>
+        <li><a href="#1-tổng-hợp-firmware-newidi3-d2">1. Tổng Hợp Firmware Newidi3 D2</a></li>
+        <li><a href="#2-update-firmware">2. Update Firmware</a></li>
+      </ul>
+    </li>
+    <li><a href="#3-build-rom-openwrt-tuỳ-chọn">#3. Build ROM OpenWRT (Tuỳ chọn)</a></li>
+  </ul>
+</nav>
+	</div>
+</div>
+<div class="content post__content clearfix">
 			<h5 id="bài-viết-sẽ-có-3-phần-phần-đầu-là-hướng-dẫn-cài-breed-bootloader-phần-2-sẽ-hướng-dẫn-up-rom-và-phần-3-là-tự-build-rom-openwrt">Bài viết sẽ có 3 phần. Phần đầu là hướng dẫn cài Breed Bootloader, phần 2 sẽ hướng dẫn UP ROM và phần 3 là tự Build ROM OpenWRT.</h5>
 <ul>
 <li>Yêu cầu chung: Sử dụng Command Line, sử dụng hệ điều hành Linux càng tốt, có SSH Client để truy cập vào Router thông qua SSH.</li>
@@ -211,19 +249,19 @@
 </table>
 <ul>
 <li>Chi tiết hơn tại 
-<a href="https://openwrt.org/toh/hwdata/d-team/d-team_newifi_d2" target="_blank" rel="noopener noreferrer" data-goatcounter-click="https://openwrt.org/toh/hwdata/d-team/d-team_newifi_d2" data-goatcounter-referrer="/posts/newifi3-d2-firmware-upgrade/">Đây</a><span title="Mức độ phổ biến" id="a517296843" class="single__badge"></span><script async>var r = new XMLHttpRequest();
+<a href="https://openwrt.org/toh/hwdata/d-team/d-team_newifi_d2" target="_blank" rel="noopener noreferrer" data-goatcounter-click="https://openwrt.org/toh/hwdata/d-team/d-team_newifi_d2" data-goatcounter-referrer="/posts/newifi3-d2-firmware-upgrade/">Đây</a><span title="Mức độ phổ biến" id="a724861593" class="single__badge"></span><script async>var r = new XMLHttpRequest();
 r.addEventListener('load', function() {
-document.querySelector('#a517296843').innerText = JSON.parse(this.responseText).count_unique
+document.querySelector('#a724861593').innerText = JSON.parse(this.responseText).count_unique
 })
 r.open('GET', 'https://stats.pnghia.com/counter/' + encodeURIComponent("https://openwrt.org/toh/hwdata/d-team/d-team_newifi_d2").replace(/\/$/, '') + '.json')
 r.send()</script>
 .</li>
 </ul>
-<h2 id="i-open-ssh-và-cài-breed-bootloader">#I. Open SSH và Cài Breed Bootloader.</h2>
+<h2 id="i-openssh--cài-breed-bootloader">I. OpenSSH &amp; Cài Breed Bootloader.</h2>
 <blockquote>
 <p>&ldquo;Bootloader của Newifi3-D2 là u-boot, nó không hỗ trợ update firmware online, và cũng không có giao diện Web; nói đơn giản, nó là một bootloader cựu kì đơn giản cho Linux. Breed cũng là một bootloader, nhưng nó được tạo ra để <strong>Hỗ trợ update firmware thông qua giao diện web</strong>, nó được thiết kế đơn giản dành cho router. Điều đáng nói ở đây, Breed không phải là Nguồn mở, <strong>sử dụng nó đồng nghĩa với bạn chấp nhận rủi ro.</strong>&rdquo;</p>
 </blockquote>
-<h3 id="1-open-ssh-stock-firmware">1. Open SSH stock Firmware:</h3>
+<h3 id="1-openssh-stock-firmware">1. OpenSSH stock Firmware:</h3>
 <blockquote>
 <p>Chỉ làm bước này nếu Newifi3 D2 của bạn đang dùng Stock firmware và chưa cài Breed, nếu khi mua shop đã cài sẵn Breed thì bỏ qua bước này.</p>
 </blockquote>
@@ -314,9 +352,9 @@ $ insmod ./newifi-d2-jail-break.ko
 <ul>
 <li>
 <p>Tải file nén chứa các phần mền cần thiết: 
-<a href="https://drive.google.com/file/d/1UelGCWtziL9v1BRczE-DQGi3x6OS8cIW/view?usp=sharing" target="_blank" rel="noopener noreferrer" data-goatcounter-click="https://drive.google.com/file/d/1UelGCWtziL9v1BRczE-DQGi3x6OS8cIW/view?usp=sharing" data-goatcounter-referrer="/posts/newifi3-d2-firmware-upgrade/">Link Google Drive</a><span title="Mức độ phổ biến" id="a743298651" class="single__badge"></span><script async>var r = new XMLHttpRequest();
+<a href="https://drive.google.com/file/d/1UelGCWtziL9v1BRczE-DQGi3x6OS8cIW/view?usp=sharing" target="_blank" rel="noopener noreferrer" data-goatcounter-click="https://drive.google.com/file/d/1UelGCWtziL9v1BRczE-DQGi3x6OS8cIW/view?usp=sharing" data-goatcounter-referrer="/posts/newifi3-d2-firmware-upgrade/">Link Google Drive</a><span title="Mức độ phổ biến" id="a786921354" class="single__badge"></span><script async>var r = new XMLHttpRequest();
 r.addEventListener('load', function() {
-document.querySelector('#a743298651').innerText = JSON.parse(this.responseText).count_unique
+document.querySelector('#a786921354').innerText = JSON.parse(this.responseText).count_unique
 })
 r.open('GET', 'https://stats.pnghia.com/counter/' + encodeURIComponent("https://drive.google.com/file/d/1UelGCWtziL9v1BRczE-DQGi3x6OS8cIW/view?usp=sharing").replace(/\/$/, '') + '.json')
 r.send()</script>
@@ -346,7 +384,7 @@ r.send()</script>
 
 </li>
 </ul>
-<h2 id="ii-up-rom-firmware">#II. Up ROM (Firmware)</h2>
+<h2 id="ii-up-rom-firmware">II. Up ROM (Firmware)</h2>
 <h3 id="1-tổng-hợp-firmware-newidi3-d2">1. Tổng Hợp Firmware Newidi3 D2</h3>
 <ul>
 <li>Có Hơn 10 Loại Firmware cho Newifi3 D2 - 
@@ -354,10 +392,22 @@ r.send()</script>
 </li>
 </ul>
 <h3 id="2-update-firmware">2. Update Firmware</h3>
+  
+<blockquote class="book-hint warning">
+Lưu ý nho nhỏ khi UP qua lại giữa các Firmware Padavan (ví dụ như Padavan Hiboy qua Padavan Scut hoặc ngược lại&hellip; một số ROM Base on OpenWRT cũng có thể gặp) trong một số trường hợp khi up FW thì file cấu hình cũ vẫn còn trong máy dẫn tới việc xung đột hoặc cấu hình không đúng ý muốn. Để khắc phục vấn đề này, các bạn phải làm thêm một bước trong <strong>BreedWeb</strong> là <em>reset Config</em>
+</blockquote>
+
+<details >
+    <summary>Hướng dẫn reset Config</summary>
+    <div class="markdown-inner">
+      <img data-src="https://pnghia.com/images/newifi-d2/ResetConfigBreedWeb_hu02a60f8d9a6d7041a5ffc231e2dc63a1_45548_filter_1334269291160664337.png" alt="Reset Config on Breedweb" class="lazyload" />
+    </div>
+  </details>
+
 <ul>
 <li>Tải Firmware.</li>
 <li>
-<a href="#3-truy-c%e1%ba%adp-v%c3%a0o-breed-bootloader">Truy cập vào Breed Bootloader</a>
+<a href="#3-truy-c%e1%ba%adp-v%c3%a0o-breed-bootloader">Truy cập Breed Bootloader</a>
 </li>
 <li>Up Firmware theo hướng dẫn<br />
 
@@ -596,7 +646,7 @@ $ make -j4 <span class="c1"># chờ tiếp.</span>
 		<div class="footer__copyright">
 			&copy; 2021 pNghia.com.
 			<span class="footer__copyright-credits">Powered by <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">goHugo</a> | <a href="https://posativ.org/isso/" rel="nofollow noopener" target="_blank">ISSO</a> | <a href="https://www.goatcounter.com/" rel="nofollow noopener" target="_blank">goatCounter</a> and the <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span><br />
-			<span>v.18:12 - 08 tháng 02, 2021</span>
+			<span>v.18:21 - 08 tháng 02, 2021</span>
 		</div>
 	</div>
 </footer>
