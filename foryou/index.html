@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For You</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Dancing+Script:400,700&amp;subset=vietnamese">
+    <style>
+        .container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #e80202;
+            overflow: hidden;
+        }
+
+        .heart {
+            position: absolute;
+            height: 40px;
+            width: 40px;
+            background: #e80202;
+            transform: rotate(45deg);
+            box-shadow: 20px 20px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        .heart::before {
+            content: "";
+            position: absolute;
+            top: -50%;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #e80202;
+            border-radius: 50%;
+            box-shadow: 0 -20px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .heart::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -50%;
+            width: 100%;
+            height: 100%;
+            background: #e80202;
+            border-radius: 50%;
+            box-shadow: -20px 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        #txt span {
+            font-family: "Dancing Script", cursive !important;
+            font-size: 25px;
+            color: #fff;
+            text-shadow: 1px 1px 1px #000, 3px 3px 5px blue;
+            user-select: none;
+        }
+
+        p {
+            position: absolute;
+            top: 8px;
+            left: 16px;
+            z-index: 1;
+            margin: .5em;
+        }
+    </style>
+    <script>
+        var CONFIG = {
+            content: [{
+                text: 'Hello Em',
+                delay: 1500,
+            }, {
+                text: ' ^^',
+                delay: 1000,
+            }, {
+                text: '!',
+                delay: 2500,
+            }, {
+                text: '\n- Có lẽ bây giờ a không còn trẻ để nói mấy câu sến như thế này nữa.',
+                delay: 1000
+            }, {
+                text: ' Nhưng vì e,',
+                delay: 1200
+            }, {
+                text: ' a sẵn sàng vắt óc suy nghĩ để nói cho e nghe và mong e hãy tin a :3',
+                delay: 2500
+            }, {
+                text: '\n- Những điều sau đây a nói đều xuất phát từ trái tim,',
+                delay: 500
+            }, {
+                text: ' không một chút hối hận và a đã suy nghĩ rất kỹ.',
+                delay: 1000
+            }],
+        };
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="heart"></div>
+        <p id="txt"></p>
+        <span style="color: #ff1414;font-size: 25px;font-family: 'Dancing Script', cursive !important;">© 2021 by Nghĩa
+            Phan</span>
+    </div>
+    <script src="/js/anime.min.js"></script>
+    <script>
+        const container = document.querySelector('.container');
+        for (var i = 1; i <= 20; i++) {
+            const hearts = document.createElement('div');
+            hearts.classList.add('heart');
+            container.appendChild(hearts);
+        }
+        function animateHearts() {
+            anime({
+                targets: '.heart',
+                translateX: function () {
+                    return anime.random(-700, 700);
+                },
+                translateY: function () {
+                    return anime.random(-500, 500);
+                },
+                rotate: 45,
+                scale: function () {
+                    return anime.random(1, 5);
+                },
+                easing: 'easeInOutBack',
+                duration: 5000,
+                delay: anime.stagger(10),
+                complete: animateHearts,
+            })
+        }
+        animateHearts()
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="/js/foryou.min.js"></script>
+</body>
+
+</html>
