@@ -7,6 +7,15 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>vi-vn</language><atom:link href="https://pnghia.com/serial/opnsense/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Hướng dẫn kết nối NordVPN và chia VLAN cho đường truyền VPN - tách đường truyền có VPN ra 1 AP riêng.</title>
+      <link>https://pnghia.com/serial/opnsense/huong-dan-ket-noi-nordvpn-va-chia-vlan/</link>
+      <pubDate>Sat, 01 May 2021 08:25:14 +0700</pubDate>
+      
+      <guid>https://pnghia.com/serial/opnsense/huong-dan-ket-noi-nordvpn-va-chia-vlan/</guid>
+      <description>Placeholder  Placeholder text Bài viết đang được hoàn thiện. Vui lòng liên hệ nếu bạn đang cần hoặc muốn được hỗ trợ.  </description>
+    </item>
+    
+    <item>
       <title>Hướng dẫn cấu hình Captive Portal trên OPNsense</title>
       <link>https://pnghia.com/serial/opnsense/opnsense-cau-hinh-captive-portal/</link>
       <pubDate>Fri, 25 Dec 2020 09:30:14 +0700</pubDate>
