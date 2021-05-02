@@ -186,7 +186,7 @@
 <ol>
 <li>Đăng nhập vào router OpenWRT, ở Menu vào mục <strong>Network</strong> &gt; <strong>Interfaces</strong><br />
 <details >
-<summary>Ảnh chụp màn hình</summary>
+<summary><b style="color:;font-weight:normal;">Ảnh chụp màn hình</b></summary>
 <div class="markdown-inner">
 <img data-src="https://pnghia.com/images/openwrt/OpenWRTb1_hu7e6a93fae0052281caa651871ba44e70_85369_filter_1334269291160664337.png" alt="Cấu hình OpenWRT quay PPPoE b1" class="lazyload" />
 </div>
@@ -194,7 +194,7 @@
 </li>
 <li>Mặc định OpenWRT sẽ tạo 3 Interfaces là <strong>LAN</strong>, <strong>WAN</strong>, và <strong>WAN6</strong><br />
 <details >
-<summary>Screenshot</summary>
+<summary><b style="color:;font-weight:normal;">Screenshot</b></summary>
 <div class="markdown-inner">
 <img data-src="https://pnghia.com/images/openwrt/interface_hud40ae494c58547cf4749a4db6e0e77ae_46448_filter_1334269291160664337.png" alt="Interface" class="lazyload" />
 </div>
@@ -203,7 +203,7 @@
 </ol>
 <p>xác minh bạn có cổng WAN vật lý và xem nó nằm ở Port nào bằng cách nhấp vào <strong>Edit</strong><br />
 <details >
-<summary>Ảnh chụp màn hình</summary>
+<summary><b style="color:;font-weight:normal;">Ảnh chụp màn hình</b></summary>
 <div class="markdown-inner">
 <img data-src="https://pnghia.com/images/openwrt/OpenWRTb2_huae91ce321b7b6990ff5b6392783d7b44_187343_filter_1334269291160664337.png" alt="wan edit" class="lazyload" />
 </div>
@@ -218,7 +218,7 @@
 <ol start="3">
 <li>Ở mục <strong>Network</strong> &gt; <strong>Switch</strong> (Router hỗ trợ VLAN sẽ có mục này, nếu không có thì kiểm tra lại xem bản OpenWRT đã chuẩn chưa, hoặc rất tiếc - router của bạn không hỗ trợ VLAN 😥). Tick vào dòng <strong>Enable VLAN Functionality</strong>. Ở đây ta sẽ tạo một <strong>VLAN ID</strong> mới bằng cách nhấn vào nút <strong>Add</strong> &gt; nhập số VLAN vào (ở đây mình sẽ lấy ví dụ mạng Viettel vùng của mình là 35). ở cột <strong>CPU(eth1)</strong> và cột <strong>WAN</strong> chọn <strong>tagged</strong><br />
 <details >
-<summary>Ảnh chụp màn hình</summary>
+<summary><b style="color:;font-weight:normal;">Ảnh chụp màn hình</b></summary>
 <div class="markdown-inner">
 <img data-src="https://pnghia.com/images/openwrt/tagVLAN_hu8655e393840644c303e422f3f01a7d4e_52933_filter_1334269291160664337.png" alt="" class="lazyload" />
 </div>
@@ -234,7 +234,7 @@
 <li>
 <p>Click vào nút <strong>Edit</strong> ở mục <strong>WAN</strong>.<br />
 <details >
-<summary>Ảnh chụp màn hình</summary>
+<summary><b style="color:;font-weight:normal;">Ảnh chụp màn hình</b></summary>
 <div class="markdown-inner">
 <img data-src="https://pnghia.com/images/openwrt/OpenWRTb2_huae91ce321b7b6990ff5b6392783d7b44_187343_filter_1334269291160664337.png" alt="" class="lazyload" />
 </div>
@@ -244,7 +244,7 @@
 <li>
 <p>Ở mục <strong>Protocol</strong> chọn <strong>PPPoE</strong>. nhấn vào <strong>Switch Protocol</strong>.<br />
 <details >
-<summary>Ảnh chụp màn hình</summary>
+<summary><b style="color:;font-weight:normal;">Ảnh chụp màn hình</b></summary>
 <div class="markdown-inner">
 <img data-src="https://pnghia.com/images/openwrt/OpenWRTb3_hued2a38a978c3e6444762a89cba8f5b12_81747_filter_1334269291160664337.png" alt="" class="lazyload" />
 
@@ -262,7 +262,7 @@
 - tại mục <em>PAP/CHAP Username</em> điền tài khoản PPPoE do nhà mạng cấp.<br />
 - tại mục <em>PAP/CHAP Password</em> điền mật khẩu PPPoE do nhà mạng cấp.<br />
 <details >
-<summary>Ảnh chụp màn hình</summary>
+<summary><b style="color:;font-weight:normal;">Ảnh chụp màn hình</b></summary>
 <div class="markdown-inner">
 <img data-src="https://pnghia.com/images/openwrt/OpenWRTb5_huf55401b52180925be0bb852a0d0064cc_90416_filter_1334269291160664337.png" alt="" class="lazyload" />
 </div>
@@ -270,7 +270,7 @@
 </p>
 <p>Sau khi điền đủ thông tin <strong>Username/Password</strong> thì chuyển qua tab <strong>Physical Settings</strong> và chọn số VLAN ID chúng ta đã tạo lúc nãy.<br />
 <details >
-<summary>Ảnh chụp màn hình</summary>
+<summary><b style="color:;font-weight:normal;">Ảnh chụp màn hình</b></summary>
 <div class="markdown-inner">
 <img data-src="https://pnghia.com/images/openwrt/eth135_hu5197e8a9682cecd03f5421d844e153bd_43481_filter_1334269291160664337.png" alt="" class="lazyload" />
 </div>
@@ -280,7 +280,7 @@
 <li>nhấn <strong>Save &amp; Apply</strong></li>
 <li>Nếu cấu hình đúng, mục <strong>WAN</strong> sẽ hiển thị địa chỉ IPv4 (và IPv6 nếu có)<br />
 <details >
-<summary>Ảnh chụp màn hình</summary>
+<summary><b style="color:;font-weight:normal;">Ảnh chụp màn hình</b></summary>
 <div class="markdown-inner">
 <img data-src="https://pnghia.com/images/openwrt/OpenWRTb7_hue3e2792342a59b3928e443d80deddeae_183473_filter_1334269291160664337.png" alt="" class="lazyload" />
 </div>
@@ -289,7 +289,7 @@
 </ol>
 <p>Nếu vẫn chưa thấy update, các bạn nhấn vào nút <strong>Connect</strong> để thử lại<br />
 <details >
-<summary>Ảnh chụp màn hình</summary>
+<summary><b style="color:;font-weight:normal;">Ảnh chụp màn hình</b></summary>
 <div class="markdown-inner">
 <img data-src="https://pnghia.com/images/openwrt/connect_hu11cc23d12444cd80539f91d0ecaf9709_34483_filter_1334269291160664337.png" alt="" class="lazyload" />
 </div>
@@ -426,7 +426,7 @@
 		<div class="footer__copyright">
 			&copy; 2021 pNghia.com.
 			<span class="footer__copyright-credits">Powered by <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">goHugo</a> | <a href="https://posativ.org/isso/" rel="nofollow noopener" target="_blank">ISSO</a> | <a href="https://www.goatcounter.com/" rel="nofollow noopener" target="_blank">goatCounter</a> and the <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span><br />
-			<span>v.08:48 - 01 tháng 05, 2021</span>
+			<span>v.17:03 - 02 tháng 05, 2021</span>
 		</div>
 	</div>
 </footer>
