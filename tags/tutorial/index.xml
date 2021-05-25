@@ -17,6 +17,16 @@
     </item>
     
     <item>
+      <title>Cấu hình Fast Roaming với OpenWRT</title>
+      <link>https://pnghia.com/serial/openwrt/cau-hinh-wifi-roaming-voi-openwrt/</link>
+      <pubDate>Sun, 21 Mar 2021 09:49:09 +0700</pubDate>
+      
+      <guid>https://pnghia.com/serial/openwrt/cau-hinh-wifi-roaming-voi-openwrt/</guid>
+      <description>Fast Roaming là gì?  Fast Roaming cho phép người dùng di chuyển từ vùng WiFi này qua vùng WiFi khác mà không bị gián đoạn kết nối. Các tiêu chuẩn mạng Wi-Fi của IEEE 802.11r và IEEE 802.11k đều là các tiêu chuẩn được thiết kế để tạo ra trải nghiệm chuyển vùng liền mạch hơn cho các thiết bị sử dụng mạng không dây.
+ Để có hệ thống wifi roaming thì cần các yếu tố sau:</description>
+    </item>
+    
+    <item>
       <title>Hướng dẫn cấu hình OpenWRT quay PPPoE có VLAN ID.</title>
       <link>https://pnghia.com/serial/openwrt/huong-dan-cau-hinh-openwrt-quay-pppoe-with-vlan/</link>
       <pubDate>Wed, 06 Jan 2021 10:49:11 +0700</pubDate>

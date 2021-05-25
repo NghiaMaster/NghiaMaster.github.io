@@ -14,14 +14,14 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Hướng dẫn kết nối NordVPN và chia VLAN cho đường truyền VPN - tách đường truyền có VPN ra 1 AP riêng. - pNghia.com</title>
+	<title>Cấu hình Fast Roaming với OpenWRT - pNghia.com</title>
 	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
-	<meta name="description" content="Hướng dẫn sẽ giúp các bạn biết cách kêt nối NordVPN trên OPNsense và chia VLAN cho nó. Khi đã có VLAN, các bạn có thể dùng WIFI AP để thiết lập 1 SSID riêng - khi muốn kết nối đến VPN, các bạn chỉ cần kết nối tới mạng WIFI đã thiết lập mà không cần sử dụng phần mềm trên điện thoại.">
-		<meta property="og:title" content="Hướng dẫn kết nối NordVPN và chia VLAN cho đường truyền VPN - tách đường truyền có VPN ra 1 AP riêng." />
-<meta property="og:description" content="Hướng dẫn sẽ giúp các bạn biết cách kêt nối NordVPN trên OPNsense và chia VLAN cho nó. Khi đã có VLAN, các bạn có thể dùng WIFI AP để thiết lập 1 SSID riêng - khi muốn kết nối đến VPN, các bạn chỉ cần kết nối tới mạng WIFI đã thiết lập mà không cần sử dụng phần mềm trên điện thoại." />
+	<meta name="description" content="Sử dụng 2 hoặc nhiều router chạy Firmware OpenWRT hoặc OpenWRT Based (PandoraBOX...) làm hệ thống WIFI Fast Roaming, giúp phủ sóng wifi khắp nhà.">
+		<meta property="og:title" content="Cấu hình Fast Roaming với OpenWRT" />
+<meta property="og:description" content="Sử dụng 2 hoặc nhiều router chạy Firmware OpenWRT hoặc OpenWRT Based (PandoraBOX...) làm hệ thống WIFI Fast Roaming, giúp phủ sóng wifi khắp nhà." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://pnghia.com/serial/opnsense/huong-dan-ket-noi-nordvpn-va-chia-vlan/" />
-<meta property="article:published_time" content="2021-05-01T08:25:14+07:00" />
+<meta property="og:url" content="https://pnghia.com/serial/openwrt/cau-hinh-wifi-roaming-voi-openwrt/" />
+<meta property="article:published_time" content="2021-03-21T09:49:09+07:00" />
 <meta property="article:modified_time" content="2021-05-01T08:49:14+07:00" />
 
 
@@ -165,7 +165,7 @@
 <main class="main" role="main">
 	<article class="post">
 		<header class="post__header">
-			<h1 class="post__title">Hướng dẫn kết nối NordVPN và chia VLAN cho đường truyền VPN - tách đường truyền có VPN ra 1 AP riêng.</h1>
+			<h1 class="post__title">Cấu hình Fast Roaming với OpenWRT</h1>
 			<div class="post__meta meta">
 <script defer>
 	var r = new XMLHttpRequest();
@@ -175,14 +175,14 @@
   r.send()
   </script>
 <div class="meta__item-datetime meta__item">
-	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2021-05-01T08:25:14&#43;07:00">1 tháng 5, 2021</time>
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2021-03-21T09:49:09&#43;07:00">21 tháng 3, 2021</time>
 	<time class="meta__text" datetime="2021-05-01T08:49:14&#43;07:00">(
 		Cập nhật: 1 tháng 5, 2021)</time>&nbsp;<div class="meta__item"><svg xmlns="http://www.w3.org/2000/svg" class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 24 24"><path d="M15 12c0 1.657-1.343 3-3 3s-3-1.343-3-3c0-.199.02-.393.057-.581 1.474.541 2.927-.882 2.405-2.371.174-.03.354-.048.538-.048 1.657 0 3 1.344 3 3zm-2.985-7c-7.569 0-12.015 6.551-12.015 6.551s4.835 7.449 12.015 7.449c7.733 0 11.985-7.449 11.985-7.449s-4.291-6.551-11.985-6.551zm-.015 12c-2.761 0-5-2.238-5-5 0-2.761 2.239-5 5-5 2.762 0 5 2.239 5 5 0 2.762-2.238 5-5 5z"/></svg>
 <span class="meta__text" id="goatCounter_value_page_pv">3456</span>&nbsp;&bull;
 	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M20 15c0 .552-.448 1-1 1s-1-.448-1-1 .448-1 1-1 1 .448 1 1m-3 0c0 .552-.448 1-1 1s-1-.448-1-1 .448-1 1-1 1 .448 1 1m-3 0c0 .552-.448 1-1 1s-1-.448-1-1 .448-1 1-1 1 .448 1 1m5.415 4.946c-1 .256-1.989.482-3.324.482-3.465 0-7.091-2.065-7.091-5.423 0-3.128 3.14-5.672 7-5.672 3.844 0 7 2.542 7 5.672 0 1.591-.646 2.527-1.481 3.527l.839 2.686-2.943-1.272zm-13.373-3.375l-4.389 1.896 1.256-4.012c-1.121-1.341-1.909-2.665-1.909-4.699 0-4.277 4.262-7.756 9.5-7.756 5.018 0 9.128 3.194 9.467 7.222-1.19-.566-2.551-.889-3.967-.889-4.199 0-8 2.797-8 6.672 0 .712.147 1.4.411 2.049-.953-.126-1.546-.272-2.369-.483m17.958-1.566c0-2.172-1.199-4.015-3.002-5.21l.002-.039c0-5.086-4.988-8.756-10.5-8.756-5.546 0-10.5 3.698-10.5 8.756 0 1.794.646 3.556 1.791 4.922l-1.744 5.572 6.078-2.625c.982.253 1.932.407 2.85.489 1.317 1.953 3.876 3.314 7.116 3.314 1.019 0 2.105-.135 3.242-.428l4.631 2-1.328-4.245c.871-1.042 1.364-2.384 1.364-3.75"/></svg>
 <a class="meta__text" href="#isso-thread">Comments</a></div>
 </div>
-<div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/opnsense-config/" rel="category">OPNsense Config</a>
+<div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/tutorial/" rel="category">Tutorial</a>
 	</span>
 </div></div>
 		</header><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
@@ -192,38 +192,64 @@
 			(adsbygoogle = window.adsbygoogle || []).push({});
 		</script>
 		<div class="content post__content clearfix">
-			<h2 id="placeholder">Placeholder</h2>
-<p>  
-<blockquote class="book-hint info">
-Placeholder text
+			<h2 id="fast-roaming-là-gì">Fast Roaming là gì?</h2>
+<blockquote>
+<p><em>Fast Roaming</em> cho phép người dùng di chuyển từ vùng WiFi này qua vùng WiFi khác mà không bị gián đoạn kết nối. Các tiêu chuẩn mạng Wi-Fi của IEEE 802.11r và IEEE 802.11k đều là các tiêu chuẩn được thiết kế để tạo ra trải nghiệm chuyển vùng liền mạch hơn cho các thiết bị sử dụng mạng không dây.</p>
 </blockquote>
-<br />
+<p>Để có hệ thống wifi roaming thì cần các yếu tố sau:</p>
+<ul>
+<li>
+<p><strong>Tất cả AP đều được cấu hình cùng SSID / mã hóa / password (Channel có thể giống hoặc khác)</strong></p>
+</li>
+<li>
+<p><strong>Tất cả AP phải cùng một lớp mạng LAN và có thể “nói chuyện” với nhau</strong></p>
+</li>
+</ul>
+<p>Ưu điểm :</p>
+<ul>
+<li>Tất cả các AP ( Accesspoint ) đều cắm dây LAN từ  một nguồn cấp IP chính router /switch giống nhau nên tốc độ mạng sẽ không bị giảm khi roaming khu vực giữa các AP .</li>
+<li>Tốc độ kết nối ở mỗi vùng AP hầu như không suy hao .</li>
+</ul>
+<p>Nhược điểm :</p>
+<ul>
+<li>Chi phí đầu tư cao, phải đi dây LAN tới từng router khá rườm rà.</li>
+</ul>
+<h2 id="yêu-cầu">Yêu cầu:</h2>
+<ul>
+<li>Có ít nhất 2 Router chạy Firmware OpenWRT càng mới càng tốt (hoặc các firmware baseon OPENWRT như PandoraBox, các firmware DD-WRT 2020, các FW khác có hỗ trợ chuẩn IEEE 802.11r, 802.11k) trong bài viết này mình chỉ hướng dẫn làm trên FW OpenWRT</li>
+<li>FW OpenWRT đã được cài đặt gói phần mềm <strong>wpad</strong> (Khuyên dùng bản Full)<br />
+<details >
+<summary><b style="color:;font-weight:normal;">Chi tiết</b></summary>
+<div class="markdown-inner">
+<p>Cài đặt <strong>wpad</strong> thông qua SSH với dòng lệnh:</p>
+<pre><code class="language-ssh" data-lang="ssh">opkg update -- opkg remove wpad-mini -- opkg install wpad
+</code></pre><p>Thông qua giao diện web LuCI: <strong>SYSTEM</strong> -&gt; <strong>SOFTWARE</strong><br />
 
 
-<img data-src="https://pnghia.com/images/opnsense/NordVPN1_hufa3d057ed0d3c47e881ac0b73aecdcaa_151691_filter_1334269291160664337.png" alt="NordVPN_OPNsense_with_VLAN" class="lazyload" />
-
-
-<br />
-
-
-<img data-src="https://pnghia.com/images/opnsense/NordVPN2_hua858cd46b3d25fcdeac97d8472adcbae_78372_filter_1334269291160664337.png" alt="NordVPN_OPNsense_with_VLAN" class="lazyload" />
-
-
-<br />
-
-
-<img data-src="https://pnghia.com/images/opnsense/NordVPN2_hua858cd46b3d25fcdeac97d8472adcbae_78372_filter_1334269291160664337.png" alt="NordVPN_OPNsense_with_VLAN" class="lazyload" />
+<img data-src="https://pnghia.com/images/openwrt/wpad_hu35689987e63617789f0a80b031312963_199964_filter_1334269291160664337.png" alt="wpad install" class="lazyload" />
 
 
 </p>
-  
-<blockquote class="book-hint warning">
-<ul>
-<li>Bài viết đang được hoàn thiện. Vui lòng liên hệ nếu bạn đang cần hoặc muốn được hỗ trợ.</li>
+
+</div>
+</details>
+</li>
 </ul>
+<h2 id="cấu-hình-fast-roaming">Cấu hình Fast Roaming</h2>
+<p>Sơ đồ ví dụ như sau:<br />
 
-</blockquote>
 
+<img data-src="https://pnghia.com/images/openwrt/netdiagram_hu6e9ab03e68f4fadd6b670bf0013595ac_9944_filter_1334269291160664337.png" alt="Network Diagram" class="lazyload" />
+
+
+</p>
+<p>Sau khi cài đặt xong <strong>wpad</strong>, các bạn vào <strong>Settings</strong> &gt; <strong>Network</strong> &gt; <strong>Wireless</strong> &gt; Chọn <strong>Wireless</strong> cần roaming và vào mục <strong>Wireless Security</strong> sẽ thấy tuỳ chọn 802.11r. Set up như hình dưới là xong.</p>
+<p>
+
+<img data-src="https://pnghia.com/images/openwrt/802-11r_hu47f014cb1f0cbcff32408a86abbafe10_52187_filter_1334269291160664337.png" alt="802.11r" class="lazyload" />
+
+
+</p>
 
 		</div>
 		<footer class="post__footer">
@@ -232,10 +258,13 @@ Placeholder text
 	<svg class="tags__badge icon icon-tag" width="16" height="16" viewBox="0 0 32 32"><path d="M32 19c0 1-1 2-1 2L21 31s-1 1-2 1-2-1-2-1L2 16c-1-1-1.4-2-1.4-2S0 12.5 0 11V3C0 1.5.8.8.8.8S1.5 0 3 0h8c1.5 0 3 .6 3 .6S15 1 16 2l15 15s1 1 1 2zM7 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></svg>
 	<ul class="tags__list">
 		<li class="tags__item">
-			<a class="tags__link btn" href="/tags/opnsense/" rel="tag">OPNsense</a>
+			<a class="tags__link btn" href="/tags/tutorial/" rel="tag">tutorial</a>
 		</li>
 		<li class="tags__item">
-			<a class="tags__link btn" href="/tags/tutorial/" rel="tag">tutorial</a>
+			<a class="tags__link btn" href="/tags/openwrt/" rel="tag">OpenWRT</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/openwrt-config/" rel="tag">OpenWRT Config</a>
 		</li>
 	</ul>
 </div>
@@ -303,7 +332,7 @@ Placeholder text
 <link rel="stylesheet" href="/css/isso.min.css">
 <script defer src="/js/helper/markdowntoolbar.min.js"></script>
 <script defer src="/js/helper/isso.min.js" data-isso='https://comments.pnghia.com/' data-isso-require-author='true' data-isso-css='false' data-isso-require-email='true' data-isso-max-comments-top='15' data-isso-max-comments-nested='8' data-isso-reveal-on-click='5' data-isso-reply-notifications='true' data-isso-vote='true' data-isso-vote-levels='-5,-3,0,3,5'></script>
-<section id='isso-thread' data-title='Hướng dẫn kết nối NordVPN và chia VLAN cho đường truyền VPN - tách đường truyền có VPN ra 1 AP riêng.' data-isso-id='/serial/opnsense/huong-dan-ket-noi-nordvpn-va-chia-vlan/'></section>
+<section id='isso-thread' data-title='Cấu hình Fast Roaming với OpenWRT' data-isso-id='/serial/openwrt/cau-hinh-wifi-roaming-voi-openwrt/'></section>
 
   
 	
@@ -339,9 +368,9 @@ Placeholder text
 
 <nav class="pager flex">
 	<div class="pager__item pager__item--prev">
-		<a class="pager__link" href="/serial/opnsense/opnsense-cau-hinh-captive-portal/" rel="prev">
+		<a class="pager__link" href="/serial/openwrt/huong-dan-cau-hinh-openwrt-quay-pppoe-with-vlan/" rel="prev">
 			<span class="pager__subtitle">«&thinsp;Trước</span>
-			<p class="pager__title">Hướng dẫn cấu hình Captive Portal trên OPNsense</p>
+			<p class="pager__title">Hướng dẫn cấu hình OpenWRT quay PPPoE có VLAN ID.</p>
 		</a>
 	</div>
 </nav>
