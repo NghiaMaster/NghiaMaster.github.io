@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Mi Router 3C on pNghia.com</title>
+    <link>https://pnghia.com/categories/mi-router-3c/</link>
+    <description>Recent content in Mi Router 3C on pNghia.com</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>vi-vn</language>
+    <lastBuildDate>Thu, 27 May 2021 19:45:12 +0700</lastBuildDate><atom:link href="https://pnghia.com/categories/mi-router-3c/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Tổng hợp Firmware cho Xiaomi Mi Router 3C</title>
+      <link>https://pnghia.com/posts/tong-hop-firmware-mi-router-3c/</link>
+      <pubDate>Thu, 27 May 2021 19:45:12 +0700</pubDate>
+      
+      <guid>https://pnghia.com/posts/tong-hop-firmware-mi-router-3c/</guid>
+      <description>Sơ lược cấu hình    &amp;mdash; &amp;mdash;     Type Router   Model Mi Router 3C / R3L   CPU MT7628N   ROM 16Mb   RAM 64Mb   Network 2.4GHz up to 300Mbps, 802.11b/g/n   Security WPA-PSK, WPA2-PSK   Antenna 4 external 5dBi   Port 2 LAN, 1 WAN (100 Mbps)   Supply 5V / 1A    Hướng dẫn Up Firmware  Để update được Firmware cho router này, yêu cầu bác bạn phải có một ít chuyên môn về điện tử, sử dụng phần mềm.</description>
+    </item>
+    
+  </channel>
+</rss>

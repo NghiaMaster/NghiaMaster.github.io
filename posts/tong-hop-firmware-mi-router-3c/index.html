@@ -14,15 +14,15 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Hướng dẫn kết nối NordVPN và chia VLAN cho đường truyền VPN - tách đường truyền có VPN ra 1 AP riêng. - pNghia.com</title>
+	<title>Tổng hợp Firmware cho Xiaomi Mi Router 3C - pNghia.com</title>
 	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
-	<meta name="description" content="Hướng dẫn sẽ giúp các bạn biết cách kêt nối NordVPN trên OPNsense và chia VLAN cho nó. Khi đã có VLAN, các bạn có thể dùng WIFI AP để thiết lập 1 SSID riêng - khi muốn kết nối đến VPN, các bạn chỉ cần kết nối tới mạng WIFI đã thiết lập mà không cần sử dụng phần mềm trên điện thoại.">
-		<meta property="og:title" content="Hướng dẫn kết nối NordVPN và chia VLAN cho đường truyền VPN - tách đường truyền có VPN ra 1 AP riêng." />
-<meta property="og:description" content="Hướng dẫn sẽ giúp các bạn biết cách kêt nối NordVPN trên OPNsense và chia VLAN cho nó. Khi đã có VLAN, các bạn có thể dùng WIFI AP để thiết lập 1 SSID riêng - khi muốn kết nối đến VPN, các bạn chỉ cần kết nối tới mạng WIFI đã thiết lập mà không cần sử dụng phần mềm trên điện thoại." />
+	<meta name="description" content="Firmware OpenWRT, Padavan, Keenetic, stock firmware Tiếng Anh, stock firmware Tiếng Trung cho Mi Router 3C">
+		<meta property="og:title" content="Tổng hợp Firmware cho Xiaomi Mi Router 3C" />
+<meta property="og:description" content="Firmware OpenWRT, Padavan, Keenetic, stock firmware Tiếng Anh, stock firmware Tiếng Trung cho Mi Router 3C" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://pnghia.com/serial/opnsense/huong-dan-ket-noi-nordvpn-va-chia-vlan/" />
-<meta property="article:published_time" content="2021-05-01T08:25:14+07:00" />
-<meta property="article:modified_time" content="2021-05-01T08:49:14+07:00" />
+<meta property="og:url" content="https://pnghia.com/posts/tong-hop-firmware-mi-router-3c/" />
+<meta property="article:published_time" content="2021-05-27T19:45:12+07:00" />
+<meta property="article:modified_time" content="2021-05-27T19:45:12+07:00" />
 
 
 	<link rel="stylesheet" href="/css/style.min.css">
@@ -165,7 +165,7 @@
 <main class="main" role="main">
 	<article class="post">
 		<header class="post__header">
-			<h1 class="post__title">Hướng dẫn kết nối NordVPN và chia VLAN cho đường truyền VPN - tách đường truyền có VPN ra 1 AP riêng.</h1>
+			<h1 class="post__title">Tổng hợp Firmware cho Xiaomi Mi Router 3C</h1>
 			<div class="post__meta meta">
 <script defer>
 	var r = new XMLHttpRequest();
@@ -175,55 +175,232 @@
   r.send()
   </script>
 <div class="meta__item-datetime meta__item">
-	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2021-05-01T08:25:14&#43;07:00">1 tháng 5, 2021</time>
-	<time class="meta__text" datetime="2021-05-01T08:49:14&#43;07:00">(
-		Cập nhật: 1 tháng 5, 2021)</time>&nbsp;<div class="meta__item"><svg xmlns="http://www.w3.org/2000/svg" class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 24 24"><path d="M15 12c0 1.657-1.343 3-3 3s-3-1.343-3-3c0-.199.02-.393.057-.581 1.474.541 2.927-.882 2.405-2.371.174-.03.354-.048.538-.048 1.657 0 3 1.344 3 3zm-2.985-7c-7.569 0-12.015 6.551-12.015 6.551s4.835 7.449 12.015 7.449c7.733 0 11.985-7.449 11.985-7.449s-4.291-6.551-11.985-6.551zm-.015 12c-2.761 0-5-2.238-5-5 0-2.761 2.239-5 5-5 2.762 0 5 2.239 5 5 0 2.762-2.238 5-5 5z"/></svg>
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2021-05-27T19:45:12&#43;07:00">27 tháng 5, 2021</time><div class="meta__item"><svg xmlns="http://www.w3.org/2000/svg" class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 24 24"><path d="M15 12c0 1.657-1.343 3-3 3s-3-1.343-3-3c0-.199.02-.393.057-.581 1.474.541 2.927-.882 2.405-2.371.174-.03.354-.048.538-.048 1.657 0 3 1.344 3 3zm-2.985-7c-7.569 0-12.015 6.551-12.015 6.551s4.835 7.449 12.015 7.449c7.733 0 11.985-7.449 11.985-7.449s-4.291-6.551-11.985-6.551zm-.015 12c-2.761 0-5-2.238-5-5 0-2.761 2.239-5 5-5 2.762 0 5 2.239 5 5 0 2.762-2.238 5-5 5z"/></svg>
 <span class="meta__text" id="goatCounter_value_page_pv">3456</span>&nbsp;&bull;
 	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M20 15c0 .552-.448 1-1 1s-1-.448-1-1 .448-1 1-1 1 .448 1 1m-3 0c0 .552-.448 1-1 1s-1-.448-1-1 .448-1 1-1 1 .448 1 1m-3 0c0 .552-.448 1-1 1s-1-.448-1-1 .448-1 1-1 1 .448 1 1m5.415 4.946c-1 .256-1.989.482-3.324.482-3.465 0-7.091-2.065-7.091-5.423 0-3.128 3.14-5.672 7-5.672 3.844 0 7 2.542 7 5.672 0 1.591-.646 2.527-1.481 3.527l.839 2.686-2.943-1.272zm-13.373-3.375l-4.389 1.896 1.256-4.012c-1.121-1.341-1.909-2.665-1.909-4.699 0-4.277 4.262-7.756 9.5-7.756 5.018 0 9.128 3.194 9.467 7.222-1.19-.566-2.551-.889-3.967-.889-4.199 0-8 2.797-8 6.672 0 .712.147 1.4.411 2.049-.953-.126-1.546-.272-2.369-.483m17.958-1.566c0-2.172-1.199-4.015-3.002-5.21l.002-.039c0-5.086-4.988-8.756-10.5-8.756-5.546 0-10.5 3.698-10.5 8.756 0 1.794.646 3.556 1.791 4.922l-1.744 5.572 6.078-2.625c.982.253 1.932.407 2.85.489 1.317 1.953 3.876 3.314 7.116 3.314 1.019 0 2.105-.135 3.242-.428l4.631 2-1.328-4.245c.871-1.042 1.364-2.384 1.364-3.75"/></svg>
 <a class="meta__text" href="#isso-thread">Comments</a></div>
 </div>
-<div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/opnsense-config/" rel="category">OPNsense Config</a>
+<div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/mi-router-3c/" rel="category">Mi Router 3C</a>
 	</span>
 </div></div>
-		</header><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+		</header>
+		<figure class="post__thumbnail">
+			<img src="/img/router3c.png" alt="Tổng hợp Firmware cho Xiaomi Mi Router 3C">
+		</figure><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 		<ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid"
 			data-ad-client="ca-pub-5013797695727204" data-ad-slot="2834381782"></ins>
 		<script>
 			(adsbygoogle = window.adsbygoogle || []).push({});
 		</script>
 		<div class="content post__content clearfix">
-			<h2 id="placeholder">Placeholder</h2>
-<p>  
-<blockquote class="book-hint info">
-Placeholder text
-</blockquote>
-<br />
-
-
-<img data-src="https://pnghia.com/images/opnsense/NordVPN1_hufa3d057ed0d3c47e881ac0b73aecdcaa_151691_filter_1334269291160664337.png" alt="NordVPN_OPNsense_with_VLAN" class="lazyload" />
-
-
-<br />
-
-
-<img data-src="https://pnghia.com/images/opnsense/NordVPN2_hua858cd46b3d25fcdeac97d8472adcbae_78372_filter_1334269291160664337.png" alt="NordVPN_OPNsense_with_VLAN" class="lazyload" />
-
-
-<br />
-
-
-<img data-src="https://pnghia.com/images/opnsense/NordVPN2_hua858cd46b3d25fcdeac97d8472adcbae_78372_filter_1334269291160664337.png" alt="NordVPN_OPNsense_with_VLAN" class="lazyload" />
-
-
-</p>
-  
-<blockquote class="book-hint warning">
+			<h3 id="sơ-lược-cấu-hình">Sơ lược cấu hình</h3>
+<table>
+<thead>
+<tr>
+<th>&mdash;</th>
+<th>&mdash;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td>Router</td>
+</tr>
+<tr>
+<td>Model</td>
+<td>Mi Router 3C / R3L</td>
+</tr>
+<tr>
+<td>CPU</td>
+<td>MT7628N</td>
+</tr>
+<tr>
+<td>ROM</td>
+<td>16Mb</td>
+</tr>
+<tr>
+<td>RAM</td>
+<td>64Mb</td>
+</tr>
+<tr>
+<td>Network</td>
+<td>2.4GHz up to 300Mbps, 802.11b/g/n</td>
+</tr>
+<tr>
+<td>Security</td>
+<td>WPA-PSK, WPA2-PSK</td>
+</tr>
+<tr>
+<td>Antenna</td>
+<td>4 external 5dBi</td>
+</tr>
+<tr>
+<td>Port</td>
+<td>2 LAN, 1 WAN (100 Mbps)</td>
+</tr>
+<tr>
+<td>Supply</td>
+<td>5V / 1A</td>
+</tr>
+</tbody>
+</table>
+<h3 id="hướng-dẫn-up-firmware">Hướng dẫn Up Firmware</h3>
 <ul>
-<li>Bài viết đang được hoàn thiện. Vui lòng liên hệ nếu bạn đang cần hoặc muốn được hỗ trợ.</li>
+<li>Để update được Firmware cho router này, yêu cầu bác bạn phải có một ít chuyên môn về điện tử, sử  dụng phần mềm.</li>
+<li>Ở bài viết này, mình sẽ chỉ tổng hợp Firmware, vê cách UP FW, mình sẽ có bài hướng dẫn chi tiết sau.</li>
 </ul>
+<h3 id="tổng-hợp-firmware">Tổng hợp Firmware</h3>
+<h4 id="1-stock-firmware-tiếng-trung">1. Stock firmware Tiếng Trung</h4>
+<ul>
+<li>Phiên bản 2.14.45（ update 26 tháng 3, 2019). Tải về từ link chính chủ 
+<a href="http://bigota.miwifi.com/xiaoqiang/rom/r3l/miwifi_r3l_firmware_0b49f_2.14.45.bin" title="Download Stock FW Mirouter 3C" data-goatcounter-title="Download Stock FW Mirouter 3C"
+ target="_blank" rel="noopener noreferrer" data-goatcounter-click="http://bigota.miwifi.com/xiaoqiang/rom/r3l/miwifi_r3l_firmware_0b49f_2.14.45.bin" data-goatcounter-referrer="/posts/tong-hop-firmware-mi-router-3c/">Tại đây</a><span title="Mức độ phổ biến" id="a231798456" class="single__badge"></span><script async>var r = new XMLHttpRequest();
+r.addEventListener('load', function() {
+document.querySelector('#a231798456').innerText = JSON.parse(this.responseText).count_unique
+})
+r.open('GET', 'https://stats.pnghia.com/counter/' + encodeURIComponent("http://bigota.miwifi.com/xiaoqiang/rom/r3l/miwifi_r3l_firmware_0b49f_2.14.45.bin").replace(/\/$/, '') + '.json')
+r.send()</script>
+<br />
+<details >
+<summary><b style="color:;font-weight:normal;">Changelog</b></summary>
+<div class="markdown-inner">
+<ol>
+<li>Solve a problem that causes DNS resolution errors and probabilistic network instability</li>
+<li>Solve the problem of losing configuration under power failure in a small probability scenario</li>
+<li>Optimized the APP binding process</li>
+<li>Optimized the system memory, the system is thinner and more stable</li>
+<li>Several minor issues have been fixed, and the stability has been further improved</li>
+</ol>
 
+</div>
+</details>
+</li>
+</ul>
+<h4 id="2-stock-firmware-tiếng-anh">2. Stock Firmware Tiếng Anh</h4>
+<ul>
+<li>Có thể UP trực tiếp thông qua giao diện web của bản tiếng Trung</li>
+<li>Phiên bản 2.8.51. Tải về từ Google Drive 
+<a href="https://drive.google.com/file/d/1TLYGXdCvG_mqF6OHyrZItUZa15uvHDMg/view?usp=sharing" title="Download FW Router3C ENG" data-goatcounter-title="Download FW Router3C ENG"
+ target="_blank" rel="noopener noreferrer" data-goatcounter-click="https://drive.google.com/file/d/1TLYGXdCvG_mqF6OHyrZItUZa15uvHDMg/view?usp=sharing" data-goatcounter-referrer="/posts/tong-hop-firmware-mi-router-3c/">Tại đây</a><span title="Mức độ phổ biến" id="a638729145" class="single__badge"></span><script async>var r = new XMLHttpRequest();
+r.addEventListener('load', function() {
+document.querySelector('#a638729145').innerText = JSON.parse(this.responseText).count_unique
+})
+r.open('GET', 'https://stats.pnghia.com/counter/' + encodeURIComponent("https://drive.google.com/file/d/1TLYGXdCvG_mqF6OHyrZItUZa15uvHDMg/view?usp=sharing").replace(/\/$/, '') + '.json')
+r.send()</script>
+</li>
+</ul>
+<h4 id="3-firmware-padavan-jump-bản-port">3. Firmware PADAVAN Jump (bản Port)</h4>
+<ul>
+<li>UP thông qua BreedBootloader hoặc KIT lập trình CH341</li>
+<li>Tải về từ Google Drive 
+<a href="https://drive.google.com/file/d/1TIF0NtEaScbACQyQSemvPIir5qT_U5Al/view?usp=sharing" title="Download PADAVAN Jump" data-goatcounter-title="Download PADAVAN Jump"
+ target="_blank" rel="noopener noreferrer" data-goatcounter-click="https://drive.google.com/file/d/1TIF0NtEaScbACQyQSemvPIir5qT_U5Al/view?usp=sharing" data-goatcounter-referrer="/posts/tong-hop-firmware-mi-router-3c/">Tại đây</a><span title="Mức độ phổ biến" id="a679832415" class="single__badge"></span><script async>var r = new XMLHttpRequest();
+r.addEventListener('load', function() {
+document.querySelector('#a679832415').innerText = JSON.parse(this.responseText).count_unique
+})
+r.open('GET', 'https://stats.pnghia.com/counter/' + encodeURIComponent("https://drive.google.com/file/d/1TIF0NtEaScbACQyQSemvPIir5qT_U5Al/view?usp=sharing").replace(/\/$/, '') + '.json')
+r.send()</script>
+</li>
+<li>Credit to 
+<a href="https://4pda.to/forum/index.php?showuser=4645599" title="Stels8800 4PDA" data-goatcounter-title="Stels8800 4PDA"
+ target="_blank" rel="noopener noreferrer" data-goatcounter-click="https://4pda.to/forum/index.php?showuser=4645599" data-goatcounter-referrer="/posts/tong-hop-firmware-mi-router-3c/"><em>Stels8800</em></a><span title="Mức độ phổ biến" id="a186439275" class="single__badge"></span><script async>var r = new XMLHttpRequest();
+r.addEventListener('load', function() {
+document.querySelector('#a186439275').innerText = JSON.parse(this.responseText).count_unique
+})
+r.open('GET', 'https://stats.pnghia.com/counter/' + encodeURIComponent("https://4pda.to/forum/index.php?showuser=4645599").replace(/\/$/, '') + '.json')
+r.send()</script>
+ 4PDA Russian</li>
+</ul>
+<h4 id="4-firmware-padavan-linaro-bản-build-version-3439l-100_939f130--usb--breed">4. Firmware PADAVAN Linaro (bản Build) version 3.4.3.9L-100_939f130 + USB + Breed</h4>
+<ul>
+<li>UP thông qua BreedBootloader hoặc KIT lập trình CH341</li>
+<li>Tải về từ Google Drive 
+<a href="https://drive.google.com/file/d/1argnhHEryuF7D0ANO_lIRKHIFvWSxIs0/view?usp=sharing" title="PADAVAN Linaro R3C" data-goatcounter-title="PADAVAN Linaro R3C"
+ target="_blank" rel="noopener noreferrer" data-goatcounter-click="https://drive.google.com/file/d/1argnhHEryuF7D0ANO_lIRKHIFvWSxIs0/view?usp=sharing" data-goatcounter-referrer="/posts/tong-hop-firmware-mi-router-3c/">Tại đây</a><span title="Mức độ phổ biến" id="a628315749" class="single__badge"></span><script async>var r = new XMLHttpRequest();
+r.addEventListener('load', function() {
+document.querySelector('#a628315749').innerText = JSON.parse(this.responseText).count_unique
+})
+r.open('GET', 'https://stats.pnghia.com/counter/' + encodeURIComponent("https://drive.google.com/file/d/1argnhHEryuF7D0ANO_lIRKHIFvWSxIs0/view?usp=sharing").replace(/\/$/, '') + '.json')
+r.send()</script>
+</li>
+<li>Credit to 
+<a href="https://4pda.to/forum/index.php?showuser=80862" title="Sedy 4PDA" data-goatcounter-title="Sedy 4PDA"
+ target="_blank" rel="noopener noreferrer" data-goatcounter-click="https://4pda.to/forum/index.php?showuser=80862" data-goatcounter-referrer="/posts/tong-hop-firmware-mi-router-3c/"><em>Sedy</em></a><span title="Mức độ phổ biến" id="a164293578" class="single__badge"></span><script async>var r = new XMLHttpRequest();
+r.addEventListener('load', function() {
+document.querySelector('#a164293578').innerText = JSON.parse(this.responseText).count_unique
+})
+r.open('GET', 'https://stats.pnghia.com/counter/' + encodeURIComponent("https://4pda.to/forum/index.php?showuser=80862").replace(/\/$/, '') + '.json')
+r.send()</script>
+ 4PDA Russian</li>
+</ul>
+<h4 id="5-firmware-openwrt-version-18061">5. Firmware OpenWRT version 18.06.1</h4>
+<ul>
+<li>UP thông qua BreedBootloader hoặc KIT lập trình CH341
+<ul>
+<li>WiFi password: <em>1234567890</em></li>
+</ul>
+</li>
+<li>Tải về từ Google Drive 
+<a href="https://drive.google.com/file/d/1yY5Q1cIX6IYKOqDAIAr5coGinZF9HwZh/view?usp=sharing" title="Download OpenWRT R3C" data-goatcounter-title="Download OpenWRT R3C"
+ target="_blank" rel="noopener noreferrer" data-goatcounter-click="https://drive.google.com/file/d/1yY5Q1cIX6IYKOqDAIAr5coGinZF9HwZh/view?usp=sharing" data-goatcounter-referrer="/posts/tong-hop-firmware-mi-router-3c/">Tại đây</a><span title="Mức độ phổ biến" id="a875169324" class="single__badge"></span><script async>var r = new XMLHttpRequest();
+r.addEventListener('load', function() {
+document.querySelector('#a875169324').innerText = JSON.parse(this.responseText).count_unique
+})
+r.open('GET', 'https://stats.pnghia.com/counter/' + encodeURIComponent("https://drive.google.com/file/d/1yY5Q1cIX6IYKOqDAIAr5coGinZF9HwZh/view?usp=sharing").replace(/\/$/, '') + '.json')
+r.send()</script>
+</li>
+<li>Credit to <em>mogvai</em> 4PDA Russian.</li>
+</ul>
+<h4 id="6-firmware-zyxel-keenetic-lite-iii-revb">6. Firmware ZyXEL Keenetic Lite III rev:B</h4>
+<ul>
+<li>UP thông qua BreedBootloader hoặc KIT lập trình CH341
+<ul>
+<li>Wifi: <em>Keenetic-3C</em> / Password: <em>1234567890</em> / WPS: <em>76133565</em></li>
+</ul>
+</li>
+<li>Tải về từ Google Drive 
+<a href="https://drive.google.com/file/d/1H6DRLmFaPFZqP36XTEio2gWZ_dEvRIOB/view?usp=sharing" title="Download Keenetic R3C" data-goatcounter-title="Download Keenetic R3C"
+ target="_blank" rel="noopener noreferrer" data-goatcounter-click="https://drive.google.com/file/d/1H6DRLmFaPFZqP36XTEio2gWZ_dEvRIOB/view?usp=sharing" data-goatcounter-referrer="/posts/tong-hop-firmware-mi-router-3c/">Tại đây</a><span title="Mức độ phổ biến" id="a456792813" class="single__badge"></span><script async>var r = new XMLHttpRequest();
+r.addEventListener('load', function() {
+document.querySelector('#a456792813').innerText = JSON.parse(this.responseText).count_unique
+})
+r.open('GET', 'https://stats.pnghia.com/counter/' + encodeURIComponent("https://drive.google.com/file/d/1H6DRLmFaPFZqP36XTEio2gWZ_dEvRIOB/view?usp=sharing").replace(/\/$/, '') + '.json')
+r.send()</script>
+</li>
+<li>Credit to 
+<a href="https://4pda.to/forum/index.php?showuser=80862" title="Sedy 4PDA" data-goatcounter-title="Sedy 4PDA"
+ target="_blank" rel="noopener noreferrer" data-goatcounter-click="https://4pda.to/forum/index.php?showuser=80862" data-goatcounter-referrer="/posts/tong-hop-firmware-mi-router-3c/"><em>Sedy</em></a><span title="Mức độ phổ biến" id="a956427831" class="single__badge"></span><script async>var r = new XMLHttpRequest();
+r.addEventListener('load', function() {
+document.querySelector('#a956427831').innerText = JSON.parse(this.responseText).count_unique
+})
+r.open('GET', 'https://stats.pnghia.com/counter/' + encodeURIComponent("https://4pda.to/forum/index.php?showuser=80862").replace(/\/$/, '') + '.json')
+r.send()</script>
+ 4PDA Russian<br />
+<details >
+<summary><b style="color:;font-weight:normal;">Screenshot</b></summary>
+<div class="markdown-inner">
+<img data-src="https://pnghia.com/images/r3c/keenetic_hu5324a403eb49fa1077f5143943382314_304000_filter_1334269291160664337.png" alt="Keenetic" class="lazyload" />
+</div>
+</details>
+</li>
+</ul>
+  
+<blockquote class="book-hint info">
+Một số phiên bản khi flash FW này bị tình trạng không khởi động được.<br />
+Để fix lỗi này, các bạn phải dùng mỏ hàn để gỡ 2 con điện trở ở vị trí R23 rồi hàn sang R24 và R25 hàn sang R26.<br />
+
+
+<img data-src="https://pnghia.com/images/r3c/fixKeeR3c_hubcb182fb3fc2da2befe10bcdae9b1797_350286_filter_1334269291160664337.png" alt="Fix Keenetic not boot" class="lazyload" />
+
+
+<br />
+
+
+<img data-src="https://pnghia.com/images/r3c/fixKeeR3c__hu1ef41e5876578232b7c8137e80d117d0_470287_filter_1334269291160664337.png" alt="Fix Keenetic not boot" class="lazyload" />
 </blockquote>
 
+<p><strong>Mọi thắc mắc các bạn để lại bình luận hoặc gửi tin nhắn cho mình, mình sẽ cố gắng giúp đỡ nếu có thể.</strong><br />
+Chúc các bạn may mắn.</p>
 
 		</div>
 		<footer class="post__footer">
@@ -232,10 +409,7 @@ Placeholder text
 	<svg class="tags__badge icon icon-tag" width="16" height="16" viewBox="0 0 32 32"><path d="M32 19c0 1-1 2-1 2L21 31s-1 1-2 1-2-1-2-1L2 16c-1-1-1.4-2-1.4-2S0 12.5 0 11V3C0 1.5.8.8.8.8S1.5 0 3 0h8c1.5 0 3 .6 3 .6S15 1 16 2l15 15s1 1 1 2zM7 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></svg>
 	<ul class="tags__list">
 		<li class="tags__item">
-			<a class="tags__link btn" href="/tags/opnsense/" rel="tag">OPNsense</a>
-		</li>
-		<li class="tags__item">
-			<a class="tags__link btn" href="/tags/tutorial/" rel="tag">tutorial</a>
+			<a class="tags__link btn" href="/tags/openwrt/" rel="tag">OpenWRT</a>
 		</li>
 	</ul>
 </div>
@@ -303,7 +477,7 @@ Placeholder text
 <link rel="stylesheet" href="/css/isso.min.css">
 <script defer src="/js/helper/markdowntoolbar.min.js"></script>
 <script defer src="/js/helper/isso.min.js" data-isso='https://comments.pnghia.com/' data-isso-require-author='true' data-isso-css='false' data-isso-require-email='true' data-isso-max-comments-top='15' data-isso-max-comments-nested='8' data-isso-reveal-on-click='5' data-isso-reply-notifications='true' data-isso-vote='true' data-isso-vote-levels='-5,-3,0,3,5'></script>
-<section id='isso-thread' data-title='Hướng dẫn kết nối NordVPN và chia VLAN cho đường truyền VPN - tách đường truyền có VPN ra 1 AP riêng.' data-isso-id='/serial/opnsense/huong-dan-ket-noi-nordvpn-va-chia-vlan/'></section>
+<section id='isso-thread' data-title='Tổng hợp Firmware cho Xiaomi Mi Router 3C' data-isso-id='/posts/tong-hop-firmware-mi-router-3c/'></section>
 
   
 	
@@ -339,9 +513,9 @@ Placeholder text
 
 <nav class="pager flex">
 	<div class="pager__item pager__item--prev">
-		<a class="pager__link" href="/serial/opnsense/opnsense-cau-hinh-captive-portal/" rel="prev">
+		<a class="pager__link" href="/serial/openwrt/" rel="prev">
 			<span class="pager__subtitle">«&thinsp;Trước</span>
-			<p class="pager__title">Hướng dẫn cấu hình Captive Portal trên OPNsense</p>
+			<p class="pager__title">Loạt bài viết hướng dẫn cấu hình OpenWRT cơ bản</p>
 		</a>
 	</div>
 </nav>
