@@ -38,7 +38,6 @@
 	<link rel="apple-touch-icon" sizes="152x152" href="/favicon/apple-icon-152x152.png">
 	<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-icon-180x180.png">
 	<link rel="icon" type="image/png" sizes="192x192" href="/favicon/android-icon-192x192.png">
-	<link rel="icon" type="image/png" sizes="192x192" href="/favicon/android-icon-512x512.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
 	<link rel="icon" type="image/png" sizes="96x96" href="/favicon/favicon-96x96.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
@@ -50,6 +49,7 @@
 	<script src="/js/helper/loading.min.32c29067b6b4c7806dbd636fa092bc5104f2f93901dbc0713da7928159e1a9aa.js"></script>
 	
 	<script data-goatcounter="https://stats.pnghia.com/count" async src="/js/helper/counter.min.b937be5d6fed99d80ad3159c2a953fc99c573ec880dcff1a83736f5d4f8dfefa.js"></script>
+	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 </head>
 <body class="body">
 	<div class="container container--outer">
@@ -188,8 +188,7 @@
 		</header>
 		<figure class="post__thumbnail">
 			<img src="/img/router3c.png" alt="Tổng hợp Firmware cho Xiaomi Mi Router 3C">
-		</figure><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-		<ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid"
+		</figure><ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid"
 			data-ad-client="ca-pub-5013797695727204" data-ad-slot="2834381782"></ins>
 		<script>
 			(adsbygoogle = window.adsbygoogle || []).push({});
@@ -249,28 +248,13 @@
 <h3 id="hướng-dẫn-up-firmware">Hướng dẫn Up Firmware</h3>
 <ul>
 <li>Để update được Firmware cho router này, yêu cầu bác bạn phải có một ít chuyên môn về điện tử, sử dụng phần mềm.</li>
-<li>Có một cách không cần phải bung máy hoặc sử dụng KIT CH341, đó là sử dụng script 
-<a href="https://github.com/acecilia/OpenWRTInvasion" target="_blank" rel="noopener noreferrer" data-goatcounter-click="https://github.com/acecilia/OpenWRTInvasion" data-goatcounter-referrer="/posts/tong-hop-firmware-mi-router-3c/">này</a><span title="Mức độ phổ biến" id="a368415729" class="single__badge"></span><script async>var r = new XMLHttpRequest();
-r.addEventListener('load', function() {
-document.querySelector('#a368415729').innerText = JSON.parse(this.responseText).count_unique
-})
-r.open('GET', 'https://stats.pnghia.com/counter/' + encodeURIComponent("https://github.com/acecilia/OpenWRTInvasion").replace(/\/$/, '') + '.json')
-r.send()</script>
- (Link github) để openSSH sau đó flash Breed bootloader rồi flash FW thông qua breed. Nếu trong quá trình up Breed các bạn làm sai thì máy sẽ brick và vẫn phải bung máy dùng KIT CH341 để cứu nhé =))</li>
+<li>Có một cách không cần phải bung máy hoặc sử dụng KIT CH341, đó là sử dụng script <a href="https://github.com/acecilia/OpenWRTInvasion">này</a> (Link github) để openSSH sau đó flash Breed bootloader rồi flash FW thông qua breed. Nếu trong quá trình up Breed các bạn làm sai thì máy sẽ brick và vẫn phải bung máy dùng KIT CH341 để cứu nhé =))</li>
 <li>Ở bài viết này, mình sẽ chỉ tổng hợp Firmware, vê cách UP FW, mình sẽ có bài hướng dẫn chi tiết sau.</li>
 </ul>
 <h3 id="tổng-hợp-firmware">Tổng hợp Firmware</h3>
 <h4 id="1-stock-firmware-tiếng-trung">1. Stock firmware Tiếng Trung</h4>
 <ul>
-<li>Phiên bản 2.14.45（ update 26 tháng 3, 2019). Tải về từ link chính chủ 
-<a href="http://bigota.miwifi.com/xiaoqiang/rom/r3l/miwifi_r3l_firmware_0b49f_2.14.45.bin" title="Download Stock FW Mirouter 3C" data-goatcounter-title="Download Stock FW Mirouter 3C"
- target="_blank" rel="noopener noreferrer" data-goatcounter-click="http://bigota.miwifi.com/xiaoqiang/rom/r3l/miwifi_r3l_firmware_0b49f_2.14.45.bin" data-goatcounter-referrer="/posts/tong-hop-firmware-mi-router-3c/">Tại đây</a><span title="Mức độ phổ biến" id="a879462153" class="single__badge"></span><script async>var r = new XMLHttpRequest();
-r.addEventListener('load', function() {
-document.querySelector('#a879462153').innerText = JSON.parse(this.responseText).count_unique
-})
-r.open('GET', 'https://stats.pnghia.com/counter/' + encodeURIComponent("http://bigota.miwifi.com/xiaoqiang/rom/r3l/miwifi_r3l_firmware_0b49f_2.14.45.bin").replace(/\/$/, '') + '.json')
-r.send()</script>
-<br />
+<li>Phiên bản 2.14.45（ update 26 tháng 3, 2019). Tải về từ link chính chủ <a href="http://bigota.miwifi.com/xiaoqiang/rom/r3l/miwifi_r3l_firmware_0b49f_2.14.45.bin" title="Download Stock FW Mirouter 3C">Tại đây</a><br />
 <details >
 <summary><b style="color:;font-weight:normal;">Changelog</b></summary>
 <div class="markdown-inner">
@@ -289,59 +273,19 @@ r.send()</script>
 <h4 id="2-stock-firmware-tiếng-anh">2. Stock Firmware Tiếng Anh</h4>
 <ul>
 <li>Có thể UP trực tiếp thông qua giao diện web của bản tiếng Trung</li>
-<li>Phiên bản 2.8.51. Tải về từ Google Drive 
-<a href="https://drive.google.com/file/d/1TLYGXdCvG_mqF6OHyrZItUZa15uvHDMg/view?usp=sharing" title="Download FW Router3C ENG" data-goatcounter-title="Download FW Router3C ENG"
- target="_blank" rel="noopener noreferrer" data-goatcounter-click="https://drive.google.com/file/d/1TLYGXdCvG_mqF6OHyrZItUZa15uvHDMg/view?usp=sharing" data-goatcounter-referrer="/posts/tong-hop-firmware-mi-router-3c/">Tại đây</a><span title="Mức độ phổ biến" id="a574362189" class="single__badge"></span><script async>var r = new XMLHttpRequest();
-r.addEventListener('load', function() {
-document.querySelector('#a574362189').innerText = JSON.parse(this.responseText).count_unique
-})
-r.open('GET', 'https://stats.pnghia.com/counter/' + encodeURIComponent("https://drive.google.com/file/d/1TLYGXdCvG_mqF6OHyrZItUZa15uvHDMg/view?usp=sharing").replace(/\/$/, '') + '.json')
-r.send()</script>
-</li>
+<li>Phiên bản 2.8.51. Tải về từ Google Drive <a href="https://drive.google.com/file/d/1TLYGXdCvG_mqF6OHyrZItUZa15uvHDMg/view?usp=sharing" title="Download FW Router3C ENG">Tại đây</a></li>
 </ul>
 <h4 id="3-firmware-padavan-jump-bản-port">3. Firmware PADAVAN Jump (bản Port)</h4>
 <ul>
 <li>UP thông qua BreedBootloader hoặc KIT lập trình CH341</li>
-<li>Tải về từ Google Drive 
-<a href="https://drive.google.com/file/d/1TIF0NtEaScbACQyQSemvPIir5qT_U5Al/view?usp=sharing" title="Download PADAVAN Jump" data-goatcounter-title="Download PADAVAN Jump"
- target="_blank" rel="noopener noreferrer" data-goatcounter-click="https://drive.google.com/file/d/1TIF0NtEaScbACQyQSemvPIir5qT_U5Al/view?usp=sharing" data-goatcounter-referrer="/posts/tong-hop-firmware-mi-router-3c/">Tại đây</a><span title="Mức độ phổ biến" id="a481762539" class="single__badge"></span><script async>var r = new XMLHttpRequest();
-r.addEventListener('load', function() {
-document.querySelector('#a481762539').innerText = JSON.parse(this.responseText).count_unique
-})
-r.open('GET', 'https://stats.pnghia.com/counter/' + encodeURIComponent("https://drive.google.com/file/d/1TIF0NtEaScbACQyQSemvPIir5qT_U5Al/view?usp=sharing").replace(/\/$/, '') + '.json')
-r.send()</script>
-</li>
-<li>Credit to 
-<a href="https://4pda.to/forum/index.php?showuser=4645599" title="Stels8800 4PDA" data-goatcounter-title="Stels8800 4PDA"
- target="_blank" rel="noopener noreferrer" data-goatcounter-click="https://4pda.to/forum/index.php?showuser=4645599" data-goatcounter-referrer="/posts/tong-hop-firmware-mi-router-3c/"><em>Stels8800</em></a><span title="Mức độ phổ biến" id="a749582613" class="single__badge"></span><script async>var r = new XMLHttpRequest();
-r.addEventListener('load', function() {
-document.querySelector('#a749582613').innerText = JSON.parse(this.responseText).count_unique
-})
-r.open('GET', 'https://stats.pnghia.com/counter/' + encodeURIComponent("https://4pda.to/forum/index.php?showuser=4645599").replace(/\/$/, '') + '.json')
-r.send()</script>
- 4PDA Russian</li>
+<li>Tải về từ Google Drive <a href="https://drive.google.com/file/d/1TIF0NtEaScbACQyQSemvPIir5qT_U5Al/view?usp=sharing" title="Download PADAVAN Jump">Tại đây</a></li>
+<li>Credit to <a href="https://4pda.to/forum/index.php?showuser=4645599" title="Stels8800 4PDA"><em>Stels8800</em></a> 4PDA Russian</li>
 </ul>
 <h4 id="4-firmware-padavan-linaro-bản-build-version-3439l-100_939f130--usb--breed">4. Firmware PADAVAN Linaro (bản Build) version 3.4.3.9L-100_939f130 + USB + Breed</h4>
 <ul>
 <li>UP thông qua BreedBootloader hoặc KIT lập trình CH341</li>
-<li>Tải về từ Google Drive 
-<a href="https://drive.google.com/file/d/1argnhHEryuF7D0ANO_lIRKHIFvWSxIs0/view?usp=sharing" title="PADAVAN Linaro R3C" data-goatcounter-title="PADAVAN Linaro R3C"
- target="_blank" rel="noopener noreferrer" data-goatcounter-click="https://drive.google.com/file/d/1argnhHEryuF7D0ANO_lIRKHIFvWSxIs0/view?usp=sharing" data-goatcounter-referrer="/posts/tong-hop-firmware-mi-router-3c/">Tại đây</a><span title="Mức độ phổ biến" id="a421893576" class="single__badge"></span><script async>var r = new XMLHttpRequest();
-r.addEventListener('load', function() {
-document.querySelector('#a421893576').innerText = JSON.parse(this.responseText).count_unique
-})
-r.open('GET', 'https://stats.pnghia.com/counter/' + encodeURIComponent("https://drive.google.com/file/d/1argnhHEryuF7D0ANO_lIRKHIFvWSxIs0/view?usp=sharing").replace(/\/$/, '') + '.json')
-r.send()</script>
-</li>
-<li>Credit to 
-<a href="https://4pda.to/forum/index.php?showuser=80862" title="Sedy 4PDA" data-goatcounter-title="Sedy 4PDA"
- target="_blank" rel="noopener noreferrer" data-goatcounter-click="https://4pda.to/forum/index.php?showuser=80862" data-goatcounter-referrer="/posts/tong-hop-firmware-mi-router-3c/"><em>Sedy</em></a><span title="Mức độ phổ biến" id="a281397456" class="single__badge"></span><script async>var r = new XMLHttpRequest();
-r.addEventListener('load', function() {
-document.querySelector('#a281397456').innerText = JSON.parse(this.responseText).count_unique
-})
-r.open('GET', 'https://stats.pnghia.com/counter/' + encodeURIComponent("https://4pda.to/forum/index.php?showuser=80862").replace(/\/$/, '') + '.json')
-r.send()</script>
- 4PDA Russian</li>
+<li>Tải về từ Google Drive <a href="https://drive.google.com/file/d/1argnhHEryuF7D0ANO_lIRKHIFvWSxIs0/view?usp=sharing" title="PADAVAN Linaro R3C">Tại đây</a></li>
+<li>Credit to <a href="https://4pda.to/forum/index.php?showuser=80862" title="Sedy 4PDA"><em>Sedy</em></a> 4PDA Russian</li>
 </ul>
 <h4 id="5-firmware-openwrt-version-18061">5. Firmware OpenWRT version 18.06.1</h4>
 <ul>
@@ -350,15 +294,7 @@ r.send()</script>
 <li>WiFi password: <em>1234567890</em></li>
 </ul>
 </li>
-<li>Tải về từ Google Drive 
-<a href="https://drive.google.com/file/d/1yY5Q1cIX6IYKOqDAIAr5coGinZF9HwZh/view?usp=sharing" title="Download OpenWRT R3C" data-goatcounter-title="Download OpenWRT R3C"
- target="_blank" rel="noopener noreferrer" data-goatcounter-click="https://drive.google.com/file/d/1yY5Q1cIX6IYKOqDAIAr5coGinZF9HwZh/view?usp=sharing" data-goatcounter-referrer="/posts/tong-hop-firmware-mi-router-3c/">Tại đây</a><span title="Mức độ phổ biến" id="a548291367" class="single__badge"></span><script async>var r = new XMLHttpRequest();
-r.addEventListener('load', function() {
-document.querySelector('#a548291367').innerText = JSON.parse(this.responseText).count_unique
-})
-r.open('GET', 'https://stats.pnghia.com/counter/' + encodeURIComponent("https://drive.google.com/file/d/1yY5Q1cIX6IYKOqDAIAr5coGinZF9HwZh/view?usp=sharing").replace(/\/$/, '') + '.json')
-r.send()</script>
-</li>
+<li>Tải về từ Google Drive <a href="https://drive.google.com/file/d/1yY5Q1cIX6IYKOqDAIAr5coGinZF9HwZh/view?usp=sharing" title="Download OpenWRT R3C">Tại đây</a></li>
 <li>Credit to <em>mogvai</em> 4PDA Russian.</li>
 </ul>
 <h4 id="6-firmware-zyxel-keenetic-lite-iii-revb">6. Firmware ZyXEL Keenetic Lite III rev:B</h4>
@@ -368,28 +304,12 @@ r.send()</script>
 <li>Wifi: <em>Keenetic-3C</em> / Password: <em>1234567890</em> / WPS: <em>76133565</em></li>
 </ul>
 </li>
-<li>Tải về từ Google Drive 
-<a href="https://drive.google.com/file/d/1H6DRLmFaPFZqP36XTEio2gWZ_dEvRIOB/view?usp=sharing" title="Download Keenetic R3C" data-goatcounter-title="Download Keenetic R3C"
- target="_blank" rel="noopener noreferrer" data-goatcounter-click="https://drive.google.com/file/d/1H6DRLmFaPFZqP36XTEio2gWZ_dEvRIOB/view?usp=sharing" data-goatcounter-referrer="/posts/tong-hop-firmware-mi-router-3c/">Tại đây</a><span title="Mức độ phổ biến" id="a278163954" class="single__badge"></span><script async>var r = new XMLHttpRequest();
-r.addEventListener('load', function() {
-document.querySelector('#a278163954').innerText = JSON.parse(this.responseText).count_unique
-})
-r.open('GET', 'https://stats.pnghia.com/counter/' + encodeURIComponent("https://drive.google.com/file/d/1H6DRLmFaPFZqP36XTEio2gWZ_dEvRIOB/view?usp=sharing").replace(/\/$/, '') + '.json')
-r.send()</script>
-</li>
-<li>Credit to 
-<a href="https://4pda.to/forum/index.php?showuser=80862" title="Sedy 4PDA" data-goatcounter-title="Sedy 4PDA"
- target="_blank" rel="noopener noreferrer" data-goatcounter-click="https://4pda.to/forum/index.php?showuser=80862" data-goatcounter-referrer="/posts/tong-hop-firmware-mi-router-3c/"><em>Sedy</em></a><span title="Mức độ phổ biến" id="a621473985" class="single__badge"></span><script async>var r = new XMLHttpRequest();
-r.addEventListener('load', function() {
-document.querySelector('#a621473985').innerText = JSON.parse(this.responseText).count_unique
-})
-r.open('GET', 'https://stats.pnghia.com/counter/' + encodeURIComponent("https://4pda.to/forum/index.php?showuser=80862").replace(/\/$/, '') + '.json')
-r.send()</script>
- 4PDA Russian<br />
+<li>Tải về từ Google Drive <a href="https://drive.google.com/file/d/1H6DRLmFaPFZqP36XTEio2gWZ_dEvRIOB/view?usp=sharing" title="Download Keenetic R3C">Tại đây</a></li>
+<li>Credit to <a href="https://4pda.to/forum/index.php?showuser=80862" title="Sedy 4PDA"><em>Sedy</em></a> 4PDA Russian<br />
 <details >
 <summary><b style="color:;font-weight:normal;">Screenshot</b></summary>
 <div class="markdown-inner">
-<img data-src="https://pnghia.com/images/r3c/keenetic_hu5324a403eb49fa1077f5143943382314_304000_filter_1334269291160664337.png" alt="Keenetic" class="lazyload" />
+<img src="/images/r3c/keenetic.png" alt="Keenetic" />
 </div>
 </details>
 </li>
@@ -398,15 +318,8 @@ r.send()</script>
 <blockquote class="book-hint info">
 Một số phiên bản khi flash FW này bị tình trạng không khởi động được.<br />
 Để fix lỗi này, các bạn phải dùng mỏ hàn để gỡ 2 con điện trở ở vị trí R23 rồi hàn sang R24 và R25 hàn sang R26.<br />
-
-
-<img data-src="https://pnghia.com/images/r3c/fixKeeR3c_hubcb182fb3fc2da2befe10bcdae9b1797_350286_filter_1334269291160664337.png" alt="Fix Keenetic not boot" class="lazyload" />
-
-
-<br />
-
-
-<img data-src="https://pnghia.com/images/r3c/fixKeeR3c__hu1ef41e5876578232b7c8137e80d117d0_470287_filter_1334269291160664337.png" alt="Fix Keenetic not boot" class="lazyload" />
+<img src="/images/r3c/fixKeeR3c.png" alt="Fix Keenetic not boot" /><br />
+<img src="/images/r3c/fixKeeR3c_.png" alt="Fix Keenetic not boot" />
 </blockquote>
 
 <p><strong>Mọi thắc mắc các bạn để lại bình luận hoặc gửi tin nhắn cho mình, mình sẽ cố gắng giúp đỡ nếu có thể.</strong><br />
@@ -540,7 +453,7 @@ Chúc các bạn may mắn.</p>
 		<div class="footer__copyright">
 			&copy; 2021 pNghia.com.
 			<span class="footer__copyright-credits">Powered by <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">goHugo</a> | <a href="https://posativ.org/isso/" rel="nofollow noopener" target="_blank">ISSO</a> | <a href="https://www.goatcounter.com/" rel="nofollow noopener" target="_blank">goatCounter</a> and the <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span><br />
-			<span>v.08:16 - 28 tháng 05, 2021</span>
+			<span>v.08:53 - 28 tháng 05, 2021</span>
 		</div>
 	</div>
 </footer>

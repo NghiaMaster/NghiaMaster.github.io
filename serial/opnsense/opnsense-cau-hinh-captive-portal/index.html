@@ -38,7 +38,6 @@
 	<link rel="apple-touch-icon" sizes="152x152" href="/favicon/apple-icon-152x152.png">
 	<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-icon-180x180.png">
 	<link rel="icon" type="image/png" sizes="192x192" href="/favicon/android-icon-192x192.png">
-	<link rel="icon" type="image/png" sizes="192x192" href="/favicon/android-icon-512x512.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
 	<link rel="icon" type="image/png" sizes="96x96" href="/favicon/favicon-96x96.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
@@ -50,6 +49,7 @@
 	<script src="/js/helper/loading.min.32c29067b6b4c7806dbd636fa092bc5104f2f93901dbc0713da7928159e1a9aa.js"></script>
 	
 	<script data-goatcounter="https://stats.pnghia.com/count" async src="/js/helper/counter.min.b937be5d6fed99d80ad3159c2a953fc99c573ec880dcff1a83736f5d4f8dfefa.js"></script>
+	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 </head>
 <body class="body">
 	<div class="container container--outer">
@@ -185,16 +185,13 @@
 <div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/opnsense-config/" rel="category">OPNsense Config</a>
 	</span>
 </div></div>
-		</header><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-		<ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid"
+		</header><ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid"
 			data-ad-client="ca-pub-5013797695727204" data-ad-slot="2834381782"></ins>
 		<script>
 			(adsbygoogle = window.adsbygoogle || []).push({});
 		</script>
 		<div class="content post__content clearfix">
-			<h5 id="xem-qua-loạt-bài-viết-hướng-dẫn-cấu-hình-opnsense-tại-đâyserialopnsense">Xem qua loạt bài viết hướng dẫn cấu hình OPNsense 
-<a href="/serial/opnsense/">tại đây</a>
-</h5>
+			<h5 id="xem-qua-loạt-bài-viết-hướng-dẫn-cấu-hình-opnsense-tại-đâyserialopnsense">Xem qua loạt bài viết hướng dẫn cấu hình OPNsense <a href="/serial/opnsense/">tại đây</a></h5>
 <details >
 <summary><b style="color:;font-weight:normal;">Ứng dụng Captive Portal</b></summary>
 <div class="markdown-inner">
@@ -235,23 +232,14 @@
 </ul>
 </li>
 <li>Quản lý Băng thông</li>
-<li>Ngoài ra còn rất nhiều chức năng khác có thể tham khảo thêm ở 
-<a href="https://docs.opnsense.org/manual/captiveportal.html" target="_blank" rel="noopener noreferrer" data-goatcounter-click="https://docs.opnsense.org/manual/captiveportal.html" data-goatcounter-referrer="/serial/opnsense/opnsense-cau-hinh-captive-portal/">Trang chủ</a><span title="Mức độ phổ biến" id="a415298673" class="single__badge"></span><script async>var r = new XMLHttpRequest();
-r.addEventListener('load', function() {
-document.querySelector('#a415298673').innerText = JSON.parse(this.responseText).count_unique
-})
-r.open('GET', 'https://stats.pnghia.com/counter/' + encodeURIComponent("https://docs.opnsense.org/manual/captiveportal.html").replace(/\/$/, '') + '.json')
-r.send()</script>
-.</li>
+<li>Ngoài ra còn rất nhiều chức năng khác có thể tham khảo thêm ở <a href="https://docs.opnsense.org/manual/captiveportal.html">Trang chủ</a>.</li>
 </ul>
 
 </div>
 </details>
 
 <blockquote>
-<p>Trong bài viết này mình sẽ hướng dẫn thiết lập Captive Portal cho mạng khách (GUESTNET), nếu chưa thiết lập GUESTNET - các bạn có thể xem thêm bài hướng dẫn 
-<a href="/serial/opnsense/opnsense-vlan-captiveportal-bwmanagement/">tại đây</a>
-. (Có thể thay thế VLAN bằng 1 cổng riêng nếu Router có nhiều cổng LAN)</p>
+<p>Trong bài viết này mình sẽ hướng dẫn thiết lập Captive Portal cho mạng khách (GUESTNET), nếu chưa thiết lập GUESTNET - các bạn có thể xem thêm bài hướng dẫn <a href="/serial/opnsense/opnsense-vlan-captiveportal-bwmanagement/">tại đây</a>. (Có thể thay thế VLAN bằng 1 cổng riêng nếu Router có nhiều cổng LAN)</p>
 </blockquote>
 <h2 id="thiết-lập-captive-portal">Thiết lập Captive Portal</h2>
 <ul>
@@ -301,9 +289,7 @@ Mỗi Interface sẽ cần phải có 1 Zone riêng (GUEST VLAN, LAN1, LAN2&hell
 <tr>
 <td>SSL certification</td>
 <td>none</td>
-<td>Nếu chưa thiết lập domain riêng thì nên để <em>none</em>, xem hướng dẫn thiết lập domain 
-<a href="/serial/opnsense/opnsense-domain-ddns-letsencrypt-reveserproxy/">tại đây</a>
-</td>
+<td>Nếu chưa thiết lập domain riêng thì nên để <em>none</em>, xem hướng dẫn thiết lập domain <a href="/serial/opnsense/opnsense-domain-ddns-letsencrypt-reveserproxy/">tại đây</a></td>
 </tr>
 <tr>
 <td>Hostname</td>
@@ -334,14 +320,7 @@ Mỗi Interface sẽ cần phải có 1 Zone riêng (GUEST VLAN, LAN1, LAN2&hell
 <ul>
 <li>Nhấn vào nút <img style="display:inline;" src="https://docs.opnsense.org/_images/btn_download.png"> ở giữa cạnh bên phải màn hình để tải về template mặc định.</li>
 <li>Các bạn có thể custom dựa trên template này hoặc có thể tìm thêm ở trên Google.</li>
-<li>Mình cũng tìm thấy 1 template trên Github, các bạn có thể tham khảo thêm 
-<a href="https://github.com/t4skforce/OPNsense-Captive-Portal" target="_blank" rel="noopener noreferrer" data-goatcounter-click="https://github.com/t4skforce/OPNsense-Captive-Portal" data-goatcounter-referrer="/serial/opnsense/opnsense-cau-hinh-captive-portal/">Link chi tiết và screenshot</a><span title="Mức độ phổ biến" id="a124836597" class="single__badge"></span><script async>var r = new XMLHttpRequest();
-r.addEventListener('load', function() {
-document.querySelector('#a124836597').innerText = JSON.parse(this.responseText).count_unique
-})
-r.open('GET', 'https://stats.pnghia.com/counter/' + encodeURIComponent("https://github.com/t4skforce/OPNsense-Captive-Portal").replace(/\/$/, '') + '.json')
-r.send()</script>
-.</li>
+<li>Mình cũng tìm thấy 1 template trên Github, các bạn có thể tham khảo thêm <a href="https://github.com/t4skforce/OPNsense-Captive-Portal">Link chi tiết và screenshot</a>.</li>
 </ul>
 </li>
 <li>Sau khi đã có template ưng ý, nén template ở dạng <strong>.zip</strong> và nhấn vào dấu <strong>+</strong> ở giữa cạnh phải màn hình, đặt tên cho template ở dòng <em>Description</em>, chọn file .ZIP vừa nén và nhấn <em>UPLOAD</em></li>
@@ -350,8 +329,7 @@ r.send()</script>
 <li>Sau khi hoàn tất, có thể xem thử trang Captive Portal tại địa chỉ <code>http://IP_OPNsense&gt;:8000</code><br />
   
 <blockquote class="book-hint info">
-Chú ý: Để khách có thể truy cập vào địa <code>http://IP_OPNsense:8000&gt;</code>, hãy chắc chắn rằng tường lửa (firewall) đã thêm đúng Rules theo hướng dẫn ở bài 
-<a href="/serial/opnsense/opnsense-vlan-captiveportal-bwmanagement/#allow-captive-portal-login---cho-ph%c3%a9p-truy-c%e1%ba%adp-trang-captive-portal">hướng dẫn chia VLAN và cấu hình mạng khách</a>
+Chú ý: Để khách có thể truy cập vào địa <code>http://IP_OPNsense:8000&gt;</code>, hãy chắc chắn rằng tường lửa (firewall) đã thêm đúng Rules theo hướng dẫn ở bài <a href="/serial/opnsense/opnsense-vlan-captiveportal-bwmanagement/#allow-captive-portal-login---cho-ph%C3%A9p-truy-c%E1%BA%ADp-trang-captive-portal">hướng dẫn chia VLAN và cấu hình mạng khách</a>
 </blockquote>
 </li>
 </ul>
@@ -364,14 +342,7 @@ Chú ý: Để khách có thể truy cập vào địa <code>http://IP_OPNsense:
 <p>Chú ý:</p>
 <ul>
 <li>Tốc độ tối đa này sẽ chia đều cho mọi clients trong mạng khách. Ví dụ nếu có 7 clients trong mạng khách thì mỗi máy sẽ có tốc độ Download tối đa là <strong>8/7 = 1.1Mbps</strong>. Thông thường nên để 1/3 hoặc 1/2 tốc độ của gói cước.</li>
-<li>Xem thêm cách thiết lập tốc độ tối đa cho từng clients và các chức năng khác về Quản Lý băng thông 
-<a href="https://docs.opnsense.org/manual/how-tos/shaper.html" target="_blank" rel="noopener noreferrer" data-goatcounter-click="https://docs.opnsense.org/manual/how-tos/shaper.html" data-goatcounter-referrer="/serial/opnsense/opnsense-cau-hinh-captive-portal/">tại đây</a><span title="Mức độ phổ biến" id="a386721945" class="single__badge"></span><script async>var r = new XMLHttpRequest();
-r.addEventListener('load', function() {
-document.querySelector('#a386721945').innerText = JSON.parse(this.responseText).count_unique
-})
-r.open('GET', 'https://stats.pnghia.com/counter/' + encodeURIComponent("https://docs.opnsense.org/manual/how-tos/shaper.html").replace(/\/$/, '') + '.json')
-r.send()</script>
-</li>
+<li>Xem thêm cách thiết lập tốc độ tối đa cho từng clients và các chức năng khác về Quản Lý băng thông <a href="https://docs.opnsense.org/manual/how-tos/shaper.html">tại đây</a></li>
 </ul>
 
 </blockquote>
@@ -558,13 +529,7 @@ r.send()</script>
 Nhấn <strong>Apply</strong> để áp dụng thay đổi.</p>
   
 <blockquote class="book-hint info">
-Xem thêm các hướng dẫn thêm Voucher/Tickets/Username&hellip; tại 
-<a href="https://docs.opnsense.org/manual/how-tos/guestnet.html#step-8-add-voucher-server" target="_blank" rel="noopener noreferrer" data-goatcounter-click="https://docs.opnsense.org/manual/how-tos/guestnet.html#step-8-add-voucher-server" data-goatcounter-referrer="/serial/opnsense/opnsense-cau-hinh-captive-portal/">trang chủ</a><span title="Mức độ phổ biến" id="a875963241" class="single__badge"></span><script async>var r = new XMLHttpRequest();
-r.addEventListener('load', function() {
-document.querySelector('#a875963241').innerText = JSON.parse(this.responseText).count_unique
-})
-r.open('GET', 'https://stats.pnghia.com/counter/' + encodeURIComponent("https://docs.opnsense.org/manual/how-tos/guestnet.html#step-8-add-voucher-server").replace(/\/$/, '') + '.json')
-r.send()</script>
+Xem thêm các hướng dẫn thêm Voucher/Tickets/Username&hellip; tại <a href="https://docs.opnsense.org/manual/how-tos/guestnet.html#step-8-add-voucher-server">trang chủ</a>
 </blockquote>
 
 
@@ -705,7 +670,7 @@ r.send()</script>
 		<div class="footer__copyright">
 			&copy; 2021 pNghia.com.
 			<span class="footer__copyright-credits">Powered by <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">goHugo</a> | <a href="https://posativ.org/isso/" rel="nofollow noopener" target="_blank">ISSO</a> | <a href="https://www.goatcounter.com/" rel="nofollow noopener" target="_blank">goatCounter</a> and the <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span><br />
-			<span>v.08:16 - 28 tháng 05, 2021</span>
+			<span>v.08:53 - 28 tháng 05, 2021</span>
 		</div>
 	</div>
 </footer>

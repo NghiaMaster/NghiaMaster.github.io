@@ -38,7 +38,6 @@
 	<link rel="apple-touch-icon" sizes="152x152" href="/favicon/apple-icon-152x152.png">
 	<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-icon-180x180.png">
 	<link rel="icon" type="image/png" sizes="192x192" href="/favicon/android-icon-192x192.png">
-	<link rel="icon" type="image/png" sizes="192x192" href="/favicon/android-icon-512x512.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
 	<link rel="icon" type="image/png" sizes="96x96" href="/favicon/favicon-96x96.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
@@ -50,6 +49,7 @@
 	<script src="/js/helper/loading.min.32c29067b6b4c7806dbd636fa092bc5104f2f93901dbc0713da7928159e1a9aa.js"></script>
 	
 	<script data-goatcounter="https://stats.pnghia.com/count" async src="/js/helper/counter.min.b937be5d6fed99d80ad3159c2a953fc99c573ec880dcff1a83736f5d4f8dfefa.js"></script>
+	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 </head>
 <body class="body">
 	<div class="container container--outer">
@@ -185,18 +185,15 @@
 <div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/tutorial/" rel="category">Tutorial</a>
 	</span>
 </div></div>
-		</header><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-		<ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid"
+		</header><ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid"
 			data-ad-client="ca-pub-5013797695727204" data-ad-slot="2834381782"></ins>
 		<script>
 			(adsbygoogle = window.adsbygoogle || []).push({});
 		</script>
 		<div class="content post__content clearfix">
 			<blockquote>
-<p>Ở bài trước mình đã 
-<a href="/serial/openwrt/huong-dan-cau-hinh-openwrt-quay-pppoe/">Hướng dẫn cấu hình OpenWRT quay PPPoE<br />
-</a>
- khi nhà cung cấp mạng không set <strong>VLAN</strong> hoặc khi <em>Brigde modem</em> nhà mạng đã hỗ trợ set <strong>VLAN</strong> ngay trong phần thiết lập Brigde của modem. Trong bài viết này, mình sẽ hướng dẫn các bạn <strong>setup OpenWRT quay PPPoE kèm VLAN</strong> vì một số modem nhà mạng không cho phép cấu hình số VLAN ở thiết lập Brigde Mode nhưng bắt buộc phải có số VLAN mới quay PPPoE được, vì vậy - chỉ còn cách là Set số VLAN đó ngay trên OpenWRT. <strong>Yêu cầu router của bạn phải hỗ trợ VLAN</strong>.</p>
+<p>Ở bài trước mình đã <a href="huong-dan-cau-hinh-openwrt-quay-pppoe/">Hướng dẫn cấu hình OpenWRT quay PPPoE<br />
+</a> khi nhà cung cấp mạng không set <strong>VLAN</strong> hoặc khi <em>Brigde modem</em> nhà mạng đã hỗ trợ set <strong>VLAN</strong> ngay trong phần thiết lập Brigde của modem. Trong bài viết này, mình sẽ hướng dẫn các bạn <strong>setup OpenWRT quay PPPoE kèm VLAN</strong> vì một số modem nhà mạng không cho phép cấu hình số VLAN ở thiết lập Brigde Mode nhưng bắt buộc phải có số VLAN mới quay PPPoE được, vì vậy - chỉ còn cách là Set số VLAN đó ngay trên OpenWRT. <strong>Yêu cầu router của bạn phải hỗ trợ VLAN</strong>.</p>
 </blockquote>
 <h2 id="i-cấu-hình-vlan">I. Cấu hình VLAN</h2>
 <ol>
@@ -204,7 +201,7 @@
 <details >
 <summary><b style="color:;font-weight:normal;">Ảnh chụp màn hình</b></summary>
 <div class="markdown-inner">
-<img data-src="https://pnghia.com/images/openwrt/OpenWRTb1_hu7e6a93fae0052281caa651871ba44e70_85369_filter_1334269291160664337.png" alt="Cấu hình OpenWRT quay PPPoE b1" class="lazyload" />
+<img src="/images/openwrt/OpenWRTb1.png" alt="Cấu hình OpenWRT quay PPPoE b1" />
 </div>
 </details>
 </li>
@@ -212,7 +209,7 @@
 <details >
 <summary><b style="color:;font-weight:normal;">Screenshot</b></summary>
 <div class="markdown-inner">
-<img data-src="https://pnghia.com/images/openwrt/interface_hud40ae494c58547cf4749a4db6e0e77ae_46448_filter_1334269291160664337.png" alt="Interface" class="lazyload" />
+<img src="/images/openwrt/interface.png" alt="Interface" />
 </div>
 </details>
 </li>
@@ -221,22 +218,17 @@
 <details >
 <summary><b style="color:;font-weight:normal;">Ảnh chụp màn hình</b></summary>
 <div class="markdown-inner">
-<img data-src="https://pnghia.com/images/openwrt/OpenWRTb2_huae91ce321b7b6990ff5b6392783d7b44_187343_filter_1334269291160664337.png" alt="wan edit" class="lazyload" />
+<img src="/images/openwrt/OpenWRTb2.png" alt="wan edit" />
 </div>
 </details>
 </p>
-<p>sau đó nhấp vào tab <strong>Physical Settings</strong>. Ở đây sẽ hiện số cổng <strong>eth</strong> (trường hợp của mình là <strong>eth1</strong>) mà Interface của bạn đang sử dụng và sẽ trông giống như sau: 
-
-<img data-src="https://pnghia.com/images/openwrt/eth_hub4731c2dc0723c943bc05762d9e0f1cf_3947_filter_1334269291160664337.png" alt="eth" class="lazyload" />
-
-
-</p>
+<p>sau đó nhấp vào tab <strong>Physical Settings</strong>. Ở đây sẽ hiện số cổng <strong>eth</strong> (trường hợp của mình là <strong>eth1</strong>) mà Interface của bạn đang sử dụng và sẽ trông giống như sau: <img src="/images/openwrt/eth.png" alt="eth" /></p>
 <ol start="3">
 <li>Ở mục <strong>Network</strong> &gt; <strong>Switch</strong> (Router hỗ trợ VLAN sẽ có mục này, nếu không có thì kiểm tra lại xem bản OpenWRT đã chuẩn chưa, hoặc rất tiếc - router của bạn không hỗ trợ VLAN 😥). Tick vào dòng <strong>Enable VLAN Functionality</strong>. Ở đây ta sẽ tạo một <strong>VLAN ID</strong> mới bằng cách nhấn vào nút <strong>Add</strong> &gt; nhập số VLAN vào (ở đây mình sẽ lấy ví dụ mạng Viettel vùng của mình là 35). ở cột <strong>CPU(eth1)</strong> và cột <strong>WAN</strong> chọn <strong>tagged</strong><br />
 <details >
 <summary><b style="color:;font-weight:normal;">Ảnh chụp màn hình</b></summary>
 <div class="markdown-inner">
-<img data-src="https://pnghia.com/images/openwrt/tagVLAN_hu8655e393840644c303e422f3f01a7d4e_52933_filter_1334269291160664337.png" alt="" class="lazyload" />
+<img src="/images/openwrt/tagVLAN.png" alt="" />
 </div>
 </details>
 </li>
@@ -252,7 +244,7 @@
 <details >
 <summary><b style="color:;font-weight:normal;">Ảnh chụp màn hình</b></summary>
 <div class="markdown-inner">
-<img data-src="https://pnghia.com/images/openwrt/OpenWRTb2_huae91ce321b7b6990ff5b6392783d7b44_187343_filter_1334269291160664337.png" alt="" class="lazyload" />
+<img src="/images/openwrt/OpenWRTb2.png" alt="" />
 </div>
 </details>
 </p>
@@ -262,13 +254,8 @@
 <details >
 <summary><b style="color:;font-weight:normal;">Ảnh chụp màn hình</b></summary>
 <div class="markdown-inner">
-<img data-src="https://pnghia.com/images/openwrt/OpenWRTb3_hued2a38a978c3e6444762a89cba8f5b12_81747_filter_1334269291160664337.png" alt="" class="lazyload" />
-
-
-<br />
-
-
-<img data-src="https://pnghia.com/images/openwrt/OpenWRTb4_hu0801492a5b6d6fa654e145be63ccbfa7_68642_filter_1334269291160664337.png" alt="" class="lazyload" />
+<img src="/images/openwrt/OpenWRTb3.png" alt="" /><br />
+<img src="/images/openwrt/OpenWRTb4.png" alt="" />
 </div>
 </details>
 </p>
@@ -280,7 +267,7 @@
 <details >
 <summary><b style="color:;font-weight:normal;">Ảnh chụp màn hình</b></summary>
 <div class="markdown-inner">
-<img data-src="https://pnghia.com/images/openwrt/OpenWRTb5_huf55401b52180925be0bb852a0d0064cc_90416_filter_1334269291160664337.png" alt="" class="lazyload" />
+<img src="/images/openwrt/OpenWRTb5.png" alt="" />
 </div>
 </details>
 </p>
@@ -288,7 +275,7 @@
 <details >
 <summary><b style="color:;font-weight:normal;">Ảnh chụp màn hình</b></summary>
 <div class="markdown-inner">
-<img data-src="https://pnghia.com/images/openwrt/eth135_hu5197e8a9682cecd03f5421d844e153bd_43481_filter_1334269291160664337.png" alt="" class="lazyload" />
+<img src="/images/openwrt/eth135.png" alt="" />
 </div>
 </details>
 </p>
@@ -298,7 +285,7 @@
 <details >
 <summary><b style="color:;font-weight:normal;">Ảnh chụp màn hình</b></summary>
 <div class="markdown-inner">
-<img data-src="https://pnghia.com/images/openwrt/OpenWRTb7_hue3e2792342a59b3928e443d80deddeae_183473_filter_1334269291160664337.png" alt="" class="lazyload" />
+<img src="/images/openwrt/OpenWRTb7.png" alt="" />
 </div>
 </details>
 </li>
@@ -307,7 +294,7 @@
 <details >
 <summary><b style="color:;font-weight:normal;">Ảnh chụp màn hình</b></summary>
 <div class="markdown-inner">
-<img data-src="https://pnghia.com/images/openwrt/connect_hu11cc23d12444cd80539f91d0ecaf9709_34483_filter_1334269291160664337.png" alt="" class="lazyload" />
+<img src="/images/openwrt/connect.png" alt="" />
 </div>
 </details>
 </p>
@@ -456,7 +443,7 @@
 		<div class="footer__copyright">
 			&copy; 2021 pNghia.com.
 			<span class="footer__copyright-credits">Powered by <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">goHugo</a> | <a href="https://posativ.org/isso/" rel="nofollow noopener" target="_blank">ISSO</a> | <a href="https://www.goatcounter.com/" rel="nofollow noopener" target="_blank">goatCounter</a> and the <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span><br />
-			<span>v.08:16 - 28 tháng 05, 2021</span>
+			<span>v.08:53 - 28 tháng 05, 2021</span>
 		</div>
 	</div>
 </footer>

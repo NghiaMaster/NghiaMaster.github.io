@@ -23,7 +23,7 @@
       
       <guid>https://pnghia.com/serial/openwrt/huong-dan-cau-hinh-openwrt-quay-pppoe-with-vlan/</guid>
       <description>Ở bài trước mình đã Hướng dẫn cấu hình OpenWRT quay PPPoE
-khi nhà cung cấp mạng không set VLAN hoặc khi Brigde modem nhà mạng đã hỗ trợ set VLAN ngay trong phần thiết lập Brigde của modem. Trong bài viết này, mình sẽ hướng dẫn các bạn setup OpenWRT quay PPPoE kèm VLAN vì một số modem nhà mạng không cho phép cấu hình số VLAN ở thiết lập Brigde Mode nhưng bắt buộc phải có số VLAN mới quay PPPoE được, vì vậy - chỉ còn cách là Set số VLAN đó ngay trên OpenWRT.</description>
+ khi nhà cung cấp mạng không set VLAN hoặc khi Brigde modem nhà mạng đã hỗ trợ set VLAN ngay trong phần thiết lập Brigde của modem. Trong bài viết này, mình sẽ hướng dẫn các bạn setup OpenWRT quay PPPoE kèm VLAN vì một số modem nhà mạng không cho phép cấu hình số VLAN ở thiết lập Brigde Mode nhưng bắt buộc phải có số VLAN mới quay PPPoE được, vì vậy - chỉ còn cách là Set số VLAN đó ngay trên OpenWRT.</description>
     </item>
     
     <item>
@@ -32,7 +32,7 @@
       <pubDate>Tue, 05 Jan 2021 12:21:39 +0700</pubDate>
       
       <guid>https://pnghia.com/serial/openwrt/huong-dan-cau-hinh-openwrt-quay-pppoe/</guid>
-      <description>Đây là bài viết hướng dẫn cấu hình OpenWRT quay PPPoE khi đã setup Modem nhà mạng sang chế độ Brigde Mode. Bài viết này hướng dẫn quay PPPoE không kèm VLAN - tức là nhà mạng khu vực bạn ở không dùng VLAN hoặc modem nhà mạng hỗ trợ setup VLAN ID ở phần cấu hình Brigde Mode của modem. Nếu modem nhà bạn không có mục set VLAN ID nhưng khi quay PPPoE bắt buộc phải có thì các bạn có thể xem bài viết Hướng dẫn cấu hình OpenWRT quay PPPoE với VLANđể set VLAN ID ngay trên router mà không thông qua modem nhà mạng.</description>
+      <description>Đây là bài viết hướng dẫn cấu hình OpenWRT quay PPPoE khi đã setup Modem nhà mạng sang chế độ Brigde Mode. Bài viết này hướng dẫn quay PPPoE không kèm VLAN - tức là nhà mạng khu vực bạn ở không dùng VLAN hoặc modem nhà mạng hỗ trợ setup VLAN ID ở phần cấu hình Brigde Mode của modem. Nếu modem nhà bạn không có mục set VLAN ID nhưng khi quay PPPoE bắt buộc phải có thì các bạn có thể xem bài viết Hướng dẫn cấu hình OpenWRT quay PPPoE với VLAN để set VLAN ID ngay trên router mà không thông qua modem nhà mạng.</description>
     </item>
     
     <item>
@@ -41,7 +41,7 @@
       <pubDate>Mon, 15 Jun 2020 13:07:56 +0000</pubDate>
       
       <guid>https://pnghia.com/serial/openwrt/cau-hinh-openwrt-lam-ap-mode/</guid>
-      <description>&amp;gt; Xem qua bài viết Hướng dẫn cấu hình OpenWRT quay PPPoE Tại đây &amp;gt; Xem qua bài viết Hướng dẫn cấu hình OpenWRT quay PPPoE có VLAN ID Tại đây Mục đích bài viết  Cấu hình Firmware OpenWRT sang chế độ AP Mode (Access Point) khi đã có modem cấp DHCP ở đằng sau.  Ở chế độ này, Router chỉ có chức năng duy nhất là phát WIFI, các chức năng khác như cấp DHCP, cân bằng tải, DNS Server, Firewall,&amp;hellip; sẽ bị vô hiệu.</description>
+      <description>&amp;gt; Xem qua bài viết Hướng dẫn cấu hình OpenWRT quay PPPoE Tại đây &amp;gt; Xem qua bài viết Hướng dẫn cấu hình OpenWRT quay PPPoE có VLAN ID Tại đây Mục đích bài viết  Cấu hình Firmware OpenWRT sang chế độ AP Mode (Access Point) khi đã có modem cấp DHCP ở đằng sau.  Ở chế độ này, Router chỉ có chức năng duy nhất là phát WIFI, các chức năng khác như cấp DHCP, cân bằng tải, DNS Server, Firewall,&amp;hellip; sẽ bị vô hiệu.</description>
     </item>
     
   </channel>

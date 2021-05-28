@@ -38,7 +38,6 @@
 	<link rel="apple-touch-icon" sizes="152x152" href="/favicon/apple-icon-152x152.png">
 	<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-icon-180x180.png">
 	<link rel="icon" type="image/png" sizes="192x192" href="/favicon/android-icon-192x192.png">
-	<link rel="icon" type="image/png" sizes="192x192" href="/favicon/android-icon-512x512.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
 	<link rel="icon" type="image/png" sizes="96x96" href="/favicon/favicon-96x96.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
@@ -50,6 +49,7 @@
 	<script src="/js/helper/loading.min.32c29067b6b4c7806dbd636fa092bc5104f2f93901dbc0713da7928159e1a9aa.js"></script>
 	
 	<script data-goatcounter="https://stats.pnghia.com/count" async src="/js/helper/counter.min.b937be5d6fed99d80ad3159c2a953fc99c573ec880dcff1a83736f5d4f8dfefa.js"></script>
+	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 </head>
 <body class="body">
 	<div class="container container--outer">
@@ -185,19 +185,14 @@
 <div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/tutorial/" rel="category">Tutorial</a>
 	</span>
 </div></div>
-		</header><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-		<ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid"
+		</header><ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid"
 			data-ad-client="ca-pub-5013797695727204" data-ad-slot="2834381782"></ins>
 		<script>
 			(adsbygoogle = window.adsbygoogle || []).push({});
 		</script>
 		<div class="content post__content clearfix">
-			<h5 id="-xem-qua-bài-viết-hướng-dẫn-cấu-hình-openwrt-quay-pppoe-tại-đâyhuong-dan-cau-hinh-openwrt-quay-pppoe">&gt; Xem qua bài viết Hướng dẫn cấu hình OpenWRT quay PPPoE 
-<a href="/serial/openwrt/huong-dan-cau-hinh-openwrt-quay-pppoe/">Tại đây</a>
-</h5>
-<h5 id="-xem-qua-bài-viết-hướng-dẫn-cấu-hình-openwrt-quay-pppoe-có-vlan-id-tại-đâyhuong-dan-cau-hinh-openwrt-quay-pppoe-with-vlan">&gt; Xem qua bài viết Hướng dẫn cấu hình OpenWRT quay PPPoE có VLAN ID 
-<a href="/serial/openwrt/huong-dan-cau-hinh-openwrt-quay-pppoe-with-vlan/">Tại đây</a>
-</h5>
+			<h5 id="-xem-qua-bài-viết-hướng-dẫn-cấu-hình-openwrt-quay-pppoe-tại-đâyhuong-dan-cau-hinh-openwrt-quay-pppoe">&gt; Xem qua bài viết Hướng dẫn cấu hình OpenWRT quay PPPoE <a href="huong-dan-cau-hinh-openwrt-quay-pppoe/">Tại đây</a></h5>
+<h5 id="-xem-qua-bài-viết-hướng-dẫn-cấu-hình-openwrt-quay-pppoe-có-vlan-id-tại-đâyhuong-dan-cau-hinh-openwrt-quay-pppoe-with-vlan">&gt; Xem qua bài viết Hướng dẫn cấu hình OpenWRT quay PPPoE có VLAN ID <a href="huong-dan-cau-hinh-openwrt-quay-pppoe-with-vlan/">Tại đây</a></h5>
 <h2 id="mục-đích-bài-viết">Mục đích bài viết</h2>
 <ul>
 <li>Cấu hình Firmware OpenWRT sang chế độ AP Mode (Access Point) khi đã có modem cấp DHCP ở đằng sau.
@@ -227,33 +222,13 @@ Ví dụ: IP chính của Modem là <code>172.16.1.1</code> thì Set Static IP c
 </blockquote>
 </li>
 <li>Đặt DNS Server và Gateway IP sang địa chỉ IP của Modem. Ở ví dụ này là <code>172.16.1.1</code><br />
-
-
-<img data-src="https://pnghia.com/images/newifi-d2/Lan_Interface_hu99b468a2857da135bc0b7c8ca512cb46_52234_filter_1334269291160664337.PNG" alt="LAN Interface" class="lazyload" />
-
-
-</li>
+<img src="/images/newifi-d2/Lan_Interface.PNG" alt="LAN Interface" /></li>
 <li>Ở Mục <strong>DHCP Server</strong> Tick chọn <em>Disable DHCP for this interface</em><br />
-
-
-<img data-src="https://pnghia.com/images/newifi-d2/Lan_Interface2_hu7e8d7eb0437983d00641e5adcd6fde40_30914_filter_1334269291160664337.PNG" alt="LAN Interface 2" class="lazyload" />
-
-
-</li>
+<img src="/images/newifi-d2/Lan_Interface2.PNG" alt="LAN Interface 2" /></li>
 <li>Chuyển qua tab IPv6 <strong>Disable</strong> tất cả các mục như hình<br />
-
-
-<img data-src="https://pnghia.com/images/newifi-d2/LAN_ipv6_hu67022bff4239acb4c537069a7e9e32a9_17001_filter_1334269291160664337.PNG" alt="Disable IPv6" class="lazyload" />
-
-
-</li>
+<img src="/images/newifi-d2/LAN_ipv6.PNG" alt="Disable IPv6" /></li>
 <li>Vào mục <strong>System</strong> -&gt; <strong>Startup</strong> <em>Disable</em> DHCP Server, Firewall, DNSMASQ, ODHCPD(nếu có) trong danh sách khởi động.<br />
-
-
-<img data-src="https://pnghia.com/images/newifi-d2/startup_hu1a42f4cda92d7fca20185f85a0a8b9fc_54886_filter_1334269291160664337.PNG" alt="Disable Startup Service" class="lazyload" />
-
-
-</li>
+<img src="/images/newifi-d2/startup.PNG" alt="Disable Startup Service" /></li>
 <li>Nhấn Save and Apply chờ Router lưu cài đặt, cắm dây <strong>LAN</strong> từ máy tính vào port 2 của Router và truy cập vào Static IP đã set ở trên <code>172.16.1.2</code> kiểm tra kết quả.</li>
 </ul>
   
@@ -281,24 +256,14 @@ Ví dụ: IP chính của Modem là <code>172.16.1.1</code> thì Set Static IP c
 <ul>
 <li>Tại đây, tạo các điểm phát WIFI tuỳ nhu cầu. Ở bài này, mình sẽ tạo 4 Điểm truy cập<br />
 bao gồm 2 điểm truy cập ở băng tần 2.4Ghz và 2 điểm ở băng tần 5Ghz. SSID là <em>test</em> và <em>test-guest</em><br />
-
-
-<img data-src="https://pnghia.com/images/newifi-d2/guest_vlan_huaa24c8a7d0bd7ddc89004e7051192c71_103110_filter_1334269291160664337.png" alt="SSID" class="lazyload" />
-
-
-</li>
+<img src="/images/newifi-d2/guest_vlan.png" alt="SSID" /></li>
 </ul>
 </li>
 <li>Tiếp theo, từ menu <em>Network</em> Chọn <em>Switch</em>
 <ul>
 <li>Tick vào Ô <em>Enable VLAN functionality</em></li>
 <li>Khai báo sẽ tương tự như hình dưới (Ở cột VLAN ID, điền số VLAN các bạn đã thiết lập ở OPNSENSE vào)<br />
-
-
-<img data-src="https://pnghia.com/images/newifi-d2/vlan_hu69a30242e12165d4c8371db251da681b_65687_filter_1334269291160664337.PNG" alt="vlan" class="lazyload" />
-
-
-</li>
+<img src="/images/newifi-d2/vlan.PNG" alt="vlan" /></li>
 </ul>
 </li>
 <li>Sau khi lưu lại các thiết lập, cũng từ menu <em>Network</em> Chọn <em>Interfaces</em>
@@ -306,30 +271,15 @@ bao gồm 2 điểm truy cập ở băng tần 2.4Ghz và 2 điểm ở băng t�
 <li>Nhấn vào nút <em>Add new Interface</em> để thêm Interface mới.</li>
 <li>Nhập tên cho Interface ở mục <em>Name of the new interface</em>.</li>
 <li>Tại mục <em>Cover the following interface</em> Tick vào ô <em>VLAN Interface: eth0.10</em><br />
-
-
-<img data-src="https://pnghia.com/images/newifi-d2/vlan1_hube6cc4a73d04ffa0d9c8a9ceb5920731_98061_filter_1334269291160664337.png" alt="vlan" class="lazyload" />
-
-
-
+<img src="/images/newifi-d2/vlan1.png" alt="vlan" />
 <ul>
 <li>Chọn <em>SAVE</em></li>
 </ul>
 </li>
 <li>Chuyển sang TAB <em>Physical Settings</em> Tick vào các ô <em>VLAN Interface: eth0.10</em>, và 2 ô <em>Wireless Network: Master &ldquo;test-guest&rdquo;</em> (Băng tần 2.5Ghz và 5Ghz)<br />
-
-
-<img data-src="https://pnghia.com/images/newifi-d2/vlan2_huc79a2b06ec988f6167653eafa34b7ddc_117176_filter_1334269291160664337.png" alt="vlan" class="lazyload" />
-
-
-</li>
+<img src="/images/newifi-d2/vlan2.png" alt="vlan" /></li>
 <li>Nhấn vào nút <em>Save</em> và <em>Apply</em><br />
-
-
-<img data-src="https://pnghia.com/images/newifi-d2/vlan3_hub7bd0f0ea40e651bf9f1a7eb3f19c4ba_113707_filter_1334269291160664337.png" alt="vlan" class="lazyload" />
-
-
-</li>
+<img src="/images/newifi-d2/vlan3.png" alt="vlan" /></li>
 </ul>
 </li>
 <li>Tiến hành thử nghiệm thôi :3</li>
@@ -471,7 +421,7 @@ bao gồm 2 điểm truy cập ở băng tần 2.4Ghz và 2 điểm ở băng t�
 		<div class="footer__copyright">
 			&copy; 2021 pNghia.com.
 			<span class="footer__copyright-credits">Powered by <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">goHugo</a> | <a href="https://posativ.org/isso/" rel="nofollow noopener" target="_blank">ISSO</a> | <a href="https://www.goatcounter.com/" rel="nofollow noopener" target="_blank">goatCounter</a> and the <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span><br />
-			<span>v.08:16 - 28 tháng 05, 2021</span>
+			<span>v.08:53 - 28 tháng 05, 2021</span>
 		</div>
 	</div>
 </footer>
