@@ -33,7 +33,7 @@
       
       <guid>https://pnghia.com/serial/openwrt/huong-dan-cau-hinh-openwrt-quay-pppoe-with-vlan/</guid>
       <description>Ở bài trước mình đã Hướng dẫn cấu hình OpenWRT quay PPPoE
- khi nhà cung cấp mạng không set VLAN hoặc khi Brigde modem nhà mạng đã hỗ trợ set VLAN ngay trong phần thiết lập Brigde của modem. Trong bài viết này, mình sẽ hướng dẫn các bạn setup OpenWRT quay PPPoE kèm VLAN vì một số modem nhà mạng không cho phép cấu hình số VLAN ở thiết lập Brigde Mode nhưng bắt buộc phải có số VLAN mới quay PPPoE được, vì vậy - chỉ còn cách là Set số VLAN đó ngay trên OpenWRT.</description>
+khi nhà cung cấp mạng không set VLAN hoặc khi Brigde modem nhà mạng đã hỗ trợ set VLAN ngay trong phần thiết lập Brigde của modem. Trong bài viết này, mình sẽ hướng dẫn các bạn setup OpenWRT quay PPPoE kèm VLAN vì một số modem nhà mạng không cho phép cấu hình số VLAN ở thiết lập Brigde Mode nhưng bắt buộc phải có số VLAN mới quay PPPoE được, vì vậy - chỉ còn cách là Set số VLAN đó ngay trên OpenWRT.</description>
     </item>
     
     <item>
@@ -42,7 +42,7 @@
       <pubDate>Tue, 05 Jan 2021 12:21:39 +0700</pubDate>
       
       <guid>https://pnghia.com/serial/openwrt/huong-dan-cau-hinh-openwrt-quay-pppoe/</guid>
-      <description>Đây là bài viết hướng dẫn cấu hình OpenWRT quay PPPoE khi đã setup Modem nhà mạng sang chế độ Brigde Mode. Bài viết này hướng dẫn quay PPPoE không kèm VLAN - tức là nhà mạng khu vực bạn ở không dùng VLAN hoặc modem nhà mạng hỗ trợ setup VLAN ID ở phần cấu hình Brigde Mode của modem. Nếu modem nhà bạn không có mục set VLAN ID nhưng khi quay PPPoE bắt buộc phải có thì các bạn có thể xem bài viết Hướng dẫn cấu hình OpenWRT quay PPPoE với VLAN để set VLAN ID ngay trên router mà không thông qua modem nhà mạng.</description>
+      <description>Đây là bài viết hướng dẫn cấu hình OpenWRT quay PPPoE khi đã setup Modem nhà mạng sang chế độ Brigde Mode. Bài viết này hướng dẫn quay PPPoE không kèm VLAN - tức là nhà mạng khu vực bạn ở không dùng VLAN hoặc modem nhà mạng hỗ trợ setup VLAN ID ở phần cấu hình Brigde Mode của modem. Nếu modem nhà bạn không có mục set VLAN ID nhưng khi quay PPPoE bắt buộc phải có thì các bạn có thể xem bài viết Hướng dẫn cấu hình OpenWRT quay PPPoE với VLANđể set VLAN ID ngay trên router mà không thông qua modem nhà mạng.</description>
     </item>
     
     <item>
@@ -51,7 +51,7 @@
       <pubDate>Mon, 15 Jun 2020 13:07:56 +0000</pubDate>
       
       <guid>https://pnghia.com/serial/openwrt/cau-hinh-openwrt-lam-ap-mode/</guid>
-      <description>&amp;gt; Xem qua bài viết Hướng dẫn cấu hình OpenWRT quay PPPoE Tại đây &amp;gt; Xem qua bài viết Hướng dẫn cấu hình OpenWRT quay PPPoE có VLAN ID Tại đây Mục đích bài viết  Cấu hình Firmware OpenWRT sang chế độ AP Mode (Access Point) khi đã có modem cấp DHCP ở đằng sau.  Ở chế độ này, Router chỉ có chức năng duy nhất là phát WIFI, các chức năng khác như cấp DHCP, cân bằng tải, DNS Server, Firewall,&amp;hellip; sẽ bị vô hiệu.</description>
+      <description>&amp;gt; Xem qua bài viết Hướng dẫn cấu hình OpenWRT quay PPPoE Tại đây &amp;gt; Xem qua bài viết Hướng dẫn cấu hình OpenWRT quay PPPoE có VLAN ID Tại đây Mục đích bài viết  Cấu hình Firmware OpenWRT sang chế độ AP Mode (Access Point) khi đã có modem cấp DHCP ở đằng sau.  Ở chế độ này, Router chỉ có chức năng duy nhất là phát WIFI, các chức năng khác như cấp DHCP, cân bằng tải, DNS Server, Firewall,&amp;hellip; sẽ bị vô hiệu.</description>
     </item>
     
     <item>
@@ -69,10 +69,8 @@
       <pubDate>Thu, 02 Apr 2020 19:51:12 +0700</pubDate>
       
       <guid>https://pnghia.com/posts/openwrt-newifi3-d2/</guid>
-      <description>-&amp;gt; Hướng dẫn UP Firmware  ROM được @kizimirua build từ Lean OpenWRT https://github.com/coolsnowwolf/lede tương thích với NEWIFI3 D2 OpenWrt thế hệ thứ 3
-Có 2 bản để lựa chọn là bản FULL và bản rút gọn, bài viết này sẽ tổng hợp lại cả 2 bản cho các bạn dễ lựa chọn.
-ROM được cộng đồng người dùng bên Trung Quốc đánh giá khá tốt.
- I. Bản ROM FULL APPS.</description>
+      <description>-&amp;gt; Hướng dẫn UP Firmware  ROM được @kizimirua build từ Lean OpenWRT https://github.com/coolsnowwolf/ledevar r = new XMLHttpRequest();r.addEventListener(&#39;load&#39;, function() {document.querySelector(&#39;#a942357861&#39;).innerText = JSON.parse(this.responseText).count_unique})r.open(&#39;GET&#39;, &#39;https://stats.pnghia.com/counter/&#39; + encodeURIComponent(&#34;https://github.com/coolsnowwolf/lede&#34;).replace(/\/$/, &#39;&#39;) + &#39;.json&#39;)r.send()tương thích với NEWIFI3 D2 OpenWrt thế hệ thứ 3
+Có 2 bản để lựa chọn là bản FULL và bản rút gọn, bài viết này sẽ tổng hợp lại cả 2 bản cho các bạn dễ lựa chọn.</description>
     </item>
     
   </channel>

@@ -33,7 +33,7 @@
       
       <guid>https://pnghia.com/serial/openwrt/huong-dan-cau-hinh-openwrt-quay-pppoe-with-vlan/</guid>
       <description>Ở bài trước mình đã Hướng dẫn cấu hình OpenWRT quay PPPoE
- khi nhà cung cấp mạng không set VLAN hoặc khi Brigde modem nhà mạng đã hỗ trợ set VLAN ngay trong phần thiết lập Brigde của modem. Trong bài viết này, mình sẽ hướng dẫn các bạn setup OpenWRT quay PPPoE kèm VLAN vì một số modem nhà mạng không cho phép cấu hình số VLAN ở thiết lập Brigde Mode nhưng bắt buộc phải có số VLAN mới quay PPPoE được, vì vậy - chỉ còn cách là Set số VLAN đó ngay trên OpenWRT.</description>
+khi nhà cung cấp mạng không set VLAN hoặc khi Brigde modem nhà mạng đã hỗ trợ set VLAN ngay trong phần thiết lập Brigde của modem. Trong bài viết này, mình sẽ hướng dẫn các bạn setup OpenWRT quay PPPoE kèm VLAN vì một số modem nhà mạng không cho phép cấu hình số VLAN ở thiết lập Brigde Mode nhưng bắt buộc phải có số VLAN mới quay PPPoE được, vì vậy - chỉ còn cách là Set số VLAN đó ngay trên OpenWRT.</description>
     </item>
     
     <item>
@@ -42,7 +42,7 @@
       <pubDate>Tue, 05 Jan 2021 12:21:39 +0700</pubDate>
       
       <guid>https://pnghia.com/serial/openwrt/huong-dan-cau-hinh-openwrt-quay-pppoe/</guid>
-      <description>Đây là bài viết hướng dẫn cấu hình OpenWRT quay PPPoE khi đã setup Modem nhà mạng sang chế độ Brigde Mode. Bài viết này hướng dẫn quay PPPoE không kèm VLAN - tức là nhà mạng khu vực bạn ở không dùng VLAN hoặc modem nhà mạng hỗ trợ setup VLAN ID ở phần cấu hình Brigde Mode của modem. Nếu modem nhà bạn không có mục set VLAN ID nhưng khi quay PPPoE bắt buộc phải có thì các bạn có thể xem bài viết Hướng dẫn cấu hình OpenWRT quay PPPoE với VLAN để set VLAN ID ngay trên router mà không thông qua modem nhà mạng.</description>
+      <description>Đây là bài viết hướng dẫn cấu hình OpenWRT quay PPPoE khi đã setup Modem nhà mạng sang chế độ Brigde Mode. Bài viết này hướng dẫn quay PPPoE không kèm VLAN - tức là nhà mạng khu vực bạn ở không dùng VLAN hoặc modem nhà mạng hỗ trợ setup VLAN ID ở phần cấu hình Brigde Mode của modem. Nếu modem nhà bạn không có mục set VLAN ID nhưng khi quay PPPoE bắt buộc phải có thì các bạn có thể xem bài viết Hướng dẫn cấu hình OpenWRT quay PPPoE với VLANđể set VLAN ID ngay trên router mà không thông qua modem nhà mạng.</description>
     </item>
     
     <item>
@@ -51,7 +51,7 @@
       <pubDate>Fri, 25 Dec 2020 09:30:14 +0700</pubDate>
       
       <guid>https://pnghia.com/serial/opnsense/opnsense-cau-hinh-captive-portal/</guid>
-      <description>Xem qua loạt bài viết hướng dẫn cấu hình OPNsense tại đây Ứng dụng Captive Portal Làm điểm truy cập WIFI ở khách sạn, nhà nghỉ, quán cafe&amp;hellip; có thể quản lý bằng các mã voucher, username&amp;hellip; WIFI Marketing, trang giới thiệu sản phẩm khi kết nối tới điểm truy cập &amp;hellip;  Các chức năng chính Có thể quản lý, tuỳ chọn các Template cho trang đăng nhập  Chuyển hướng URL Cửa sổ POP-UP Tuỳ chỉnh trang splash&amp;hellip;   Quản lý Khu vực  Các vùng khác nhau có thể được thiết lập trên mỗi giao diện hoặc nhiều giao diện, có thể chia sẻ thiết lập một vùng.</description>
+      <description>Xem qua loạt bài viết hướng dẫn cấu hình OPNsense tại đây Ứng dụng Captive Portal Làm điểm truy cập WIFI ở khách sạn, nhà nghỉ, quán cafe&amp;hellip; có thể quản lý bằng các mã voucher, username&amp;hellip; WIFI Marketing, trang giới thiệu sản phẩm khi kết nối tới điểm truy cập &amp;hellip;  Các chức năng chính Có thể quản lý, tuỳ chọn các Template cho trang đăng nhập  Chuyển hướng URL Cửa sổ POP-UP Tuỳ chỉnh trang splash&amp;hellip;   Quản lý Khu vực  Các vùng khác nhau có thể được thiết lập trên mỗi giao diện hoặc nhiều giao diện, có thể chia sẻ thiết lập một vùng.</description>
     </item>
     
     <item>
@@ -60,7 +60,7 @@
       <pubDate>Thu, 24 Dec 2020 13:01:14 +0700</pubDate>
       
       <guid>https://pnghia.com/serial/opnsense/opnsense-domain-ddns-letsencrypt-reveserproxy/</guid>
-      <description>Xem qua loạt bài viết hướng dẫn cấu hình OPNsense tại đây  &amp;ldquo;Đây là bài viết mở rộng, yêu cầu các bạn phải biết cấu hình Domain, bài này mình hướng dẫn dựa trên dịch vụ DynamicDNS (DDNS) của Cloudflare (Domain đăng kí tại nơi khác phải trỏ Nameserver về Cloudflare để sử dụng) - các dịch vụ DDNS khác các bạn tự tham khảo hướng dẫn tại nơi đăng kí.</description>
+      <description>Xem qua loạt bài viết hướng dẫn cấu hình OPNsense tại đây  &amp;ldquo;Đây là bài viết mở rộng, yêu cầu các bạn phải biết cấu hình Domain, bài này mình hướng dẫn dựa trên dịch vụ DynamicDNS (DDNS) của Cloudflare (Domain đăng kí tại nơi khác phải trỏ Nameserver về Cloudflare để sử dụng) - các dịch vụ DDNS khác các bạn tự tham khảo hướng dẫn tại nơi đăng kí.</description>
     </item>
     
     <item>
@@ -69,7 +69,7 @@
       <pubDate>Thu, 24 Dec 2020 13:00:39 +0700</pubDate>
       
       <guid>https://pnghia.com/serial/opnsense/opnsense-install-adguardhome/</guid>
-      <description>Xem qua loạt bài viết hướng dẫn cấu hình OPNsense tại đây [PHẢI ĐỌC] Chú ý trước khi làm Để cài đặt được ADguardHome yêu cầu các bạn phải hiểu biết cơ bản về sử dụng dòng lệnh (Terminal, Commandline&amp;hellip;) Mọi thao tác phải thận trọng, các thao tác Copy, Dán, gõ lệnh - phải thao tác chính xác, không thừa hoặc thiếu bất kì ký tự nào. Bất kì sai sót nào cũng sẽ khiến thao tác cài đặt thất bại, nhẹ thì ADguardHome không chạy, nặng thì phải cài đặt lại OPNsense.</description>
+      <description>Xem qua loạt bài viết hướng dẫn cấu hình OPNsense tại đây [PHẢI ĐỌC] Chú ý trước khi làm Để cài đặt được ADguardHome yêu cầu các bạn phải hiểu biết cơ bản về sử dụng dòng lệnh (Terminal, Commandline&amp;hellip;) Mọi thao tác phải thận trọng, các thao tác Copy, Dán, gõ lệnh - phải thao tác chính xác, không thừa hoặc thiếu bất kì ký tự nào.</description>
     </item>
     
     <item>
@@ -78,7 +78,7 @@
       <pubDate>Thu, 24 Dec 2020 12:58:08 +0700</pubDate>
       
       <guid>https://pnghia.com/serial/opnsense/opnsense-vlan-captiveportal-bwmanagement/</guid>
-      <description>Xem qua loạt bài viết hướng dẫn cấu hình OPNsense tại đây  Chia VLAN cho mạng khách là cách để ta có thể dùng 1 Port LAN để chia thành 2 đường truyền riêng biệt áp dụng cho các Router có số Port hạn chế (Router nhà mình có 2 Port, 1 LAN và 1 WAN). Ví dụ nếu ta muốn phát Wifi Free cho khách nhưng lại muốn hạn chế tốc độ tối đa cho khách, tách biệt với đường truyền chính, đưa máy khách vào 1 DHCP server riêng để dễ quản lý hoặc các quán cafe muốn khách phải truy cập vào một trang giới thiệu (Captive Portal) mới có thể tiếp tục truy cập mạng (Để quảng cáo sản phẩm, giới thiệu &amp;hellip;).</description>
+      <description>Xem qua loạt bài viết hướng dẫn cấu hình OPNsense tại đây  Chia VLAN cho mạng khách là cách để ta có thể dùng 1 Port LAN để chia thành 2 đường truyền riêng biệt áp dụng cho các Router có số Port hạn chế (Router nhà mình có 2 Port, 1 LAN và 1 WAN). Ví dụ nếu ta muốn phát Wifi Free cho khách nhưng lại muốn hạn chế tốc độ tối đa cho khách, tách biệt với đường truyền chính, đưa máy khách vào 1 DHCP server riêng để dễ quản lý hoặc các quán cafe muốn khách phải truy cập vào một trang giới thiệu (Captive Portal) mới có thể tiếp tục truy cập mạng (Để quảng cáo sản phẩm, giới thiệu &amp;hellip;).</description>
     </item>
     
     <item>
@@ -87,7 +87,7 @@
       <pubDate>Thu, 24 Dec 2020 12:45:58 +0700</pubDate>
       
       <guid>https://pnghia.com/serial/opnsense/opnsense-pppoe/</guid>
-      <description>Xem qua loạt bài viết hướng dẫn cấu hình OPNsense tại đây  Đăng nhập vào OPNsense  IP mặc định là https://192.168.1.1 với Username là root và Password là opnsense   Vào mục Interface &amp;gt; WAN, Thiết lập theo bảng dưới. Những mục không được nêu thì để mặc định.     Mục Chọn Ghi chú     IPv4 Configuration type PPPoE    IPv6 Configuration type DHCPv6 Nếu không muốn bật IPv6 thì chọn None, tuỳ vào nhà mạng mà mục này sẽ khác nhau.</description>
+      <description>Xem qua loạt bài viết hướng dẫn cấu hình OPNsense tại đây  Đăng nhập vào OPNsense  IP mặc định là https://192.168.1.1 với Username là root và Password là opnsense   Vào mục Interface &amp;gt; WAN, Thiết lập theo bảng dưới. Những mục không được nêu thì để mặc định.     Mục Chọn Ghi chú     IPv4 Configuration type PPPoE    IPv6 Configuration type DHCPv6 Nếu không muốn bật IPv6 thì chọn None, tuỳ vào nhà mạng mà mục này sẽ khác nhau.</description>
     </item>
     
     <item>
@@ -96,7 +96,7 @@
       <pubDate>Mon, 15 Jun 2020 13:07:56 +0000</pubDate>
       
       <guid>https://pnghia.com/serial/openwrt/cau-hinh-openwrt-lam-ap-mode/</guid>
-      <description>&amp;gt; Xem qua bài viết Hướng dẫn cấu hình OpenWRT quay PPPoE Tại đây &amp;gt; Xem qua bài viết Hướng dẫn cấu hình OpenWRT quay PPPoE có VLAN ID Tại đây Mục đích bài viết  Cấu hình Firmware OpenWRT sang chế độ AP Mode (Access Point) khi đã có modem cấp DHCP ở đằng sau.  Ở chế độ này, Router chỉ có chức năng duy nhất là phát WIFI, các chức năng khác như cấp DHCP, cân bằng tải, DNS Server, Firewall,&amp;hellip; sẽ bị vô hiệu.</description>
+      <description>&amp;gt; Xem qua bài viết Hướng dẫn cấu hình OpenWRT quay PPPoE Tại đây &amp;gt; Xem qua bài viết Hướng dẫn cấu hình OpenWRT quay PPPoE có VLAN ID Tại đây Mục đích bài viết  Cấu hình Firmware OpenWRT sang chế độ AP Mode (Access Point) khi đã có modem cấp DHCP ở đằng sau.  Ở chế độ này, Router chỉ có chức năng duy nhất là phát WIFI, các chức năng khác như cấp DHCP, cân bằng tải, DNS Server, Firewall,&amp;hellip; sẽ bị vô hiệu.</description>
     </item>
     
   </channel>

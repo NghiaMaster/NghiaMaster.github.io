@@ -191,7 +191,9 @@
 			(adsbygoogle = window.adsbygoogle || []).push({});
 		</script>
 		<div class="content post__content clearfix">
-			<h5 id="xem-qua-loạt-bài-viết-hướng-dẫn-cấu-hình-opnsense-tại-đâyserialopnsense">Xem qua loạt bài viết hướng dẫn cấu hình OPNsense <a href="/serial/opnsense">tại đây</a></h5>
+			<h5 id="xem-qua-loạt-bài-viết-hướng-dẫn-cấu-hình-opnsense-tại-đâyserialopnsense">Xem qua loạt bài viết hướng dẫn cấu hình OPNsense 
+<a href="/serial/opnsense/">tại đây</a>
+</h5>
 <blockquote>
 <p>&ldquo;Đây là bài viết mở rộng, yêu cầu các bạn phải biết cấu hình Domain, bài này mình hướng dẫn dựa trên dịch vụ DynamicDNS (DDNS) của Cloudflare (Domain đăng kí tại nơi khác phải trỏ Nameserver về Cloudflare để sử dụng) - các dịch vụ DDNS khác các bạn tự tham khảo hướng dẫn tại nơi đăng kí. Khi đọc tới bài này thì chắc đa số đều đã biết về Domain và sử dụng Domain nên mình sẽ không hướng dẫn chi tiết như các bài khác.&rdquo;</p>
 </blockquote>
@@ -249,7 +251,14 @@
 <tr>
 <td>Password</td>
 <td>Dãy kí tự Global API do Cloudflare cấp</td>
-<td>Hướng dẫn lấy Global API <a href="https://support.cloudflare.com/hc/en-us/articles/200167836-Managing-API-Tokens-and-Keys">tại đây</a></td>
+<td>Hướng dẫn lấy Global API 
+<a href="https://support.cloudflare.com/hc/en-us/articles/200167836-Managing-API-Tokens-and-Keys" target="_blank" rel="noopener noreferrer" data-goatcounter-click="https://support.cloudflare.com/hc/en-us/articles/200167836-Managing-API-Tokens-and-Keys" data-goatcounter-referrer="/serial/opnsense/opnsense-domain-ddns-letsencrypt-reveserproxy/">tại đây</a><span title="Mức độ phổ biến" id="a748915263" class="single__badge"></span><script async>var r = new XMLHttpRequest();
+r.addEventListener('load', function() {
+document.querySelector('#a748915263').innerText = JSON.parse(this.responseText).count_unique
+})
+r.open('GET', 'https://stats.pnghia.com/counter/' + encodeURIComponent("https://support.cloudflare.com/hc/en-us/articles/200167836-Managing-API-Tokens-and-Keys").replace(/\/$/, '') + '.json')
+r.send()</script>
+</td>
 </tr>
 <tr>
 <td>Description</td>
@@ -259,7 +268,12 @@
 </tbody>
 </table>
 <p>Nhấn <strong>SAVE</strong></p>
-<p><img src="/images/opnsense/DDNS.png" alt="Cloudflare DDNS" /></p>
+<p>
+
+<img data-src="https://pnghia.com/images/opnsense/DDNS_huc333773a43e396ddbc821f8f914f0c6a_9955_filter_1334269291160664337.png" alt="Cloudflare DDNS" class="lazyload" />
+
+
+</p>
 <ul>
 <li>Sau khi nhấn <strong>SAVE</strong> nếu OPNsense chưa cập nhật như ảnh thì có thể nhấn vào nút <strong>▶</strong> để <em>Disable</em> sau đó nhấn <strong>▶</strong> thêm lần nữa để <em>Enable</em> là được.</li>
 <li>Nếu vẫn chưa được thì kiểm tra Username/API và làm lại.</li>
@@ -419,7 +433,12 @@ Tìm plugin <strong>os-acme-client</strong> nhấn vào dấu <strong>+</strong>
 </table>
 <p>Nhấn <strong>SAVE</strong><br />
 Sau khi <strong>SAVE</strong> nhấn vào nút <strong>Issue/Renew Cetification Now</strong><br />
-<img src="/images/opnsense/SSLissue.png" alt="SSL Issued" /></p>
+
+
+<img data-src="https://pnghia.com/images/opnsense/SSLissue_hu0205aa24fb9852aa0ea27b12a18fb736_12128_filter_1334269291160664337.png" alt="SSL Issued" class="lazyload" />
+
+
+</p>
 <ul>
 <li>Hiện như hình là được.</li>
 </ul>
@@ -438,7 +457,9 @@ Sau khi <strong>SAVE</strong> nhấn vào nút <strong>Issue/Renew Cetification 
 <blockquote class="book-hint info">
 <ul>
 <li>Do chưa mở Port trong firewall nên chỉ có thể truy cập vào tên miền khi bạn đang ở trong mạng nội bộ. muốn truy cập từ xa thông qua 3G, 4G hoặc mạng WIFI khác thì phải mở port. Phần tiếp theo mình sẽ hướng dẫn phần này. Mình không khuyến khích mở Port 80 và 443 trực tiếp ra Internet nếu chưa đảm bảo an toàn về bảo mật.</li>
-<li>Nếu các bạn cài <em>Adguardhome</em> theo hướng dẫn tại bài <a href="/serial/opnsense/opnsense-install-adguardhome">Cài đặt ADGuardHome lên OPNsense </a> thì đã có thể truy cập vào ADguardHome thông qua domain.</li>
+<li>Nếu các bạn cài <em>Adguardhome</em> theo hướng dẫn tại bài 
+<a href="/serial/opnsense/opnsense-install-adguardhome/">Cài đặt ADGuardHome lên OPNsense </a>
+ thì đã có thể truy cập vào ADguardHome thông qua domain.</li>
 </ul>
 
 </blockquote>
@@ -583,7 +604,7 @@ Sau khi <strong>SAVE</strong> nhấn vào nút <strong>Issue/Renew Cetification 
 		<div class="footer__copyright">
 			&copy; 2021 pNghia.com.
 			<span class="footer__copyright-credits">Powered by <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">goHugo</a> | <a href="https://posativ.org/isso/" rel="nofollow noopener" target="_blank">ISSO</a> | <a href="https://www.goatcounter.com/" rel="nofollow noopener" target="_blank">goatCounter</a> and the <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span><br />
-			<span>v.08:53 - 28 tháng 05, 2021</span>
+			<span>v.08:56 - 28 tháng 05, 2021</span>
 		</div>
 	</div>
 </footer>

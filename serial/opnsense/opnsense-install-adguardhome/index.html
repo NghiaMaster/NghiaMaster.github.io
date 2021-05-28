@@ -191,7 +191,9 @@
 			(adsbygoogle = window.adsbygoogle || []).push({});
 		</script>
 		<div class="content post__content clearfix">
-			<h5 id="xem-qua-loạt-bài-viết-hướng-dẫn-cấu-hình-opnsense-tại-đâyserialopnsense">Xem qua loạt bài viết hướng dẫn cấu hình OPNsense <a href="/serial/opnsense">tại đây</a></h5>
+			<h5 id="xem-qua-loạt-bài-viết-hướng-dẫn-cấu-hình-opnsense-tại-đâyserialopnsense">Xem qua loạt bài viết hướng dẫn cấu hình OPNsense 
+<a href="/serial/opnsense/">tại đây</a>
+</h5>
 <details >
 <summary><b style="color:;font-weight:normal;">[PHẢI ĐỌC] Chú ý trước khi làm</b></summary>
 <div class="markdown-inner">
@@ -269,7 +271,14 @@
 </ul>
 </li>
 <li>
-<p>Truy cập vào trang Github chính thức của <em>ADguardHome</em> <a href="https://github.com/AdguardTeam/AdGuardHome/releases">tại đây</a> và copy link của phiên bản mới nhất, ở đây ta copy link có tên <code>AdGuardHome_freebsd_amd64.tar.gz</code> (<em>freebsd</em> là hệ điều hành <em>OPNsense</em> đang dùng, <em>amd64</em> là kiến trúc 64bit)</p>
+<p>Truy cập vào trang Github chính thức của <em>ADguardHome</em> 
+<a href="https://github.com/AdguardTeam/AdGuardHome/releases" target="_blank" rel="noopener noreferrer" data-goatcounter-click="https://github.com/AdguardTeam/AdGuardHome/releases" data-goatcounter-referrer="/serial/opnsense/opnsense-install-adguardhome/">tại đây</a><span title="Mức độ phổ biến" id="a156724893" class="single__badge"></span><script async>var r = new XMLHttpRequest();
+r.addEventListener('load', function() {
+document.querySelector('#a156724893').innerText = JSON.parse(this.responseText).count_unique
+})
+r.open('GET', 'https://stats.pnghia.com/counter/' + encodeURIComponent("https://github.com/AdguardTeam/AdGuardHome/releases").replace(/\/$/, '') + '.json')
+r.send()</script>
+ và copy link của phiên bản mới nhất, ở đây ta copy link có tên <code>AdGuardHome_freebsd_amd64.tar.gz</code> (<em>freebsd</em> là hệ điều hành <em>OPNsense</em> đang dùng, <em>amd64</em> là kiến trúc 64bit)</p>
 <ul>
 <li>tải xuống Binary của ADguardHome</li>
 </ul>
@@ -293,7 +302,12 @@ $ chmod a+x ./AdGuardHome
 <p>Dùng trình duyệt truy cập vào địa chỉ <code>http://192.168.1.1:3000</code>.</p>
 <ul>
 <li>Trình duyệt sẽ hiển thị trang thiết lập lần đầu của <em>AdGuardHome</em><br />
-<img src="/images/opnsense/AdguardWelcome.PNG" alt="ADguardHome Welcome Page" /></li>
+
+
+<img data-src="https://pnghia.com/images/opnsense/AdguardWelcome_hu7ea94877ae18f2483b569232cfe5b876_19644_filter_1334269291160664337.PNG" alt="ADguardHome Welcome Page" class="lazyload" />
+
+
+</li>
 <li>Tại mục <strong>Admin Web Interface</strong> các bạn thay port <em>80</em> bằng port tuỳ ý. ví dụ như <em>8080</em>
 <ul>
 <li>Nhớ số Port để sau này truy cập vào trang Dashboard nha ~~.</li>
@@ -389,7 +403,9 @@ run_rc_command <span class="s2">&#34;</span><span class="nv">$1</span><span clas
 <ul>
 <li>Mọi thắc mắc các bạn Comment ở dưới.</li>
 <li>Sau khi hoàn thành toàn bộ hướng dẫn trên đây thì cơ bản đã sử dụng được AdguardHome</li>
-<li>Các thiết lập nâng cao như DoT - DoH, Enable HTTPS, rDNS&hellip; yêu cầu phải mở Port và thiết lập DDNS để sử dụng. Mình sẽ hướng dẫn thêm ở bài <a href="/serial/opnsense/opnsense-domain-ddns-letsencrypt-reveserproxy/">Thiết lập Tên Miền, DDNS thông qua Cloudflare, lấy chứng chỉ SSL Let&rsquo;s Encrypt, Reveser Proxy</a></li>
+<li>Các thiết lập nâng cao như DoT - DoH, Enable HTTPS, rDNS&hellip; yêu cầu phải mở Port và thiết lập DDNS để sử dụng. Mình sẽ hướng dẫn thêm ở bài 
+<a href="/serial/opnsense/opnsense-domain-ddns-letsencrypt-reveserproxy/">Thiết lập Tên Miền, DDNS thông qua Cloudflare, lấy chứng chỉ SSL Let&rsquo;s Encrypt, Reveser Proxy</a>
+</li>
 </ul>
 
 </blockquote>
@@ -532,7 +548,7 @@ run_rc_command <span class="s2">&#34;</span><span class="nv">$1</span><span clas
 		<div class="footer__copyright">
 			&copy; 2021 pNghia.com.
 			<span class="footer__copyright-credits">Powered by <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">goHugo</a> | <a href="https://posativ.org/isso/" rel="nofollow noopener" target="_blank">ISSO</a> | <a href="https://www.goatcounter.com/" rel="nofollow noopener" target="_blank">goatCounter</a> and the <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span><br />
-			<span>v.08:53 - 28 tháng 05, 2021</span>
+			<span>v.08:56 - 28 tháng 05, 2021</span>
 		</div>
 	</div>
 </footer>
