@@ -12,7 +12,7 @@
       <pubDate>Sat, 01 May 2021 08:25:14 +0700</pubDate>
       
       <guid>https://pnghia.com/serial/opnsense/huong-dan-ket-noi-nordvpn-va-chia-vlan/</guid>
-      <description>Placeholder  Placeholder text Bài viết đang được hoàn thiện. Vui lòng liên hệ nếu bạn đang cần hoặc muốn được hỗ trợ.  </description>
+      <description>Vì đây là cấu hình nâng cao, các bạn phải hiểu biết một chút về các mục trên Menu của OPNsense, mình sẽ không hướng dẫn chi tiết nên các bạn phải tự suy luận một chút nhé ^^.I. Phần cấu hình trên Modem chạy OPNsense. 1. Tạo một VLAN mới  Đăng nhập vào OPNsense. Từ Menu, truy cập vào mục Interfaces &amp;gt; Other Types &amp;gt; VLAN Click vào Add.</description>
     </item>
     
     <item>

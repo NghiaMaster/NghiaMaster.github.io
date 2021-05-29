@@ -9,16 +9,14 @@
 		gtag('js', new Date());
 		gtag('config', 'UA-105800435-1');
 	</script>
-	<script data-ad-client="ca-pub-5013797695727204" async
-		src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>Hướng dẫn kết nối NordVPN và chia VLAN cho đường truyền VPN - tách đường truyền có VPN ra 1 AP riêng. - pNghia.com</title>
 	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
-	<meta name="description" content="Hướng dẫn sẽ giúp các bạn biết cách kêt nối NordVPN trên OPNsense và chia VLAN cho nó. Khi đã có VLAN, các bạn có thể dùng WIFI AP để thiết lập 1 SSID riêng - khi muốn kết nối đến VPN, các bạn chỉ cần kết nối tới mạng WIFI đã thiết lập mà không cần sử dụng phần mềm trên điện thoại.">
+	<meta name="description" content="Hướng dẫn sẽ giúp các bạn biết cách kêt nối NordVPN trên OPNsense và chia VLAN cho nó. Khi đã có VLAN, các bạn có thể dùng WIFI AP để thiết lập 1 SSID riêng - khi muốn kết nối đến VPN, các bạn chỉ cần kết nối tới mạng WIFI đã thiết lập mà không cần sử dụng phần mềm VPN trên điện thoại.">
 		<meta property="og:title" content="Hướng dẫn kết nối NordVPN và chia VLAN cho đường truyền VPN - tách đường truyền có VPN ra 1 AP riêng." />
-<meta property="og:description" content="Hướng dẫn sẽ giúp các bạn biết cách kêt nối NordVPN trên OPNsense và chia VLAN cho nó. Khi đã có VLAN, các bạn có thể dùng WIFI AP để thiết lập 1 SSID riêng - khi muốn kết nối đến VPN, các bạn chỉ cần kết nối tới mạng WIFI đã thiết lập mà không cần sử dụng phần mềm trên điện thoại." />
+<meta property="og:description" content="Hướng dẫn sẽ giúp các bạn biết cách kêt nối NordVPN trên OPNsense và chia VLAN cho nó. Khi đã có VLAN, các bạn có thể dùng WIFI AP để thiết lập 1 SSID riêng - khi muốn kết nối đến VPN, các bạn chỉ cần kết nối tới mạng WIFI đã thiết lập mà không cần sử dụng phần mềm VPN trên điện thoại." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://pnghia.com/serial/opnsense/huong-dan-ket-noi-nordvpn-va-chia-vlan/" />
 <meta property="article:published_time" content="2021-05-01T08:25:14+07:00" />
@@ -45,11 +43,13 @@
 	<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
 	<meta name="theme-color" content="#171d26" />
 		
+		<script data-ad-client="ca-pub-5013797695727204" async
+			src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 	
 	<script src="/js/helper/loading.min.32c29067b6b4c7806dbd636fa092bc5104f2f93901dbc0713da7928159e1a9aa.js"></script>
 	
 	<script data-goatcounter="https://stats.pnghia.com/count" async src="/js/helper/counter.min.b937be5d6fed99d80ad3159c2a953fc99c573ec880dcff1a83736f5d4f8dfefa.js"></script>
-	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
 </head>
 <body class="body">
 	<div class="container container--outer">
@@ -191,13 +191,253 @@
 			(adsbygoogle = window.adsbygoogle || []).push({});
 		</script>
 		<div class="content post__content clearfix">
-			<h2 id="placeholder">Placeholder</h2>
-<p>  
+			  
 <blockquote class="book-hint info">
-Placeholder text
+Vì đây là cấu hình nâng cao, các bạn phải hiểu biết một chút về các mục trên Menu của OPNsense, mình sẽ không hướng dẫn chi tiết nên các bạn phải tự suy luận một chút nhé ^^.
 </blockquote>
-<br />
 
+<h3 id="i-phần-cấu-hình-trên-modem-chạy-opnsense">I. Phần cấu hình trên Modem chạy OPNsense.</h3>
+<h4 id="1-tạo-một-vlan-mới">1. Tạo một VLAN mới</h4>
+<ul>
+<li>Đăng nhập vào OPNsense. Từ Menu, truy cập vào mục <strong>Interfaces</strong> &gt; <strong>Other Types</strong> &gt; <strong>VLAN</strong></li>
+<li>Click vào <strong>Add</strong>.
+<ul>
+<li>Mục <em>Parent interface</em> nhớ chọn cổng LAN nha</li>
+<li>Nhập số <em>VLAN</em> vào <em>VLAN Tag</em> (vd: 11), thêm mô tả (vd: VPN) sau đó nhấn <strong>SAVE</strong>.</li>
+</ul>
+</li>
+</ul>
+<h4 id="2-tạo-interface-mới-chứa-vlan-vừa-tạo">2. Tạo Interface mới chứa VLAN vừa tạo</h4>
+<ul>
+<li>Truy cập vào mục <strong>Interfaces</strong> &gt; <strong>Assignments</strong> và thêm một <em>Interface</em> mới. Mục <strong>New interface</strong> chọn <strong>vlan11 on xxx (VPN)</strong> (<em>xx là gì thì tuỳ vào Router của các bạn</em>). <em>Interface</em> mới tạo sẽ có tên là <em>OPT1</em> (hoặc tương tự). Nhấn vào <em>OPT1</em> để tiến hành chỉnh sửa.</li>
+<li>Tick vào <strong>Enable Interface</strong> và điền thông số tương tự như sau (<em>Địa chỉ IP là ví dụ tuỳ theo LAN IP các bạn đã đặt cho OPNsense mà set lại cho đúng</em>):
+<table>
+<thead>
+<tr>
+<th>Description</th>
+<th>VPN_LAN</th>
+<th>Thêm mô tả interface cho dễ nhớ</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Block Private networks</td>
+<td>không chọn</td>
+<td></td>
+</tr>
+<tr>
+<td>Block bogon networks</td>
+<td>không chọn</td>
+<td></td>
+</tr>
+<tr>
+<td>IPv4 Configuration Type</td>
+<td>Static IPv4</td>
+<td></td>
+</tr>
+<tr>
+<td>IPv6 Configuration Type</td>
+<td>None</td>
+<td></td>
+</tr>
+<tr>
+<td>MAC address</td>
+<td>Bỏ trống</td>
+<td></td>
+</tr>
+<tr>
+<td>MTU</td>
+<td>Bỏ trống</td>
+<td></td>
+</tr>
+<tr>
+<td>MSS</td>
+<td>Bỏ trống</td>
+<td></td>
+</tr>
+<tr>
+<td>Speed and duplex</td>
+<td>Default</td>
+<td></td>
+</tr>
+<tr>
+<td>Static IPv4 address</td>
+<td>192.168.200.1/24</td>
+<td>Cái này đặt dựa vào IP mặc định mà bạn đang thiết lập cho OPNsense</td>
+</tr>
+<tr>
+<td>IPv4 Upstream Gateway</td>
+<td>Auto-detect</td>
+<td></td>
+</tr>
+<tr>
+<td>Nhấn <strong>SAVE</strong> sau đó <strong>Apply change</strong></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<h4 id="3-cấu-hình-dhcp-server-cho-interface-vừa-tạo">3. Cấu hình DHCP Server cho Interface vừa tạo</h4>
+<ul>
+<li>Vào <strong>Services</strong> ‣ <strong>DHCPv4</strong> ‣ <strong>[VPN_LAN]</strong>.</li>
+<li>Điền vào phần sau để thiết lập DHCP Server cho VPN_LAN (các cài dặt khác để mặc định):
+<table>
+<thead>
+<tr>
+<th>Enable</th>
+<th>Tick vào</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Range</td>
+<td>192.168.200.100 tới 192.168.200.200</td>
+<td>Khoảng IP mà DHCP server sẽ cấp</td>
+</tr>
+<tr>
+<td>DNS Server</td>
+<td>192.168.200.1</td>
+<td>Máy chủ DNS</td>
+</tr>
+<tr>
+<td>Gateway</td>
+<td>192.168.200.1</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<h4 id="4-cấu-hình-tường-lửa">4. Cấu hình tường lửa.</h4>
+<ul>
+<li>Vào <strong>Firewall</strong> ‣ <strong>Rules</strong> ‣ <strong>VPN_LAN</strong> để thêm rules mới.</li>
+</ul>
+<h6 id="allow-dns---cho-phép-vpn_lan-sử-dụng-máy-chủ-chuyển-tiếp-dns">Allow DNS - Cho phép VPN_LAN sử dụng máy chủ chuyển tiếp DNS</h6>
+<table>
+<thead>
+<tr>
+<th>Mục</th>
+<th>Chọn</th>
+<th>Ghi chú</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Action</td>
+<td>PASS</td>
+<td></td>
+</tr>
+<tr>
+<td>Interface</td>
+<td>GUESTNET</td>
+<td></td>
+</tr>
+<tr>
+<td>Protocol</td>
+<td>TCP/UDP</td>
+<td></td>
+</tr>
+<tr>
+<td>Source</td>
+<td>GUESTNET net</td>
+<td></td>
+</tr>
+<tr>
+<td>Destination</td>
+<td>GUESTNET Address</td>
+<td></td>
+</tr>
+<tr>
+<td>Destination port range</td>
+<td>DNS/DNS</td>
+<td></td>
+</tr>
+<tr>
+<td>Category</td>
+<td>GuestNet Basic Rules</td>
+<td></td>
+</tr>
+<tr>
+<td>Description</td>
+<td>Allow DNS</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Nhấn <strong>SAVE</strong></p>
+<h6 id="cho-phép-vpn_lan-truy-cập-ra-internet">Cho phép VPN_LAN truy cập ra Internet.</h6>
+<table>
+<thead>
+<tr>
+<th>Mục</th>
+<th>Chọn</th>
+<th>Ghi chú</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Action</td>
+<td>Pass</td>
+<td></td>
+</tr>
+<tr>
+<td>Interface</td>
+<td>GUESTNET</td>
+<td></td>
+</tr>
+<tr>
+<td>Protocol</td>
+<td>any</td>
+<td></td>
+</tr>
+<tr>
+<td>Source</td>
+<td>GUESTNET net</td>
+<td></td>
+</tr>
+<tr>
+<td>Destination</td>
+<td>any</td>
+<td></td>
+</tr>
+<tr>
+<td>Destination port range</td>
+<td>any</td>
+<td></td>
+</tr>
+<tr>
+<td>Category</td>
+<td>GuestNet Basic Rules</td>
+<td></td>
+</tr>
+<tr>
+<td>Description</td>
+<td>Allow Guest Network</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Nhấn <strong>SAVE</strong> và <strong>Apply changes</strong></p>
+<h4 id="5-cấu-hình-vpn-client-nordvpn-các-vpn-server-hỗ-trợ-giao-thức-openvpn">5. Cấu hình VPN Client (NordVPN, các VPN server hỗ trợ giao thức OpenVPN&hellip;)</h4>
+<ul>
+<li>Đang hoàn thiện</li>
+</ul>
+<h4 id="6-cấu-hình-tường-lửa">6. Cấu hình tường lửa.</h4>
+<ul>
+<li>Đang hoàn thiện</li>
+</ul>
+<h3 id="ii-phần-cấu-hình-trên-wifi-ap">II. Phần cấu hình trên Wifi AP</h3>
+  
+<blockquote class="book-hint info">
+Yêu cầu chung về AP:<br />
+- Hỗ trợ VLAN.<br />
+- Nếu chia ra nhiều SSID (nhiều mạng như mạng khách, mạng nội bộ&hellip;) thì yêu cầu FW phải hỗ trợ gán VLAN cho SSID.
+</blockquote>
+
+<p>
 
 <img data-src="https://pnghia.com/images/opnsense/NordVPN1_hufa3d057ed0d3c47e881ac0b73aecdcaa_151691_filter_1334269291160664337.png" alt="NordVPN_OPNsense_with_VLAN" class="lazyload" />
 
@@ -218,7 +458,7 @@ Placeholder text
   
 <blockquote class="book-hint warning">
 <ul>
-<li>Bài viết đang được hoàn thiện. Vui lòng liên hệ nếu bạn đang cần hoặc muốn được hỗ trợ.</li>
+<li>Bài viết đang được hoàn thiện. Nếu bạn đang quan tâm, vui lòng liên hệ để được hướng dẫn chi tiết.</li>
 </ul>
 
 </blockquote>
@@ -241,7 +481,6 @@ Placeholder text
 		</footer>
 	</article>
 	
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 
 <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5013797695727204" data-ad-slot="3005486768"
   data-ad-format="auto" data-full-width-responsive="true"></ins>
@@ -355,7 +594,7 @@ Placeholder text
 		<div class="footer__copyright">
 			&copy; 2021 pNghia.com.
 			<span class="footer__copyright-credits">Powered by <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">goHugo</a> | <a href="https://posativ.org/isso/" rel="nofollow noopener" target="_blank">ISSO</a> | <a href="https://www.goatcounter.com/" rel="nofollow noopener" target="_blank">goatCounter</a> and the <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span><br />
-			<span>v.09:19 - 28 tháng 05, 2021</span>
+			<span>v.16:58 - 29 tháng 05, 2021</span>
 		</div>
 	</div>
 </footer>

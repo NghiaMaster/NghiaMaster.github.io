@@ -22,7 +22,7 @@
       <pubDate>Sat, 01 May 2021 08:25:14 +0700</pubDate>
       
       <guid>https://pnghia.com/serial/opnsense/huong-dan-ket-noi-nordvpn-va-chia-vlan/</guid>
-      <description>Placeholder  Placeholder text Bài viết đang được hoàn thiện. Vui lòng liên hệ nếu bạn đang cần hoặc muốn được hỗ trợ.  </description>
+      <description>Vì đây là cấu hình nâng cao, các bạn phải hiểu biết một chút về các mục trên Menu của OPNsense, mình sẽ không hướng dẫn chi tiết nên các bạn phải tự suy luận một chút nhé ^^.I. Phần cấu hình trên Modem chạy OPNsense. 1. Tạo một VLAN mới  Đăng nhập vào OPNsense. Từ Menu, truy cập vào mục Interfaces &amp;gt; Other Types &amp;gt; VLAN Click vào Add.</description>
     </item>
     
     <item>
@@ -172,7 +172,7 @@ $ cd /usr/local/lib/python3.7/site-packages/netaddr/eui$ mv ./oui.txt ./oui.txt
       <pubDate>Thu, 02 Apr 2020 19:51:12 +0700</pubDate>
       
       <guid>https://pnghia.com/posts/openwrt-newifi3-d2/</guid>
-      <description>-&amp;gt; Hướng dẫn UP Firmware  ROM được @kizimirua build từ Lean OpenWRT https://github.com/coolsnowwolf/ledevar r = new XMLHttpRequest();r.addEventListener(&#39;load&#39;, function() {document.querySelector(&#39;#a163972584&#39;).innerText = JSON.parse(this.responseText).count_unique})r.open(&#39;GET&#39;, &#39;https://stats.pnghia.com/counter/&#39; + encodeURIComponent(&#34;https://github.com/coolsnowwolf/lede&#34;).replace(/\/$/, &#39;&#39;) + &#39;.json&#39;)r.send()tương thích với NEWIFI3 D2 OpenWrt thế hệ thứ 3
+      <description>-&amp;gt; Hướng dẫn UP Firmware  ROM được @kizimirua build từ Lean OpenWRT https://github.com/coolsnowwolf/ledevar r = new XMLHttpRequest();r.addEventListener(&#39;load&#39;, function() {document.querySelector(&#39;#a634721958&#39;).innerText = JSON.parse(this.responseText).count_unique})r.open(&#39;GET&#39;, &#39;https://stats.pnghia.com/counter/&#39; + encodeURIComponent(&#34;https://github.com/coolsnowwolf/lede&#34;).replace(/\/$/, &#39;&#39;) + &#39;.json&#39;)r.send()tương thích với NEWIFI3 D2 OpenWrt thế hệ thứ 3
 Có 2 bản để lựa chọn là bản FULL và bản rút gọn, bài viết này sẽ tổng hợp lại cả 2 bản cho các bạn dễ lựa chọn.</description>
     </item>
     
