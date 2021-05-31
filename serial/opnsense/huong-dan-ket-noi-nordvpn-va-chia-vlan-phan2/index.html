@@ -12,15 +12,15 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Cấu hình Fast Roaming với OpenWRT - pNghia.com</title>
+	<title>Hướng dẫn kết nối NordVPN và chia VLAN cho đường truyền VPN - tách đường truyền có VPN ra 1 AP riêng. [Phần 2] - pNghia.com</title>
 	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
-	<meta name="description" content="Sử dụng 2 hoặc nhiều router chạy Firmware OpenWRT hoặc OpenWRT Based (PandoraBOX...) làm hệ thống WIFI Fast Roaming, giúp phủ sóng wifi khắp nhà.">
-		<meta property="og:title" content="Cấu hình Fast Roaming với OpenWRT" />
-<meta property="og:description" content="Sử dụng 2 hoặc nhiều router chạy Firmware OpenWRT hoặc OpenWRT Based (PandoraBOX...) làm hệ thống WIFI Fast Roaming, giúp phủ sóng wifi khắp nhà." />
+	<meta name="description" content="- Tiếp nối bài Hướng dẫn kết nối NordVPN và chia VLAN cho đường truyền VPN - tách đường truyền có VPN ra 1 AP riêng PHẦN 1., ở Phần 2 sẽ là phần Thiết lập cấu hình NordVPN.">
+		<meta property="og:title" content="Hướng dẫn kết nối NordVPN và chia VLAN cho đường truyền VPN - tách đường truyền có VPN ra 1 AP riêng. [Phần 2]" />
+<meta property="og:description" content="- Tiếp nối bài Hướng dẫn kết nối NordVPN và chia VLAN cho đường truyền VPN - tách đường truyền có VPN ra 1 AP riêng PHẦN 1., ở Phần 2 sẽ là phần Thiết lập cấu hình NordVPN." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://pnghia.com/serial/openwrt/cau-hinh-wifi-roaming-voi-openwrt/" />
-<meta property="article:published_time" content="2021-03-21T09:49:09+07:00" />
-<meta property="article:modified_time" content="2021-05-25T10:56:00+07:00" />
+<meta property="og:url" content="https://pnghia.com/serial/opnsense/huong-dan-ket-noi-nordvpn-va-chia-vlan-phan2/" />
+<meta property="article:published_time" content="2021-05-01T08:24:14+07:00" />
+<meta property="article:modified_time" content="2021-05-01T08:24:14+07:00" />
 
 
 	<link rel="stylesheet" href="/css/style.min.css">
@@ -165,7 +165,7 @@
 <main class="main" role="main">
 	<article class="post">
 		<header class="post__header">
-			<h1 class="post__title">Cấu hình Fast Roaming với OpenWRT</h1>
+			<h1 class="post__title">Hướng dẫn kết nối NordVPN và chia VLAN cho đường truyền VPN - tách đường truyền có VPN ra 1 AP riêng. [Phần 2]</h1>
 			<div class="post__meta meta">
 <script defer>
 	var r = new XMLHttpRequest();
@@ -175,14 +175,12 @@
   r.send()
   </script>
 <div class="meta__item-datetime meta__item">
-	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2021-03-21T09:49:09&#43;07:00">21 tháng 3, 2021</time>
-	<time class="meta__text" datetime="2021-05-25T10:56:00&#43;07:00">(
-		Cập nhật: 25 tháng 5, 2021)</time>&nbsp;<div class="meta__item"><svg xmlns="http://www.w3.org/2000/svg" class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 24 24"><path d="M15 12c0 1.657-1.343 3-3 3s-3-1.343-3-3c0-.199.02-.393.057-.581 1.474.541 2.927-.882 2.405-2.371.174-.03.354-.048.538-.048 1.657 0 3 1.344 3 3zm-2.985-7c-7.569 0-12.015 6.551-12.015 6.551s4.835 7.449 12.015 7.449c7.733 0 11.985-7.449 11.985-7.449s-4.291-6.551-11.985-6.551zm-.015 12c-2.761 0-5-2.238-5-5 0-2.761 2.239-5 5-5 2.762 0 5 2.239 5 5 0 2.762-2.238 5-5 5z"/></svg>
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2021-05-01T08:24:14&#43;07:00">1 tháng 5, 2021</time><div class="meta__item"><svg xmlns="http://www.w3.org/2000/svg" class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 24 24"><path d="M15 12c0 1.657-1.343 3-3 3s-3-1.343-3-3c0-.199.02-.393.057-.581 1.474.541 2.927-.882 2.405-2.371.174-.03.354-.048.538-.048 1.657 0 3 1.344 3 3zm-2.985-7c-7.569 0-12.015 6.551-12.015 6.551s4.835 7.449 12.015 7.449c7.733 0 11.985-7.449 11.985-7.449s-4.291-6.551-11.985-6.551zm-.015 12c-2.761 0-5-2.238-5-5 0-2.761 2.239-5 5-5 2.762 0 5 2.239 5 5 0 2.762-2.238 5-5 5z"/></svg>
 <span class="meta__text" id="goatCounter_value_page_pv">3456</span>&nbsp;&bull;
 	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M20 15c0 .552-.448 1-1 1s-1-.448-1-1 .448-1 1-1 1 .448 1 1m-3 0c0 .552-.448 1-1 1s-1-.448-1-1 .448-1 1-1 1 .448 1 1m-3 0c0 .552-.448 1-1 1s-1-.448-1-1 .448-1 1-1 1 .448 1 1m5.415 4.946c-1 .256-1.989.482-3.324.482-3.465 0-7.091-2.065-7.091-5.423 0-3.128 3.14-5.672 7-5.672 3.844 0 7 2.542 7 5.672 0 1.591-.646 2.527-1.481 3.527l.839 2.686-2.943-1.272zm-13.373-3.375l-4.389 1.896 1.256-4.012c-1.121-1.341-1.909-2.665-1.909-4.699 0-4.277 4.262-7.756 9.5-7.756 5.018 0 9.128 3.194 9.467 7.222-1.19-.566-2.551-.889-3.967-.889-4.199 0-8 2.797-8 6.672 0 .712.147 1.4.411 2.049-.953-.126-1.546-.272-2.369-.483m17.958-1.566c0-2.172-1.199-4.015-3.002-5.21l.002-.039c0-5.086-4.988-8.756-10.5-8.756-5.546 0-10.5 3.698-10.5 8.756 0 1.794.646 3.556 1.791 4.922l-1.744 5.572 6.078-2.625c.982.253 1.932.407 2.85.489 1.317 1.953 3.876 3.314 7.116 3.314 1.019 0 2.105-.135 3.242-.428l4.631 2-1.328-4.245c.871-1.042 1.364-2.384 1.364-3.75"/></svg>
 <a class="meta__text" href="#isso-thread">Comments</a></div>
 </div>
-<div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/tutorial/" rel="category">Tutorial</a>
+<div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/opnsense-config/" rel="category">OPNsense Config</a>
 	</span>
 </div></div>
 		</header><ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid"
@@ -191,64 +189,363 @@
 			(adsbygoogle = window.adsbygoogle || []).push({});
 		</script>
 		<div class="content post__content clearfix">
-			<h2 id="fast-roaming-là-gì">Fast Roaming là gì?</h2>
-<blockquote>
-<p><em>Fast Roaming</em> cho phép người dùng di chuyển từ vùng WiFi này qua vùng WiFi khác mà không bị gián đoạn kết nối. Các tiêu chuẩn mạng Wi-Fi của IEEE 802.11r và IEEE 802.11k đều là các tiêu chuẩn được thiết kế để tạo ra trải nghiệm chuyển vùng liền mạch hơn cho các thiết bị sử dụng mạng không dây.</p>
+			  
+<blockquote class="book-hint info">
+Vì đây là cấu hình nâng cao, các bạn phải hiểu biết một chút về các mục trên Menu của OPNsense, mình sẽ không hướng dẫn chi tiết nên các bạn phải tự suy luận một chút nhé ^^.
 </blockquote>
-<p>Để có hệ thống wifi roaming thì cần các yếu tố sau:</p>
+
+<p>&laquo; Xem 
+<a href="/serial/opnsense/huong-dan-ket-noi-nordvpn-va-chia-vlan-phan1/">PHẦN 1 - Thêm VLAN và gán VLAN vào Interface</a>
+.</p>
+<h2 id="ii-thiết-lập-cấu-hình-nordvpn-trên-opnsense">II. Thiết lập cấu hình NordVPN trên OPNsense.</h2>
+<h3 id="1-cấu-hình-vpn-client-nordvpn-các-vpn-server-hỗ-trợ-giao-thức-openvpn">1. Cấu hình VPN Client (NordVPN, các VPN server hỗ trợ giao thức OpenVPN&hellip;)</h3>
 <ul>
-<li>
-<p><strong>Tất cả AP đều được cấu hình cùng SSID / mã hóa / password (Channel có thể giống hoặc khác)</strong></p>
-</li>
-<li>
-<p><strong>Tất cả AP phải cùng một lớp mạng LAN và có thể “nói chuyện” với nhau</strong></p>
-</li>
+<li>Vào menu <strong>System</strong> -&gt; <strong>Trust</strong> -&gt; <strong>Authorities</strong> chọn <strong>+Add</strong> để thêm chứng chỉ mới</li>
 </ul>
-<p>Ưu điểm :</p>
-<ul>
-<li>Tất cả các AP ( Accesspoint ) đều cắm dây LAN từ  một nguồn cấp IP chính router /switch giống nhau nên tốc độ mạng sẽ không bị giảm khi roaming khu vực giữa các AP .</li>
-<li>Tốc độ kết nối ở mỗi vùng AP hầu như không suy hao .</li>
-</ul>
-<p>Nhược điểm :</p>
-<ul>
-<li>Chi phí đầu tư cao, phải đi dây LAN tới từng router khá rườm rà.</li>
-</ul>
-<h2 id="yêu-cầu">Yêu cầu:</h2>
-<ul>
-<li>Có ít nhất 2 Router chạy Firmware OpenWRT càng mới càng tốt (hoặc các firmware baseon OPENWRT như PandoraBox, các firmware DD-WRT 2020, các FW khác có hỗ trợ chuẩn IEEE 802.11r, 802.11k) trong bài viết này mình chỉ hướng dẫn làm trên FW OpenWRT</li>
-<li>FW OpenWRT đã được cài đặt gói phần mềm <strong>wpad</strong> (Khuyên dùng bản Full)<br />
+<p><strong>Descriptive Name:</strong> NordVPN_CA<br />
+<strong>Method:</strong> Import an existing Certificate Authority<br />
+<strong>Certificate data:</strong> Copy và dán nội dung bên dưới vào</p>
+<pre><code>-----BEGIN CERTIFICATE-----
+MIIFCjCCAvKgAwIBAgIBATANBgkqhkiG9w0BAQ0FADA5MQswCQYDVQQGEwJQQTEQ
+MA4GA1UEChMHTm9yZFZQTjEYMBYGA1UEAxMPTm9yZFZQTiBSb290IENBMB4XDTE2
+MDEwMTAwMDAwMFoXDTM1MTIzMTIzNTk1OVowOTELMAkGA1UEBhMCUEExEDAOBgNV
+BAoTB05vcmRWUE4xGDAWBgNVBAMTD05vcmRWUE4gUm9vdCBDQTCCAiIwDQYJKoZI
+hvcNAQEBBQADggIPADCCAgoCggIBAMkr/BYhyo0F2upsIMXwC6QvkZps3NN2/eQF
+kfQIS1gql0aejsKsEnmY0Kaon8uZCTXPsRH1gQNgg5D2gixdd1mJUvV3dE3y9FJr
+XMoDkXdCGBodvKJyU6lcfEVF6/UxHcbBguZK9UtRHS9eJYm3rpL/5huQMCppX7kU
+eQ8dpCwd3iKITqwd1ZudDqsWaU0vqzC2H55IyaZ/5/TnCk31Q1UP6BksbbuRcwOV
+skEDsm6YoWDnn/IIzGOYnFJRzQH5jTz3j1QBvRIuQuBuvUkfhx1FEwhwZigrcxXu
+MP+QgM54kezgziJUaZcOM2zF3lvrwMvXDMfNeIoJABv9ljw969xQ8czQCU5lMVmA
+37ltv5Ec9U5hZuwk/9QO1Z+d/r6Jx0mlurS8gnCAKJgwa3kyZw6e4FZ8mYL4vpRR
+hPdvRTWCMJkeB4yBHyhxUmTRgJHm6YR3D6hcFAc9cQcTEl/I60tMdz33G6m0O42s
+Qt/+AR3YCY/RusWVBJB/qNS94EtNtj8iaebCQW1jHAhvGmFILVR9lzD0EzWKHkvy
+WEjmUVRgCDd6Ne3eFRNS73gdv/C3l5boYySeu4exkEYVxVRn8DhCxs0MnkMHWFK6
+MyzXCCn+JnWFDYPfDKHvpff/kLDobtPBf+Lbch5wQy9quY27xaj0XwLyjOltpiST
+LWae/Q4vAgMBAAGjHTAbMAwGA1UdEwQFMAMBAf8wCwYDVR0PBAQDAgEGMA0GCSqG
+SIb3DQEBDQUAA4ICAQC9fUL2sZPxIN2mD32VeNySTgZlCEdVmlq471o/bDMP4B8g
+nQesFRtXY2ZCjs50Jm73B2LViL9qlREmI6vE5IC8IsRBJSV4ce1WYxyXro5rmVg/
+k6a10rlsbK/eg//GHoJxDdXDOokLUSnxt7gk3QKpX6eCdh67p0PuWm/7WUJQxH2S
+DxsT9vB/iZriTIEe/ILoOQF0Aqp7AgNCcLcLAmbxXQkXYCCSB35Vp06u+eTWjG0/
+pyS5V14stGtw+fA0DJp5ZJV4eqJ5LqxMlYvEZ/qKTEdoCeaXv2QEmN6dVqjDoTAo
+k0t5u4YRXzEVCfXAC3ocplNdtCA72wjFJcSbfif4BSC8bDACTXtnPC7nD0VndZLp
++RiNLeiENhk0oTC+UVdSc+n2nJOzkCK0vYu0Ads4JGIB7g8IB3z2t9ICmsWrgnhd
+NdcOe15BincrGA8avQ1cWXsfIKEjbrnEuEk9b5jel6NfHtPKoHc9mDpRdNPISeVa
+wDBM1mJChneHt59Nh8Gah74+TM1jBsw4fhJPvoc7Atcg740JErb904mZfkIEmojC
+VPhBHVQ9LHBAdM8qFI2kRK0IynOmAZhexlP/aT/kpEsEPyaZQlnBn3An1CRz8h0S
+PApL8PytggYKeQmRhl499+6jLxcZ2IegLfqq41dzIjwHwTMplg+1pKIOVojpWA==
+-----END CERTIFICATE-----
+</code></pre><p><strong>Certificate Private Key:</strong> bỏ trống;<br />
+<strong>Serial for next certificate:</strong> để mặc định;</p>
 <details >
-<summary><b style="color:;font-weight:normal;">Chi tiết</b></summary>
+<summary><b style="color:;font-weight:normal;">Screenshot</b></summary>
 <div class="markdown-inner">
-<p>Cài đặt <strong>wpad</strong> thông qua SSH với dòng lệnh:</p>
-<pre><code class="language-ssh" data-lang="ssh">opkg update -- opkg remove wpad-mini -- opkg install wpad
-</code></pre><p>Thông qua giao diện web LuCI: <strong>SYSTEM</strong> -&gt; <strong>SOFTWARE</strong><br />
+<img data-src="https://pnghia.com/images/opnsense/NordVPN/NordVPN_OPNsense-Cer_hu170790a1f461e678b9bbce284eb72bcf_33818_filter_1334269291160664337.png" alt="NordVPN-OPnsense" class="lazyload" />
+</div>
+</details>
 
+<p>Nhấn <strong>SAVE</strong></p>
+<ul>
+<li>Vào <strong>VPN</strong> -&gt; <strong>OpenVPN</strong> -&gt; <strong>Clients</strong> chọn <strong>+Add</strong> để thêm cấu hình mới.</li>
+<li>Điền các thông số như sau</li>
+</ul>
+<p><strong>GENERAL INFORMATION</strong></p>
+<table>
+<thead>
+<tr>
+<th>-</th>
+<th>-</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Disabled</td>
+<td>Để mặc định (không check)</td>
+</tr>
+<tr>
+<td>Description</td>
+<td>Mô tả. (Ví dụ: NordVPN_JP)</td>
+</tr>
+<tr>
+<td>Server mode</td>
+<td>Peer to Peer (SSL/TLS)</td>
+</tr>
+<tr>
+<td>Protocol</td>
+<td>UDP4 (có thể dùng TCP4 nếu muốn)</td>
+</tr>
+<tr>
+<td>Device mode</td>
+<td>tun</td>
+</tr>
+<tr>
+<td>Interface</td>
+<td><strong>VPN_LAN</strong></td>
+</tr>
+<tr>
+<td>Remote server</td>
+<td>Host address: vào <a href="https://nordvpn.com/servers/tools/">https://nordvpn.com/servers/tools/</a> để lấy. Port: 1194 cho UDP và 443 cho TCP</td>
+</tr>
+<tr>
+<td>Retry DNS resolution</td>
+<td>Tick vào</td>
+</tr>
+<tr>
+<td>Proxy host or address</td>
+<td>Để trống</td>
+</tr>
+<tr>
+<td>Proxy port</td>
+<td>Để trống</td>
+</tr>
+<tr>
+<td>Proxy Authentication</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Local port</td>
+<td>Để trống</td>
+</tr>
+</tbody>
+</table>
+<p><strong>USER AUTHENTICATION SETTINGS</strong></p>
+<table>
+<thead>
+<tr>
+<th>-</th>
+<th>-</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Username/pass</td>
+<td>Điền Username và Password tài khoản NordVPN</td>
+</tr>
+<tr>
+<td>Renegotiate time</td>
+<td>Để trống</td>
+</tr>
+</tbody>
+</table>
+<p><strong>CRYPTOGRAPHIC SETTINGS</strong></p>
+<p>Mục TLS Authentication:</p>
+<ul>
+<li><strong>Enable authentication of TLS packets: Leave Enabled</strong></li>
+<li><strong>Automatically generate a shared TLS authentication key</strong>: Bỏ tick và dán nội dung sau đây vào.</li>
+</ul>
+<pre><code>-----BEGIN OpenVPN Static key V1-----
+e685bdaf659a25a200e2b9e39e51ff03
+0fc72cf1ce07232bd8b2be5e6c670143
+f51e937e670eee09d4f2ea5a6e4e6996
+5db852c275351b86fc4ca892d78ae002
+d6f70d029bd79c4d1c26cf14e9588033
+cf639f8a74809f29f72b9d58f9b8f5fe
+fc7938eade40e9fed6cb92184abb2cc1
+0eb1a296df243b251df0643d53724cdb
+5a92a1d6cb817804c4a9319b57d53be5
+80815bcfcb2df55018cc83fc43bc7ff8
+2d51f9b88364776ee9d12fc85cc7ea5b
+9741c4f598c485316db066d52db4540e
+212e1518a9bd4828219e24b20d88f598
+a196c9de96012090e333519ae18d3509
+9427e7b372d348d352dc4c85e18cd4b9
+3f8a56ddb2e64eb67adfc9b337157ff4
+-----END OpenVPN Static key V1-----
+</code></pre><ul>
+<li><strong>Peer Certificate Authority</strong>: NordVPN_CA;</li>
+<li><strong>Client Certificate</strong>: None (Username and Password required);</li>
+<li><strong>Encryption Algorithm</strong>: AES-256-CBC;</li>
+<li><strong>Auth Digest Algorithm</strong>: SHA512 (512-bit);</li>
+<li><strong>Hardware Crypto</strong>: No hardware crypto acceleration;</li>
+</ul>
+<details >
+<summary><b style="color:;font-weight:normal;">Screenshot</b></summary>
+<div class="markdown-inner">
+<img data-src="https://pnghia.com/images/opnsense/NordVPN/Cryptographic_hu72e772b1dc9ee096000309938e13fa05_44272_filter_1334269291160664337.png" alt="Cryptographic" class="lazyload" />
+</div>
+</details>
 
-<img data-src="https://pnghia.com/images/openwrt/wpad_hu35689987e63617789f0a80b031312963_199964_filter_1334269291160664337.png" alt="wpad install" class="lazyload" />
+<p><strong>TUNNEL SETTINGS</strong></p>
+<table>
+<thead>
+<tr>
+<th>-</th>
+<th>-</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>IPv4 tunnel network</td>
+<td>Để trống</td>
+</tr>
+<tr>
+<td>IPv6 tunnel network</td>
+<td>Để trống</td>
+</tr>
+<tr>
+<td>IPv4 remote network(s)</td>
+<td>Để trống</td>
+</tr>
+<tr>
+<td>IPv6 remote network(s)</td>
+<td>Để trống</td>
+</tr>
+<tr>
+<td>Limit outgoing bandwidth</td>
+<td>Để trống</td>
+</tr>
+<tr>
+<td>Compression</td>
+<td>Enable with adaptive Compression</td>
+</tr>
+<tr>
+<td>Type-of-service</td>
+<td>không check</td>
+</tr>
+<tr>
+<td>Disable IPv6</td>
+<td>check vào</td>
+</tr>
+<tr>
+<td>Don’t pull routes</td>
+<td>không check</td>
+</tr>
+<tr>
+<td>Don’t add/remove routes</td>
+<td>check vào</td>
+</tr>
+</tbody>
+</table>
+<details >
+<summary><b style="color:;font-weight:normal;">screenshot</b></summary>
+<div class="markdown-inner">
+<img data-src="https://pnghia.com/images/opnsense/NordVPN/TUNNEL-SETTINGS_hueb970abcb6953d777c609bf3bb09c36c_21545_filter_1334269291160664337.png" alt="TUNNEL SETTINGS" class="lazyload" />
+</div>
+</details>
 
-
-</p>
+<p><strong>ADVANCED CONFIGURATION</strong></p>
+<ul>
+<li><strong>Advanced</strong>: Dán nội dung bên dưới vào.</li>
+</ul>
+<pre><code>remote-random;
+tun-mtu 1500;
+tun-mtu-extra 32;
+mssfix 1450;
+persist-key;
+persist-tun;
+reneg-sec 0;
+remote-cert-tls server;
+</code></pre><ul>
+<li><strong>Verbosity level</strong>: 3 (recommended) hoặc 1 (default);</li>
+</ul>
+<p>Nhấn <strong>SAVE</strong></p>
+<h3 id="2-thêm-interface-cho-vpn">2. Thêm Interface cho VPN.</h3>
+<ul>
+<li>Vào <strong>Interfaces</strong> -&gt; <strong>Assignments</strong> bấm ào dấu <strong>+</strong> để thêm. mặc định sẽ là <strong>ovpnc1</strong>.</li>
+<li>Bấm vào OPTx (vừa mới tạo) để tiến hành chỉnh sửa.
+<ul>
+<li>Click vào <strong>Enable Interface</strong> và tiến hành chỉnh sửa như sau:
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Description</td>
+<td>NordVPN (hoặc bất cứ thứ gì bạn muốn)</td>
+</tr>
+<tr>
+<td>Block private networks</td>
+<td>bỏ chọn</td>
+</tr>
+<tr>
+<td>Block bogon networks</td>
+<td>bỏ chọn</td>
+</tr>
+<tr>
+<td>IPv4 Configuration Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>IPv6 Configuration Type</td>
+<td>None</td>
+</tr>
+<tr>
+<td>MAC address</td>
+<td>bỏ trống</td>
+</tr>
+<tr>
+<td>MTU</td>
+<td>bỏ trống</td>
+</tr>
+<tr>
+<td>MSS</td>
+<td>bỏ trống</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+</li>
+</ul>
+<p>Không cần thay đổi gì ở <strong>DHCP client configuration</strong>. Nhấn <strong>SAVE</strong>.<br />
+<details >
+<summary><b style="color:;font-weight:normal;">screenshot</b></summary>
+<div class="markdown-inner">
 
 </div>
 </details>
+<br />
+Nhấn <strong>Apply changes</strong></p>
+<h3 id="cấu-hình-tường-lửa">Cấu hình tường lửa</h3>
+<ul>
+<li>
+<p>Vào <strong>Firewall</strong> -&gt; <strong>NAT</strong> -&gt; <strong>Outbound</strong>, chọn <em>Hybrid outbound NAT rule generation (automatically generated rules are applied after manual rules)</em>, click <strong>Save and Apply Changes.</strong></p>
+</li>
+<li>
+<p>Vào <strong>Firewall</strong> -&gt; <strong>Rules</strong> -&gt; <strong>LAN</strong> click vào nút edit ở Rule <strong>Allow VPN_LAN network</strong> . Cuộn xuống mục <strong>Advanced features</strong>, chọn Gateway là NORDVPN_VPNV4.</p>
 </li>
 </ul>
-<h2 id="cấu-hình-fast-roaming">Cấu hình Fast Roaming</h2>
-<p>Sơ đồ ví dụ như sau:<br />
+<p>Click <strong>Save</strong>.</p>
+<ul>
+<li>
+<p>Tạo một Rule mới, click <strong>+Add</strong>, thay đổi <strong>Source</strong> thành <strong>VPN_LAN net</strong> và <strong>Destination</strong> thành <strong>VPN_LAN Address</strong>, không thay đổi bất cứ thứ gì khác sau đó nhấn <strong>Save</strong> và <strong>Apply Changes.</strong></p>
+</li>
+<li>
+<p>Vào <strong>System</strong> -&gt; <strong>Gateways</strong> -&gt; <strong>Single</strong> và thực hiện các thay đổi sau:</p>
+<ul>
+<li>Chỉnh sửa <strong>NORDVPN_VPN6</strong> -&gt; click <strong>Disabled</strong></li>
+<li>Click **SAVE and <strong>Apply changes</strong></li>
+</ul>
+</li>
+<li>
+<p>Bây giờ, vào <strong>VPN</strong> -&gt; <strong>OpenVPN</strong> -&gt; <strong>Connection Status</strong> bạn có thể thấy status chuyển sang trạng thái “up” là được.</p>
+</li>
+</ul>
+<details >
+<summary><b style="color:;font-weight:normal;">screenshot</b></summary>
+<div class="markdown-inner">
+<img data-src="https://pnghia.com/images/opnsense/NordVPN/up1_hu980641e6ec83eba550234a67dd15b181_16498_filter_1334269291160664337.png" alt="up1" class="lazyload" />
 
 
-<img data-src="https://pnghia.com/images/openwrt/netdiagram_hu6e9ab03e68f4fadd6b670bf0013595ac_9944_filter_1334269291160664337.png" alt="Network Diagram" class="lazyload" />
+<br />
 
 
-</p>
-<p>Sau khi cài đặt xong <strong>wpad</strong>, các bạn vào <strong>Settings</strong> &gt; <strong>Network</strong> &gt; <strong>Wireless</strong> &gt; Chọn <strong>Wireless</strong> cần roaming và vào mục <strong>Wireless Security</strong> sẽ thấy tuỳ chọn 802.11r. Set up như hình dưới là xong.</p>
-<p>
+<img data-src="https://pnghia.com/images/opnsense/NordVPN/up2_hu5731ca37e85bc5030fa7d17035ed28ad_15336_filter_1334269291160664337.png" alt="up1" class="lazyload" />
+</div>
+</details>
 
-<img data-src="https://pnghia.com/images/openwrt/802-11r_hu47f014cb1f0cbcff32408a86abbafe10_52187_filter_1334269291160664337.png" alt="802.11r" class="lazyload" />
-
-
-</p>
+<h2 id="iii-cấu-hình-trên-ap-chia-đường-truyền-có-vpn-thành-1-mạng-wifi-riêng">III. Cấu hình trên AP, chia đường truyền có VPN thành 1 mạng Wifi riêng.</h2>
+<h3 id="làm-tương-tự-bài-hướng-dẫn-cấu-hình-openwrt-làm-access-point-ap-và-cách-thêm-vlan-cho-guest-apserialopenwrtcau-hinh-openwrt-lam-ap-modecấu-hình-vlan-cho-guest-wifi">Làm tương tự bài 
+<a href="/serial/openwrt/cau-hinh-openwrt-lam-ap-mode/#c%e1%ba%a5u-h%c3%acnh-vlan-cho-guest-wifi">Hướng dẫn cấu hình OpenWRT làm Access Point (AP) và cách thêm VLAN cho GUEST AP</a>
+</h3>
+<ul>
+<li>Chỉ cần chỉnh sửa lại số VLAN mà các bạn đã set cho đường truyền VPN là được,</li>
+</ul>
+<h5 id="chúc-các-bạn-thành-công-mọi-thắc-mắc-vui-lòng-để-lại-comment-hoặc-liên-hệ-mình">Chúc các bạn thành công. Mọi thắc mắc vui lòng để lại comment hoặc liên hệ mình.</h5>
+<p>Bài viết khác dài nên không thể tránh khỏi sai sót, nếu có thiếu bước nào hoặc kẹt ở bước nào xin hãy cho mình biết. cám ơn các bạn rất nhiều.</p>
 
 		</div>
 		<footer class="post__footer">
@@ -257,13 +554,10 @@
 	<svg class="tags__badge icon icon-tag" width="16" height="16" viewBox="0 0 32 32"><path d="M32 19c0 1-1 2-1 2L21 31s-1 1-2 1-2-1-2-1L2 16c-1-1-1.4-2-1.4-2S0 12.5 0 11V3C0 1.5.8.8.8.8S1.5 0 3 0h8c1.5 0 3 .6 3 .6S15 1 16 2l15 15s1 1 1 2zM7 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></svg>
 	<ul class="tags__list">
 		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/opnsense/" rel="tag">OPNsense</a>
+		</li>
+		<li class="tags__item">
 			<a class="tags__link btn" href="/tags/tutorial/" rel="tag">tutorial</a>
-		</li>
-		<li class="tags__item">
-			<a class="tags__link btn" href="/tags/openwrt/" rel="tag">OpenWRT</a>
-		</li>
-		<li class="tags__item">
-			<a class="tags__link btn" href="/tags/openwrt-config/" rel="tag">OpenWRT Config</a>
 		</li>
 	</ul>
 </div>
@@ -330,7 +624,7 @@
 <link rel="stylesheet" href="/css/isso.min.css">
 <script defer src="/js/helper/markdowntoolbar.min.js"></script>
 <script defer src="/js/helper/isso.min.js" data-isso='https://comments.pnghia.com/' data-isso-require-author='true' data-isso-css='false' data-isso-require-email='true' data-isso-max-comments-top='15' data-isso-max-comments-nested='8' data-isso-reveal-on-click='5' data-isso-reply-notifications='true' data-isso-vote='true' data-isso-vote-levels='-5,-3,0,3,5'></script>
-<section id='isso-thread' data-title='Cấu hình Fast Roaming với OpenWRT' data-isso-id='/serial/openwrt/cau-hinh-wifi-roaming-voi-openwrt/'></section>
+<section id='isso-thread' data-title='Hướng dẫn kết nối NordVPN và chia VLAN cho đường truyền VPN - tách đường truyền có VPN ra 1 AP riêng. [Phần 2]' data-isso-id='/serial/opnsense/huong-dan-ket-noi-nordvpn-va-chia-vlan-phan2/'></section>
 
   
 	
@@ -366,9 +660,15 @@
 
 <nav class="pager flex">
 	<div class="pager__item pager__item--prev">
-		<a class="pager__link" href="/serial/openwrt/huong-dan-cau-hinh-openwrt-quay-pppoe-with-vlan/" rel="prev">
+		<a class="pager__link" href="/serial/opnsense/opnsense-cau-hinh-captive-portal/" rel="prev">
 			<span class="pager__subtitle">«&thinsp;Trước</span>
-			<p class="pager__title">Hướng dẫn cấu hình OpenWRT quay PPPoE có VLAN ID.</p>
+			<p class="pager__title">Hướng dẫn cấu hình Captive Portal trên OPNsense</p>
+		</a>
+	</div>
+	<div class="pager__item pager__item--next">
+		<a class="pager__link" href="/serial/opnsense/huong-dan-ket-noi-nordvpn-va-chia-vlan-phan1/" rel="next">
+			<span class="pager__subtitle">Sau&thinsp;»</span>
+			<p class="pager__title">Hướng dẫn kết nối NordVPN và chia VLAN cho đường truyền VPN - tách đường truyền có VPN ra 1 AP riêng. [Phần 1]</p>
 		</a>
 	</div>
 </nav>

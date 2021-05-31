@@ -8,12 +8,22 @@
     <language>vi-vn</language>
     <lastBuildDate>Sat, 01 May 2021 08:25:14 +0700</lastBuildDate><atom:link href="https://pnghia.com/tags/tutorial/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Hướng dẫn kết nối NordVPN và chia VLAN cho đường truyền VPN - tách đường truyền có VPN ra 1 AP riêng.</title>
-      <link>https://pnghia.com/serial/opnsense/huong-dan-ket-noi-nordvpn-va-chia-vlan/</link>
+      <title>Hướng dẫn kết nối NordVPN và chia VLAN cho đường truyền VPN - tách đường truyền có VPN ra 1 AP riêng. [Phần 1]</title>
+      <link>https://pnghia.com/serial/opnsense/huong-dan-ket-noi-nordvpn-va-chia-vlan-phan1/</link>
       <pubDate>Sat, 01 May 2021 08:25:14 +0700</pubDate>
       
-      <guid>https://pnghia.com/serial/opnsense/huong-dan-ket-noi-nordvpn-va-chia-vlan/</guid>
-      <description>Vì đây là cấu hình nâng cao, các bạn phải hiểu biết một chút về các mục trên Menu của OPNsense, mình sẽ không hướng dẫn chi tiết nên các bạn phải tự suy luận một chút nhé ^^.I. Phần cấu hình trên Modem chạy OPNsense. 1. Tạo một VLAN mới  Đăng nhập vào OPNsense. Từ Menu, truy cập vào mục Interfaces &amp;gt; Other Types &amp;gt; VLAN Click vào Add.</description>
+      <guid>https://pnghia.com/serial/opnsense/huong-dan-ket-noi-nordvpn-va-chia-vlan-phan1/</guid>
+      <description>Bài viết khá dài vì mình hướng dẫn toàn bộ các bước từ tạo VLAN, Tạo Interface, thiết lập firewall, thiết lập cấu hình VPN. thiết lập trên wifi ap&amp;hellip; nên mình sẽ chia bài ra 2 hoặc 3 phần tuỳ vào độ dài của các bài. các bạn nhớ theo dõi nhé. Vì đây là cấu hình nâng cao, các bạn phải hiểu biết một chút về các mục trên Menu của OPNsense, mình sẽ không hướng dẫn chi tiết nên các bạn phải tự suy luận một chút nhé ^^.</description>
+    </item>
+    
+    <item>
+      <title>Hướng dẫn kết nối NordVPN và chia VLAN cho đường truyền VPN - tách đường truyền có VPN ra 1 AP riêng. [Phần 2]</title>
+      <link>https://pnghia.com/serial/opnsense/huong-dan-ket-noi-nordvpn-va-chia-vlan-phan2/</link>
+      <pubDate>Sat, 01 May 2021 08:24:14 +0700</pubDate>
+      
+      <guid>https://pnghia.com/serial/opnsense/huong-dan-ket-noi-nordvpn-va-chia-vlan-phan2/</guid>
+      <description>Vì đây là cấu hình nâng cao, các bạn phải hiểu biết một chút về các mục trên Menu của OPNsense, mình sẽ không hướng dẫn chi tiết nên các bạn phải tự suy luận một chút nhé ^^.&amp;laquo; Xem PHẦN 1 - Thêm VLAN và gán VLAN vào Interface.
+II. Thiết lập cấu hình NordVPN trên OPNsense. 1. Cấu hình VPN Client (NordVPN, các VPN server hỗ trợ giao thức OpenVPN&amp;hellip;)  Vào menu System -&amp;gt; Trust -&amp;gt; Authorities chọn +Add để thêm chứng chỉ mới  Descriptive Name: NordVPN_CA</description>
     </item>
     
     <item>

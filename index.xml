@@ -17,12 +17,22 @@
     </item>
     
     <item>
-      <title>Hướng dẫn kết nối NordVPN và chia VLAN cho đường truyền VPN - tách đường truyền có VPN ra 1 AP riêng.</title>
-      <link>https://pnghia.com/serial/opnsense/huong-dan-ket-noi-nordvpn-va-chia-vlan/</link>
+      <title>Hướng dẫn kết nối NordVPN và chia VLAN cho đường truyền VPN - tách đường truyền có VPN ra 1 AP riêng. [Phần 1]</title>
+      <link>https://pnghia.com/serial/opnsense/huong-dan-ket-noi-nordvpn-va-chia-vlan-phan1/</link>
       <pubDate>Sat, 01 May 2021 08:25:14 +0700</pubDate>
       
-      <guid>https://pnghia.com/serial/opnsense/huong-dan-ket-noi-nordvpn-va-chia-vlan/</guid>
-      <description>Vì đây là cấu hình nâng cao, các bạn phải hiểu biết một chút về các mục trên Menu của OPNsense, mình sẽ không hướng dẫn chi tiết nên các bạn phải tự suy luận một chút nhé ^^.I. Phần cấu hình trên Modem chạy OPNsense. 1. Tạo một VLAN mới  Đăng nhập vào OPNsense. Từ Menu, truy cập vào mục Interfaces &amp;gt; Other Types &amp;gt; VLAN Click vào Add.</description>
+      <guid>https://pnghia.com/serial/opnsense/huong-dan-ket-noi-nordvpn-va-chia-vlan-phan1/</guid>
+      <description>Bài viết khá dài vì mình hướng dẫn toàn bộ các bước từ tạo VLAN, Tạo Interface, thiết lập firewall, thiết lập cấu hình VPN. thiết lập trên wifi ap&amp;hellip; nên mình sẽ chia bài ra 2 hoặc 3 phần tuỳ vào độ dài của các bài. các bạn nhớ theo dõi nhé. Vì đây là cấu hình nâng cao, các bạn phải hiểu biết một chút về các mục trên Menu của OPNsense, mình sẽ không hướng dẫn chi tiết nên các bạn phải tự suy luận một chút nhé ^^.</description>
+    </item>
+    
+    <item>
+      <title>Hướng dẫn kết nối NordVPN và chia VLAN cho đường truyền VPN - tách đường truyền có VPN ra 1 AP riêng. [Phần 2]</title>
+      <link>https://pnghia.com/serial/opnsense/huong-dan-ket-noi-nordvpn-va-chia-vlan-phan2/</link>
+      <pubDate>Sat, 01 May 2021 08:24:14 +0700</pubDate>
+      
+      <guid>https://pnghia.com/serial/opnsense/huong-dan-ket-noi-nordvpn-va-chia-vlan-phan2/</guid>
+      <description>Vì đây là cấu hình nâng cao, các bạn phải hiểu biết một chút về các mục trên Menu của OPNsense, mình sẽ không hướng dẫn chi tiết nên các bạn phải tự suy luận một chút nhé ^^.&amp;laquo; Xem PHẦN 1 - Thêm VLAN và gán VLAN vào Interface.
+II. Thiết lập cấu hình NordVPN trên OPNsense. 1. Cấu hình VPN Client (NordVPN, các VPN server hỗ trợ giao thức OpenVPN&amp;hellip;)  Vào menu System -&amp;gt; Trust -&amp;gt; Authorities chọn +Add để thêm chứng chỉ mới  Descriptive Name: NordVPN_CA</description>
     </item>
     
     <item>
@@ -172,7 +182,7 @@ $ cd /usr/local/lib/python3.7/site-packages/netaddr/eui$ mv ./oui.txt ./oui.txt
       <pubDate>Thu, 02 Apr 2020 19:51:12 +0700</pubDate>
       
       <guid>https://pnghia.com/posts/openwrt-newifi3-d2/</guid>
-      <description>-&amp;gt; Hướng dẫn UP Firmware  ROM được @kizimirua build từ Lean OpenWRT https://github.com/coolsnowwolf/ledevar r = new XMLHttpRequest();r.addEventListener(&#39;load&#39;, function() {document.querySelector(&#39;#a634721958&#39;).innerText = JSON.parse(this.responseText).count_unique})r.open(&#39;GET&#39;, &#39;https://stats.pnghia.com/counter/&#39; + encodeURIComponent(&#34;https://github.com/coolsnowwolf/lede&#34;).replace(/\/$/, &#39;&#39;) + &#39;.json&#39;)r.send()tương thích với NEWIFI3 D2 OpenWrt thế hệ thứ 3
+      <description>-&amp;gt; Hướng dẫn UP Firmware  ROM được @kizimirua build từ Lean OpenWRT https://github.com/coolsnowwolf/ledevar r = new XMLHttpRequest();r.addEventListener(&#39;load&#39;, function() {document.querySelector(&#39;#a417329568&#39;).innerText = JSON.parse(this.responseText).count_unique})r.open(&#39;GET&#39;, &#39;https://stats.pnghia.com/counter/&#39; + encodeURIComponent(&#34;https://github.com/coolsnowwolf/lede&#34;).replace(/\/$/, &#39;&#39;) + &#39;.json&#39;)r.send()tương thích với NEWIFI3 D2 OpenWrt thế hệ thứ 3
 Có 2 bản để lựa chọn là bản FULL và bản rút gọn, bài viết này sẽ tổng hợp lại cả 2 bản cho các bạn dễ lựa chọn.</description>
     </item>
     

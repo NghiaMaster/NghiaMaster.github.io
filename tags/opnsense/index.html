@@ -19,7 +19,7 @@
 <meta property="og:description" content="Nghĩa Phan&#39;s Blog - Viết vì đam mê" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://pnghia.com/tags/opnsense/" />
-<meta property="og:updated_time" content="2021-05-01T08:49:14+07:00" />
+<meta property="og:updated_time" content="2021-05-01T08:25:14+07:00" />
 
 
 	<link rel="stylesheet" href="/css/style.min.css">
@@ -165,20 +165,38 @@
 	</header><article class="list__item post">
 	<header class="list__header">
 		<h2 class="list__title post__title">
-			<a href="/serial/opnsense/huong-dan-ket-noi-nordvpn-va-chia-vlan/" rel="bookmark">Hướng dẫn kết nối NordVPN và chia VLAN cho đường truyền VPN - tách đường truyền có VPN ra 1 AP riêng.
+			<a href="/serial/opnsense/huong-dan-ket-noi-nordvpn-va-chia-vlan-phan1/" rel="bookmark">Hướng dẫn kết nối NordVPN và chia VLAN cho đường truyền VPN - tách đường truyền có VPN ra 1 AP riêng. [Phần 1]
 			</a>
 		</h2>
 		<div class="list__meta meta">
 <div class="meta__item-datetime meta__item">
-	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2021-05-01T08:25:14&#43;07:00">1 tháng 5, 2021</time>
-	<time class="meta__text" datetime="2021-05-01T08:49:14&#43;07:00">(Cập nhật lần cuối: 1 tháng 5, 2021)</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/opnsense-config/" rel="category">OPNsense Config</a>
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2021-05-01T08:25:14&#43;07:00">1 tháng 5, 2021</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/opnsense-config/" rel="category">OPNsense Config</a>
 	</span>
 </div>
 </div>
 	</header>
 	<div class="content list__excerpt post__content clearfix">
 		
-		Hướng dẫn sẽ giúp các bạn biết cách kêt nối NordVPN trên OPNsense và chia VLAN cho nó. Khi đã có VLAN, các bạn có thể dùng WIFI AP để thiết lập 1 SSID riêng - khi muốn kết nối đến VPN, các bạn chỉ cần kết nối tới mạng WIFI đã thiết lập mà không cần sử dụng phần mềm VPN trên điện thoại.
+		- Hướng dẫn sẽ giúp các bạn biết cách kêt nối NordVPN trên OPNsense và chia VLAN cho nó. Khi đã có VLAN, các bạn có thể dùng WIFI AP để thiết lập 1 SSID riêng - khi muốn kết nối đến VPN, các bạn chỉ cần kết nối tới mạng WIFI đã thiết lập mà không cần sử dụng phần mềm VPN trên điện thoại. [PHẦN 1. Thêm VLAN và gán vào Interface, Thiết lập DHCP Server.]
+	  
+	</div>
+</article>
+<article class="list__item post">
+	<header class="list__header">
+		<h2 class="list__title post__title">
+			<a href="/serial/opnsense/huong-dan-ket-noi-nordvpn-va-chia-vlan-phan2/" rel="bookmark">Hướng dẫn kết nối NordVPN và chia VLAN cho đường truyền VPN - tách đường truyền có VPN ra 1 AP riêng. [Phần 2]
+			</a>
+		</h2>
+		<div class="list__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2021-05-01T08:24:14&#43;07:00">1 tháng 5, 2021</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/opnsense-config/" rel="category">OPNsense Config</a>
+	</span>
+</div>
+</div>
+	</header>
+	<div class="content list__excerpt post__content clearfix">
+		
+		- Tiếp nối bài Hướng dẫn kết nối NordVPN và chia VLAN cho đường truyền VPN - tách đường truyền có VPN ra 1 AP riêng PHẦN 1., ở Phần 2 sẽ là phần Thiết lập cấu hình NordVPN.
 	  
 	</div>
 </article>
@@ -372,11 +390,11 @@
 	<h3 class="widget__title">Bài viết gần đây</h3>
 	<div class="widget__content">
 		<ul class="widget__list">
-			<li class="widget__item"><a class="widget__link" href="/serial/opnsense/huong-dan-ket-noi-nordvpn-va-chia-vlan/">Hướng dẫn kết nối NordVPN và chia VLAN cho đường truyền VPN - tách đường truyền có VPN ra 1 AP riêng.</a></li>
+			<li class="widget__item"><a class="widget__link" href="/serial/opnsense/huong-dan-ket-noi-nordvpn-va-chia-vlan-phan1/">Hướng dẫn kết nối NordVPN và chia VLAN cho đường truyền VPN - tách đường truyền có VPN ra 1 AP riêng. [Phần 1]</a></li>
+			<li class="widget__item"><a class="widget__link" href="/serial/opnsense/huong-dan-ket-noi-nordvpn-va-chia-vlan-phan2/">Hướng dẫn kết nối NordVPN và chia VLAN cho đường truyền VPN - tách đường truyền có VPN ra 1 AP riêng. [Phần 2]</a></li>
 			<li class="widget__item"><a class="widget__link" href="/serial/openwrt/cau-hinh-wifi-roaming-voi-openwrt/">Cấu hình Fast Roaming với OpenWRT</a></li>
 			<li class="widget__item"><a class="widget__link" href="/serial/openwrt/huong-dan-cau-hinh-openwrt-quay-pppoe-with-vlan/">Hướng dẫn cấu hình OpenWRT quay PPPoE có VLAN ID.</a></li>
 			<li class="widget__item"><a class="widget__link" href="/serial/openwrt/huong-dan-cau-hinh-openwrt-quay-pppoe/">Hướng dẫn cấu hình OpenWRT quay PPPoE</a></li>
-			<li class="widget__item"><a class="widget__link" href="/serial/opnsense/opnsense-cau-hinh-captive-portal/">Hướng dẫn cấu hình Captive Portal trên OPNsense</a></li>
 		</ul>
 	</div>
 </div>
@@ -435,7 +453,7 @@
 		<div class="footer__copyright">
 			&copy; 2021 pNghia.com.
 			<span class="footer__copyright-credits">Powered by <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">goHugo</a> | <a href="https://posativ.org/isso/" rel="nofollow noopener" target="_blank">ISSO</a> | <a href="https://www.goatcounter.com/" rel="nofollow noopener" target="_blank">goatCounter</a> and the <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span><br />
-			<span>v.16:58 - 29 tháng 05, 2021</span>
+			<span>v.11:18 - 31 tháng 05, 2021</span>
 		</div>
 	</div>
 </footer>
