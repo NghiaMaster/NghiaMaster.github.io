@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>OpenWRT PPPoE VLAN on pNghia.com</title>
+    <link>https://pnghia.com/tags/openwrt-pppoe-vlan/</link>
+    <description>Recent content in OpenWRT PPPoE VLAN on pNghia.com</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>vi-vn</language>
+    <lastBuildDate>Wed, 06 Jan 2021 10:49:11 +0700</lastBuildDate><atom:link href="https://pnghia.com/tags/openwrt-pppoe-vlan/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hướng dẫn cấu hình OpenWRT quay PPPoE có VLAN ID.</title>
+      <link>https://pnghia.com/serial/openwrt/huong-dan-cau-hinh-openwrt-quay-pppoe-with-vlan/</link>
+      <pubDate>Wed, 06 Jan 2021 10:49:11 +0700</pubDate>
+      
+      <guid>https://pnghia.com/serial/openwrt/huong-dan-cau-hinh-openwrt-quay-pppoe-with-vlan/</guid>
+      <description>Ở bài trước mình đã Hướng dẫn cấu hình OpenWRT quay PPPoE
+khi nhà cung cấp mạng không set VLAN hoặc khi Brigde modem nhà mạng đã hỗ trợ set VLAN ngay trong phần thiết lập Brigde của modem. Trong bài viết này, mình sẽ hướng dẫn các bạn setup OpenWRT quay PPPoE kèm VLAN vì một số modem nhà mạng không cho phép cấu hình số VLAN ở thiết lập Brigde Mode nhưng bắt buộc phải có số VLAN mới quay PPPoE được, vì vậy - chỉ còn cách là Set số VLAN đó ngay trên OpenWRT.</description>
+    </item>
+    
+  </channel>
+</rss>
