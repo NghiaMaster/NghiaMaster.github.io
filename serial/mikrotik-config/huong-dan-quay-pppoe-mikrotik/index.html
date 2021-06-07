@@ -12,15 +12,15 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Hướng dẫn quay PPPoE trên router Mikrotik - pNghia.com</title>
+	<title>Hướng dẫn quay PPPoE, DHCP server, cấu hình cơ bản để truy cập internet trên router Mikrotik - pNghia.com</title>
 	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
 	<meta name="description" content="Bài biết sẽ hướng dẫn các bạn quay PPPoE trên Router Mikrotik, thiết lập DNS server sau khi đã có tài khoản do nhà mạng cung cấp.">
-		<meta property="og:title" content="Hướng dẫn quay PPPoE trên router Mikrotik" />
+		<meta property="og:title" content="Hướng dẫn quay PPPoE, DHCP server, cấu hình cơ bản để truy cập internet trên router Mikrotik" />
 <meta property="og:description" content="Bài biết sẽ hướng dẫn các bạn quay PPPoE trên Router Mikrotik, thiết lập DNS server sau khi đã có tài khoản do nhà mạng cung cấp." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://pnghia.com/serial/mikrotik-config/huong-dan-quay-pppoe-mikrotik/" />
 <meta property="article:published_time" content="2021-06-05T10:08:15+07:00" />
-<meta property="article:modified_time" content="2021-06-05T10:08:15+07:00" />
+<meta property="article:modified_time" content="2021-06-05T11:31:39+07:00" />
 
 
 	<link rel="stylesheet" href="/css/style.min.css">
@@ -179,7 +179,7 @@
 <main class="main" role="main">
 	<article class="post">
 		<header class="post__header">
-			<h1 class="post__title">Hướng dẫn quay PPPoE trên router Mikrotik</h1>
+			<h1 class="post__title">Hướng dẫn quay PPPoE, DHCP server, cấu hình cơ bản để truy cập internet trên router Mikrotik</h1>
 			<div class="post__meta meta">
 <script defer>
 	var r = new XMLHttpRequest();
@@ -189,7 +189,9 @@
   r.send()
   </script>
 <div class="meta__item-datetime meta__item">
-	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2021-06-05T10:08:15&#43;07:00">5 tháng 6, 2021</time><div class="meta__item"><svg xmlns="http://www.w3.org/2000/svg" class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 24 24"><path d="M15 12c0 1.657-1.343 3-3 3s-3-1.343-3-3c0-.199.02-.393.057-.581 1.474.541 2.927-.882 2.405-2.371.174-.03.354-.048.538-.048 1.657 0 3 1.344 3 3zm-2.985-7c-7.569 0-12.015 6.551-12.015 6.551s4.835 7.449 12.015 7.449c7.733 0 11.985-7.449 11.985-7.449s-4.291-6.551-11.985-6.551zm-.015 12c-2.761 0-5-2.238-5-5 0-2.761 2.239-5 5-5 2.762 0 5 2.239 5 5 0 2.762-2.238 5-5 5z"/></svg>
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2021-06-05T10:08:15&#43;07:00">5 tháng 6, 2021</time>
+	<time class="meta__text" datetime="2021-06-05T11:31:39&#43;07:00">(
+		Cập nhật: 5 tháng 6, 2021)</time>&nbsp;<div class="meta__item"><svg xmlns="http://www.w3.org/2000/svg" class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 24 24"><path d="M15 12c0 1.657-1.343 3-3 3s-3-1.343-3-3c0-.199.02-.393.057-.581 1.474.541 2.927-.882 2.405-2.371.174-.03.354-.048.538-.048 1.657 0 3 1.344 3 3zm-2.985-7c-7.569 0-12.015 6.551-12.015 6.551s4.835 7.449 12.015 7.449c7.733 0 11.985-7.449 11.985-7.449s-4.291-6.551-11.985-6.551zm-.015 12c-2.761 0-5-2.238-5-5 0-2.761 2.239-5 5-5 2.762 0 5 2.239 5 5 0 2.762-2.238 5-5 5z"/></svg>
 <span class="meta__text" id="goatCounter_value_page_pv">3456</span>&nbsp;&bull;
 	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M20 15c0 .552-.448 1-1 1s-1-.448-1-1 .448-1 1-1 1 .448 1 1m-3 0c0 .552-.448 1-1 1s-1-.448-1-1 .448-1 1-1 1 .448 1 1m-3 0c0 .552-.448 1-1 1s-1-.448-1-1 .448-1 1-1 1 .448 1 1m5.415 4.946c-1 .256-1.989.482-3.324.482-3.465 0-7.091-2.065-7.091-5.423 0-3.128 3.14-5.672 7-5.672 3.844 0 7 2.542 7 5.672 0 1.591-.646 2.527-1.481 3.527l.839 2.686-2.943-1.272zm-13.373-3.375l-4.389 1.896 1.256-4.012c-1.121-1.341-1.909-2.665-1.909-4.699 0-4.277 4.262-7.756 9.5-7.756 5.018 0 9.128 3.194 9.467 7.222-1.19-.566-2.551-.889-3.967-.889-4.199 0-8 2.797-8 6.672 0 .712.147 1.4.411 2.049-.953-.126-1.546-.272-2.369-.483m17.958-1.566c0-2.172-1.199-4.015-3.002-5.21l.002-.039c0-5.086-4.988-8.756-10.5-8.756-5.546 0-10.5 3.698-10.5 8.756 0 1.794.646 3.556 1.791 4.922l-1.744 5.572 6.078-2.625c.982.253 1.932.407 2.85.489 1.317 1.953 3.876 3.314 7.116 3.314 1.019 0 2.105-.135 3.242-.428l4.631 2-1.328-4.245c.871-1.042 1.364-2.384 1.364-3.75"/></svg>
 <a class="meta__text" href="#isso-thread">Comments</a></div>
@@ -197,13 +199,47 @@
 <div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/tutorial/" rel="category">Tutorial</a>, <a class="meta__link" href="/categories/mikrotik/" rel="category">Mikrotik</a>
 	</span>
 </div></div>
-		</header><ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid"
+		</header>
+<div class="post__toc toc">
+	<div class="toc__title">Mục lục</div>
+	<div class="toc__menu">
+		<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#i-quay-pppoe">I. Quay PPPoE</a></li>
+        <li><a href="#ii-thiết-lập-server-dns">II. Thiết lập Server DNS.</a></li>
+        <li><a href="#iii-tạo-brigde-và-thêm-cổng-lan-vào-brigde">III. Tạo Brigde và thêm Cổng LAN vào Brigde</a>
+          <ul>
+            <li><a href="#1-tạo-brigde">1. Tạo Brigde</a></li>
+            <li><a href="#2-thêm-port-vào-brigde">2. Thêm Port vào Brigde</a></li>
+          </ul>
+        </li>
+        <li><a href="#iv-thiết-lập-dhcp-server">IV. Thiết lập DHCP Server</a>
+          <ul>
+            <li><a href="#1-tạo-1-khoảng-ip---dhcp-server-sẽ-cấp-ip-cho-client-trong-khoảng-ip-này">1. Tạo 1 khoảng IP - DHCP server sẽ cấp IP cho client trong khoảng IP này.</a></li>
+            <li><a href="#2-tạo-dhcp-server-sau-khi-đã-tạo-1-dãi-ip">2. Tạo DHCP Server sau khi đã tạo 1 dãi IP</a></li>
+          </ul>
+        </li>
+        <li><a href="#v-cấu-hình-nat-để-client-có-thể-truy-cập-internet">V. Cấu hình NAT để client có thể truy cập Internet</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+	</div>
+</div>
+<ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid"
 			data-ad-client="ca-pub-5013797695727204" data-ad-slot="2834381782"></ins>
 		<script>
 			(adsbygoogle = window.adsbygoogle || []).push({});
 		</script>
 		<div class="content post__content clearfix">
-			<h3 id="quay-pppoe">Quay PPPoE</h3>
+			  
+<blockquote class="book-hint danger">
+Một số thuật ngữ hoặc mô tả có gì sai sót mong các bạn bỏ qua nhé 😁
+</blockquote>
+
+<h3 id="i-quay-pppoe">I. Quay PPPoE</h3>
 <ul>
 <li>Click vào <strong>PPP</strong> &gt; click vào dấu <strong>+</strong> màu xanh &gt; chọn <strong>PPPoE client</strong><br />
 
@@ -232,7 +268,7 @@
 </li>
 <li>Sau khi kết nối điền đủ thông số, chuyển qua tab <strong>status</strong> nếu thấy hiện IP ở <strong>Local Address</strong> và <strong>Remote Address</strong>, dưới chân ứng dụng có hiện <strong>Status: Connected</strong> là đã thành công. Nếu không có các dấu hiệu đó thì các bạn kiểm tra lại tài khoản PPPoE, thiết bị Brigde &hellip;</li>
 </ul>
-<h3 id="thiết-lập-server-dns">Thiết lập Server DNS.</h3>
+<h3 id="ii-thiết-lập-server-dns">II. Thiết lập Server DNS.</h3>
 <ul>
 <li>Click vào <strong>IP</strong> &gt; <strong>DNS</strong> &gt; Ở dòng server điền <strong>8.8.8.8</strong>, click vào dấu mũi lên xuống để thêm server thứ 2, điền <strong>8.8.4.4</strong>.<br />
   
@@ -251,7 +287,102 @@
 
 
 </p>
-<h3 id="bài-viết-đang-được-hoàn-thiện-vui-lòng-quay-lại-sau">Bài viết đang được hoàn thiện&hellip;. vui lòng quay lại sau</h3>
+<ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-5013797695727204" data-ad-slot="5117903966"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+
+<h3 id="iii-tạo-brigde-và-thêm-cổng-lan-vào-brigde">III. Tạo Brigde và thêm Cổng LAN vào Brigde</h3>
+<h4 id="1-tạo-brigde">1. Tạo Brigde</h4>
+<ul>
+<li>Click vào mục <strong>Brigde</strong> &gt; Click vào dấu <strong>+</strong> &gt; đặt tên &gt; Nhấn OK.</li>
+</ul>
+<p>
+
+<img data-src="https://pnghia.com/images/mik/brigdeadd_hu24f72f73fc6196562916437d89f8dfe1_64585_filter_1334269291160664337.png" alt="add brigde" class="lazyload" />
+
+
+</p>
+<h4 id="2-thêm-port-vào-brigde">2. Thêm Port vào Brigde</h4>
+<ul>
+<li>Click vào <strong>Port</strong> &gt; Click vào dấu <strong>+</strong> &gt; chọn port &gt; OK.</li>
+</ul>
+<p>
+
+<img data-src="https://pnghia.com/images/mik/addport_hu55f143b62fbf7c7aca9ad1ffa3bb0bae_64206_filter_1334269291160664337.png" alt="add port" class="lazyload" />
+
+
+</p>
+<ul>
+<li>Làm tương tự cho tới hết số port</li>
+</ul>
+<h3 id="iv-thiết-lập-dhcp-server">IV. Thiết lập DHCP Server</h3>
+<h4 id="1-tạo-1-khoảng-ip---dhcp-server-sẽ-cấp-ip-cho-client-trong-khoảng-ip-này">1. Tạo 1 khoảng IP - DHCP server sẽ cấp IP cho client trong khoảng IP này.</h4>
+<ul>
+<li>Click vào mục <strong>IP</strong> &gt; chọn <strong>Pool</strong> &gt; Click vào dấu <strong>+</strong> &gt; đặt tên tuỳ ý &gt; điền khoảng IP &gt; nhấn OK</li>
+</ul>
+<p>
+
+<img data-src="https://pnghia.com/images/mik/pooladd_hu48216568b8a84134a1f1f95b3a1f82e0_63579_filter_1334269291160664337.png" alt="pool add" class="lazyload" />
+
+
+</p>
+<h4 id="2-tạo-dhcp-server-sau-khi-đã-tạo-1-dãi-ip">2. Tạo DHCP Server sau khi đã tạo 1 dãi IP</h4>
+<ul>
+<li>Click vào mục <strong>IP</strong> &gt; <strong>DHCP Server</strong> &gt; click vào dấu <strong>+</strong>
+<ul>
+<li>Mục số 4: Điền tên bất kì</li>
+<li>Mục số 5: Chọn Port</li>
+<li>Mục số 6: Điền Lease time (giờ:phút:giây).</li>
+<li>Mục số 7: Chọn dãi IP đã tạo lúc nãy.<br />
+
+
+<img data-src="https://pnghia.com/images/mik/dhcp_hu5fa4c2ebe13d326b6996cfed91b02d35_78675_filter_1334269291160664337.png" alt="dhcp" class="lazyload" />
+
+
+</li>
+</ul>
+</li>
+<li>Nhấn <strong>OK</strong> và chuyển qua tab <strong>Network</strong>
+<ul>
+<li>Mục Address: 192.168.88.0/24 (IP mặc định của Mikrotik là 192.168.88.1 - Tuỳ theo IP bạn đã set là gì mà sửa lại cho đúng)</li>
+<li>Mục Gateway: 192.168.88.1<br />
+
+
+
+</li>
+</ul>
+</li>
+</ul>
+<p>Nhấn <strong>OK</strong><br />
+<ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-5013797695727204" data-ad-slot="5117903966"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</p>
+<h3 id="v-cấu-hình-nat-để-client-có-thể-truy-cập-internet">V. Cấu hình NAT để client có thể truy cập Internet</h3>
+<ul>
+<li>Vào mục <strong>IP</strong> &gt; <strong>Firewall</strong> &gt; Chuyển qua tab <strong>NAT</strong>
+<ul>
+<li>Mục số 3: Chọn <em>srcnat</em></li>
+<li>Mục số 4: Chọn Interface là PPPoE đã cấu hình<br />
+
+
+<img data-src="https://pnghia.com/images/mik/NAT_huadddd851572dea3ef43d64daf04236f7_80212_filter_1334269291160664337.png" alt="NAT" class="lazyload" />
+
+
+</li>
+</ul>
+</li>
+</ul>
+<p>Chuyển qua tab <strong>Action</strong></p>
+<ul>
+<li>Mục số 1: Chọn <em>masquerade</em><br />
+
+
+<img data-src="https://pnghia.com/images/mik/NAT2_hu34efa8da431969355a7f94f3c661f5e3_60624_filter_1334269291160664337.png" alt="NAT2" class="lazyload" />
+
+
+</li>
+</ul>
+<p>Nhấn <strong>OK</strong></p>
+<p>Sau khi hoàn thành xong các bước trên đây thì cơ bản đã truy cập được internet rồi đó.</p>
 
 		</div>
 		<footer class="post__footer">
@@ -333,7 +464,7 @@
 <link rel="stylesheet" href="/css/isso.min.css">
 <script defer src="/js/helper/markdowntoolbar.min.js"></script>
 <script defer src="/js/helper/isso.min.js" data-isso='https://comments.pnghia.com/' data-isso-require-author='true' data-isso-css='false' data-isso-require-email='true' data-isso-max-comments-top='15' data-isso-max-comments-nested='8' data-isso-reveal-on-click='5' data-isso-reply-notifications='true' data-isso-vote='true' data-isso-vote-levels='-5,-3,0,3,5'></script>
-<section id='isso-thread' data-title='Hướng dẫn quay PPPoE trên router Mikrotik' data-isso-id='/serial/mikrotik-config/huong-dan-quay-pppoe-mikrotik/'></section>
+<section id='isso-thread' data-title='Hướng dẫn quay PPPoE, DHCP server, cấu hình cơ bản để truy cập internet trên router Mikrotik' data-isso-id='/serial/mikrotik-config/huong-dan-quay-pppoe-mikrotik/'></section>
 
   
 	
@@ -386,7 +517,7 @@
 		<div class="footer__copyright">
 			&copy; 2021 pNghia.com.
 			<span class="footer__copyright-credits">Powered by <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">goHugo</a> | <a href="https://posativ.org/isso/" rel="nofollow noopener" target="_blank">ISSO</a> | <a href="https://www.goatcounter.com/" rel="nofollow noopener" target="_blank">goatCounter</a> and the <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span><br />
-			<span>v.11:30 - 05 tháng 06, 2021</span>
+			<span>v.09:25 - 07 tháng 06, 2021</span>
 		</div>
 	</div>
 </footer>

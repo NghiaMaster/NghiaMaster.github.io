@@ -5,24 +5,23 @@
     <link>https://pnghia.com/serial/mikrotik-config/</link>
     <description>Recent content in Loạt bài viết hướng dẫn cấu hình Mikrotik được sưu tầm từ nhiều nguồn on pNghia.com</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>vi-vn</language>
-    <lastBuildDate>Sat, 05 Jun 2021 10:21:26 +0700</lastBuildDate><atom:link href="https://pnghia.com/serial/mikrotik-config/index.xml" rel="self" type="application/rss+xml" />
+    <language>vi-vn</language><atom:link href="https://pnghia.com/serial/mikrotik-config/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hướng dẫn thiết lập cơ bản và các cách cấu hình router Mikrotik</title>
       <link>https://pnghia.com/serial/mikrotik-config/huong-dan-thiet-lap-va-cau-hinh-co-ban-router-mikrotik/</link>
       <pubDate>Sat, 05 Jun 2021 10:21:26 +0700</pubDate>
       
       <guid>https://pnghia.com/serial/mikrotik-config/huong-dan-thiet-lap-va-cau-hinh-co-ban-router-mikrotik/</guid>
-      <description>Bài viết này (và mọi hướng dẫn sau này) sử dụng phần mềm Winbox trên máy tính để cấu hình vì đó là cách đơn giản và hiệu quả nhất để cấu hình router Mikrotik.1. Tải phần mềm Winbox từ trang chủ.  Các bạn truy cập vào trang chủ: https://mikrotik.com/var r = new XMLHttpRequest();r.addEventListener(&#39;load&#39;, function() {document.querySelector(&#39;#a186375924&#39;).innerText = JSON.parse(this.responseText).count_unique})r.open(&#39;GET&#39;, &#39;https://stats.pnghia.com/counter/&#39; + encodeURIComponent(&#34;https://mikrotik.com/&#34;).replace(/\/$/, &#39;&#39;) + &#39;.</description>
+      <description>Bài viết này (và mọi hướng dẫn sau này) sử dụng phần mềm Winbox trên máy tính để cấu hình vì đó là cách đơn giản và hiệu quả nhất để cấu hình router Mikrotik.1. Tải phần mềm Winbox từ trang chủ.  Các bạn truy cập vào trang chủ: https://mikrotik.com/var r = new XMLHttpRequest();r.addEventListener(&#39;load&#39;, function() {document.querySelector(&#39;#a684917253&#39;).innerText = JSON.parse(this.responseText).count_unique})r.open(&#39;GET&#39;, &#39;https://stats.pnghia.com/counter/&#39; + encodeURIComponent(&#34;https://mikrotik.com/&#34;).replace(/\/$/, &#39;&#39;) + &#39;.</description>
     </item>
     
     <item>
-      <title>Hướng dẫn quay PPPoE trên router Mikrotik</title>
+      <title>Hướng dẫn quay PPPoE, DHCP server, cấu hình cơ bản để truy cập internet trên router Mikrotik</title>
       <link>https://pnghia.com/serial/mikrotik-config/huong-dan-quay-pppoe-mikrotik/</link>
       <pubDate>Sat, 05 Jun 2021 10:08:15 +0700</pubDate>
       
       <guid>https://pnghia.com/serial/mikrotik-config/huong-dan-quay-pppoe-mikrotik/</guid>
-      <description>Quay PPPoE  Click vào PPP &amp;gt; click vào dấu + màu xanh &amp;gt; chọn PPPoE client
+      <description>Một số thuật ngữ hoặc mô tả có gì sai sót mong các bạn bỏ qua nhé 😁I. Quay PPPoE  Click vào PPP &amp;gt; click vào dấu + màu xanh &amp;gt; chọn PPPoE client
  Điền tên cho dễ nhớ (để mặc định cũng được) Chọn cổng WAN (đa số là cổng số 1) Chuyển sang tab Dial Out
  Dòng User: Điêu tài khoản PPPoE do nhà mạng cung cấp (có hgi trong hợp đồng hoặc họi tổng đài hỏi) Dòng Password: Điền mật khẩu của tài khoản PPPoE Nhấn OK</description>
     </item>
