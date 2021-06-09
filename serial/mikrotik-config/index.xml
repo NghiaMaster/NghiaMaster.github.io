@@ -12,7 +12,7 @@
       <pubDate>Sat, 05 Jun 2021 10:21:26 +0700</pubDate>
       
       <guid>https://pnghia.com/serial/mikrotik-config/huong-dan-thiet-lap-va-cau-hinh-co-ban-router-mikrotik/</guid>
-      <description>Bài viết này (và mọi hướng dẫn sau này) sử dụng phần mềm Winbox trên máy tính để cấu hình vì đó là cách đơn giản và hiệu quả nhất để cấu hình router Mikrotik.1. Tải phần mềm Winbox từ trang chủ.  Các bạn truy cập vào trang chủ: https://mikrotik.com/var r = new XMLHttpRequest();r.addEventListener(&#39;load&#39;, function() {document.querySelector(&#39;#a684917253&#39;).innerText = JSON.parse(this.responseText).count_unique})r.open(&#39;GET&#39;, &#39;https://stats.pnghia.com/counter/&#39; + encodeURIComponent(&#34;https://mikrotik.com/&#34;).replace(/\/$/, &#39;&#39;) + &#39;.</description>
+      <description>About Mikrotik  MikroTik is a Latvian company which was founded in 1996 to develop routers and wireless ISP systems. MikroTik now provides hardware and software for Internet connectivity in most of the countries around the world. Our experience in using industry standard PC hardware and complete routing systems allowed us in 1997 to create the RouterOS software system that provides extensive stability, controls, and flexibility for all kinds of data interfaces and routing.</description>
     </item>
     
     <item>

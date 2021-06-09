@@ -20,7 +20,7 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://pnghia.com/serial/mikrotik-config/huong-dan-thiet-lap-va-cau-hinh-co-ban-router-mikrotik/" />
 <meta property="article:published_time" content="2021-06-05T10:21:26+07:00" />
-<meta property="article:modified_time" content="2021-06-05T11:31:39+07:00" />
+<meta property="article:modified_time" content="2021-06-07T09:27:16+07:00" />
 
 
 	<link rel="stylesheet" href="/css/style.min.css">
@@ -190,8 +190,8 @@
   </script>
 <div class="meta__item-datetime meta__item">
 	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2021-06-05T10:21:26&#43;07:00">5 tháng 6, 2021</time>
-	<time class="meta__text" datetime="2021-06-05T11:31:39&#43;07:00">(
-		Cập nhật: 5 tháng 6, 2021)</time>&nbsp;<div class="meta__item"><svg xmlns="http://www.w3.org/2000/svg" class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 24 24"><path d="M15 12c0 1.657-1.343 3-3 3s-3-1.343-3-3c0-.199.02-.393.057-.581 1.474.541 2.927-.882 2.405-2.371.174-.03.354-.048.538-.048 1.657 0 3 1.344 3 3zm-2.985-7c-7.569 0-12.015 6.551-12.015 6.551s4.835 7.449 12.015 7.449c7.733 0 11.985-7.449 11.985-7.449s-4.291-6.551-11.985-6.551zm-.015 12c-2.761 0-5-2.238-5-5 0-2.761 2.239-5 5-5 2.762 0 5 2.239 5 5 0 2.762-2.238 5-5 5z"/></svg>
+	<time class="meta__text" datetime="2021-06-07T09:27:16&#43;07:00">(
+		Cập nhật: 7 tháng 6, 2021)</time>&nbsp;<div class="meta__item"><svg xmlns="http://www.w3.org/2000/svg" class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 24 24"><path d="M15 12c0 1.657-1.343 3-3 3s-3-1.343-3-3c0-.199.02-.393.057-.581 1.474.541 2.927-.882 2.405-2.371.174-.03.354-.048.538-.048 1.657 0 3 1.344 3 3zm-2.985-7c-7.569 0-12.015 6.551-12.015 6.551s4.835 7.449 12.015 7.449c7.733 0 11.985-7.449 11.985-7.449s-4.291-6.551-11.985-6.551zm-.015 12c-2.761 0-5-2.238-5-5 0-2.761 2.239-5 5-5 2.762 0 5 2.239 5 5 0 2.762-2.238 5-5 5z"/></svg>
 <span class="meta__text" id="goatCounter_value_page_pv">3456</span>&nbsp;&bull;
 	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M20 15c0 .552-.448 1-1 1s-1-.448-1-1 .448-1 1-1 1 .448 1 1m-3 0c0 .552-.448 1-1 1s-1-.448-1-1 .448-1 1-1 1 .448 1 1m-3 0c0 .552-.448 1-1 1s-1-.448-1-1 .448-1 1-1 1 .448 1 1m5.415 4.946c-1 .256-1.989.482-3.324.482-3.465 0-7.091-2.065-7.091-5.423 0-3.128 3.14-5.672 7-5.672 3.844 0 7 2.542 7 5.672 0 1.591-.646 2.527-1.481 3.527l.839 2.686-2.943-1.272zm-13.373-3.375l-4.389 1.896 1.256-4.012c-1.121-1.341-1.909-2.665-1.909-4.699 0-4.277 4.262-7.756 9.5-7.756 5.018 0 9.128 3.194 9.467 7.222-1.19-.566-2.551-.889-3.967-.889-4.199 0-8 2.797-8 6.672 0 .712.147 1.4.411 2.049-.953-.126-1.546-.272-2.369-.483m17.958-1.566c0-2.172-1.199-4.015-3.002-5.21l.002-.039c0-5.086-4.988-8.756-10.5-8.756-5.546 0-10.5 3.698-10.5 8.756 0 1.794.646 3.556 1.791 4.922l-1.744 5.572 6.078-2.625c.982.253 1.932.407 2.85.489 1.317 1.953 3.876 3.314 7.116 3.314 1.019 0 2.105-.135 3.242-.428l4.631 2-1.328-4.245c.871-1.042 1.364-2.384 1.364-3.75"/></svg>
 <a class="meta__text" href="#isso-thread">Comments</a></div>
@@ -205,32 +205,62 @@
 			(adsbygoogle = window.adsbygoogle || []).push({});
 		</script>
 		<div class="content post__content clearfix">
-			  
+			<h2 id="about-mikrotik">About Mikrotik</h2>
+<blockquote>
+<p>MikroTik is a Latvian company which was founded in 1996 to develop routers and wireless ISP systems. MikroTik now provides hardware and software for Internet connectivity in most of the countries around the world. Our experience in using industry standard PC hardware and complete routing systems allowed us in 1997 to create the RouterOS software system that provides extensive stability, controls, and flexibility for all kinds of data interfaces and routing. In 2002 we decided to make our own hardware, and the RouterBOARD brand was born. We have resellers in most parts of the world, and customers in probably every country on the planet. Our company is located in Riga, the capital city of Latvia and has more than 280 employees.</p>
+</blockquote>
+  
 <blockquote class="book-hint info">
-Bài viết này (và mọi hướng dẫn sau này) sử dụng phần mềm Winbox trên máy tính để cấu hình vì đó là cách đơn giản và hiệu quả nhất để cấu hình router Mikrotik.
+<ul>
+<li>Có 3 cách được sử dụng để cấu hình router Mikrotik đó là
+<ul>
+<li>Cấu hình qua giao diện web. (IP mặc định: <em>192.168.88.1</em>)</li>
+<li>Cấu hình qua chế độ dòng lệnh (<em>Terminal</em>, <em>Putty</em>&hellip;) thông qua các giao thức: <em>Telnet</em>, <em>SSH</em> hoặc <em>Console</em></li>
+<li>Cấu hình qua phần mềm <em>Winbox</em> trên máy tính Windowns</li>
+</ul>
+</li>
+<li>Trong loạt bài hướng dẫn này, mình chủ yếu sẽ làm trên phầm mềm <em>Winbox</em> vì tính đơn giản, trực quan và dễ thao tác.</li>
+</ul>
+
 </blockquote>
 
 <h2 id="1-tải-phần-mềm-winbox-từ-trang-chủ">1. Tải phần mềm Winbox từ trang chủ.</h2>
 <ul>
 <li>Các bạn truy cập vào trang chủ: 
 <a href="https://mikrotik.com/" title="Trang chủ Mikrotik" data-goatcounter-title="Trang chủ Mikrotik"
- target="_blank" rel="noopener noreferrer" data-goatcounter-click="https://mikrotik.com/" data-goatcounter-referrer="/serial/mikrotik-config/huong-dan-thiet-lap-va-cau-hinh-co-ban-router-mikrotik/">https://mikrotik.com/</a><span title="Mức độ phổ biến" id="a684917253" class="single__badge"></span><script async>var r = new XMLHttpRequest();
+ target="_blank" rel="noopener noreferrer" data-goatcounter-click="https://mikrotik.com/" data-goatcounter-referrer="/serial/mikrotik-config/huong-dan-thiet-lap-va-cau-hinh-co-ban-router-mikrotik/">https://mikrotik.com/</a><span title="Mức độ phổ biến" id="a134297865" class="single__badge"></span><script async>var r = new XMLHttpRequest();
 r.addEventListener('load', function() {
-document.querySelector('#a684917253').innerText = JSON.parse(this.responseText).count_unique
+document.querySelector('#a134297865').innerText = JSON.parse(this.responseText).count_unique
 })
 r.open('GET', 'https://stats.pnghia.com/counter/' + encodeURIComponent("https://mikrotik.com/").replace(/\/$/, '') + '.json')
 r.send()</script>
 </li>
 <li>Click vào mục <strong>Software</strong> trên menu.</li>
-<li>Click vào mục <strong>Winbox</strong> sau đó chọn phiên bản <em>64bit</em> or <em>32bit</em> tuỳ theo cấu hình máy tính đang sử dụng (đa số là 64bit)<br />
-<details >
-<summary><b style="color:;font-weight:normal;">screenshot</b></summary>
-<div class="markdown-inner">
-<img data-src="https://pnghia.com/images/mik/winbox-download_hub1d4943b78bf681c0fd0ef6c79ccea89_114559_filter_1334269291160664337.png" alt="Winbox Download" class="lazyload" />
-</div>
-</details>
-</li>
+<li>Click vào mục <strong>Winbox</strong> sau đó chọn phiên bản <em>64bit</em> or <em>32bit</em> tuỳ theo cấu hình máy tính đang sử dụng (đa số là <em>64bit</em>)</li>
+<li>Hoặc click trực tiếp vào các link sau (link chính chủ): 
+<a href="https://mt.lv/winbox64" title="Download Winbox64" data-goatcounter-title="Download Winbox64"
+ target="_blank" rel="noopener noreferrer" data-goatcounter-click="https://mt.lv/winbox64" data-goatcounter-referrer="/serial/mikrotik-config/huong-dan-thiet-lap-va-cau-hinh-co-ban-router-mikrotik/">Phiên bản <em>64bit</em></a><span title="Mức độ phổ biến" id="a741238965" class="single__badge"></span><script async>var r = new XMLHttpRequest();
+r.addEventListener('load', function() {
+document.querySelector('#a741238965').innerText = JSON.parse(this.responseText).count_unique
+})
+r.open('GET', 'https://stats.pnghia.com/counter/' + encodeURIComponent("https://mt.lv/winbox64").replace(/\/$/, '') + '.json')
+r.send()</script>
+, 
+<a href="https://mt.lv/winbox" title="Download Winbox32" data-goatcounter-title="Download Winbox32"
+ target="_blank" rel="noopener noreferrer" data-goatcounter-click="https://mt.lv/winbox" data-goatcounter-referrer="/serial/mikrotik-config/huong-dan-thiet-lap-va-cau-hinh-co-ban-router-mikrotik/">Phiên bản <em>32bit</em></a><span title="Mức độ phổ biến" id="a684537219" class="single__badge"></span><script async>var r = new XMLHttpRequest();
+r.addEventListener('load', function() {
+document.querySelector('#a684537219').innerText = JSON.parse(this.responseText).count_unique
+})
+r.open('GET', 'https://stats.pnghia.com/counter/' + encodeURIComponent("https://mt.lv/winbox").replace(/\/$/, '') + '.json')
+r.send()</script>
+ để tải xuống.</li>
 </ul>
+<p>
+
+<img data-src="https://pnghia.com/images/mik/winbox-download_hub1d4943b78bf681c0fd0ef6c79ccea89_114559_filter_1334269291160664337.png" alt="Winbox Download" class="lazyload" />
+
+
+</p>
 <h2 id="2-kết-nối-modem-với-router-mikrotik-và-pc">2. Kết nối Modem với router Mikrotik và PC.</h2>
 <ul>
 <li>Dùng dây LAN kết nối từ cổng Brigde của modem vào cổng số WAN của router Mikrotik.</li>
@@ -241,15 +271,14 @@ r.send()</script>
 <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 
 <ul>
-<li>Mở phần mềm winbox vừa tải ở bước 1 lên.</li>
+<li>Mở phần mềm <em>Winbox</em> vừa tải ở bước 1 lên.</li>
 <li>Nhấn nút <strong>Refresh</strong>, bên dưới sẽ hiện lên router mà các bạn đang kết nối</li>
 </ul>
-<p><details >
-<summary><b style="color:;font-weight:normal;">screenshot</b></summary>
-<div class="markdown-inner">
+<p>
+
 <img data-src="https://pnghia.com/images/mik/winbox-connect_huf9762a0318b16aa51d64189fddd1d377_26820_filter_1334269291160664337.png" alt="Winbox connect" class="lazyload" />
-</div>
-</details>
+
+
 <br />
 <br /></p>
 <h4 id="xem-bài-tiếp-theo-hướng-dẫn-quay-pppoe-trên-router-mikrotikserialmikrotik-confighuong-dan-quay-pppoe-mikrotik">Xem bài tiếp theo: 
@@ -389,7 +418,7 @@ r.send()</script>
 		<div class="footer__copyright">
 			&copy; 2021 pNghia.com.
 			<span class="footer__copyright-credits">Powered by <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">goHugo</a> | <a href="https://posativ.org/isso/" rel="nofollow noopener" target="_blank">ISSO</a> | <a href="https://www.goatcounter.com/" rel="nofollow noopener" target="_blank">goatCounter</a> and the <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span><br />
-			<span>v.09:25 - 07 tháng 06, 2021</span>
+			<span>v.08:25 - 09 tháng 06, 2021</span>
 		</div>
 	</div>
 </footer>

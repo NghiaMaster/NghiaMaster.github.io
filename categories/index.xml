@@ -6,22 +6,31 @@
     <description>Recent content in Categories on pNghia.com</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>vi-vn</language>
-    <lastBuildDate>Sat, 05 Jun 2021 10:21:26 +0700</lastBuildDate><atom:link href="https://pnghia.com/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 09 Jun 2021 07:33:40 +0700</lastBuildDate><atom:link href="https://pnghia.com/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Mikrotik</title>
-      <link>https://pnghia.com/categories/mikrotik/</link>
-      <pubDate>Sat, 05 Jun 2021 10:21:26 +0700</pubDate>
+      <title>Newifi3 D2</title>
+      <link>https://pnghia.com/categories/newifi3-d2/</link>
+      <pubDate>Wed, 09 Jun 2021 07:33:40 +0700</pubDate>
       
-      <guid>https://pnghia.com/categories/mikrotik/</guid>
+      <guid>https://pnghia.com/categories/newifi3-d2/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Tutorial</title>
       <link>https://pnghia.com/categories/tutorial/</link>
-      <pubDate>Sat, 05 Jun 2021 10:21:26 +0700</pubDate>
+      <pubDate>Wed, 09 Jun 2021 07:33:40 +0700</pubDate>
       
       <guid>https://pnghia.com/categories/tutorial/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Mikrotik</title>
+      <link>https://pnghia.com/categories/mikrotik/</link>
+      <pubDate>Sat, 05 Jun 2021 10:21:26 +0700</pubDate>
+      
+      <guid>https://pnghia.com/categories/mikrotik/</guid>
       <description></description>
     </item>
     
@@ -40,15 +49,6 @@
       <pubDate>Sat, 01 May 2021 08:25:14 +0700</pubDate>
       
       <guid>https://pnghia.com/categories/opnsense-config/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Newifi3 D2</title>
-      <link>https://pnghia.com/categories/newifi3-d2/</link>
-      <pubDate>Wed, 06 Jan 2021 17:38:05 +0700</pubDate>
-      
-      <guid>https://pnghia.com/categories/newifi3-d2/</guid>
       <description></description>
     </item>
     

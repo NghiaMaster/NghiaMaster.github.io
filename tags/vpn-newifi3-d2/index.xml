@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>VPN Newifi3 D2 on pNghia.com</title>
+    <link>https://pnghia.com/tags/vpn-newifi3-d2/</link>
+    <description>Recent content in VPN Newifi3 D2 on pNghia.com</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>vi-vn</language>
+    <lastBuildDate>Wed, 09 Jun 2021 07:33:40 +0700</lastBuildDate><atom:link href="https://pnghia.com/tags/vpn-newifi3-d2/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hướng dẫn cấu hình NordVPN trên ROM/Firmware PADAVAN</title>
+      <link>https://pnghia.com/posts/huong-dan-cau-hinh-nordvpn-tren-padavan/</link>
+      <pubDate>Wed, 09 Jun 2021 07:33:40 +0700</pubDate>
+      
+      <guid>https://pnghia.com/posts/huong-dan-cau-hinh-nordvpn-tren-padavan/</guid>
+      <description>Để sử dụng được NordVPN, trước hết các bạn phải có tài khoản NordVPN đã nha ^^ ROM PADAVAN là một loại ROM đã quá nổi tiếng về độ ổn định, giao diện đơn giãn, dễ cấu hình nhất trong các loại ROM mình từng dùng qua. Các bạn có thể tham khảo các Router có thể chạy cực tốt ROM PADAVAN như Newifi 3D2&amp;hellip; ROM PADAVAN cho Newifi 3D2 các bạn tham khảo Ở đâyBài viết này sẽ hướng dẫn các bạn tích hợp luôn NordVPN vào router, chỉ cần kết nối Wifi là dùng.</description>
+    </item>
+    
+  </channel>
+</rss>

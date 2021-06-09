@@ -4,61 +4,86 @@
   
   <url>
     <loc>https://pnghia.com/categories/</loc>
-    <lastmod>2021-06-05T11:31:39+07:00</lastmod>
+    <lastmod>2021-06-09T07:33:40+07:00</lastmod>
   </url>
   
   <url>
-    <loc>https://pnghia.com/tags/c%E1%BA%A5u-h%C3%ACnh-mikrotik/</loc>
-    <lastmod>2021-06-05T11:31:39+07:00</lastmod>
+    <loc>https://pnghia.com/posts/huong-dan-cau-hinh-nordvpn-tren-padavan/</loc>
+    <lastmod>2021-06-09T07:33:40+07:00</lastmod>
   </url>
   
   <url>
-    <loc>https://pnghia.com/serial/mikrotik-config/huong-dan-thiet-lap-va-cau-hinh-co-ban-router-mikrotik/</loc>
-    <lastmod>2021-06-05T11:31:39+07:00</lastmod>
+    <loc>https://pnghia.com/tags/newifi3-d2/</loc>
+    <lastmod>2021-06-09T07:33:40+07:00</lastmod>
   </url>
   
   <url>
-    <loc>https://pnghia.com/categories/mikrotik/</loc>
-    <lastmod>2021-06-05T11:31:39+07:00</lastmod>
+    <loc>https://pnghia.com/categories/newifi3-d2/</loc>
+    <lastmod>2021-06-09T07:33:40+07:00</lastmod>
   </url>
   
   <url>
     <loc>https://pnghia.com/</loc>
-    <lastmod>2021-06-05T11:31:39+07:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://pnghia.com/tags/pppoe-mikrotik/</loc>
-    <lastmod>2021-06-05T11:31:39+07:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://pnghia.com/tags/</loc>
-    <lastmod>2021-06-05T11:31:39+07:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://pnghia.com/categories/tutorial/</loc>
-    <lastmod>2021-06-05T11:31:39+07:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://pnghia.com/tags/tutorial/</loc>
-    <lastmod>2021-06-05T11:31:39+07:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://pnghia.com/serial/mikrotik-config/huong-dan-quay-pppoe-mikrotik/</loc>
-    <lastmod>2021-06-05T11:31:39+07:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://pnghia.com/serial/mikrotik-config/</loc>
-    <lastmod>2021-06-05T11:31:39+07:00</lastmod>
+    <lastmod>2021-06-09T07:33:40+07:00</lastmod>
   </url>
   
   <url>
     <loc>https://pnghia.com/posts/</loc>
+    <lastmod>2021-06-09T07:33:40+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://pnghia.com/tags/</loc>
+    <lastmod>2021-06-09T07:33:40+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://pnghia.com/categories/tutorial/</loc>
+    <lastmod>2021-06-09T07:33:40+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://pnghia.com/tags/vpn-newifi3-d2/</loc>
+    <lastmod>2021-06-09T07:33:40+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://pnghia.com/tags/vpn-padavan/</loc>
+    <lastmod>2021-06-09T07:33:40+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://pnghia.com/tags/c%E1%BA%A5u-h%C3%ACnh-mikrotik/</loc>
+    <lastmod>2021-06-07T09:27:16+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://pnghia.com/serial/mikrotik-config/huong-dan-thiet-lap-va-cau-hinh-co-ban-router-mikrotik/</loc>
+    <lastmod>2021-06-07T09:27:16+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://pnghia.com/categories/mikrotik/</loc>
+    <lastmod>2021-06-07T09:27:16+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://pnghia.com/tags/pppoe-mikrotik/</loc>
+    <lastmod>2021-06-07T09:27:16+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://pnghia.com/tags/tutorial/</loc>
+    <lastmod>2021-06-07T09:27:16+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://pnghia.com/serial/mikrotik-config/huong-dan-quay-pppoe-mikrotik/</loc>
+    <lastmod>2021-06-07T09:27:16+07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://pnghia.com/serial/mikrotik-config/</loc>
     <lastmod>2021-06-05T11:31:39+07:00</lastmod>
   </url>
   
@@ -120,16 +145,6 @@
   <url>
     <loc>https://pnghia.com/posts/newifi3-d2-stock-english-firmware/</loc>
     <lastmod>2021-01-23T16:04:12+07:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://pnghia.com/tags/newifi3-d2/</loc>
-    <lastmod>2021-06-05T11:31:39+07:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://pnghia.com/categories/newifi3-d2/</loc>
-    <lastmod>2021-06-05T11:31:39+07:00</lastmod>
   </url>
   
   <url>
